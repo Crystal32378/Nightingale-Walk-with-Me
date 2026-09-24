@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { randomUUID } from "node:crypto";
 import { RouteError, startSession, step } from "./engine.js";
 import type { Interpreter } from "./interpreter.js";
@@ -28,6 +29,10 @@ function initialAction(route: Route): EngineAction {
 export function createApp({ routes, store, interpreter }: AppDeps): Hono {
   const app = new Hono();
   const routeById = new Map(routes.map((r) => [r.routeId, r]));
+
+  // Production serves the frontend from the same origin (Firebase rewrite);
+  // this is for local dev and preview deploys. No credentials are involved.
+  app.use("/api/*", cors());
 
   app.get("/api/health", (c) => c.json({ ok: true }));
 
