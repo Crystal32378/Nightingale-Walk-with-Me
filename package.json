@@ -16,6 +16,7 @@
     "vitest": "^2.1.0"
   },
   "dependencies": {
+    "@google/genai": "^2.24.0",
     "@hono/node-server": "^2.1.1",
     "hono": "^4.13.9",
     "zod": "^3.23.0"
