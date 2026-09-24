@@ -5,14 +5,19 @@
   "description": "Transit stop to verified hospital entrance. AI interprets; verified data decides.",
   "type": "module",
   "scripts": {
+    "start": "tsx src/index.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
     "typescript": "^5.6.0",
     "vitest": "^2.1.0"
   },
   "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "hono": "^4.13.9",
     "zod": "^3.23.0"
   }
 }
