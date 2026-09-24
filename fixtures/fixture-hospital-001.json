@@ -1,0 +1,56 @@
+{
+  "routeId": "fixture-hospital-001",
+  "origin": { "type": "transit_exit", "name": "Fixture Station Exit 6" },
+  "destination": { "type": "hospital_entrance", "name": "Fixture Hospital Outpatient Entrance" },
+  "start": "cp1",
+  "checkpoints": [
+    {
+      "id": "cp1",
+      "instruction": "From exit 6, walk south along the tree-lined avenue.",
+      "expectedLandmarks": ["exit 6 sign"],
+      "next": "cp2"
+    },
+    {
+      "id": "cp2",
+      "instruction": "Keep straight past the pharmacy; the hospital block is ahead on your right.",
+      "expectedLandmarks": ["green pharmacy sign"],
+      "next": "cp3"
+    },
+    {
+      "id": "cp3",
+      "instruction": "Cross at the footbridge, then follow the hospital fence.",
+      "expectedLandmarks": ["footbridge"],
+      "conflictLandmarks": [
+        {
+          "landmark": "roundabout",
+          "recoveryPointer": "cp2",
+          "recoveryInstruction": "The roundabout means you went one block too far. Turn around and return to the pharmacy corner."
+        }
+      ],
+      "next": "cp4"
+    },
+    {
+      "id": "cp4",
+      "instruction": "At the campus corner, follow the blue outpatient signpost along the building.",
+      "expectedLandmarks": ["blue outpatient signpost"],
+      "next": "cp5"
+    },
+    {
+      "id": "cp5",
+      "instruction": "The outpatient entrance is the door under the large sign, past the forecourt.",
+      "expectedLandmarks": ["outpatient forecourt"],
+      "ambiguity": {
+        "sharedEvidence": ["hospital building", "glass doors"],
+        "question": "Do you see an outpatient sign above the door, or a red emergency sign?"
+      },
+      "conflictLandmarks": [
+        {
+          "landmark": "emergency red sign",
+          "recoveryPointer": "cp4",
+          "recoveryInstruction": "That is the emergency entrance — you passed the outpatient door. Turn around and go back to the blue signpost."
+        }
+      ],
+      "arrivalEvidence": ["outpatient entrance sign"]
+    }
+  ]
+}
