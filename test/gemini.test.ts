@@ -40,6 +40,16 @@ describe("parseObservation", () => {
       parseObservation('{"landmarks":[],"signage":[],"confidence":"certain","source":"text"}'),
     ).toBeNull();
   });
+
+  it("stamps provenance itself — a model-mangled source field cannot sink the parse", () => {
+    // Live failure 2026-09-26: Gemini echoed the whole description into `source`.
+    const mangled =
+      '{"landmarks":[],"signage":["2號出口"],"confidence":"high","source":"電梯出來看到黃色的牌子"}';
+    const obs = parseObservation(mangled, "text");
+    expect(obs?.signage).toEqual(["2號出口"]);
+    expect(obs?.source).toBe("text");
+    expect(parseObservation(mangled, "photo")?.source).toBe("photo");
+  });
 });
 
 describe("GeminiInterpreter", () => {

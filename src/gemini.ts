@@ -41,19 +41,29 @@ export function buildObservationPrompt(text: string, route: Route): string {
     "",
     "Rules:",
     "- Map the description onto canonical terms only when the person clearly indicates them.",
+    "- Every value MUST be copied character-for-character from the vocabulary list above.",
+    "  Never translate, rephrase, or normalize a term — if the person's words do not",
+    "  correspond to a listed term, leave it out.",
     "- If nothing matches the vocabulary, return empty arrays. Never guess or invent.",
     "- `signage` is for text the person reports reading on a sign; `landmarks` for everything else.",
     "- confidence: high = explicit and unambiguous, medium = probable, low = vague.",
     "",
     "Return ONLY a JSON object, no markdown, exactly this shape:",
-    '{"landmarks": string[], "signage": string[], "confidence": "low"|"medium"|"high", "source": "text"}',
+    '{"landmarks": string[], "signage": string[], "confidence": "low"|"medium"|"high"}',
     "",
     `Description: """${text}"""`,
   ].join("\n");
 }
 
-/** Accepts raw model output; returns a schema-valid observation or null. Untrusted input. */
-export function parseObservation(raw: string): Observation | null {
+/**
+ * Accepts raw model output; returns a schema-valid observation or null.
+ * Untrusted input. `source` is provenance — the server knows how the
+ * observation arrived, so the model's opinion about it is discarded.
+ */
+export function parseObservation(
+  raw: string,
+  source: Observation["source"] = "text",
+): Observation | null {
   const stripped = raw.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
   let parsed: unknown;
   try {
@@ -61,7 +71,8 @@ export function parseObservation(raw: string): Observation | null {
   } catch {
     return null;
   }
-  const result = observationSchema.safeParse(parsed);
+  if (typeof parsed !== "object" || parsed === null) return null;
+  const result = observationSchema.safeParse({ ...parsed, source });
   return result.success ? result.data : null;
 }
 
@@ -93,10 +104,13 @@ export class GeminiInterpreter implements Interpreter {
         this.client.generate(buildObservationPrompt(text, route)),
         this.timeoutMs,
       );
-      const observation = parseObservation(raw);
-      if (observation) return { ...observation, source: "text" };
-    } catch {
-      // fall through to deterministic fallback
+      const observation = parseObservation(raw, "text");
+      if (observation) return observation;
+      console.warn("gemini interpreter: schema-invalid output, using fallback");
+    } catch (e) {
+      console.warn(
+        `gemini interpreter: ${e instanceof Error ? e.message : "call failed"}, using fallback`,
+      );
     }
     return this.fallback.interpret(text, route);
   }
