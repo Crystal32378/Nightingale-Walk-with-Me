@@ -49,8 +49,8 @@ describe("renai-001 field route", () => {
     r = await observe("經過7-11了");
     expect(r.session.checkpointId).toBe("cp3");
 
-    // cp3 — the eight-lane crossing.
-    r = await observe("我到仁愛路的大路口了");
+    // cp3 — the eight-lane crossing; the Howard Plaza corner anchors it.
+    r = await observe("我看到福華飯店，到大路口了");
     expect(r.session.checkpointId).toBe("cp4");
 
     // cp4 — the emergency/parking driveway confirms the hospital block,
@@ -118,6 +118,11 @@ describe("renai-001 field route", () => {
     // The terminal checkpoint declares arrival evidence; no other one does.
     const terminals = route.checkpoints.filter((c) => c.arrivalEvidence);
     expect(terminals.map((c) => c.id)).toEqual(["cp5"]);
+    // Crystal's field ruling: Howard Plaza marks the Renai crossing (seeing it
+    // is on-route evidence, so it is an anchor, never a conflict).
+    const cp3 = route.checkpoints.find((c) => c.id === "cp3");
+    expect(cp3?.expectedLandmarks).toContain("福華飯店");
+    expect(cp3?.conflictLandmarks ?? []).toEqual([]);
     // Vocabulary is normalized and non-empty — the fail-closed boundary exists.
     expect(routeVocabulary(route).size).toBeGreaterThan(10);
   });
