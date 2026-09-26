@@ -1,5 +1,6 @@
 import { serve } from "@hono/node-server";
-import routeJson from "../fixtures/fixture-hospital-001.json" with { type: "json" };
+import fixtureJson from "../fixtures/fixture-hospital-001.json" with { type: "json" };
+import renaiJson from "../fixtures/route-renai-001.json" with { type: "json" };
 import { createVertexClient, GeminiInterpreter } from "./gemini.js";
 import { KeywordInterpreter, type Interpreter } from "./interpreter.js";
 import { createApp } from "./server.js";
@@ -13,7 +14,7 @@ const interpreter: Interpreter = process.env.GOOGLE_CLOUD_PROJECT
   : fallback;
 
 const app = createApp({
-  routes: [routeJson as Route],
+  routes: [renaiJson as Route, fixtureJson as Route],
   store: new InMemorySessionStore(),
   interpreter,
 });
