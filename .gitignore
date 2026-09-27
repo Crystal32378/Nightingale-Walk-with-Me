@@ -6,3 +6,5 @@ dist/
 service-account*.json
 
 field trip photos/
+
+eval/out/

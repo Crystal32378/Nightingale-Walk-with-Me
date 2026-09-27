@@ -21,12 +21,17 @@ export function createVertexClient(opts?: {
   const model = opts?.model ?? process.env.GEMINI_MODEL ?? DEFAULT_MODEL;
   if (!project) throw new Error("GOOGLE_CLOUD_PROJECT is required for the Vertex client");
   const ai = new GoogleGenAI({ vertexai: true, project, location });
+  const budget = process.env.GEMINI_THINKING_BUDGET;
+  const config = {
+    temperature: 0,
+    ...(budget !== undefined && budget !== "" ? { thinkingConfig: { thinkingBudget: Number(budget) } } : {}),
+  };
   return {
     async generate(prompt: string): Promise<string> {
       const res = await ai.models.generateContent({
         model,
         contents: prompt,
-        config: { temperature: 0 },
+        config,
       });
       return res.text ?? "";
     },
@@ -39,7 +44,7 @@ export function createVertexClient(opts?: {
             parts: [{ inlineData: { mimeType: image.mimeType, data: image.data } }, { text: prompt }],
           },
         ],
-        config: { temperature: 0 },
+        config,
       });
       return res.text ?? "";
     },
@@ -83,6 +88,15 @@ export function buildPhotoPrompt(route: Route): string {
     "- `landmarks`: listed terms for things clearly visible that are not sign text.",
     "- Only report what is visible in THIS photo. Never add a term because the place is",
     "  probably nearby, or because it belongs with what you do see.",
+    "- Report only text that names or marks the spot in front of the person: a sign on the",
+    "  building, entrance, shop, pole or street right here. Maps, floor directories and boards",
+    "  that list several destinations, exits or floors describe OTHER places — do not report",
+    "  any term that appears only there. Exception: if such a map or list marks the person's",
+    "  own position (「您的位置」/ You are here, or the current floor highlighted), report only",
+    "  the name at that marked position.",
+    "- A pictogram, poster, advert or illustration is not the thing it depicts (a wheelchair",
+    "  symbol is not 復康巴士; a drawn bus is not a bus). Report a term only when its words are",
+    "  printed on a sign or the real thing itself is in view.",
     "- Every OUTPUT value MUST be an exact character-for-character copy of a term from the list.",
     "- If text is too blurry, cut off, or too dark to read, do not guess it — leave it out.",
     "- If nothing listed is clearly visible, return empty arrays. Never guess or invent.",

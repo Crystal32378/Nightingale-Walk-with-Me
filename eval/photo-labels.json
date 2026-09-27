@@ -1,0 +1,428 @@
+{
+  "routeId": "renai-001",
+  "photoDir": "field trip photos",
+  "about": "Ground truth for the renai-001 field photos (2026-09-26). Draft by Opus 2026-09-27 — every row needs Crystal's check, rows with review=true most of all. zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
+  "zones": [
+    "station",
+    "cp1",
+    "cp2",
+    "cp3",
+    "cp4",
+    "cp5",
+    "inside",
+    "past",
+    "noise"
+  ],
+  "photos": [
+    {
+      "file": "S__121634827_0.jpg",
+      "zone": "past",
+      "expect": [
+        "綠色頂棚走廊"
+      ],
+      "note": "綠色頂棚長廊（大安路側）＝走過頭"
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "zone": "cp4",
+      "expect": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口"
+      ],
+      "optional": [
+        "聯合醫院",
+        "急診",
+        "停車場"
+      ],
+      "note": "人行道上的醫院立柱：ENTRANCE ↑ 大廳入口／急診室入口／停車場入口。還不是大廳",
+      "review": true
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "zone": "cp4",
+      "expect": [
+        "臺北市立聯合醫院",
+        "仁愛院區"
+      ],
+      "optional": [
+        "聯合醫院"
+      ],
+      "note": "花台上的院名石碑。位置未確認：若就在大廳門口，zone 應改 cp5",
+      "review": true
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "zone": "cp5",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "大廳車道上方的金字院名＋車輛「出口」牌；金字斜拍、在陰影裡",
+      "review": true
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "zone": "cp5",
+      "expect": [],
+      "optional": [
+        "玻璃門",
+        "聯合醫院",
+        "臺北市立聯合醫院"
+      ],
+      "note": "大廳玻璃自動門（門上蝕刻院名很淡）；有人臉"
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "zone": "cp5",
+      "expect": [],
+      "note": "大廳車道地面「本院全面禁菸」；無路線詞彙；有人"
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "zone": "cp5",
+      "expect": [
+        "排班計程車"
+      ],
+      "note": "「排班計程車 請入內／入口 Entrance」大廳車道入口"
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "zone": "cp4",
+      "expect": [
+        "急診",
+        "仁愛院區"
+      ],
+      "optional": [
+        "停車場"
+      ],
+      "note": "急診 EMERGENCY＋P 立牌（右車道緊急公務／左車道一般臨停）"
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "zone": "cp3",
+      "expect": [],
+      "optional": [
+        "大路口",
+        "八線道"
+      ],
+      "note": "大路口＋高架捷運，無路名牌。位置推定",
+      "review": true
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "zone": "cp2",
+      "expect": [
+        "自行車標線"
+      ],
+      "note": "人行道自行車＋行人標線"
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "zone": "cp4",
+      "expect": [
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "公車站亭「聯合醫院仁愛院區」。位置未確認",
+      "review": true
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "zone": "cp3",
+      "expect": [],
+      "optional": [
+        "大路口"
+      ],
+      "note": "仁愛路口行人倒數 84 秒，遠處 SOGO 大樓（沒有「復興館」字樣）",
+      "review": true
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "糊掉的人行道（黃昏），看不出位置"
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "optional": [
+        "大路口",
+        "自行車標線"
+      ],
+      "note": "出口2外高架下的復興南路斑馬線（右側有自行車穿越道標線），遠方 SOGO；無可讀路名",
+      "review": true
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "note": "出口2外「無障礙坡道」牌（已刻意不收進詞彙）"
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "note": "電梯 20m → ＋無障礙坡道牌"
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "zone": "station",
+      "expect": [],
+      "note": "站內出口資訊板，列出所有出口與目的地（含 SOGO復興館、忠孝東路三段、福華飯店、聯合醫院仁愛院區、大安路一段）——不代表人在出口2",
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "忠孝東路",
+        "福華飯店",
+        "聯合醫院",
+        "仁愛院區",
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "zone": "station",
+      "expect": [],
+      "note": "站內街區地圖＋轉乘資訊，文字極小",
+      "review": true,
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "忠孝東路",
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "optional": [
+        "1號電梯",
+        "出口2"
+      ],
+      "note": "1F 的 1號電梯（★1），樓層牌很小；有人臉"
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "zone": "cp1",
+      "expect": [
+        "1號電梯",
+        "SOGO復興館"
+      ],
+      "optional": [
+        "出口2"
+      ],
+      "note": "1F 1號電梯正面＋樓層牌「1F 出口2 SOGO復興館」；有人臉"
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "zone": "cp1",
+      "expect": [
+        "出口2",
+        "SOGO復興館"
+      ],
+      "note": "1F 站內資訊圖（「您的位置」在 1F）＋ ←出口2 SOGO復興館",
+      "optional": [
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "zone": "cp1",
+      "expect": [
+        "出口2",
+        "SOGO復興館"
+      ],
+      "note": "同一張 1F 資訊圖下半部，也印著 大安路一段（出口3）",
+      "review": true,
+      "optional": [
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "zone": "station",
+      "expect": [],
+      "note": "糊掉的「月台電梯」牌"
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "note": "出口2外無障礙坡道牌，街上有路人"
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "zone": "cp1",
+      "expect": [],
+      "note": "輪椅 ← 指示牌＋計程車（車牌可辨識）"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "zone": "cp2",
+      "expect": [],
+      "optional": [
+        "停車場"
+      ],
+      "note": "復興南路人行道，「P 20M 停車場」小牌——不是醫院停車場"
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "長椅，位置未知"
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "腳、糊掉"
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "原263 公車，LED 顯示英文 Renai（不是「仁愛路」三字）；司機臉"
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "瀚群骨科診所轉角＋斑馬線，位置未知",
+      "review": true
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "zone": "cp2",
+      "expect": [
+        "自行車標線"
+      ],
+      "note": "褪色的自行車標線"
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "zone": "cp4",
+      "expect": [],
+      "optional": [
+        "急診",
+        "救護車",
+        "停車場"
+      ],
+      "note": "急診/P 立牌背面（右車道→／左車道→），遠處小紅字急診＋救護車"
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "zone": "cp5",
+      "expect": [
+        "臺北市立聯合醫院"
+      ],
+      "optional": [
+        "聯合醫院",
+        "玻璃門"
+      ],
+      "note": "大廳玻璃門＋直式黃色掛牌"
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "zone": "cp5",
+      "expect": [
+        "臺北市立聯合醫院",
+        "仁愛院區"
+      ],
+      "optional": [
+        "聯合醫院"
+      ],
+      "note": "直式黃色掛牌近拍＋院區看板"
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "zone": "noise",
+      "expect": [],
+      "note": "花崗岩地板"
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "zone": "inside",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "急診",
+        "仁愛路"
+      ],
+      "note": "院內樓層一覽表（平面圖上有「急診」「仁愛路四段」）"
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "zone": "inside",
+      "expect": [],
+      "note": "院內醫療大樓樓層一覽表（英文院名）"
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "zone": "inside",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "急診",
+        "大安路",
+        "仁愛路"
+      ],
+      "note": "院內平面圖，印著「大安路一段」「急診」——cp5 誤觸 conflict 的測點"
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "zone": "inside",
+      "expect": [],
+      "optional": [
+        "急診"
+      ],
+      "note": "院內 1F 指標柱（急診 →、服務台）"
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "zone": "cp2",
+      "expect": [],
+      "optional": [
+        "自行車標線"
+      ],
+      "note": "行人（大人牽小孩）標線，位置推定",
+      "review": true
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "zone": "cp5",
+      "expect": [
+        "復康巴士",
+        "臨時停車區"
+      ],
+      "note": "復康巴士及無障礙計程車臨時停車區（3分鐘）"
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "zone": "cp4",
+      "expect": [
+        "臺北市立聯合醫院",
+        "仁愛院區"
+      ],
+      "optional": [
+        "聯合醫院"
+      ],
+      "note": "路口的醫院立柱（對面義美食品）。位置未確認",
+      "review": true
+    }
+  ],
+  "excluded": [
+    {
+      "file": "截圖 2026-09-26 下午6.58.20.png",
+      "reason": "Chrome 截圖，不是實地照片"
+    }
+  ]
+}
