@@ -20,7 +20,7 @@ Live: **https://nightingale-walk-with-me.web.app/?flow=last300m**
 
 - Frontend on Firebase Hosting; `/api/**` rewrites to Cloud Run (`nightingale`, asia-east1) — one origin for page and API.
 - Gemini 2.5 Flash on Vertex AI maps free-text observations onto the route vocabulary; every failure mode falls back to deterministic matching.
-- 47 tests (engine, validator, Gemini fallbacks, HTTP API, and an end-to-end walk of the real route).
+- 57 tests (engine, validator, Gemini text and photo fallbacks, Firestore session store, HTTP API, and end-to-end walks of the real route).
 
 ```
 npm install
@@ -35,11 +35,11 @@ Walked and photographed on 2026-09-26 by the route author; every landmark string
 
 ## Voice: Gemini TTS
 
-Route guidance is spoken by **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices the user can switch between: Leda (female) and Puck (male).
+Route guidance has been recorded with **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices — Leda (female) and Puck (male) — for a user-switchable voice. The recordings and the script are ready; wiring playback into the frontend is the next step.
 
 What made Gemini TTS the right fit is that accent and manner are steered in plain language. One style instruction — *speak Mandarin with a natural Taiwanese accent, gently and unhurried, like a grandchild walking an elder* — produced voices a native Taiwanese listener judged as warm and local. No voice training and no audio engineering were needed.
 
-Only human-written, verified lines are recorded (`docs/tts-outdoor-script.md`, 16 lines, all passing the product's register lint). Live server text and anything the user says are never sent to speech generation.
+Only human-written, verified lines are recorded (`docs/tts-outdoor-script.md`, 17 lines, all passing the product's register lint). Live server text and anything the user says are never sent to speech generation.
 
 ## Adding a new hospital
 
