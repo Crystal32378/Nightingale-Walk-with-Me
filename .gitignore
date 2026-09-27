@@ -4,3 +4,5 @@ dist/
 *.local
 .DS_Store
 service-account*.json
+
+field trip photos/

@@ -49,4 +49,10 @@ A route is a slice of a real walk, not a map inference, so a new location is add
 2. The signage text becomes the route vocabulary; the walker's own way of giving directions becomes the instructions.
 3. The spoken lines are written, checked, and recorded — in a voice the hospital chooses for its community.
 
-Our one field run suggests roughly **30 to 60 minutes of walking and photographing per route** (estimate from a single route; authoring and recording time come on top). A hospital can author its own entrances, and can swap in whatever voice best fits the people it serves.
+Our one field run took **30 to 60 minutes per route**, covering:
+
+- walking from a transit stop about 10 minutes from the hospital;
+- walking the route twice (there and back), photographing 8 to 10 points to confirm landmarks and directions;
+- putting the photos and notes into a folder for an agent to organise and analyse.
+
+That is one route's experience, not a benchmark; writing and recording the spoken lines comes on top. A hospital can author its own entrances, and can swap in whatever voice best fits the people it serves.
