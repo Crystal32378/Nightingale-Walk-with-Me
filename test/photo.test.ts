@@ -1,4 +1,5 @@
-import { describe, expect, it } from "vitest";
+import sharp from "sharp";
+import { beforeAll, describe, expect, it } from "vitest";
 import renaiJson from "../fixtures/route-renai-001.json";
 import { buildPhotoPrompt, GeminiInterpreter, type LlmClient } from "../src/gemini.js";
 import { KeywordInterpreter, type PhotoInput } from "../src/interpreter.js";
@@ -7,7 +8,10 @@ import { InMemorySessionStore } from "../src/store.js";
 import type { Route } from "../src/types.js";
 
 const route = renaiJson as Route;
-const photo: PhotoInput = { mimeType: "image/jpeg", data: "AAAA" };
+const photo: PhotoInput = { mimeType: "image/jpeg", data: "" };
+beforeAll(async () => {
+  photo.data = (await sharp({ create: { width: 320, height: 240, channels: 3, background: "#888" } }).jpeg().toBuffer()).toString("base64");
+});
 const seeing = (raw: string): LlmClient => ({
   generate: async () => "{}",
   generateWithImage: async () => raw,

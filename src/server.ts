@@ -8,6 +8,8 @@ import {
   type Interpreter,
   type PhotoInput,
 } from "./interpreter.js";
+import { clientKey, DEFAULT_PHOTO_LIMITS, SlidingWindow, type PhotoLimits } from "./limits.js";
+import { inspectPhoto } from "./photo.js";
 import type { SessionStore } from "./store.js";
 import {
   observationSchema,
@@ -23,6 +25,8 @@ export interface AppDeps {
   routes: Route[];
   store: SessionStore;
   interpreter: Interpreter;
+  photoLimits?: PhotoLimits;
+  now?: () => number;
 }
 
 function initialAction(route: Route): EngineAction {
@@ -34,9 +38,17 @@ function initialAction(route: Route): EngineAction {
   };
 }
 
-export function createApp({ routes, store, interpreter }: AppDeps): Hono {
+export function createApp({
+  routes,
+  store,
+  interpreter,
+  photoLimits = DEFAULT_PHOTO_LIMITS,
+  now = Date.now,
+}: AppDeps): Hono {
   const app = new Hono();
   const routeById = new Map(routes.map((r) => [r.routeId, r]));
+  const perClient = new SlidingWindow(photoLimits.perClient.max, photoLimits.perClient.windowMs, now);
+  const perInstance = new SlidingWindow(photoLimits.perInstance.max, photoLimits.perInstance.windowMs, now);
 
   // Production serves the frontend from the same origin (Firebase rewrite);
   // this is for local dev and preview deploys. No credentials are involved.
@@ -75,7 +87,7 @@ export function createApp({ routes, store, interpreter }: AppDeps): Hono {
 
   app.post("/api/sessions/:id/observations", async (c) => {
     const id = c.req.param("id");
-    const record = await store.get(id);
+    let record = await store.get(id);
     if (!record) return c.json({ error: "unknown session" }, 404);
     if (record.session.state === "ARRIVED") {
       return c.json({ error: "session already arrived" }, 409);
@@ -105,8 +117,26 @@ export function createApp({ routes, store, interpreter }: AppDeps): Hono {
       ) {
         return c.json({ error: "invalid photo" }, 400);
       }
+      const input: PhotoInput = { mimeType: mimeType as PhotoInput["mimeType"], data };
+      if (!inspectPhoto(input).ok) return c.json({ error: "invalid photo" }, 400);
+
+      // Cost gate: cheapest check first, and a throttled client never spends the shared budget.
+      const photoCount = record.photoCount ?? 0;
+      if (photoCount >= photoLimits.perSession) {
+        return c.json({ error: "photo limit reached for this walk" }, 429);
+      }
+      const wait =
+        perClient.take(clientKey(c.req.header("x-forwarded-for"))) ||
+        perInstance.take("all");
+      if (wait > 0) {
+        c.header("Retry-After", String(Math.ceil(wait / 1000)));
+        return c.json({ error: "too many photos, try again shortly" }, 429);
+      }
+      record = { ...record, photoCount: photoCount + 1 };
+      await store.put(id, record);
+
       observation = interpreter.interpretPhoto
-        ? await interpreter.interpretPhoto({ mimeType: mimeType as PhotoInput["mimeType"], data }, route)
+        ? await interpreter.interpretPhoto(input, route)
         : EMPTY_PHOTO_OBSERVATION;
     } else if (typeof body?.text === "string" && body.text.trim().length > 0) {
       observation = await interpreter.interpret(body.text, route);
@@ -116,7 +146,7 @@ export function createApp({ routes, store, interpreter }: AppDeps): Hono {
 
     try {
       const result = step(route, record.session, observation);
-      await store.put(id, { session: result.session, lastAction: result.action });
+      await store.put(id, { ...record, session: result.session, lastAction: result.action });
       // verdict + observation are returned for observability (debug panel), not for UI truth.
       return c.json({ ...result, observation });
     } catch (err) {

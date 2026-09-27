@@ -3,6 +3,8 @@ import type { EngineAction, SessionSnapshot } from "./types.js";
 export interface SessionRecord {
   session: SessionSnapshot;
   lastAction: EngineAction;
+  /** Photos this walk has sent to the reader; absent means none. */
+  photoCount?: number;
 }
 
 /** In-memory for tests and local runs; Firestore in production. */
@@ -62,13 +64,16 @@ export class FirestoreSessionStore implements SessionStore {
     const snap = await this.collection.doc(id).get();
     if (!snap.exists) return undefined;
     const data = snap.data();
-    return isRecord(data) ? { session: data.session, lastAction: data.lastAction } : undefined;
+    if (!isRecord(data)) return undefined;
+    const { session, lastAction, photoCount } = data;
+    return typeof photoCount === "number" ? { session, lastAction, photoCount } : { session, lastAction };
   }
 
   async put(id: string, record: SessionRecord): Promise<void> {
     await this.collection.doc(id).set({
       session: record.session,
       lastAction: record.lastAction,
+      ...(record.photoCount !== undefined ? { photoCount: record.photoCount } : {}),
       updatedAt: new Date(),
       // Firestore TTL policy on this field removes abandoned walks after a day.
       expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
