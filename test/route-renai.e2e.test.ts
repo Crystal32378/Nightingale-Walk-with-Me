@@ -124,6 +124,18 @@ describe("renai-001 field route", () => {
     expect(r.session.state).toBe("ARRIVED");
   });
 
+  it("anchors the exit by what is visible looking out, not by in-station line signs", async () => {
+    const post = client(makeApp());
+    const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
+    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
+    let r = await observe("我看到板南線的指標");
+    expect(r.verdict.verdict).toBe("UNKNOWN");
+    expect(r.session.checkpointId).toBe("cp1");
+    r = await observe("出來正前方是忠孝東路跟復興南路的路口");
+    expect(r.verdict.verdict).toBe("CONFIRMED");
+    expect(r.session.checkpointId).toBe("cp2");
+  });
+
   it("never treats an unregistered landmark as evidence", async () => {
     const post = client(makeApp());
     const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
