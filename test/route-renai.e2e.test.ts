@@ -97,6 +97,33 @@ describe("renai-001 field route", () => {
     expect(r.session.state).toBe("ARRIVED");
   });
 
+  it("answers the entrance question: an emergency sign means keep walking to the lobby", async () => {
+    const post = client(makeApp());
+    const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
+    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
+    await observe("出口2");
+    await observe("小七");
+    await observe("福華飯店");
+    await observe("急診車道");
+
+    let r = await observe("我在一個玻璃門前面");
+    expect(r.action.type).toBe("ASK");
+
+    // "Yes, it says 急診" — still at the driveway; the lobby is a little further on.
+    r = await observe("對，上面寫急診");
+    expect(r.verdict.verdict).toBe("CONFLICT");
+    expect(r.action.type).toBe("RECOVER");
+    expect(r.session.checkpointId).toBe("cp5");
+
+    // The emergency pylon also reads 仁愛院區 — conflict must beat arrival.
+    r = await observe("牌子寫仁愛院區急診");
+    expect(r.verdict.verdict).toBe("CONFLICT");
+    expect(r.session.state).not.toBe("ARRIVED");
+
+    r = await observe("黃色掛牌寫臺北市立聯合醫院");
+    expect(r.session.state).toBe("ARRIVED");
+  });
+
   it("never treats an unregistered landmark as evidence", async () => {
     const post = client(makeApp());
     const { sessionId } = await post("/api/sessions", { routeId: route.routeId });

@@ -1,58 +1,111 @@
 {
   "routeId": "renai-001",
-  "origin": { "type": "transit_exit", "name": "捷運忠孝復興站 出口2（無障礙電梯）" },
-  "destination": { "type": "hospital_entrance", "name": "臺北市立聯合醫院仁愛院區 大廳入口（無台階）" },
+  "origin": {
+    "type": "transit_exit",
+    "name": "捷運忠孝復興站 出口2（無障礙電梯）"
+  },
+  "destination": {
+    "type": "hospital_entrance",
+    "name": "臺北市立聯合醫院仁愛院區 大廳入口（無台階）"
+  },
   "start": "cp1",
   "checkpoints": [
     {
       "id": "cp1",
       "instruction": "搭「1號電梯」到 1F，出電梯就是「出口2 SOGO復興館」。這是唯一有電梯的無障礙出口。",
-      "expectedLandmarks": ["出口2", "2號出口", "二號出口", "出口二", "SOGO復興館", "1號電梯"],
+      "expectedLandmarks": [
+        "出口2",
+        "2號出口",
+        "二號出口",
+        "出口二",
+        "SOGO復興館",
+        "1號電梯"
+      ],
       "next": "cp2"
     },
     {
       "id": "cp2",
       "instruction": "出口2出來，先過復興南路到對面，兩邊都有斜坡——過了馬路那一側才有輪椅專用道。過完往右轉，沿復興南路直走，高架捷運一直在頭上，地上有自行車和行人的標線。途中會經過 7-Eleven，可以買水，不用趕。",
-      "expectedLandmarks": ["7-Eleven", "7-11", "小七", "便利商店", "超商", "自行車標線"],
+      "expectedLandmarks": [
+        "7-Eleven",
+        "7-11",
+        "小七",
+        "便利商店",
+        "超商",
+        "自行車標線"
+      ],
       "next": "cp3"
     },
     {
       "id": "cp3",
       "instruction": "走到八線道的大路口就是仁愛路，路口的大飯店是福華飯店。行人綠燈約 80 秒，足夠慢慢過，兩端都有坡道。往南過仁愛路，過完往左轉沿仁愛路四段直走，不用再過馬路，醫院就在這一側前方。",
-      "expectedLandmarks": ["仁愛路", "八線道", "大路口", "福華飯店", "福華"],
+      "expectedLandmarks": [
+        "仁愛路",
+        "八線道",
+        "大路口",
+        "福華飯店",
+        "福華"
+      ],
       "next": "cp4"
     },
     {
       "id": "cp4",
       "instruction": "沿醫院這一側的人行道直走。會先經過寫著紅色「急診」和「P」的車道口——那是救護車和停車場的入口，行人的大廳入口還要再往前一點。",
-      "expectedLandmarks": ["急診", "停車場", "救護車", "聯合醫院"],
+      "expectedLandmarks": [
+        "急診",
+        "停車場",
+        "救護車",
+        "聯合醫院"
+      ],
       "ambiguity": {
-        "sharedEvidence": ["醫院大樓", "玻璃門", "醫院"],
-        "question": "門口上方是紅色的「急診」兩個字，還是直的金色「臺北市立聯合醫院」掛牌？"
+        "sharedEvidence": [
+          "醫院大樓",
+          "玻璃門",
+          "醫院"
+        ],
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
       },
       "next": "cp5"
     },
     {
       "id": "cp5",
-      "instruction": "大廳入口是一整排玻璃自動門，牆上有直的金色「臺北市立聯合醫院」掛牌，門口有「復康巴士及無障礙計程車臨時停車區」的牌子——車輛可以直接停在門口，全程無台階、有坡道。",
-      "expectedLandmarks": ["復康巴士", "臨時停車區", "排班計程車"],
+      "instruction": "大廳入口是一整排玻璃自動門，牆上有直的黃色「臺北市立聯合醫院」掛牌，門口有「復康巴士及無障礙計程車臨時停車區」的牌子——車輛可以直接停在門口，全程無台階、有坡道。",
+      "expectedLandmarks": [
+        "復康巴士",
+        "臨時停車區",
+        "排班計程車"
+      ],
       "ambiguity": {
-        "sharedEvidence": ["醫院大樓", "玻璃門", "醫院"],
-        "question": "門口上方是紅色的「急診」兩個字，還是直的金色「臺北市立聯合醫院」掛牌？"
+        "sharedEvidence": [
+          "醫院大樓",
+          "玻璃門",
+          "醫院"
+        ],
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
       },
       "conflictLandmarks": [
         {
+          "landmark": "急診",
+          "recoveryPointer": "cp5",
+          "recoveryInstruction": "那是急診的車道口。大廳入口還在前面一點。"
+        },
+        {
           "landmark": "大安路",
           "recoveryPointer": "cp4",
-          "recoveryInstruction": "看到大安路，表示大廳入口在另一個方向。轉身沿著醫院牆面往回走，就會看到玻璃自動門。"
+          "recoveryInstruction": "這條路會通到大安路。我們先轉身，再沿著醫院牆面往回走，會看到玻璃自動門。"
         },
         {
           "landmark": "綠色頂棚走廊",
           "recoveryPointer": "cp4",
-          "recoveryInstruction": "有綠色頂棚的長廊是往大安路的側邊通道。轉身往回走，大廳的玻璃自動門就在前面。"
+          "recoveryInstruction": "綠色頂棚的長廊是側邊通道。左轉往仁愛路走2分鐘，大廳入口就在前面。"
         }
       ],
-      "arrivalEvidence": ["臺北市立聯合醫院", "聯合醫院", "大廳入口", "仁愛院區"]
+      "arrivalEvidence": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "大廳入口",
+        "仁愛院區"
+      ]
     }
   ]
 }
