@@ -16,7 +16,11 @@ A fresh build for **AI Builder Cup 2026** (Hack2Skill × Google Cloud). It guide
 
 ## Status
 
-Route engine + validator + full-verdict test suite (21 tests: progression, fail-closed evidence, ambiguity budget, conflict/recovery, true arrival, malformed LLM output, route integrity).
+Live: **https://nightingale-walk-with-me.web.app/?flow=last300m**
+
+- Frontend on Firebase Hosting; `/api/**` rewrites to Cloud Run (`nightingale`, asia-east1) — one origin for page and API.
+- Gemini 2.5 Flash on Vertex AI maps free-text observations onto the route vocabulary; every failure mode falls back to deterministic matching.
+- 47 tests (engine, validator, Gemini fallbacks, HTTP API, and an end-to-end walk of the real route).
 
 ```
 npm install
@@ -24,6 +28,25 @@ npm test
 npm run typecheck
 ```
 
-## Planned stack
+## The route
 
-Firebase Hosting (mobile web, one state · one instruction · one decision) → Cloud Run (session + engine) → Vertex AI Gemini 2.5 Flash. Demo route: MRT Zhongxiao Dunhua → Taipei City Hospital Renai Branch outpatient entrance (field-verified).
+**MRT Zhongxiao Fuxing Exit 2 (elevator) → Taipei City Hospital Renai Branch lobby entrance (step-free).**
+Walked and photographed on 2026-09-26 by the route author; every landmark string is copied from real signage. The route *is* the accessible route: the only exit with both an elevator and a ramp, the side of the street that has a wheelchair lane, an 80-second crossing, and an entrance where rehab buses and accessible taxis stop at the door. Field notes: `docs/route-renai-field-notes.md`. Verified in daylight and dusk only — night-time sign visibility is not yet verified.
+
+## Voice: Gemini TTS
+
+Route guidance is spoken by **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices the user can switch between: Leda (female) and Puck (male).
+
+What made Gemini TTS the right fit is that accent and manner are steered in plain language. One style instruction — *speak Mandarin with a natural Taiwanese accent, gently and unhurried, like a grandchild walking an elder* — produced voices a native Taiwanese listener judged as warm and local. No voice training and no audio engineering were needed.
+
+Only human-written, verified lines are recorded (`docs/tts-outdoor-script.md`, 16 lines, all passing the product's register lint). Live server text and anything the user says are never sent to speech generation.
+
+## Adding a new hospital
+
+A route is a slice of a real walk, not a map inference, so a new location is added by walking it:
+
+1. Someone local walks the route once — the transit exit to the entrance — photographing each sign they would use to find their way, plus the sights that mean "walked too far".
+2. The signage text becomes the route vocabulary; the walker's own way of giving directions becomes the instructions.
+3. The spoken lines are written, checked, and recorded — in a voice the hospital chooses for its community.
+
+Our one field run suggests roughly **30 to 60 minutes of walking and photographing per route** (estimate from a single route; authoring and recording time come on top). A hospital can author its own entrances, and can swap in whatever voice best fits the people it serves.
