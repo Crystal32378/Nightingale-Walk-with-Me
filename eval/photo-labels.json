@@ -1,7 +1,7 @@
 {
   "routeId": "renai-001",
   "photoDir": "field trip photos",
-  "about": "Ground truth for the renai-001 field photos (2026-09-26). Draft by Opus 2026-09-27 — every row needs Crystal's check, rows with review=true most of all. zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
+  "about": "Ground truth for the renai-001 field photos (2026-09-26). Drafted by Opus 2026-09-27; Crystal checked the 12 uncertain rows on 2026-09-28 (two still open, review=true). zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
   "zones": [
     "station",
     "cp1",
@@ -24,7 +24,7 @@
     },
     {
       "file": "S__121634828_0.jpg",
-      "zone": "cp4",
+      "zone": "past",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區",
@@ -35,8 +35,7 @@
         "急診",
         "停車場"
       ],
-      "note": "人行道上的醫院立柱：ENTRANCE ↑ 大廳入口／急診室入口／停車場入口。還不是大廳",
-      "review": true
+      "note": "仁愛×大安路口的醫院立柱（ENTRANCE ↑ 大廳入口／急診室入口／停車場入口）——已經走過大廳。Crystal 2026-09-28 核對"
     },
     {
       "file": "S__121634829_0.jpg",
@@ -48,8 +47,7 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "花台上的院名石碑。位置未確認：若就在大廳門口，zone 應改 cp5",
-      "review": true
+      "note": "花台上的院名石碑。位置未確認：若就在大廳門口，zone 應改 cp5"
     },
     {
       "file": "S__121634830_0.jpg",
@@ -60,8 +58,7 @@
         "聯合醫院",
         "仁愛院區"
       ],
-      "note": "大廳車道上方的金字院名＋車輛「出口」牌；金字斜拍、在陰影裡",
-      "review": true
+      "note": "大廳車道上方的金字院名＋車輛「出口」牌；金字斜拍、在陰影裡"
     },
     {
       "file": "S__121634831_0.jpg",
@@ -108,8 +105,7 @@
         "大路口",
         "八線道"
       ],
-      "note": "大路口＋高架捷運，無路名牌。位置推定",
-      "review": true
+      "note": "大路口＋高架捷運，無路名牌。位置推定"
     },
     {
       "file": "S__121634836_0.jpg",
@@ -121,13 +117,12 @@
     },
     {
       "file": "S__121634838_0.jpg",
-      "zone": "cp4",
+      "zone": "cp2",
       "expect": [
         "聯合醫院",
         "仁愛院區"
       ],
-      "note": "公車站亭「聯合醫院仁愛院區」。位置未確認",
-      "review": true
+      "note": "復興南路上的公車站亭，站名「聯合醫院仁愛院區」——院名在復興南路上就出現。Crystal 2026-09-28 核對"
     },
     {
       "file": "S__121634839_0.jpg",
@@ -136,7 +131,7 @@
       "optional": [
         "大路口"
       ],
-      "note": "仁愛路口行人倒數 84 秒，遠處 SOGO 大樓（沒有「復興館」字樣）",
+      "note": "行人倒數 84 秒；Crystal：這個路口在復興南路上，不在仁愛路上（待確認是哪一個路口）",
       "review": true
     },
     {
@@ -153,8 +148,7 @@
         "大路口",
         "自行車標線"
       ],
-      "note": "出口2外高架下的復興南路斑馬線（右側有自行車穿越道標線），遠方 SOGO；無可讀路名",
-      "review": true
+      "note": "忠孝東路對側往 SOGO 白色復興館拍；右側有自行車穿越道標線。Crystal 2026-09-28 核對"
     },
     {
       "file": "S__121634842_0.jpg",
@@ -185,10 +179,9 @@
     },
     {
       "file": "S__121634845_0.jpg",
-      "zone": "station",
+      "zone": "cp1",
       "expect": [],
-      "note": "站內街區地圖＋轉乘資訊，文字極小",
-      "review": true,
+      "note": "街區地圖＋轉乘資訊，在 1F。Crystal 2026-09-28 核對",
       "optional": [
         "出口2",
         "SOGO復興館",
@@ -238,7 +231,6 @@
         "SOGO復興館"
       ],
       "note": "同一張 1F 資訊圖下半部，也印著 大安路一段（出口3）",
-      "review": true,
       "optional": [
         "大安路"
       ]
@@ -290,10 +282,9 @@
     },
     {
       "file": "S__121634858_0.jpg",
-      "zone": "noise",
+      "zone": "cp3",
       "expect": [],
-      "note": "瀚群骨科診所轉角＋斑馬線，位置未知",
-      "review": true
+      "note": "瀚群骨科診所：仁愛×復興南路口，醫院這一側。Crystal 2026-09-28 核對"
     },
     {
       "file": "S__121634860_0.jpg",
@@ -393,8 +384,7 @@
       "optional": [
         "自行車標線"
       ],
-      "note": "行人（大人牽小孩）標線，位置推定",
-      "review": true
+      "note": "行人（大人牽小孩）標線，位置推定"
     },
     {
       "file": "S__121634871_0.jpg",
@@ -415,7 +405,7 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "路口的醫院立柱（對面義美食品）。位置未確認",
+      "note": "醫院立柱（對面義美食品）；Crystal：仁愛×大安路口、福華這一側（待確認：大安路口的話應是 past）",
       "review": true
     }
   ],
