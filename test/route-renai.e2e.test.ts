@@ -131,6 +131,10 @@ describe("renai-001 field route", () => {
     let r = await observe("我看到板南線的指標");
     expect(r.verdict.verdict).toBe("UNKNOWN");
     expect(r.session.checkpointId).toBe("cp1");
+    // Every station map's legend prints 無障礙坡道 — reading it proves nothing about the exit.
+    r = await observe("地圖下面寫無障礙坡道");
+    expect(r.verdict.verdict).not.toBe("CONFIRMED");
+    expect(r.session.checkpointId).toBe("cp1");
     r = await observe("出來正前方是忠孝東路跟復興南路的路口");
     expect(r.verdict.verdict).toBe("CONFIRMED");
     expect(r.session.checkpointId).toBe("cp2");
