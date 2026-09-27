@@ -2,7 +2,12 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { randomUUID } from "node:crypto";
 import { RouteError, startSession, step } from "./engine.js";
-import type { Interpreter } from "./interpreter.js";
+import {
+  EMPTY_PHOTO_OBSERVATION,
+  PHOTO_MIME_TYPES,
+  type Interpreter,
+  type PhotoInput,
+} from "./interpreter.js";
 import type { SessionStore } from "./store.js";
 import {
   observationSchema,
@@ -10,6 +15,9 @@ import {
   type Observation,
   type Route,
 } from "./types.js";
+
+/** ~4.5 MB of image; the client downsizes before upload. */
+export const MAX_PHOTO_BASE64_CHARS = 6_000_000;
 
 export interface AppDeps {
   routes: Route[];
@@ -83,10 +91,27 @@ export function createApp({ routes, store, interpreter }: AppDeps): Hono {
       const parsed = observationSchema.safeParse(body.observation);
       if (!parsed.success) return c.json({ error: "invalid observation" }, 400);
       observation = parsed.data;
+    } else if (body?.photo !== undefined) {
+      const photo = body.photo as Record<string, unknown> | null;
+      const mimeType = photo?.mimeType;
+      const data = photo?.data;
+      if (
+        typeof mimeType !== "string" ||
+        !(PHOTO_MIME_TYPES as readonly string[]).includes(mimeType) ||
+        typeof data !== "string" ||
+        data.length === 0 ||
+        data.length > MAX_PHOTO_BASE64_CHARS ||
+        !/^[A-Za-z0-9+/]+={0,2}$/.test(data)
+      ) {
+        return c.json({ error: "invalid photo" }, 400);
+      }
+      observation = interpreter.interpretPhoto
+        ? await interpreter.interpretPhoto({ mimeType: mimeType as PhotoInput["mimeType"], data }, route)
+        : EMPTY_PHOTO_OBSERVATION;
     } else if (typeof body?.text === "string" && body.text.trim().length > 0) {
       observation = await interpreter.interpret(body.text, route);
     } else {
-      return c.json({ error: "provide text or observation" }, 400);
+      return c.json({ error: "provide text, photo or observation" }, 400);
     }
 
     try {

@@ -1,11 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
-import type { Interpreter } from "./interpreter.js";
+import { EMPTY_PHOTO_OBSERVATION, type Interpreter, type PhotoInput } from "./interpreter.js";
 import { observationSchema, type Observation, type Route } from "./types.js";
-import { routeVocabulary } from "./validator.js";
+import { routeTerms } from "./validator.js";
 
 /** Thin seam so tests never need network or credentials. */
 export interface LlmClient {
   generate(prompt: string): Promise<string>;
+  generateWithImage?(prompt: string, image: PhotoInput): Promise<string>;
 }
 
 export const DEFAULT_MODEL = "gemini-2.5-flash";
@@ -29,11 +30,24 @@ export function createVertexClient(opts?: {
       });
       return res.text ?? "";
     },
+    async generateWithImage(prompt: string, image: PhotoInput): Promise<string> {
+      const res = await ai.models.generateContent({
+        model,
+        contents: [
+          {
+            role: "user",
+            parts: [{ inlineData: { mimeType: image.mimeType, data: image.data } }, { text: prompt }],
+          },
+        ],
+        config: { temperature: 0 },
+      });
+      return res.text ?? "";
+    },
   };
 }
 
 export function buildObservationPrompt(text: string, route: Route): string {
-  const vocab = [...routeVocabulary(route)].sort();
+  const vocab = routeTerms(route);
   return [
     "You convert a walker's description of their surroundings into a structured observation.",
     "Canonical landmark vocabulary for this route (the ONLY values allowed in `landmarks` and `signage`):",
@@ -54,6 +68,28 @@ export function buildObservationPrompt(text: string, route: Route): string {
     '{"landmarks": string[], "signage": string[], "confidence": "low"|"medium"|"high"}',
     "",
     `Description: """${text}"""`,
+  ].join("\n");
+}
+
+export function buildPhotoPrompt(route: Route): string {
+  const vocab = routeTerms(route);
+  return [
+    "A person walking to a hospital took this photo of what is in front of them.",
+    "Canonical landmark vocabulary for this route (the ONLY values allowed in `landmarks` and `signage`):",
+    vocab.map((v) => `- ${v}`).join("\n"),
+    "",
+    "Rules:",
+    "- `signage`: listed terms whose text you can actually read on a sign in the photo.",
+    "- `landmarks`: listed terms for things clearly visible that are not sign text.",
+    "- Only report what is visible in THIS photo. Never add a term because the place is",
+    "  probably nearby, or because it belongs with what you do see.",
+    "- Every OUTPUT value MUST be an exact character-for-character copy of a term from the list.",
+    "- If text is too blurry, cut off, or too dark to read, do not guess it — leave it out.",
+    "- If nothing listed is clearly visible, return empty arrays. Never guess or invent.",
+    "- confidence: high = clearly legible, medium = partly legible, low = unclear.",
+    "",
+    "Return ONLY a JSON object, no markdown, exactly this shape:",
+    '{"landmarks": string[], "signage": string[], "confidence": "low"|"medium"|"high"}',
   ].join("\n");
 }
 
@@ -98,6 +134,7 @@ export class GeminiInterpreter implements Interpreter {
     private readonly client: LlmClient,
     private readonly fallback: Interpreter,
     private readonly timeoutMs = 8000,
+    private readonly photoTimeoutMs = 15000,
   ) {}
 
   async interpret(text: string, route: Route): Promise<Observation> {
@@ -115,5 +152,28 @@ export class GeminiInterpreter implements Interpreter {
       );
     }
     return this.fallback.interpret(text, route);
+  }
+
+  /**
+   * There is no deterministic way to read a photo, so every failure here
+   * yields an empty observation — the engine then re-anchors instead of
+   * guessing where the person is.
+   */
+  async interpretPhoto(photo: PhotoInput, route: Route): Promise<Observation> {
+    if (!this.client.generateWithImage) return EMPTY_PHOTO_OBSERVATION;
+    try {
+      const raw = await withTimeout(
+        this.client.generateWithImage(buildPhotoPrompt(route), photo),
+        this.photoTimeoutMs,
+      );
+      const observation = parseObservation(raw, "photo");
+      if (observation) return observation;
+      console.warn("gemini photo interpreter: schema-invalid output, no evidence");
+    } catch (e) {
+      console.warn(
+        `gemini photo interpreter: ${e instanceof Error ? e.message : "call failed"}, no evidence`,
+      );
+    }
+    return EMPTY_PHOTO_OBSERVATION;
   }
 }

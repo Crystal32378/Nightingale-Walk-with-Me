@@ -20,6 +20,26 @@ export function routeVocabulary(route: Route): Set<string> {
 }
 
 /**
+ * Every registered term in its authored spelling (as printed on the sign),
+ * deduplicated by normalized form. Prompts show these, so the model can match
+ * sign text exactly; the validator still compares normalized forms.
+ */
+export function routeTerms(route: Route): string[] {
+  const seen = new Map<string, string>();
+  const add = (t: string) => {
+    const n = normalize(t);
+    if (!seen.has(n)) seen.set(n, t.trim());
+  };
+  for (const cp of route.checkpoints) {
+    cp.expectedLandmarks.forEach(add);
+    (cp.ambiguity?.sharedEvidence ?? []).forEach(add);
+    (cp.conflictLandmarks ?? []).forEach((c) => add(c.landmark));
+    (cp.arrivalEvidence ?? []).forEach(add);
+  }
+  return [...seen.values()].sort();
+}
+
+/**
  * Deterministic core: compares an observation against route truth at one checkpoint.
  * Pure function — no IO, no LLM, no clock.
  *
