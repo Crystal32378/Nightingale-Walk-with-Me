@@ -1,7 +1,7 @@
 {
   "routeId": "renai-001",
   "photoDir": "field trip photos",
-  "about": "Ground truth for the renai-001 field photos (2026-09-26). Drafted by Opus 2026-09-27; Crystal checked the 12 uncertain rows on 2026-09-28 (two still open, review=true). zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
+  "about": "Ground truth for the renai-001 field photos (2026-09-26). Drafted by Opus 2026-09-27; Crystal checked the 12 uncertain rows on 2026-09-28 (all resolved). zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
   "zones": [
     "station",
     "cp1",
@@ -131,8 +131,7 @@
       "optional": [
         "大路口"
       ],
-      "note": "行人倒數 84 秒；Crystal：這個路口在復興南路上，不在仁愛路上（待確認是哪一個路口）",
-      "review": true
+      "note": "仁愛×復興南路口的行人倒數（拍到 84 秒；Crystal：對長輩保守寫 75 秒）。Crystal 2026-09-28 核對"
     },
     {
       "file": "S__121634840_0.jpg",
@@ -397,7 +396,7 @@
     },
     {
       "file": "S__121634872_0.jpg",
-      "zone": "cp4",
+      "zone": "past",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區"
@@ -405,8 +404,7 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "醫院立柱（對面義美食品）；Crystal：仁愛×大安路口、福華這一側（待確認：大安路口的話應是 past）",
-      "review": true
+      "note": "仁愛×大安路口的醫院立柱（對面義美食品）——已經走過大廳。Crystal 2026-09-28 核對"
     }
   ],
   "excluded": [
