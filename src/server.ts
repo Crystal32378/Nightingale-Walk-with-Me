@@ -13,9 +13,12 @@ import { inspectPhoto } from "./photo.js";
 import type { SessionStore } from "./store.js";
 import {
   observationSchema,
+  UNKNOWN_ZONE,
   type EngineAction,
+  type LocationFix,
   type Observation,
   type Route,
+  type SessionSnapshot,
 } from "./types.js";
 
 /** ~4.5 MB of image; the client downsizes before upload. */
@@ -36,6 +39,11 @@ function initialAction(route: Route): EngineAction {
     checkpointId: cp.id,
     lookFor: [...cp.expectedLandmarks, ...(cp.arrivalEvidence ?? [])],
   };
+}
+
+/** What the next confirmation has to be: evidence (text/photo), or the walker saying a crossing is done. */
+function expects(route: Route, session: SessionSnapshot): "evidence" | "walker" {
+  return route.checkpoints.find((c) => c.id === session.checkpointId)?.confirmBy === "walker" ? "walker" : "evidence";
 }
 
 export function createApp({
@@ -62,6 +70,8 @@ export function createApp({
         routeId: r.routeId,
         origin: r.origin,
         destination: r.destination,
+        // Public street corners; the phone maps its own position onto them locally.
+        zones: r.zones ?? [],
       })),
     ),
   );
@@ -76,7 +86,7 @@ export function createApp({
     const action = initialAction(route);
     const sessionId = randomUUID();
     await store.put(sessionId, { session, lastAction: action });
-    return c.json({ sessionId, session, action }, 201);
+    return c.json({ sessionId, session, action, expects: expects(route, session) }, 201);
   });
 
   app.get("/api/sessions/:id", async (c) => {
@@ -96,8 +106,19 @@ export function createApp({
     if (!route) return c.json({ error: "route no longer available" }, 500);
 
     const body = await c.req.json().catch(() => null);
+
+    let location: LocationFix | undefined;
+    if (body?.location !== undefined) {
+      const zone = (body.location as Record<string, unknown> | null)?.zone;
+      const known = new Set([UNKNOWN_ZONE, ...(route.zones ?? []).map((z) => z.id)]);
+      if (typeof zone !== "string" || !known.has(zone)) return c.json({ error: "invalid location" }, 400);
+      location = { zone };
+    }
+
     let observation: Observation;
-    if (body?.observation !== undefined) {
+    if (body?.confirm === "crossed") {
+      observation = { landmarks: [], signage: [], confidence: "high", source: "walker" };
+    } else if (body?.observation !== undefined) {
       // Structured observations (tests, demo scripts, future Gemini layer)
       // are untrusted input: schema or nothing.
       const parsed = observationSchema.safeParse(body.observation);
@@ -141,14 +162,14 @@ export function createApp({
     } else if (typeof body?.text === "string" && body.text.trim().length > 0) {
       observation = await interpreter.interpret(body.text, route);
     } else {
-      return c.json({ error: "provide text, photo or observation" }, 400);
+      return c.json({ error: "provide text, photo, confirm or observation" }, 400);
     }
 
     try {
-      const result = step(route, record.session, observation);
+      const result = step(route, record.session, observation, location);
       await store.put(id, { ...record, session: result.session, lastAction: result.action });
       // verdict + observation are returned for observability (debug panel), not for UI truth.
-      return c.json({ ...result, observation });
+      return c.json({ ...result, observation, expects: expects(route, result.session) });
     } catch (err) {
       if (err instanceof RouteError) return c.json({ error: err.message }, 409);
       throw err;

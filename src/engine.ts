@@ -1,9 +1,12 @@
-import type {
-  Checkpoint,
-  Observation,
-  Route,
-  SessionSnapshot,
-  StepResult,
+import {
+  UNKNOWN_ZONE,
+  type Checkpoint,
+  type LocationFix,
+  type Observation,
+  type Route,
+  type SessionSnapshot,
+  type StepResult,
+  type VerdictResult,
 } from "./types.js";
 import { validate } from "./validator.js";
 
@@ -43,6 +46,7 @@ export function step(
   route: Route,
   session: SessionSnapshot,
   observation: Observation,
+  location?: LocationFix,
 ): StepResult {
   if (session.routeId !== route.routeId) {
     throw new RouteError(`session route ${session.routeId} does not match ${route.routeId}`);
@@ -55,7 +59,10 @@ export function step(
     throw new RouteError(`unknown checkpoint ${session.checkpointId}`);
   }
 
-  const verdict = validate(route, cp, observation);
+  const verdict: VerdictResult =
+    cp.confirmBy === "walker" && observation.source === "walker"
+      ? { verdict: "CONFIRMED", matchedExpected: [], matchedArrival: [], matchedShared: [], matchedConflict: null, unrecognized: [] }
+      : validate(route, cp, observation);
 
   switch (verdict.verdict) {
     case "CONFLICT": {
@@ -81,8 +88,21 @@ export function step(
     }
 
     case "CONFIRMED": {
-      // True arrival requires arrival evidence, never GPS, never proximity.
+      const where = zoneRule(cp, location);
+      if (where === "veto") {
+        return reanchor(session, cp, { ...verdict, locationVeto: location!.zone });
+      }
+      // True arrival requires the entrance's own evidence; location can only
+      // hold it back. Near or unknown: ask once, then let the evidence stand,
+      // so a phone that cannot locate itself never blocks arrival for good.
       if (cp.arrivalEvidence && verdict.matchedArrival.length > 0) {
+        if ((where === "ask" || where === "unknown") && cp.ambiguity && session.questionCount < MAX_QUESTIONS) {
+          return {
+            verdict,
+            session: { ...session, state: "AMBIGUOUS", questionCount: session.questionCount + 1 },
+            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question },
+          };
+        }
         return {
           verdict,
           session: { ...session, state: "ARRIVED", questionCount: 0 },
@@ -121,6 +141,19 @@ export function step(
     case "UNKNOWN":
       return reanchor(session, cp, verdict);
   }
+}
+
+/**
+ * `none`: this checkpoint has no zones (location plays no part). `unknown`: it
+ * has zones but the phone could not place itself. `veto`: the phone is
+ * confidently somewhere this checkpoint cannot have been reached from.
+ */
+function zoneRule(cp: Checkpoint, location: LocationFix | undefined): "none" | "unknown" | "allow" | "ask" | "veto" {
+  if (!cp.zones) return "none";
+  if (!location || location.zone === UNKNOWN_ZONE) return "unknown";
+  if (cp.zones.allow.includes(location.zone)) return "allow";
+  if (cp.zones.ask?.includes(location.zone)) return "ask";
+  return "veto";
 }
 
 /**

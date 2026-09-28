@@ -25,8 +25,42 @@ export interface Ambiguity {
   question: string;
 }
 
+/**
+ * A coarse circle around one stretch of the route. The phone turns its own
+ * position into a zone id before anything is sent; raw coordinates never leave
+ * the device. Zones only veto — they never confirm a checkpoint on their own.
+ */
+export interface Zone {
+  id: string;
+  lat: number;
+  lon: number;
+  radiusM: number;
+}
+
+/** Per-checkpoint use of zones. A known zone outside both lists vetoes a confirmation. */
+export interface CheckpointZones {
+  /** Being in one of these is consistent with having reached this checkpoint. */
+  allow: string[];
+  /** Close but not certain: arrival asks the entrance question first. Terminal checkpoints only. */
+  ask?: string[];
+}
+
+/** Measured once on site; varies by time of day, so never spoken or shown as a promise. */
+export interface FieldObservation {
+  note: string;
+  observedOn: string;
+  stable: false;
+}
+
 export interface Checkpoint {
   id: string;
+  /**
+   * `walker`: confirmed only by the walker saying they are done (a crossing),
+   * never by what a photo or sentence happens to contain. Default: evidence.
+   */
+  confirmBy?: "evidence" | "walker";
+  zones?: CheckpointZones;
+  observations?: FieldObservation[];
   /** Canonical instruction fact for the segment starting at this checkpoint. */
   instruction: string;
   /** Evidence that confirms the user is at / has reached this checkpoint. */
@@ -45,7 +79,15 @@ export interface Route {
   /** First checkpoint id. */
   start: string;
   checkpoints: Checkpoint[];
+  zones?: Zone[];
 }
+
+/** What the phone reports about where it is: a zone id from the route, or unknown. */
+export interface LocationFix {
+  zone: string;
+}
+
+export const UNKNOWN_ZONE = "unknown";
 
 /** Session state machine. */
 export type SessionState =
@@ -71,7 +113,7 @@ export const observationSchema = z.object({
   landmarks: z.array(z.string().min(1).max(80)).max(10),
   signage: z.array(z.string().min(1).max(80)).max(10),
   confidence: z.enum(["low", "medium", "high"]),
-  source: z.enum(["text", "photo"]),
+  source: z.enum(["text", "photo", "walker"]),
 });
 
 export type Observation = z.infer<typeof observationSchema>;
@@ -86,6 +128,8 @@ export interface VerdictResult {
   matchedConflict: ConflictLandmark | null;
   /** Observed strings not registered anywhere in the route (never count as evidence). */
   unrecognized: string[];
+  /** Set when the evidence matched but the phone's zone says this checkpoint is not reached yet. */
+  locationVeto?: string;
 }
 
 /** What the engine decided; canonical facts only, phrased later by the language layer. */

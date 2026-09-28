@@ -34,110 +34,129 @@ describe("renai-001 field route", () => {
     return post;
   };
 
-  it("walks exit 2 to the lobby doors on user language", async () => {
-    const post = client(makeApp());
+  const walk = async (app = makeApp()) => {
+    const post = client(app);
     const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
-    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
+    const send = (body: unknown) => post(`/api/sessions/${sessionId}/observations`, body);
+    return {
+      observe: (text: string, zone?: string) => send(zone ? { text, location: { zone } } : { text }),
+      crossed: () => send({ confirm: "crossed" }),
+      send,
+    };
+  };
 
-    // cp1 — the accessible anchor: elevator exit, not just "an exit".
-    let r = await observe("我看到出口2的牌子，SOGO復興館");
-    expect(r.verdict.verdict).toBe("CONFIRMED");
-    expect(r.action.type).toBe("GUIDE");
+  it("walks exit 2 ground level to the lobby, one job per step, crossings confirmed by the walker", async () => {
+    const { observe, crossed } = await walk();
+
+    let r = await observe("我在出口2外面，後面是SOGO復興館", "exit2");
+    expect(r.action).toMatchObject({ type: "GUIDE", instruction: "出口2出來，往右轉。" });
     expect(r.session.checkpointId).toBe("cp2");
 
-    // cp2 — the convenience store confirms the straight segment.
-    r = await observe("經過7-11了");
-    expect(r.session.checkpointId).toBe("cp3");
+    r = await observe("前面路口有YouBike", "yb");
+    expect(r.action.instruction).toBe("等綠燈，過復興南路。");
+    expect(r.expects).toBe("walker");
 
-    // cp3 — the eight-lane crossing; the Howard Plaza corner anchors it.
-    r = await observe("我看到福華飯店，到大路口了");
-    expect(r.session.checkpointId).toBe("cp4");
+    // While crossing, nothing but the walker's own "done" moves the walk on.
+    r = await observe("我看到仁愛路");
+    expect(r.session.checkpointId).toBe("cp2x");
+    expect(r.action.type).toBe("REANCHOR");
+    r = await crossed();
+    expect(r.action.instruction).toBe("過完馬路，往右轉。");
+    expect(r.expects).toBe("evidence");
 
-    // cp4 — the emergency/parking driveway confirms the hospital block,
-    // and the instruction says to keep walking, so the next stop is the lobby.
-    r = await observe("我看到紅色的急診跟一個P的車道");
-    expect(r.verdict.verdict).toBe("CONFIRMED");
+    r = await observe("到仁愛路口了，對面是福華飯店", "renai_fuxing");
+    expect(r.action.instruction).toBe("等綠燈，過仁愛路。");
+    r = await crossed();
+    expect(r.action.instruction).toBe("過完左轉，醫院在這一側。");
+
+    r = await observe("我看到紅色的急診跟一個P的車道", "er");
     expect(r.session.checkpointId).toBe("cp5");
 
-    // Mode B — a glass door alone can never confirm arrival.
-    r = await observe("我在一個玻璃門前面");
-    expect(r.verdict.verdict).toBe("INSUFFICIENT");
+    // The hospital name is printed all along the way: it only asks.
+    r = await observe("掛牌寫臺北市立聯合醫院", "lobby");
     expect(r.action.type).toBe("ASK");
-    expect(r.session.state).toBe("AMBIGUOUS");
 
-    // Mode D — arrival needs the entrance's own evidence.
-    r = await observe("掛牌寫臺北市立聯合醫院");
+    r = await observe("門口有復康巴士的牌子", "lobby");
     expect(r.action.type).toBe("CONFIRM_ARRIVAL");
     expect(r.session.state).toBe("ARRIVED");
   });
 
-  it("recovers when the user overshoots to Daan Rd", async () => {
-    const post = client(makeApp());
-    const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
-    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
+  it("never speaks or shows signal seconds: timings are field notes, marked unstable", () => {
+    for (const cp of route.checkpoints) {
+      expect(cp.instruction).not.toMatch(/秒/);
+      for (const o of cp.observations ?? []) expect(o.stable).toBe(false);
+    }
+    expect(JSON.stringify(route)).not.toMatch(/7-Eleven|7-11|小七|輪椅專用道|自行車標線/);
+  });
 
+  it("location vetoes a corner the walker cannot have reached, without inventing a place", async () => {
+    const { observe } = await walk();
+    await observe("出口2", "exit2");
+    const r = await observe("我看到YouBike", "exit2");
+    expect(r.verdict.locationVeto).toBe("exit2");
+    expect(r.action.type).toBe("REANCHOR");
+    expect(r.session.checkpointId).toBe("cp2");
+  });
+
+  it("an unknown location asks once at the lobby, then lets the lobby's own evidence arrive", async () => {
+    const { observe, crossed } = await walk();
     await observe("出口2");
-    await observe("小七");
+    await observe("YouBike");
+    await crossed();
     await observe("仁愛路");
+    await crossed();
     await observe("急診車道");
-
-    // Past the lobby, the Daan Rd corner is the walked-too-far evidence.
-    let r = await observe("我走到大安路了");
-    expect(r.verdict.verdict).toBe("CONFLICT");
-    expect(r.action.type).toBe("RECOVER");
-    expect(r.session.state).toBe("RECOVERING");
-    expect(r.session.checkpointId).toBe("cp4");
-
-    // Recovery closes only on confirmed evidence, then arrival still works.
-    r = await observe("回到急診的車道口了");
-    expect(r.session.state).toBe("AT_CHECKPOINT");
+    let r = await observe("看到復康巴士臨時停車區的牌子");
+    expect(r.action.type).toBe("ASK");
     r = await observe("看到復康巴士臨時停車區的牌子");
-    expect(r.session.checkpointId).toBe("cp5");
-    r = await observe("門口掛牌是聯合醫院仁愛院區");
     expect(r.session.state).toBe("ARRIVED");
   });
 
-  it("answers the entrance question: an emergency sign means keep walking to the lobby", async () => {
-    const post = client(makeApp());
-    const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
-    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
+  it("a known zone short of the lobby holds arrival back", async () => {
+    const { observe, crossed } = await walk();
     await observe("出口2");
-    await observe("小七");
-    await observe("福華飯店");
+    await observe("YouBike");
+    await crossed();
+    await observe("仁愛路");
+    await crossed();
     await observe("急診車道");
+    const r = await observe("看到排班計程車的牌子", "renai_fuxing");
+    expect(r.verdict.locationVeto).toBe("renai_fuxing");
+    expect(r.session.state).not.toBe("ARRIVED");
+  });
 
-    let r = await observe("我在一個玻璃門前面");
-    expect(r.action.type).toBe("ASK");
-
-    // "Yes, it says 急診" — still at the driveway; the lobby is a little further on.
-    r = await observe("對，上面寫急診");
-    expect(r.verdict.verdict).toBe("CONFLICT");
+  it("recovers from the Daan Rd side straight back to the lobby", async () => {
+    const { observe, crossed } = await walk();
+    await observe("出口2");
+    await observe("YouBike");
+    await crossed();
+    await observe("仁愛路");
+    await crossed();
+    await observe("急診車道");
+    let r = await observe("我走到大安路了");
     expect(r.action.type).toBe("RECOVER");
     expect(r.session.checkpointId).toBe("cp5");
+    r = await observe("門口掛牌是黃色直式掛牌", "lobby");
+    expect(r.session.state).toBe("ARRIVED");
+  });
 
-    // The emergency pylon also reads 仁愛院區 — conflict must beat arrival.
-    r = await observe("牌子寫仁愛院區急診");
+  it("an emergency sign at the lobby step means keep walking; conflict beats arrival", async () => {
+    const { observe, crossed } = await walk();
+    await observe("出口2");
+    await observe("YouBike");
+    await crossed();
+    await observe("仁愛路");
+    await crossed();
+    await observe("急診車道");
+    const r = await observe("牌子寫復康巴士，旁邊寫急診", "lobby");
     expect(r.verdict.verdict).toBe("CONFLICT");
     expect(r.session.state).not.toBe("ARRIVED");
-
-    r = await observe("黃色掛牌寫臺北市立聯合醫院");
-    expect(r.session.state).toBe("ARRIVED");
   });
 
-  it("anchors the exit by what is visible looking out, not by in-station line signs", async () => {
-    const post = client(makeApp());
-    const { sessionId } = await post("/api/sessions", { routeId: route.routeId });
-    const observe = (text: string) => post(`/api/sessions/${sessionId}/observations`, { text });
-    let r = await observe("我看到板南線的指標");
-    expect(r.verdict.verdict).toBe("UNKNOWN");
-    expect(r.session.checkpointId).toBe("cp1");
-    // Every station map's legend prints 無障礙坡道 — reading it proves nothing about the exit.
-    r = await observe("地圖下面寫無障礙坡道");
-    expect(r.verdict.verdict).not.toBe("CONFIRMED");
-    expect(r.session.checkpointId).toBe("cp1");
-    r = await observe("出來正前方是忠孝東路跟復興南路的路口");
-    expect(r.verdict.verdict).toBe("CONFIRMED");
-    expect(r.session.checkpointId).toBe("cp2");
+  it("rejects a zone the route does not have", async () => {
+    const { send } = await walk();
+    const res = await send({ text: "出口2", location: { zone: "moon" } });
+    expect(res.error).toBe("invalid location");
   });
 
   it("never treats an unregistered landmark as evidence", async () => {
@@ -150,23 +169,21 @@ describe("renai-001 field route", () => {
     expect(r.session.checkpointId).toBe("cp1");
   });
 
-  it("keeps recovery pointers and next ids inside the route", () => {
+  it("keeps recovery pointers, next ids and zones inside the route", () => {
     const ids = new Set(route.checkpoints.map((c) => c.id));
+    const zones = new Set((route.zones ?? []).map((z) => z.id));
     for (const cp of route.checkpoints) {
       if (cp.next) expect(ids.has(cp.next)).toBe(true);
-      for (const c of cp.conflictLandmarks ?? []) {
-        expect(ids.has(c.recoveryPointer)).toBe(true);
-      }
+      for (const c of cp.conflictLandmarks ?? []) expect(ids.has(c.recoveryPointer)).toBe(true);
+      for (const z of [...(cp.zones?.allow ?? []), ...(cp.zones?.ask ?? [])]) expect(zones.has(z), `${cp.id}:${z}`).toBe(true);
+      if (cp.confirmBy === "walker") expect(cp.expectedLandmarks).toEqual([]);
     }
-    // The terminal checkpoint declares arrival evidence; no other one does.
     const terminals = route.checkpoints.filter((c) => c.arrivalEvidence);
     expect(terminals.map((c) => c.id)).toEqual(["cp5"]);
-    // Crystal's field ruling: Howard Plaza marks the Renai crossing (seeing it
-    // is on-route evidence, so it is an anchor, never a conflict).
-    const cp3 = route.checkpoints.find((c) => c.id === "cp3");
-    expect(cp3?.expectedLandmarks).toContain("福華飯店");
-    expect(cp3?.conflictLandmarks ?? []).toEqual([]);
-    // Vocabulary is normalized and non-empty — the fail-closed boundary exists.
+    // Arrival needs lobby-only evidence; the hospital name is shared everywhere.
+    const cp5 = terminals[0]!;
+    expect(cp5.arrivalEvidence).not.toContain("臺北市立聯合醫院");
+    expect(cp5.ambiguity?.sharedEvidence).toContain("臺北市立聯合醫院");
     expect(routeVocabulary(route).size).toBeGreaterThan(10);
   });
 });

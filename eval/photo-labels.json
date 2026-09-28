@@ -1,30 +1,18 @@
 {
   "routeId": "renai-001",
   "photoDir": "field trip photos",
-  "about": "Ground truth for the renai-001 field photos (2026-09-26). Drafted by Opus 2026-09-27; Crystal checked the 12 uncertain rows on 2026-09-28 (all resolved). zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do.",
-  "zones": [
-    "station",
-    "cp1",
-    "cp2",
-    "cp3",
-    "cp4",
-    "cp5",
-    "inside",
-    "past",
-    "noise"
-  ],
+  "about": "Ground truth for the renai-001 field photos (2026-09-26). Drafted by Opus 2026-09-27; Crystal checked the 12 uncertain rows on 2026-09-28 (all resolved). zone = where the photo was taken; expect = route terms that are really legible in the photo; optional = terms a reader may fairly report but that are not required. Photos never enter the repo; only their file names do. Trip 2 (2026-09-28) rows are placed by Opus from GPS and content; Crystal has not checked them yet.",
   "photos": [
     {
       "file": "S__121634827_0.jpg",
-      "zone": "past",
       "expect": [
         "綠色頂棚走廊"
       ],
-      "note": "綠色頂棚長廊（大安路側）＝走過頭"
+      "note": "綠色頂棚長廊（大安路側）＝走過頭",
+      "place": "past"
     },
     {
       "file": "S__121634828_0.jpg",
-      "zone": "past",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區",
@@ -35,11 +23,11 @@
         "急診",
         "停車場"
       ],
-      "note": "仁愛×大安路口的醫院立柱（ENTRANCE ↑ 大廳入口／急診室入口／停車場入口）——已經走過大廳。Crystal 2026-09-28 核對"
+      "note": "仁愛×大安路口的醫院立柱（ENTRANCE ↑ 大廳入口／急診室入口／停車場入口）——已經走過大廳。Crystal 2026-09-28 核對",
+      "place": "past"
     },
     {
       "file": "S__121634829_0.jpg",
-      "zone": "cp4",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區"
@@ -47,47 +35,47 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "花台上的院名石碑。位置未確認：若就在大廳門口，zone 應改 cp5"
+      "note": "花台上的院名石碑。位置未確認：若就在大廳門口，zone 應改 cp5",
+      "place": "er"
     },
     {
       "file": "S__121634830_0.jpg",
-      "zone": "cp5",
       "expect": [],
       "optional": [
         "臺北市立聯合醫院",
         "聯合醫院",
         "仁愛院區"
       ],
-      "note": "大廳車道上方的金字院名＋車輛「出口」牌；金字斜拍、在陰影裡"
+      "note": "大廳車道上方的金字院名＋車輛「出口」牌；金字斜拍、在陰影裡",
+      "place": "lobby"
     },
     {
       "file": "S__121634831_0.jpg",
-      "zone": "cp5",
       "expect": [],
       "optional": [
         "玻璃門",
         "聯合醫院",
         "臺北市立聯合醫院"
       ],
-      "note": "大廳玻璃自動門（門上蝕刻院名很淡）；有人臉"
+      "note": "大廳玻璃自動門（門上蝕刻院名很淡）；有人臉",
+      "place": "lobby"
     },
     {
       "file": "S__121634832_0.jpg",
-      "zone": "cp5",
       "expect": [],
-      "note": "大廳車道地面「本院全面禁菸」；無路線詞彙；有人"
+      "note": "大廳車道地面「本院全面禁菸」；無路線詞彙；有人",
+      "place": "lobby"
     },
     {
       "file": "S__121634833_0.jpg",
-      "zone": "cp5",
       "expect": [
         "排班計程車"
       ],
-      "note": "「排班計程車 請入內／入口 Entrance」大廳車道入口"
+      "note": "「排班計程車 請入內／入口 Entrance」大廳車道入口",
+      "place": "lobby"
     },
     {
       "file": "S__121634834_0.jpg",
-      "zone": "cp4",
       "expect": [
         "急診",
         "仁愛院區"
@@ -95,75 +83,74 @@
       "optional": [
         "停車場"
       ],
-      "note": "急診 EMERGENCY＋P 立牌（右車道緊急公務／左車道一般臨停）"
+      "note": "急診 EMERGENCY＋P 立牌（右車道緊急公務／左車道一般臨停）",
+      "place": "er"
     },
     {
       "file": "S__121634835_0.jpg",
-      "zone": "cp3",
       "expect": [],
       "optional": [
         "大路口",
         "八線道"
       ],
-      "note": "大路口＋高架捷運，無路名牌。位置推定"
+      "note": "大路口＋高架捷運，無路名牌。位置推定",
+      "place": "renai_fuxing"
     },
     {
       "file": "S__121634836_0.jpg",
-      "zone": "cp2",
-      "expect": [
-        "自行車標線"
-      ],
-      "note": "人行道自行車＋行人標線"
+      "expect": [],
+      "note": "人行道自行車＋行人標線（側別依第一趟路線推定：當時走東側）",
+      "place": "fuxing_east",
+      "optional": []
     },
     {
       "file": "S__121634838_0.jpg",
-      "zone": "cp2",
       "expect": [
         "聯合醫院",
         "仁愛院區"
       ],
-      "note": "復興南路上的公車站亭，站名「聯合醫院仁愛院區」——院名在復興南路上就出現。Crystal 2026-09-28 核對"
+      "note": "復興南路上的公車站亭，站名「聯合醫院仁愛院區」——院名在復興南路上就出現。Crystal 2026-09-28 核對",
+      "place": "fuxing_west"
     },
     {
       "file": "S__121634839_0.jpg",
-      "zone": "cp3",
       "expect": [],
       "optional": [
         "大路口"
       ],
-      "note": "仁愛×復興南路口的行人倒數（拍到 84 秒；Crystal：對長輩保守寫 75 秒）。Crystal 2026-09-28 核對"
+      "note": "仁愛×復興南路口的行人倒數（拍到 84 秒；Crystal：對長輩保守寫 75 秒）。Crystal 2026-09-28 核對",
+      "place": "renai_fuxing"
     },
     {
       "file": "S__121634840_0.jpg",
-      "zone": "noise",
       "expect": [],
-      "note": "糊掉的人行道（黃昏），看不出位置"
+      "note": "糊掉的人行道（黃昏），看不出位置",
+      "place": "noise"
     },
     {
       "file": "S__121634841_0.jpg",
-      "zone": "cp1",
       "expect": [],
       "optional": [
         "大路口",
         "自行車標線"
       ],
-      "note": "忠孝東路對側往 SOGO 白色復興館拍；右側有自行車穿越道標線。Crystal 2026-09-28 核對"
+      "note": "忠孝東路對側往 SOGO 白色復興館拍；右側有自行車穿越道標線。Crystal 2026-09-28 核對",
+      "place": "exit2"
     },
     {
       "file": "S__121634842_0.jpg",
-      "zone": "cp1",
       "expect": [],
-      "note": "出口2外「無障礙坡道」牌（已刻意不收進詞彙）"
+      "note": "出口2外「無障礙坡道」牌（已刻意不收進詞彙）",
+      "place": "exit2"
     },
     {
       "file": "S__121634843_0.jpg",
-      "zone": "cp1",
       "expect": [],
-      "note": "電梯 20m → ＋無障礙坡道牌"
+      "note": "電梯 20m → ＋無障礙坡道牌",
+      "place": "exit2"
     },
     {
       "file": "S__121634844_0.jpg",
-      "zone": "station",
       "expect": [],
       "note": "站內出口資訊板，列出所有出口與目的地（含 SOGO復興館、忠孝東路三段、福華飯店、聯合醫院仁愛院區、大安路一段）——不代表人在出口2",
       "optional": [
@@ -174,11 +161,11 @@
         "聯合醫院",
         "仁愛院區",
         "大安路"
-      ]
+      ],
+      "place": "station"
     },
     {
       "file": "S__121634845_0.jpg",
-      "zone": "cp1",
       "expect": [],
       "note": "街區地圖＋轉乘資訊，在 1F。Crystal 2026-09-28 核對",
       "optional": [
@@ -186,21 +173,21 @@
         "SOGO復興館",
         "忠孝東路",
         "大安路"
-      ]
+      ],
+      "place": "exit2"
     },
     {
       "file": "S__121634846_0.jpg",
-      "zone": "cp1",
       "expect": [],
       "optional": [
         "1號電梯",
         "出口2"
       ],
-      "note": "1F 的 1號電梯（★1），樓層牌很小；有人臉"
+      "note": "1F 的 1號電梯（★1），樓層牌很小；有人臉",
+      "place": "exit2"
     },
     {
       "file": "S__121634847_0.jpg",
-      "zone": "cp1",
       "expect": [
         "1號電梯",
         "SOGO復興館"
@@ -208,11 +195,11 @@
       "optional": [
         "出口2"
       ],
-      "note": "1F 1號電梯正面＋樓層牌「1F 出口2 SOGO復興館」；有人臉"
+      "note": "1F 1號電梯正面＋樓層牌「1F 出口2 SOGO復興館」；有人臉",
+      "place": "exit2"
     },
     {
       "file": "S__121634849_0.jpg",
-      "zone": "cp1",
       "expect": [
         "出口2",
         "SOGO復興館"
@@ -220,11 +207,11 @@
       "note": "1F 站內資訊圖（「您的位置」在 1F）＋ ←出口2 SOGO復興館",
       "optional": [
         "大安路"
-      ]
+      ],
+      "place": "exit2"
     },
     {
       "file": "S__121634850_0.jpg",
-      "zone": "cp1",
       "expect": [
         "出口2",
         "SOGO復興館"
@@ -232,81 +219,83 @@
       "note": "同一張 1F 資訊圖下半部，也印著 大安路一段（出口3）",
       "optional": [
         "大安路"
-      ]
+      ],
+      "place": "exit2"
     },
     {
       "file": "S__121634851_0.jpg",
-      "zone": "station",
       "expect": [],
-      "note": "糊掉的「月台電梯」牌"
+      "note": "糊掉的「月台電梯」牌",
+      "place": "station"
     },
     {
       "file": "S__121634852_0.jpg",
-      "zone": "cp1",
       "expect": [],
-      "note": "出口2外無障礙坡道牌，街上有路人"
+      "note": "出口2外無障礙坡道牌，街上有路人",
+      "place": "exit2"
     },
     {
       "file": "S__121634853_0.jpg",
-      "zone": "cp1",
       "expect": [],
-      "note": "輪椅 ← 指示牌＋計程車（車牌可辨識）"
+      "note": "輪椅 ← 指示牌＋計程車（車牌可辨識）",
+      "place": "exit2"
     },
     {
       "file": "S__121634854_0.jpg",
-      "zone": "cp2",
       "expect": [],
       "optional": [
         "停車場"
       ],
-      "note": "復興南路人行道，「P 20M 停車場」小牌——不是醫院停車場"
+      "note": "復興南路人行道，「P 20M 停車場」小牌——不是醫院停車場（側別依第一趟路線推定：當時走東側）",
+      "place": "fuxing_east"
     },
     {
       "file": "S__121634855_0.jpg",
-      "zone": "noise",
       "expect": [],
-      "note": "長椅，位置未知"
+      "note": "長椅，位置未知",
+      "place": "noise"
     },
     {
       "file": "S__121634856_0.jpg",
-      "zone": "noise",
       "expect": [],
-      "note": "腳、糊掉"
+      "note": "腳、糊掉",
+      "place": "noise"
     },
     {
       "file": "S__121634857_0.jpg",
-      "zone": "noise",
       "expect": [],
-      "note": "原263 公車，LED 顯示英文 Renai（不是「仁愛路」三字）；司機臉"
+      "note": "原263 公車，LED 顯示英文 Renai（不是「仁愛路」三字）；司機臉",
+      "place": "noise"
     },
     {
       "file": "S__121634858_0.jpg",
-      "zone": "cp3",
       "expect": [],
-      "note": "瀚群骨科診所：仁愛×復興南路口，醫院這一側。Crystal 2026-09-28 核對"
+      "note": "瀚群骨科診所：仁愛×復興南路口，醫院這一側。Crystal 2026-09-28 核對",
+      "place": "hospital_side",
+      "optional": [
+        "瀚群骨科"
+      ]
     },
     {
       "file": "S__121634860_0.jpg",
-      "zone": "cp2",
-      "expect": [
-        "自行車標線"
-      ],
-      "note": "褪色的自行車標線"
+      "expect": [],
+      "note": "褪色的自行車標線（側別依第一趟路線推定：當時走東側）",
+      "place": "fuxing_east",
+      "optional": []
     },
     {
       "file": "S__121634861_0.jpg",
-      "zone": "cp4",
       "expect": [],
       "optional": [
         "急診",
         "救護車",
         "停車場"
       ],
-      "note": "急診/P 立牌背面（右車道→／左車道→），遠處小紅字急診＋救護車"
+      "note": "急診/P 立牌背面（右車道→／左車道→），遠處小紅字急診＋救護車",
+      "place": "er"
     },
     {
       "file": "S__121634862_0.jpg",
-      "zone": "cp5",
       "expect": [
         "臺北市立聯合醫院"
       ],
@@ -314,11 +303,11 @@
         "聯合醫院",
         "玻璃門"
       ],
-      "note": "大廳玻璃門＋直式黃色掛牌"
+      "note": "大廳玻璃門＋直式黃色掛牌",
+      "place": "lobby"
     },
     {
       "file": "S__121634863_0.jpg",
-      "zone": "cp5",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區"
@@ -326,17 +315,17 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "直式黃色掛牌近拍＋院區看板"
+      "note": "直式黃色掛牌近拍＋院區看板",
+      "place": "lobby"
     },
     {
       "file": "S__121634864_0.jpg",
-      "zone": "noise",
       "expect": [],
-      "note": "花崗岩地板"
+      "note": "花崗岩地板",
+      "place": "noise"
     },
     {
       "file": "S__121634865_0.jpg",
-      "zone": "inside",
       "expect": [],
       "optional": [
         "臺北市立聯合醫院",
@@ -345,17 +334,17 @@
         "急診",
         "仁愛路"
       ],
-      "note": "院內樓層一覽表（平面圖上有「急診」「仁愛路四段」）"
+      "note": "院內樓層一覽表（平面圖上有「急診」「仁愛路四段」）",
+      "place": "inside"
     },
     {
       "file": "S__121634866_0.jpg",
-      "zone": "inside",
       "expect": [],
-      "note": "院內醫療大樓樓層一覽表（英文院名）"
+      "note": "院內醫療大樓樓層一覽表（英文院名）",
+      "place": "inside"
     },
     {
       "file": "S__121634867_0.jpg",
-      "zone": "inside",
       "expect": [],
       "optional": [
         "臺北市立聯合醫院",
@@ -365,38 +354,38 @@
         "大安路",
         "仁愛路"
       ],
-      "note": "院內平面圖，印著「大安路一段」「急診」——cp5 誤觸 conflict 的測點"
+      "note": "院內平面圖，印著「大安路一段」「急診」——cp5 誤觸 conflict 的測點",
+      "place": "inside"
     },
     {
       "file": "S__121634868_0.jpg",
-      "zone": "inside",
       "expect": [],
       "optional": [
         "急診"
       ],
-      "note": "院內 1F 指標柱（急診 →、服務台）"
+      "note": "院內 1F 指標柱（急診 →、服務台）",
+      "place": "inside"
     },
     {
       "file": "S__121634869_0.jpg",
-      "zone": "cp2",
       "expect": [],
       "optional": [
         "自行車標線"
       ],
-      "note": "行人（大人牽小孩）標線，位置推定"
+      "note": "行人（大人牽小孩）標線，位置推定（側別依第一趟路線推定：當時走東側）",
+      "place": "fuxing_east"
     },
     {
       "file": "S__121634871_0.jpg",
-      "zone": "cp5",
       "expect": [
         "復康巴士",
         "臨時停車區"
       ],
-      "note": "復康巴士及無障礙計程車臨時停車區（3分鐘）"
+      "note": "復康巴士及無障礙計程車臨時停車區（3分鐘）",
+      "place": "lobby"
     },
     {
       "file": "S__121634872_0.jpg",
-      "zone": "past",
       "expect": [
         "臺北市立聯合醫院",
         "仁愛院區"
@@ -404,7 +393,650 @@
       "optional": [
         "聯合醫院"
       ],
-      "note": "仁愛×大安路口的醫院立柱（對面義美食品）——已經走過大廳。Crystal 2026-09-28 核對"
+      "note": "仁愛×大安路口的醫院立柱（對面義美食品）——已經走過大廳。Crystal 2026-09-28 核對",
+      "place": "past"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "仁愛×復興路口，腳踏車＋行人共用標線",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "仁愛×復興路口，腳踏車＋行人共用標線",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路上（側別不明，保守當成西側）；5591 是全家",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路上（側別不明，保守當成西側）；5591 是全家",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路上（側別不明，保守當成西側）；5591 是全家",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "place": "yb",
+      "expect": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄"
+      ],
+      "optional": [
+        "復興南路"
+      ],
+      "note": "YouBike 路口的路牌",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [],
+      "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [
+        "瀚群骨科"
+      ],
+      "note": "過仁愛路中，對面瀚群骨科",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "仁愛×復興路口斑馬線",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [],
+      "note": "急診車道附近的店面，無路線詞彙",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "place": "past",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "急診",
+        "停車場",
+        "YouBike"
+      ],
+      "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "place": "past",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "急診",
+        "停車場",
+        "YouBike"
+      ],
+      "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "place": "past",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "急診",
+        "停車場",
+        "YouBike"
+      ],
+      "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ],
+      "note": "從大安路側走向大廳，金字院名（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ],
+      "note": "從大安路側走向大廳，金字院名（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ],
+      "note": "從大安路側走向大廳，金字院名（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳門口（定位 8 m）（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳門口（定位 8 m）（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳門口（定位 8 m）（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [
+        "急診",
+        "仁愛院區",
+        "停車場"
+      ],
+      "note": "急診/P 立牌（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "place": "er",
+      "expect": [
+        "急診"
+      ],
+      "optional": [
+        "急診",
+        "仁愛院區",
+        "停車場"
+      ],
+      "note": "急診/P 立牌（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [
+        "急診",
+        "仁愛院區",
+        "停車場"
+      ],
+      "note": "急診/P 立牌（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "過仁愛路的 40 秒影片（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "過仁愛路的 40 秒影片（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "place": "renai_fuxing",
+      "expect": [],
+      "optional": [],
+      "note": "過仁愛路的 40 秒影片（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "復興南路公車站「聯合醫院仁愛院區」（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "復興南路公車站「聯合醫院仁愛院區」（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "復興南路公車站「聯合醫院仁愛院區」（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "同一個公車站（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "同一個公車站（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "place": "fuxing_west",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區"
+      ],
+      "note": "同一個公車站（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄",
+        "YouBike"
+      ],
+      "note": "YouBike 路口過復興南路（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄",
+        "YouBike"
+      ],
+      "note": "YouBike 路口過復興南路（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄",
+        "YouBike"
+      ],
+      "note": "YouBike 路口過復興南路（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（定位 128 m）（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（定位 128 m）（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（定位 128 m）（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳，往文湖線手扶梯（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳，往文湖線手扶梯（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳，往文湖線手扶梯（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "出口2",
+        "SOGO復興館",
+        "1號電梯"
+      ],
+      "note": "1F 站體大廳（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "SOGO復興館"
+      ],
+      "note": "出口2 外的無障礙坡道（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "SOGO復興館"
+      ],
+      "note": "出口2 外的無障礙坡道（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "place": "exit2",
+      "expect": [],
+      "optional": [
+        "SOGO復興館"
+      ],
+      "note": "出口2 外的無障礙坡道（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "YouBike"
+      ],
+      "note": "YouBike 站＋全家（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "YouBike"
+      ],
+      "note": "YouBike 站＋全家（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "place": "yb",
+      "expect": [],
+      "optional": [
+        "YouBike"
+      ],
+      "note": "YouBike 站＋全家（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [
+        "急診",
+        "救護車",
+        "停車場"
+      ],
+      "note": "急診車道，救護車（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [
+        "急診",
+        "救護車",
+        "停車場"
+      ],
+      "note": "急診車道，救護車（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "place": "er",
+      "expect": [],
+      "optional": [
+        "急診",
+        "救護車",
+        "停車場"
+      ],
+      "note": "急診車道，救護車（影片畫面 3/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "黃色直式掛牌",
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳前車道到門口掛牌（影片畫面 1/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "黃色直式掛牌",
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳前車道到門口掛牌（影片畫面 2/3）",
+      "trip": 2
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "place": "lobby",
+      "expect": [],
+      "optional": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "黃色直式掛牌",
+        "玻璃門",
+        "醫院大樓"
+      ],
+      "note": "大廳前車道到門口掛牌（影片畫面 3/3）",
+      "trip": 2
     }
   ],
   "excluded": [
@@ -412,5 +1044,52 @@
       "file": "截圖 2026-09-26 下午6.58.20.png",
       "reason": "Chrome 截圖，不是實地照片"
     }
-  ]
+  ],
+  "places": {
+    "about": "Where along renai-001 v2 a place is (pos: cp1=1 … cp5=7, between = fraction) and the zone a phone standing there would report.",
+    "station": {
+      "pos": 0,
+      "zone": "unknown"
+    },
+    "exit2": {
+      "pos": 1,
+      "zone": "exit2"
+    },
+    "fuxing_west": {
+      "pos": 1.5,
+      "zone": "unknown"
+    },
+    "yb": {
+      "pos": 2,
+      "zone": "yb"
+    },
+    "fuxing_east": {
+      "pos": 3,
+      "zone": "unknown"
+    },
+    "renai_fuxing": {
+      "pos": 4,
+      "zone": "renai_fuxing"
+    },
+    "hospital_side": {
+      "pos": 5,
+      "zone": "renai_fuxing"
+    },
+    "er": {
+      "pos": 6,
+      "zone": "er"
+    },
+    "lobby": {
+      "pos": 7,
+      "zone": "lobby"
+    },
+    "inside": {
+      "pos": 7,
+      "zone": "lobby"
+    },
+    "past": {
+      "pos": 8,
+      "zone": "daan"
+    }
+  }
 }

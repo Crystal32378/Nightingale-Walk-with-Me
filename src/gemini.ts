@@ -148,7 +148,7 @@ export class GeminiInterpreter implements Interpreter {
     private readonly client: LlmClient,
     private readonly fallback: Interpreter,
     private readonly timeoutMs = 8000,
-    private readonly photoTimeoutMs = 15000,
+    private readonly photoTimeoutMs = 20000,
   ) {}
 
   async interpret(text: string, route: Route): Promise<Observation> {

@@ -30,8 +30,10 @@ npm run typecheck
 
 ## The route
 
-**MRT Zhongxiao Fuxing Exit 2 (elevator) → Taipei City Hospital Renai Branch lobby entrance (step-free).**
-Walked and photographed on 2026-09-26 by the route author; every landmark string is copied from real signage. The route *is* the accessible route: the only exit with both an elevator and a ramp, the side of the street that has a wheelchair lane, an 80-second crossing, and an entrance where rehab buses and accessible taxis stop at the door. Field notes: `docs/route-renai-field-notes.md`. Verified in daylight and dusk only — night-time sign visibility is not yet verified.
+**MRT Zhongxiao Fuxing Exit 2, ground level (step-free passage) → Taipei City Hospital Renai Branch lobby entrance (step-free).**
+Walked twice by the route author (2026-09-26 and 2026-09-28); every landmark string is copied from real signage. The second walk corrected the first: Fuxing S. Rd has a shared bike-and-pedestrian path, not a wheelchair lane, and the corner stores are FamilyMart. The route is step-free end to end: exit 2 is the only exit with both an elevator and a ramp, both crossings have signals and ramps at each end, and rehab buses and accessible taxis stop at the lobby door. Signal timings were observed once and are kept as unstable field notes — never spoken, never shown. Field notes: `docs/route-renai-field-notes.md`. Verified in daylight and dusk only — night-time sign visibility is not yet verified.
+
+**Location only vetoes.** The phone turns its position into a coarse route zone on the device; raw coordinates are never sent. A zone can stop a checkpoint the walker cannot have reached yet from being confirmed; it never confirms anything by itself. Arrival still needs the lobby's own evidence (the rehab-bus sign, the taxi-rank sign, the vertical yellow plaque), because the hospital's name is printed on signs all the way from Fuxing S. Rd to the Daan Rd corner.
 
 ## Voice: Gemini TTS
 

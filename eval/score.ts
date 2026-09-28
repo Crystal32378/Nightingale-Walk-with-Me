@@ -1,101 +1,98 @@
 import { step } from "../src/engine.js";
-import type { EngineAction, Observation, Route, VerdictResult } from "../src/types.js";
+import { UNKNOWN_ZONE, type EngineAction, type LocationFix, type Observation, type Route, type VerdictResult } from "../src/types.js";
 import { routeVocabulary } from "../src/validator.js";
 
 /**
- * Where a photo was taken. `inside` is past the lobby doors (arrival is right),
- * `past` is walked-too-far, `noise` is anywhere or nowhere in particular.
+ * Where a photo was taken, as a named place along the route. `noise` is
+ * anywhere or nowhere in particular; `past` is walked beyond the lobby.
  */
-export type Zone = "station" | "cp1" | "cp2" | "cp3" | "cp4" | "cp5" | "inside" | "past" | "noise";
-
 export interface PhotoLabel {
   file: string;
-  zone: Zone;
+  place: string;
   expect: string[];
   optional?: string[];
   note?: string;
   review?: boolean;
+  trip?: number;
 }
 
-export type Outcome =
-  | "correct"
-  | "miss"
-  | "ok"
-  | "advance"
-  | "false_confirm"
-  | "false_arrival"
-  | "false_conflict";
+/** pos: where the place sits between checkpoints (cp at index i has pos i+1). zone: what a phone there reports. */
+export type Places = Record<string, { pos: number; zone: string }>;
+
+export type Outcome = "correct" | "miss" | "ok" | "advance" | "false_confirm" | "false_arrival" | "false_conflict";
 
 export interface Cell {
   checkpointId: string;
   action: EngineAction["type"];
   verdict: VerdictResult["verdict"];
   outcome: Outcome;
-  /** Could this (photo place, engine checkpoint) pair happen on a real walk? */
+  /** Could this (place, engine checkpoint) pair happen on a real walk? */
   reachable: boolean;
+  vetoed: boolean;
 }
 
-const ORDER: Record<Zone, number> = {
-  station: 0, cp1: 1, cp2: 2, cp3: 3, cp4: 4, cp5: 5, inside: 5, past: 6, noise: -1,
-};
-
-const cpIndex = (id: string): number => Number(id.replace(/^cp/, ""));
 const norm = (s: string) => s.trim().toLowerCase();
 
+/** `none`: the phone reports nothing. `place`: it reports the zone of the place the photo was taken. */
+export type LocationMode = "none" | "place";
+
 /**
- * Judges one engine step, taken at checkpoint `checkpointId`, on an observation
- * of a photo taken in `label.zone`.
+ * Judges one engine step, taken while the engine expects `checkpointId`, on an
+ * observation of a photo taken at `label.place`.
  *
- * Reachable pairs are the ones a real walk produces: the person is at the
- * checkpoint the engine expects, or still standing at the previous one (the
- * moment right after a confirmation), or walked past the lobby, or the photo
- * says nothing about place at all. A confirmation there while the person has
- * not reached the checkpoint is the failure that must never happen.
+ * Reachable pairs are the ones a real walk produces: the person is somewhere
+ * between the previous checkpoint and this one, or walked past the lobby, or
+ * the photo says nothing about place at all. Confirming a checkpoint the person
+ * has not reached is the failure that must never happen.
  */
 export function judge(
   route: Route,
+  places: Places,
   label: PhotoLabel,
   checkpointId: string,
   observation: Observation,
+  mode: LocationMode = "none",
 ): Cell {
+  const idx = route.checkpoints.findIndex((cp) => cp.id === checkpointId);
+  const c = idx + 1;
+  const isLast = idx === route.checkpoints.length - 1;
+  const noise = label.place === "noise";
+  const place = noise ? undefined : places[label.place];
+  if (!noise && !place) throw new Error(`unknown place ${label.place} for ${label.file}`);
+  const location: LocationFix | undefined =
+    mode === "place" ? { zone: place?.zone ?? UNKNOWN_ZONE } : undefined;
+
   const result = step(
     route,
     { routeId: route.routeId, state: "AT_CHECKPOINT", checkpointId, questionCount: 0 },
     observation,
+    location,
   );
   const action = result.action.type;
   const verdict = result.verdict.verdict;
-  const c = cpIndex(checkpointId);
-  const z = ORDER[label.zone];
   const shown = new Set([...label.expect, ...(label.optional ?? [])].map(norm));
-  const lastId = route.checkpoints[route.checkpoints.length - 1]!.id;
-  const isLast = checkpointId === lastId;
+  const past = label.place === "past";
+  const z = place?.pos ?? -1;
 
-  const reachable =
-    label.zone === "noise" || z === c || z === c - 1 || (label.zone === "past" && isLast);
-
-  const conflictIsReal = () =>
-    result.verdict.matchedConflict !== null &&
-    shown.has(norm(result.verdict.matchedConflict.landmark));
+  const reachable = noise || (past ? isLast : c - 1 <= z && z <= c);
 
   let outcome: Outcome;
   if (action === "RECOVER") {
-    outcome = conflictIsReal() ? (label.zone === "past" || z < c ? "correct" : "false_conflict") : "false_conflict";
-  } else if (label.zone === "noise") {
+    const real = result.verdict.matchedConflict !== null && shown.has(norm(result.verdict.matchedConflict.landmark));
+    outcome = real && (past || z < c) ? "correct" : "false_conflict";
+  } else if (noise) {
     outcome = action === "GUIDE" ? "false_confirm" : action === "CONFIRM_ARRIVAL" ? "false_arrival" : "ok";
-  } else if (label.zone === "past") {
+  } else if (past) {
     if (isLast) outcome = action === "CONFIRM_ARRIVAL" ? "false_arrival" : action === "GUIDE" ? "false_confirm" : "miss";
     else outcome = action === "GUIDE" ? "advance" : "ok";
-  } else if (z === c) {
-    if (action === "CONFIRM_ARRIVAL") outcome = "correct";
-    else if (action === "GUIDE") outcome = isLast ? "miss" : "correct";
-    else outcome = label.expect.length > 0 ? "miss" : "ok";
-  } else if (z < c) {
-    outcome = action === "GUIDE" ? "false_confirm" : action === "CONFIRM_ARRIVAL" ? "false_arrival" : "ok";
+  } else if (z >= c) {
+    const home = z === c;
+    if (action === "CONFIRM_ARRIVAL" || action === "GUIDE") outcome = home ? "correct" : "advance";
+    else outcome = home && label.expect.length > 0 ? "miss" : "ok";
   } else {
-    outcome = action === "GUIDE" ? "advance" : "ok";
+    outcome = action === "GUIDE" ? "false_confirm" : action === "CONFIRM_ARRIVAL" ? "false_arrival" : "ok";
   }
-  return { checkpointId, action, verdict, outcome, reachable };
+  return { checkpointId, action, verdict, outcome, reachable, vetoed: result.verdict.locationVeto !== undefined };
 }
 
 export interface Reading {

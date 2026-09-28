@@ -19,9 +19,9 @@ import { buildPhotoPrompt, createVertexClient, parseObservation } from "../src/g
 import { EMPTY_PHOTO_OBSERVATION } from "../src/interpreter.js";
 import type { Route } from "../src/types.js";
 import { routeTerms } from "../src/validator.js";
-import { judge, termStats, type Cell, type PhotoLabel, type Reading } from "./score.js";
+import { judge, termStats, type Cell, type LocationMode, type PhotoLabel, type Places, type Reading } from "./score.js";
 
-const PROD_PHOTO_TIMEOUT_MS = 15000;
+const PROD_PHOTO_TIMEOUT_MS = 20000;
 
 const args = new Map<string, string>();
 for (let i = 2; i < process.argv.length; i += 2) args.set(process.argv[i]!.replace(/^--/, ""), process.argv[i + 1] ?? "");
@@ -30,8 +30,12 @@ const root = resolve(import.meta.dirname, "..");
 const labelsDoc = JSON.parse(readFileSync(join(root, "eval/photo-labels.json"), "utf8")) as {
   photoDir: string;
   photos: PhotoLabel[];
+  places: Places & { about?: string };
 };
-const labels = new Map(labelsDoc.photos.map((p) => [p.file, p]));
+const places = labelsDoc.places as Places;
+const only = args.get("trip");
+const photos = only ? labelsDoc.photos.filter((p) => String(p.trip ?? 1) === only) : labelsDoc.photos;
+const labels = new Map(photos.map((p) => [p.file, p]));
 const routePath = resolve(root, args.get("route") ?? "fixtures/route-renai-001.json");
 const route = JSON.parse(readFileSync(routePath, "utf8")) as Route;
 const outDir = resolve(root, args.get("out") ?? "eval/out");
@@ -70,7 +74,7 @@ async function readAll(): Promise<Reading[]> {
   const concurrency = Number(args.get("concurrency") ?? 4);
   const client = createVertexClient();
   const prompt = buildPhotoPrompt(route);
-  const jobs = labelsDoc.photos.flatMap((p) =>
+  const jobs = photos.flatMap((p) =>
     variants.flatMap((v) => Array.from({ length: repeat }, (_, r) => ({ file: p.file, variant: v, repeat: r }))),
   );
   const readings: Reading[] = [];
@@ -112,43 +116,46 @@ function score(readings: Reading[]) {
   const byVariant = new Map<string, Reading[]>();
   for (const r of readings) byVariant.set(r.variant, [...(byVariant.get(r.variant) ?? []), r]);
   const rows: Record<string, unknown>[] = [];
-  const failures: { file: string; variant: string; repeat: number; zone: string; cell: Cell; read: string[] }[] = [];
+  const failures: { file: string; variant: string; repeat: number; location: LocationMode; place: string; cell: Cell; read: string[] }[] = [];
+  const cpPos = new Map(route.checkpoints.map((cp, i) => [cp.id, i + 1]));
   for (const [variant, rs] of byVariant) {
     const ok = rs.filter((r) => !r.error);
-    const cells = ok.flatMap((r) =>
-      route.checkpoints.map((cp) => ({ r, cell: judge(route, labels.get(r.file)!, cp.id, r.observation) })),
-    );
-    const count = (pred: (c: Cell) => boolean) => cells.filter(({ cell }) => pred(cell)).length;
-    const home = cells.filter(({ r, cell }) => {
-      const l = labels.get(r.file)!;
-      const z = l.zone === "inside" ? "cp5" : l.zone === "past" ? "cp5" : l.zone;
-      return z === cell.checkpointId && l.expect.length > 0;
-    });
     const terms = termStats(route, labels, ok);
-    for (const { r, cell } of cells) {
-      if (["false_confirm", "false_arrival", "false_conflict"].includes(cell.outcome) || (cell.outcome === "miss" && cell.reachable)) {
-        failures.push({
-          file: r.file, variant, repeat: r.repeat, zone: labels.get(r.file)!.zone, cell,
-          read: [...r.observation.signage, ...r.observation.landmarks],
-        });
+    for (const mode of ["none", "place"] as LocationMode[]) {
+      const cells = ok.flatMap((r) =>
+        route.checkpoints.map((cp) => ({ r, cell: judge(route, places, labels.get(r.file)!, cp.id, r.observation, mode) })),
+      );
+      const count = (pred: (c: Cell) => boolean) => cells.filter(({ cell }) => pred(cell)).length;
+      const home = cells.filter(({ r, cell }) => {
+        const l = labels.get(r.file)!;
+        const cp = route.checkpoints.find((x) => x.id === cell.checkpointId)!;
+        return cp.confirmBy !== "walker" && places[l.place]?.pos === cpPos.get(cell.checkpointId) && l.expect.length > 0;
+      });
+      for (const { r, cell } of cells) {
+        if (["false_confirm", "false_arrival", "false_conflict"].includes(cell.outcome) || (cell.outcome === "miss" && cell.reachable)) {
+          failures.push({
+            file: r.file, variant, repeat: r.repeat, location: mode, place: labels.get(r.file)!.place, cell,
+            read: [...r.observation.signage, ...r.observation.landmarks],
+          });
+        }
       }
+      rows.push({
+        variant,
+        location: mode,
+        readings: rs.length,
+        errors: rs.length - ok.length,
+        timeouts: ok.filter((r) => r.timedOut).length,
+        medianMs: median(ok.map((r) => r.latencyMs)),
+        falseConfirm: count((c) => c.reachable && c.outcome === "false_confirm"),
+        falseArrival: count((c) => c.reachable && c.outcome === "false_arrival"),
+        falseConflict: count((c) => c.reachable && c.outcome === "false_conflict"),
+        strict: count((c) => c.outcome === "false_confirm" || c.outcome === "false_arrival"),
+        vetoes: count((c) => c.vetoed),
+        homeHits: `${home.filter(({ cell }) => cell.outcome === "correct").length}/${home.length}`,
+        termRecall: `${terms.read}/${terms.expected}`,
+        outOfVocab: terms.outOfVocab,
+      });
     }
-    rows.push({
-      variant,
-      readings: rs.length,
-      errors: rs.length - ok.length,
-      timeouts: ok.filter((r) => r.timedOut).length,
-      schemaInvalid: ok.filter((r) => r.schemaInvalid).length,
-      medianLatencyMs: median(ok.map((r) => r.latencyMs)),
-      reachableFalseConfirm: count((c) => c.reachable && c.outcome === "false_confirm"),
-      reachableFalseArrival: count((c) => c.reachable && c.outcome === "false_arrival"),
-      reachableFalseConflict: count((c) => c.reachable && c.outcome === "false_conflict"),
-      strictFalseConfirmOrArrival: count((c) => c.outcome === "false_confirm" || c.outcome === "false_arrival"),
-      homeHits: `${home.filter(({ cell }) => cell.outcome === "correct").length}/${home.length}`,
-      termRecall: `${terms.read}/${terms.expected}`,
-      unsupportedTerms: terms.unsupported.length,
-      outOfVocab: terms.outOfVocab,
-    });
   }
   return { rows, failures, unsupported: termStats(route, labels, readings.filter((r) => !r.error)).unsupported };
 }
@@ -167,7 +174,7 @@ if (args.has("replay")) {
   if (savedTerms !== JSON.stringify(routeTerms(route))) {
     console.error("warning: this route's vocabulary differs from the one the photos were read with; re-run live to be exact");
   }
-  readings = saved.readings;
+  readings = (saved.readings as Reading[]).filter((r) => labels.has(r.file));
   runId = `${saved.runId}-replay-${route.routeId}`;
 } else {
   runId = new Date().toISOString().replace(/[:.]/g, "-");
@@ -183,6 +190,6 @@ writeFileSync(
 console.table(result.rows);
 console.log(`\nfailures (${result.failures.length}):`);
 for (const f of result.failures) {
-  console.log(`  ${f.cell.outcome.padEnd(14)} ${f.file} [${f.variant}#${f.repeat}] zone=${f.zone} at=${f.cell.checkpointId} → ${f.cell.action} read=${JSON.stringify(f.read)}`);
+  console.log(`  ${f.cell.outcome.padEnd(14)} ${f.location.padEnd(5)} ${f.file} [${f.variant}#${f.repeat}] place=${f.place} at=${f.cell.checkpointId} → ${f.cell.action} read=${JSON.stringify(f.read)}`);
 }
 console.log(`\nsaved ${join(outDir, `${runId}.json`)}`);
