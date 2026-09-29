@@ -67,6 +67,18 @@ export function step(
   switch (verdict.verdict) {
     case "CONFLICT": {
       const conflict = verdict.matchedConflict!;
+      if (location && location.zone !== UNKNOWN_ZONE && conflict.zones && !conflict.zones.includes(location.zone)) {
+        // Reliably somewhere this landmark cannot mean: drop the recovery, stay put.
+        const held = { ...verdict, locationVeto: location.zone };
+        if (cp.ambiguity && session.questionCount < MAX_QUESTIONS) {
+          return {
+            verdict: held,
+            session: { ...session, state: "AMBIGUOUS", questionCount: session.questionCount + 1 },
+            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question },
+          };
+        }
+        return reanchor(session, cp, held);
+      }
       const target = findCheckpoint(route, conflict.recoveryPointer);
       if (!target) {
         throw new RouteError(`recovery pointer ${conflict.recoveryPointer} not in route`);

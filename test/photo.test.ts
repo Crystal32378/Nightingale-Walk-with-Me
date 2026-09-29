@@ -20,17 +20,17 @@ const seeing = (raw: string): LlmClient => ({
 describe("photo interpretation", () => {
   it("prompt carries the vocabulary and forbids guessing unreadable text", () => {
     const p = buildPhotoPrompt(route);
-    expect(p).toContain("- 出口2");
+    expect(p).toContain("- 大安路一段116巷");
     expect(p).toContain("do not guess");
   });
 
   it("returns the model's reading, stamped as a photo observation", async () => {
     const gi = new GeminiInterpreter(
-      seeing('{"landmarks":[],"signage":["出口2","SOGO復興館"],"confidence":"high","source":"text"}'),
+      seeing('{"landmarks":[],"signage":["大安路一段116巷","SOGO復興館"],"confidence":"high","source":"text"}'),
       new KeywordInterpreter(),
     );
     const obs = await gi.interpretPhoto(photo, route);
-    expect(obs.signage).toEqual(["出口2", "SOGO復興館"]);
+    expect(obs.signage).toEqual(["大安路一段116巷", "SOGO復興館"]);
     expect(obs.source).toBe("photo");
   });
 
@@ -52,7 +52,7 @@ describe("photo interpretation", () => {
 
 describe("photo observations over HTTP", () => {
   const app = (interpreter = new GeminiInterpreter(
-    seeing('{"landmarks":[],"signage":["出口2"],"confidence":"high"}'),
+    seeing('{"landmarks":[],"signage":["大安路一段116巷"],"confidence":"high"}'),
     new KeywordInterpreter(),
   )) => createApp({ routes: [route], store: new InMemorySessionStore(), interpreter });
   const post = async (a: ReturnType<typeof app>, path: string, body: unknown) => {
@@ -60,13 +60,16 @@ describe("photo observations over HTTP", () => {
     return { status: res.status, json: await res.json() };
   };
 
-  it("a readable exit-2 sign advances the walk", async () => {
+  it("a photo cannot confirm exit 2, but a readable corner sign advances the walk", async () => {
     const a = app();
     const { json: s } = await post(a, "/api/sessions", { routeId: route.routeId });
+    const first = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo });
+    expect(first.json.session.checkpointId).toBe("cp1");
+    await post(a, `/api/sessions/${s.sessionId}/observations`, { confirm: "done" });
     const { status, json } = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo });
     expect(status).toBe(200);
     expect(json.verdict.verdict).toBe("CONFIRMED");
-    expect(json.session.checkpointId).toBe("cp2");
+    expect(json.session.checkpointId).toBe("cp2x");
   });
 
   it("an interpreter that cannot see never moves the walk", async () => {

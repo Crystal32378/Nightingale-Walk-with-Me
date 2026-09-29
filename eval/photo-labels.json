@@ -433,12 +433,12 @@
       "place": "fuxing_west",
       "expect": [],
       "optional": [],
-      "note": "復興南路上（側別不明，保守當成西側）；5591 是全家",
+      "note": "復興南路上的全家；Crystal：這張沒有拍到路牌（模型讀出「仁愛路三段123巷13弄」是幻覺）",
       "trip": 2
     },
     {
       "file": "第二趟/jpg/IMG_5593.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [
         "大安路一段116巷",
         "仁愛路三段123巷13弄"
@@ -451,7 +451,7 @@
     },
     {
       "file": "第二趟/jpg/IMG_5594.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [],
       "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
@@ -459,7 +459,7 @@
     },
     {
       "file": "第二趟/jpg/IMG_5595.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [],
       "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
@@ -467,7 +467,7 @@
     },
     {
       "file": "第二趟/jpg/IMG_5596.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [],
       "note": "復興南路地面「行人優先 當心行人」，YouBike 路口附近",
@@ -509,8 +509,7 @@
         "仁愛院區",
         "大廳入口",
         "急診",
-        "停車場",
-        "YouBike"
+        "停車場"
       ],
       "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 1/3）",
       "trip": 2
@@ -525,8 +524,7 @@
         "仁愛院區",
         "大廳入口",
         "急診",
-        "停車場",
-        "YouBike"
+        "停車場"
       ],
       "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 2/3）",
       "trip": 2
@@ -541,8 +539,7 @@
         "仁愛院區",
         "大廳入口",
         "急診",
-        "停車場",
-        "YouBike"
+        "停車場"
       ],
       "note": "仁愛×大安路口（f1 是醫院立柱）（影片畫面 3/3）",
       "trip": 2
@@ -755,36 +752,33 @@
     },
     {
       "file": "第二趟/frames/IMG_5592_f1.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [
         "大安路一段116巷",
-        "仁愛路三段123巷13弄",
-        "YouBike"
+        "仁愛路三段123巷13弄"
       ],
       "note": "YouBike 路口過復興南路（影片畫面 1/3）",
       "trip": 2
     },
     {
       "file": "第二趟/frames/IMG_5592_f2.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [
         "大安路一段116巷",
-        "仁愛路三段123巷13弄",
-        "YouBike"
+        "仁愛路三段123巷13弄"
       ],
       "note": "YouBike 路口過復興南路（影片畫面 2/3）",
       "trip": 2
     },
     {
       "file": "第二趟/frames/IMG_5592_f3.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
       "optional": [
         "大安路一段116巷",
-        "仁愛路三段123巷13弄",
-        "YouBike"
+        "仁愛路三段123巷13弄"
       ],
       "note": "YouBike 路口過復興南路（影片畫面 3/3）",
       "trip": 2
@@ -929,31 +923,25 @@
     },
     {
       "file": "第二趟/frames/IMG_5601_f1.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
-      "optional": [
-        "YouBike"
-      ],
+      "optional": [],
       "note": "YouBike 站＋全家（影片畫面 1/3）",
       "trip": 2
     },
     {
       "file": "第二趟/frames/IMG_5601_f2.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
-      "optional": [
-        "YouBike"
-      ],
+      "optional": [],
       "note": "YouBike 站＋全家（影片畫面 2/3）",
       "trip": 2
     },
     {
       "file": "第二趟/frames/IMG_5601_f3.jpg",
-      "place": "yb",
+      "place": "lane",
       "expect": [],
-      "optional": [
-        "YouBike"
-      ],
+      "optional": [],
       "note": "YouBike 站＋全家（影片畫面 3/3）",
       "trip": 2
     },
@@ -1059,10 +1047,6 @@
       "pos": 1.5,
       "zone": "unknown"
     },
-    "yb": {
-      "pos": 2,
-      "zone": "yb"
-    },
     "fuxing_east": {
       "pos": 3,
       "zone": "unknown"
@@ -1090,6 +1074,10 @@
     "past": {
       "pos": 8,
       "zone": "daan"
+    },
+    "lane": {
+      "pos": 2,
+      "zone": "lane"
     }
   }
 }

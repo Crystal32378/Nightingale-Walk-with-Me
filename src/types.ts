@@ -13,6 +13,12 @@ export interface ConflictLandmark {
   recoveryPointer: string;
   /** Canonical recovery fact, phrased later by the language layer. */
   recoveryInstruction: string;
+  /**
+   * Zones where this landmark can really mean "you are here". A reliable fix
+   * in another zone vetoes the conflict (a floor directory inside the lobby
+   * printing 急診 is not the ER driveway). Vetoing never confirms anything.
+   */
+  zones?: string[];
 }
 
 export interface Ambiguity {
@@ -55,8 +61,9 @@ export interface FieldObservation {
 export interface Checkpoint {
   id: string;
   /**
-   * `walker`: confirmed only by the walker saying they are done (a crossing),
-   * never by what a photo or sentence happens to contain. Default: evidence.
+   * `walker`: confirmed only by the walker saying they are done (reaching
+   * exit 2 at ground level, finishing a crossing), never by what a photo or
+   * sentence happens to contain. Default: evidence.
    */
   confirmBy?: "evidence" | "walker";
   zones?: CheckpointZones;

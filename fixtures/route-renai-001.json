@@ -14,75 +14,57 @@
       "id": "exit2",
       "lat": 25.0413,
       "lon": 121.5435,
-      "radiusM": 70
+      "radiusM": 90
     },
     {
-      "id": "yb",
+      "id": "lane",
       "lat": 25.0396,
       "lon": 121.5435,
-      "radiusM": 60
+      "radiusM": 90
     },
     {
       "id": "renai_fuxing",
       "lat": 25.0377,
       "lon": 121.5438,
-      "radiusM": 50
+      "radiusM": 40
     },
     {
       "id": "er",
       "lat": 25.0377,
       "lon": 121.5446,
-      "radiusM": 35
+      "radiusM": 40
     },
     {
       "id": "lobby",
       "lat": 25.0377,
       "lon": 121.5455,
-      "radiusM": 28
+      "radiusM": 24
     },
     {
       "id": "daan",
       "lat": 25.0378,
-      "lon": 121.546,
-      "radiusM": 20
+      "lon": 121.5461,
+      "radiusM": 24
     }
   ],
   "checkpoints": [
     {
       "id": "cp1",
+      "confirmBy": "walker",
       "instruction": "出口2出來，往右轉。",
-      "expectedLandmarks": [
-        "出口2",
-        "2號出口",
-        "二號出口",
-        "出口二",
-        "SOGO復興館",
-        "1號電梯",
-        "復興南路"
-      ],
-      "zones": {
-        "allow": [
-          "exit2",
-          "yb",
-          "renai_fuxing",
-          "er",
-          "lobby",
-          "daan"
-        ]
-      },
+      "expectedLandmarks": [],
       "next": "cp2"
     },
     {
       "id": "cp2",
       "instruction": "等綠燈，過復興南路。",
       "expectedLandmarks": [
-        "YouBike",
         "大安路一段116巷",
         "仁愛路三段123巷13弄"
       ],
       "zones": {
         "allow": [
-          "yb",
+          "lane",
           "renai_fuxing",
           "er",
           "lobby",
@@ -198,17 +180,26 @@
         {
           "landmark": "急診",
           "recoveryPointer": "cp5",
-          "recoveryInstruction": "那是急診的車道口。大廳入口還在前面一點。"
+          "recoveryInstruction": "那是急診的車道口。大廳入口還在前面一點。",
+          "zones": [
+            "er"
+          ]
         },
         {
           "landmark": "大安路",
           "recoveryPointer": "cp5",
-          "recoveryInstruction": "這條路會通到大安路。我們先轉身，再沿著醫院牆面往回走，會看到玻璃自動門。"
+          "recoveryInstruction": "這條路會通到大安路。我們先轉身，再沿著醫院牆面往回走，會看到玻璃自動門。",
+          "zones": [
+            "daan"
+          ]
         },
         {
           "landmark": "綠色頂棚走廊",
           "recoveryPointer": "cp5",
-          "recoveryInstruction": "綠色頂棚的長廊是側邊通道。左轉往仁愛路走2分鐘，大廳入口就在前面。"
+          "recoveryInstruction": "綠色頂棚的長廊是側邊通道。左轉往仁愛路走2分鐘，大廳入口就在前面。",
+          "zones": [
+            "daan"
+          ]
         }
       ],
       "arrivalEvidence": [

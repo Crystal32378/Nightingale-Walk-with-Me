@@ -41,7 +41,7 @@ function initialAction(route: Route): EngineAction {
   };
 }
 
-/** What the next confirmation has to be: evidence (text/photo), or the walker saying a crossing is done. */
+/** What the next confirmation has to be: evidence (text/photo), or the walker saying this step is done. */
 function expects(route: Route, session: SessionSnapshot): "evidence" | "walker" {
   return route.checkpoints.find((c) => c.id === session.checkpointId)?.confirmBy === "walker" ? "walker" : "evidence";
 }
@@ -116,7 +116,7 @@ export function createApp({
     }
 
     let observation: Observation;
-    if (body?.confirm === "crossed") {
+    if (body?.confirm === "done") {
       observation = { landmarks: [], signage: [], confidence: "high", source: "walker" };
     } else if (body?.observation !== undefined) {
       // Structured observations (tests, demo scripts, future Gemini layer)

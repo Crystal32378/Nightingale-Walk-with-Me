@@ -13,6 +13,7 @@ describe("photo eval scoring", () => {
   it("every labelled place exists, and every checkpoint sits at its own position", () => {
     for (const p of labelsJson.photos) expect(p.place === "noise" || p.place in places, p.file).toBe(true);
     expect(route.checkpoints.map((c) => c.id)).toEqual(["cp1", "cp2", "cp2x", "cp3", "cp3x", "cp4", "cp5"]);
+    expect(places.lane?.zone).toBe("lane");
   });
 
   it("lobby-only evidence at the lobby arrives when the phone agrees, and asks first when it cannot tell", () => {
@@ -32,9 +33,19 @@ describe("photo eval scoring", () => {
   });
 
   it("location vetoes confirming a corner the walker has not reached", () => {
-    const exit = at("exit2", [], ["YouBike"]);
-    expect(judge(route, places, exit, "cp2", saw("YouBike"), "none")).toMatchObject({ outcome: "false_confirm", reachable: true });
-    expect(judge(route, places, exit, "cp2", saw("YouBike"), "place")).toMatchObject({ action: "REANCHOR", outcome: "ok", vetoed: true });
+    const exit = at("exit2");
+    expect(judge(route, places, exit, "cp2", saw("大安路一段116巷"), "none")).toMatchObject({ outcome: "false_confirm", reachable: true });
+    expect(judge(route, places, exit, "cp2", saw("大安路一段116巷"), "place")).toMatchObject({ action: "REANCHOR", outcome: "ok", vetoed: true });
+  });
+
+  it("an exit board underground never confirms exit 2: only the walker does", () => {
+    expect(judge(route, places, at("station", [], ["SOGO復興館", "出口2"]), "cp1", saw("出口2", "SOGO復興館")).outcome).toBe("ok");
+  });
+
+  it("inside the lobby, a floor directory's 急診 is held back once the phone knows it is at the lobby", () => {
+    const floor = at("inside", [], ["急診"]);
+    expect(judge(route, places, floor, "cp5", saw("急診"), "none").outcome).toBe("false_conflict");
+    expect(judge(route, places, floor, "cp5", saw("急診"), "place")).toMatchObject({ action: "ASK", vetoed: true });
   });
 
   it("a photo never confirms a crossing, and never counts against it", () => {
