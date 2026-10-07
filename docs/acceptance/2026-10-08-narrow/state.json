@@ -1,0 +1,10 @@
+{
+  "fixVerdict": "PASS",
+  "temporaryPreviewVerdict": "PASS",
+  "fullLiveVerdict": "HOLD",
+  "reviewedBackendCommit": "65de4d86a59f9aaade7d8b44f4342a36f5678efe",
+  "reviewedFrontendCommit": "f4016ba8b0b009aa209cbbcfc72b5487823da913",
+  "reportSha256": "452ac4d37be44cc62ca6a8d13fa8db4c833cfa49217b292aaab4260909559fa5",
+  "deploymentStatus": "not yet deployed",
+  "scope": "Cloud Run tagged no-traffic revision min 0 max 1; 7-day Firebase preview only; real tag API in bundle; no live backend rewrite; hosted smoke before phone test."
+}
