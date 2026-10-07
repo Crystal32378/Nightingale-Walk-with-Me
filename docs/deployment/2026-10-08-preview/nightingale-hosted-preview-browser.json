@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-07T17:11:43.455Z",
+  "previewUrl": "https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app",
+  "api": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "actualTextApiWalk": true,
+  "arrived": true,
+  "voice": "Puck",
+  "crossingControlsQuiet": true,
+  "errors": [],
+  "audio": [
+    {
+      "path": "/audio/outdoor/renai-001/puck/cp1.guide.wav",
+      "status": 200
+    },
+    {
+      "path": "/audio/outdoor/renai-001/puck/cp2.cross.wav",
+      "status": 200
+    },
+    {
+      "path": "/audio/outdoor/renai-001/puck/cp2.after.wav",
+      "status": 200
+    },
+    {
+      "path": "/audio/outdoor/renai-001/puck/cp2.along.wav",
+      "status": 200
+    },
+    {
+      "path": "/audio/outdoor/renai-001/puck/cp3.after.wav",
+      "status": 200
+    },
+    {
+      "path": "/audio/outdoor/renai-001/puck/arrived.wav",
+      "status": 200
+    }
+  ]
+}

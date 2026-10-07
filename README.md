@@ -16,11 +16,14 @@ A fresh build for **AI Builder Cup 2026** (Hack2Skill × Google Cloud). It guide
 
 ## Status
 
-Live: **https://nightingale-walk-with-me.web.app/?flow=last300m**
+Temporary reviewed phone-test preview: **https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app/?flow=last300m&photo=1** — expires **2026-10-15 01:09 Asia/Taipei**. Independent verdict: narrow fix PASS, this limited preview PASS, full/live release HOLD. Hosted API, actual photo, text walkthrough and all 44 speech assets passed smoke checks; iPhone and physical-route acceptance are still pending. Deployment receipt: `docs/deployment/2026-10-08-preview/`.
+
+The existing live site below and its production backend traffic were not switched:
+**https://nightingale-walk-with-me.web.app/?flow=last300m**
 
 - Frontend on Firebase Hosting; `/api/**` rewrites to Cloud Run (`nightingale`, asia-east1) — one origin for page and API.
 - Gemini 2.5 Flash on Vertex AI maps free-text observations onto the route vocabulary; every failure mode falls back to deterministic matching.
-- 84 tests (engine, validator, Gemini text and photo fallbacks, photo gates and scoring, Firestore session store, HTTP API, and end-to-end walks of the real route), plus 5 Python review-import checks.
+- 95 tests (engine, validator, Gemini text and photo fallbacks, photo context guards, photo gates and scoring, Firestore session store, HTTP API, and end-to-end walks of the real route), plus 5 Python review-import checks.
 
 ```
 npm install
@@ -37,7 +40,7 @@ Walked twice by the route author (2026-09-26 and 2026-09-28); every landmark str
 
 ## Voice: Gemini TTS
 
-Route guidance uses pre-recorded **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices — Leda (female) and Puck (male). On 2026-10-07, the 11 revised lines were generated for both voices, including `cp2.along`. The local frontend now selects fixed recordings by route, checkpoint, and action, supports voice switching and mute, and plays `cp2.after` followed by `cp2.along` only after the walker presses「過完了」. Crystal has accepted all 22 revised recordings, including a final single-line Puck `photo.wait` retake with an explicit adult-male voice instruction. This continuation has not been deployed; phone field acceptance remains separate.
+Route guidance uses pre-recorded **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices — Leda (female) and Puck (male). On 2026-10-07, the 11 revised lines were generated for both voices, including `cp2.along`. The frontend selects fixed recordings by route, checkpoint, and action, supports voice switching and mute, and plays `cp2.after` followed by `cp2.along` only after the walker presses「過完了」. Crystal has accepted all 22 revised recordings, including a final single-line Puck `photo.wait` retake with an explicit adult-male voice instruction. The accepted audio is now served in the temporary preview; the live site remains unchanged and phone field acceptance remains separate.
 
 The current style instruction is *speak Mandarin gently and unhurried, like a grandchild walking an elder*. In the 2026-10-07 comparison, Crystal approved the Leda/Puck samples after removing the explicit Taiwanese-accent instruction: the Mandarin sounded natural while the pace and warmth remained suitable. The model, voices, wording and other generation settings were held constant. This records a listening decision for these samples, not a general claim about accent prompting.
 

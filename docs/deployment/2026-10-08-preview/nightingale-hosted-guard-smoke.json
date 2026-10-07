@@ -1,0 +1,656 @@
+{
+  "checkedAt": "2026-10-07T17:07:27.229Z",
+  "api": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "health": 200,
+  "savedFailingPairs": 7,
+  "absentAndUnknownBothHeld": true,
+  "positiveWalkArrived": true,
+  "realPhoto": {
+    "file": "第二趟/jpg/IMG_5593.jpg",
+    "inputSha256": "88cd6f44cb788000b655f5035cff00f5192de92e6fa887b143922e6b5d91fd96",
+    "latencyMs": 7295,
+    "observation": {
+      "landmarks": [],
+      "signage": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄",
+        "復興南路一段"
+      ],
+      "confidence": "high",
+      "source": "photo"
+    },
+    "action": {
+      "type": "REANCHOR",
+      "checkpointId": "cp2",
+      "lookFor": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄"
+      ]
+    },
+    "photoHold": "crossing-needs-location"
+  },
+  "trace": [
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "checkpoint": "cp2",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "checkpoint": "cp2",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "checkpoint": "cp2",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "checkpoint": "cp2",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "checkpoint": "cp3",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "checkpoint": "cp3",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "checkpoint": "cp3",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "checkpoint": "cp3",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3",
+        "instruction": "等綠燈，過仁愛路。"
+      },
+      "checkpoint": "cp3x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3x",
+        "instruction": "過完左轉，醫院在這一側。"
+      },
+      "checkpoint": "cp4"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp4",
+        "instruction": "大廳入口還在前面一點。"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3",
+        "instruction": "等綠燈，過仁愛路。"
+      },
+      "checkpoint": "cp3x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3x",
+        "instruction": "過完左轉，醫院在這一側。"
+      },
+      "checkpoint": "cp4"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp4",
+        "instruction": "大廳入口還在前面一點。"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3",
+        "instruction": "等綠燈，過仁愛路。"
+      },
+      "checkpoint": "cp3x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3x",
+        "instruction": "過完左轉，醫院在這一側。"
+      },
+      "checkpoint": "cp4"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp4",
+        "instruction": "大廳入口還在前面一點。"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "checkpoint": "cp5",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2x",
+        "lookFor": []
+      },
+      "checkpoint": "cp2x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "checkpoint": "cp3"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3",
+        "instruction": "等綠燈，過仁愛路。"
+      },
+      "checkpoint": "cp3x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3x",
+        "lookFor": []
+      },
+      "checkpoint": "cp3x"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3x",
+        "instruction": "過完左轉，醫院在這一側。"
+      },
+      "checkpoint": "cp4"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp4",
+        "instruction": "大廳入口還在前面一點。"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "ASK",
+        "checkpointId": "cp5",
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "CONFIRM_ARRIVAL",
+        "checkpointId": "cp5"
+      },
+      "checkpoint": "cp5"
+    },
+    {
+      "path": "/api/sessions",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp1",
+        "lookFor": []
+      },
+      "checkpoint": "cp1"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "checkpoint": "cp2"
+    },
+    {
+      "path": "/api/sessions/<new-test-id>/observations",
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "checkpoint": "cp2",
+      "photoHold": "crossing-needs-location"
+    }
+  ]
+}
