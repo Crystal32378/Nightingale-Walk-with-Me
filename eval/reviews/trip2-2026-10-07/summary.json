@@ -1,0 +1,1368 @@
+{
+  "before-projected": {
+    "rows": [
+      {
+        "variant": "crop",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 2,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "3/8",
+        "termRecall": "18/21",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "crop",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 7,
+        "homeHits": "5/8",
+        "termRecall": "18/21",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "orig",
+        "location": "none",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 1,
+        "strict": 2,
+        "vetoes": 0,
+        "homeHits": "3/8",
+        "termRecall": "21/21",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "orig",
+        "location": "place",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 5,
+        "homeHits": "6/8",
+        "termRecall": "21/21",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "small",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "18/21",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "small",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 3,
+        "homeHits": "5/8",
+        "termRecall": "18/21",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "dark",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 1,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "18/21",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "dark",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 3,
+        "homeHits": "6/8",
+        "termRecall": "18/21",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "blur",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "16/21",
+        "outOfVocab": 14
+      },
+      {
+        "variant": "blur",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 3,
+        "homeHits": "4/8",
+        "termRecall": "16/21",
+        "outOfVocab": 14
+      }
+    ],
+    "vocabularyMatches": false,
+    "reachableFailures": [
+      {
+        "file": "S__121634865_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診"
+        ]
+      },
+      {
+        "file": "S__121634868_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診",
+          "醫院",
+          "醫院大樓"
+        ]
+      },
+      {
+        "file": "第二趟/frames/IMG_5600_f1.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "exit2",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "瀚群骨科",
+          "聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "大安路",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634867_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "急診",
+          "仁愛路",
+          "大安路"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      }
+    ],
+    "totalsByLocation": {
+      "none": {
+        "falseConfirm": 4,
+        "falseArrival": 0,
+        "falseConflict": 3
+      },
+      "place": {
+        "falseConfirm": 3,
+        "falseArrival": 0,
+        "falseConflict": 0
+      }
+    }
+  },
+  "after-projected": {
+    "rows": [
+      {
+        "variant": "crop",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 2,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "3/8",
+        "termRecall": "20/28",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "crop",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 7,
+        "homeHits": "5/8",
+        "termRecall": "20/28",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "orig",
+        "location": "none",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 1,
+        "strict": 2,
+        "vetoes": 0,
+        "homeHits": "3/8",
+        "termRecall": "26/28",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "orig",
+        "location": "place",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 5,
+        "homeHits": "6/8",
+        "termRecall": "26/28",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "small",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "24/28",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "small",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 3,
+        "homeHits": "5/8",
+        "termRecall": "24/28",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "dark",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 1,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "24/28",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "dark",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 3,
+        "homeHits": "6/8",
+        "termRecall": "24/28",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "blur",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 0,
+        "homeHits": "2/8",
+        "termRecall": "23/28",
+        "outOfVocab": 14
+      },
+      {
+        "variant": "blur",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 3,
+        "homeHits": "4/8",
+        "termRecall": "23/28",
+        "outOfVocab": 14
+      }
+    ],
+    "vocabularyMatches": false,
+    "reachableFailures": [
+      {
+        "file": "S__121634865_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診"
+        ]
+      },
+      {
+        "file": "S__121634868_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診",
+          "醫院",
+          "醫院大樓"
+        ]
+      },
+      {
+        "file": "第二趟/frames/IMG_5600_f1.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "exit2",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "瀚群骨科",
+          "聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "大安路",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634867_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "急診",
+          "仁愛路",
+          "大安路"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      }
+    ],
+    "totalsByLocation": {
+      "none": {
+        "falseConfirm": 4,
+        "falseArrival": 0,
+        "falseConflict": 3
+      },
+      "place": {
+        "falseConfirm": 3,
+        "falseArrival": 0,
+        "falseConflict": 0
+      }
+    }
+  },
+  "trip2-projected": {
+    "rows": [
+      {
+        "variant": "orig",
+        "location": "none",
+        "readings": 57,
+        "errors": 1,
+        "timeouts": 1,
+        "medianMs": 7146,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 0,
+        "homeHits": "2/2",
+        "termRecall": "8/10",
+        "outOfVocab": 25
+      },
+      {
+        "variant": "orig",
+        "location": "place",
+        "readings": 57,
+        "errors": 1,
+        "timeouts": 1,
+        "medianMs": 7146,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 2,
+        "homeHits": "2/2",
+        "termRecall": "8/10",
+        "outOfVocab": 25
+      },
+      {
+        "variant": "small",
+        "location": "none",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 0,
+        "medianMs": 7031,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 0,
+        "homeHits": "1/2",
+        "termRecall": "7/10",
+        "outOfVocab": 23
+      },
+      {
+        "variant": "small",
+        "location": "place",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 0,
+        "medianMs": 7031,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 1,
+        "homeHits": "1/2",
+        "termRecall": "7/10",
+        "outOfVocab": 23
+      },
+      {
+        "variant": "crop",
+        "location": "none",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7487,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 4,
+        "vetoes": 0,
+        "homeHits": "2/2",
+        "termRecall": "5/10",
+        "outOfVocab": 14
+      },
+      {
+        "variant": "crop",
+        "location": "place",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7487,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 4,
+        "homeHits": "2/2",
+        "termRecall": "5/10",
+        "outOfVocab": 14
+      },
+      {
+        "variant": "blur",
+        "location": "none",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 0,
+        "medianMs": 7716,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 0,
+        "homeHits": "1/2",
+        "termRecall": "8/10",
+        "outOfVocab": 9
+      },
+      {
+        "variant": "blur",
+        "location": "place",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 0,
+        "medianMs": 7716,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 1,
+        "vetoes": 3,
+        "homeHits": "1/2",
+        "termRecall": "8/10",
+        "outOfVocab": 9
+      },
+      {
+        "variant": "dark",
+        "location": "none",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 1,
+        "vetoes": 0,
+        "homeHits": "1/2",
+        "termRecall": "7/10",
+        "outOfVocab": 28
+      },
+      {
+        "variant": "dark",
+        "location": "place",
+        "readings": 57,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 3,
+        "homeHits": "1/2",
+        "termRecall": "7/10",
+        "outOfVocab": 28
+      }
+    ],
+    "vocabularyMatches": false,
+    "reachableFailures": [
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      {
+        "file": "第二趟/frames/IMG_5600_f1.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "exit2",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "瀚群骨科",
+          "聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "大安路",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ]
+      }
+    ]
+  },
+  "after-verbatim": {
+    "rows": [
+      {
+        "variant": "crop",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 2,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "5/13",
+        "termRecall": "21/39",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "crop",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7425,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 7,
+        "homeHits": "7/13",
+        "termRecall": "21/39",
+        "outOfVocab": 45
+      },
+      {
+        "variant": "orig",
+        "location": "none",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 1,
+        "strict": 2,
+        "vetoes": 0,
+        "homeHits": "4/13",
+        "termRecall": "23/39",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "orig",
+        "location": "place",
+        "readings": 99,
+        "errors": 1,
+        "timeouts": 3,
+        "medianMs": 7082,
+        "falseConfirm": 1,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 5,
+        "homeHits": "7/13",
+        "termRecall": "23/39",
+        "outOfVocab": 49
+      },
+      {
+        "variant": "small",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 0,
+        "homeHits": "4/13",
+        "termRecall": "21/39",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "small",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 3,
+        "medianMs": 7036,
+        "falseConfirm": 2,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 5,
+        "vetoes": 3,
+        "homeHits": "7/13",
+        "termRecall": "21/39",
+        "outOfVocab": 35
+      },
+      {
+        "variant": "dark",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 1,
+        "vetoes": 0,
+        "homeHits": "3/13",
+        "termRecall": "21/39",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "dark",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 2,
+        "medianMs": 8177,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 0,
+        "vetoes": 3,
+        "homeHits": "7/13",
+        "termRecall": "21/39",
+        "outOfVocab": 41
+      },
+      {
+        "variant": "blur",
+        "location": "none",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 3,
+        "vetoes": 0,
+        "homeHits": "3/13",
+        "termRecall": "16/39",
+        "outOfVocab": 14
+      },
+      {
+        "variant": "blur",
+        "location": "place",
+        "readings": 99,
+        "errors": 0,
+        "timeouts": 1,
+        "medianMs": 7624,
+        "falseConfirm": 0,
+        "falseArrival": 0,
+        "falseConflict": 0,
+        "strict": 2,
+        "vetoes": 3,
+        "homeHits": "5/13",
+        "termRecall": "16/39",
+        "outOfVocab": 14
+      }
+    ],
+    "vocabularyMatches": false,
+    "reachableFailures": [
+      {
+        "file": "S__121634865_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診"
+        ]
+      },
+      {
+        "file": "S__121634868_0.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "急診",
+          "醫院",
+          "醫院大樓"
+        ]
+      },
+      {
+        "file": "第二趟/frames/IMG_5600_f1.jpg",
+        "variant": "crop",
+        "repeat": 0,
+        "location": "none",
+        "place": "exit2",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "瀚群骨科",
+          "聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "大安路",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634867_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "none",
+        "place": "inside",
+        "cell": {
+          "checkpointId": "cp5",
+          "action": "RECOVER",
+          "verdict": "CONFLICT",
+          "outcome": "false_conflict",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "急診",
+          "仁愛路",
+          "大安路"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "orig",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "none",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      {
+        "file": "S__121634854_0.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_east",
+        "cell": {
+          "checkpointId": "cp3",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "人行道",
+          "停車場",
+          "瀚群骨科",
+          "黃色直式掛牌"
+        ]
+      },
+      {
+        "file": "第二趟/jpg/IMG_5591.jpg",
+        "variant": "small",
+        "repeat": 0,
+        "location": "place",
+        "place": "fuxing_west",
+        "cell": {
+          "checkpointId": "cp2",
+          "action": "GUIDE",
+          "verdict": "CONFIRMED",
+          "outcome": "false_confirm",
+          "reachable": true,
+          "vetoed": false
+        },
+        "read": [
+          "仁愛路三段123巷13弄"
+        ]
+      }
+    ]
+  }
+}

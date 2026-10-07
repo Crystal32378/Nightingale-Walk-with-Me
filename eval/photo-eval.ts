@@ -14,6 +14,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { createHash } from "node:crypto";
 import sharp from "sharp";
 import { buildPhotoPrompt, createVertexClient, parseObservation } from "../src/gemini.js";
 import { EMPTY_PHOTO_OBSERVATION } from "../src/interpreter.js";
@@ -27,7 +28,8 @@ const args = new Map<string, string>();
 for (let i = 2; i < process.argv.length; i += 2) args.set(process.argv[i]!.replace(/^--/, ""), process.argv[i + 1] ?? "");
 
 const root = resolve(import.meta.dirname, "..");
-const labelsDoc = JSON.parse(readFileSync(join(root, "eval/photo-labels.json"), "utf8")) as {
+const labelsPath = resolve(root, args.get("labels") ?? "eval/photo-labels.json");
+const labelsDoc = JSON.parse(readFileSync(labelsPath, "utf8")) as {
   photoDir: string;
   photos: PhotoLabel[];
   places: Places & { about?: string };
@@ -168,9 +170,16 @@ function median(xs: number[]): number {
 
 let readings: Reading[];
 let runId: string;
+let readingVocabulary = routeTerms(route);
+let replaySource: string | null = null;
+let replaySourceSha256: string | null = null;
 if (args.has("replay")) {
-  const saved = JSON.parse(readFileSync(resolve(root, args.get("replay")!), "utf8"));
-  const savedTerms = JSON.stringify(saved.vocabulary);
+  const replayPath = resolve(root, args.get("replay")!);
+  const saved = JSON.parse(readFileSync(replayPath, "utf8"));
+  readingVocabulary = saved.readingVocabulary ?? saved.vocabulary;
+  replaySource = replayPath.replace(root + "/", "");
+  replaySourceSha256 = createHash("sha256").update(readFileSync(replayPath)).digest("hex");
+  const savedTerms = JSON.stringify(readingVocabulary);
   if (savedTerms !== JSON.stringify(routeTerms(route))) {
     console.error("warning: this route's vocabulary differs from the one the photos were read with; re-run live to be exact");
   }
@@ -185,7 +194,17 @@ const result = score(readings);
 mkdirSync(outDir, { recursive: true });
 writeFileSync(
   join(outDir, `${runId}.json`),
-  JSON.stringify({ runId, route: routePath.replace(root + "/", ""), vocabulary: routeTerms(route), readings, ...result }, null, 2),
+  JSON.stringify({
+    runId,
+    evaluationMode: args.has("replay") ? "replay" : "live",
+    route: routePath.replace(root + "/", ""),
+    routeSha256: createHash("sha256").update(readFileSync(routePath)).digest("hex"),
+    labels: labelsPath.replace(root + "/", ""),
+    labelsSha256: createHash("sha256").update(readFileSync(labelsPath)).digest("hex"),
+    replaySource, replaySourceSha256, readingVocabulary,
+    vocabularyMatches: JSON.stringify(readingVocabulary) === JSON.stringify(routeTerms(route)),
+    vocabulary: routeTerms(route), readings, ...result,
+  }, null, 2),
 );
 console.table(result.rows);
 console.log(`\nfailures (${result.failures.length}):`);

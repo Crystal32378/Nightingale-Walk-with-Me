@@ -1,0 +1,201 @@
+{
+  "sourceSha256": "28e928558d77d54945270b1a33d0c08a3b1db99974203d649c8f99f78773e85b",
+  "reviewSha256": "d010f80aa660d250078c0ca8be13a4578ccd95f46558977eba4a1886801e7135",
+  "routeSha256": "3c0ca31f831c4254d82b2cc7a66233f39f0ab308099a6d111c2f25e9411152f8",
+  "changes": [
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "FamilyMart",
+            "復興南路一段219巷"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "changes": {
+        "expect": {
+          "before": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ],
+          "after": [
+            "大安路一段116巷",
+            "復興南路一段"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "行人優先 當心行人"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "changes": {
+        "place": {
+          "before": "lane",
+          "after": "fuxing_west"
+        },
+        "expect": {
+          "before": [],
+          "after": [
+            "行人優先 當心行人"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "changes": {
+        "place": {
+          "before": "lane",
+          "after": "fuxing_west"
+        },
+        "expect": {
+          "before": [],
+          "after": [
+            "行人優先 當心行人"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "望 左"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "救護員工車 臨停 無需取票 車牌辨識系統 人請走人行道"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "聯合醫院 仁愛院區 大廳入口 急診室哭 停車場入口"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "醫院"
+          ]
+        },
+        "optional": {
+          "before": [
+            "臺北市立聯合醫院",
+            "聯合醫院",
+            "仁愛院區",
+            "大廳入口",
+            "急診",
+            "停車場"
+          ],
+          "after": []
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "台北市立聯合"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "出口"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "changes": {
+        "expect": {
+          "before": [
+            "急診"
+          ],
+          "after": [
+            "急診 右車道 左車道"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "changes": {
+        "optional": {
+          "before": [
+            "臺北市立聯合醫院",
+            "聯合醫院",
+            "仁愛院區"
+          ],
+          "after": []
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "changes": {
+        "expect": {
+          "before": [],
+          "after": [
+            "聯合醫院仁愛院區"
+          ]
+        }
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "changes": {
+        "optional": {
+          "before": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ],
+          "after": []
+        }
+      }
+    }
+  ]
+}

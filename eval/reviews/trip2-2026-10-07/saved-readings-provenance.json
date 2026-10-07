@@ -1,0 +1,17 @@
+{
+  "sourceFile": "eval/out/2026-09-28T13-45-15-303Z.json",
+  "sourceSha256": "e89bc9bc4a1be80d5071e70b2052871f8b4b39b74f792782e2756b23efeb193b",
+  "sourceRunId": "2026-09-28T13-45-15-303Z",
+  "preservedFields": [
+    "runId",
+    "vocabulary",
+    "readings"
+  ],
+  "readingCount": 495,
+  "distinctPhotos": 99,
+  "errors": [
+    "{\"error\":{\"code\":429,\"message\":\"Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\",\"status\":\"RESOURCE_E"
+  ],
+  "freshModelCalls": 0,
+  "note": "Historical model outputs. Replaying them does not prove present-day model behavior or observed phone GPS."
+}

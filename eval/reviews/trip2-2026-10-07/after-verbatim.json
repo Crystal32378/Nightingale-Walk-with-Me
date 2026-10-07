@@ -1,0 +1,4635 @@
+{
+  "runId": "2026-09-28T13-45-15-303Z-replay-renai-001",
+  "evaluationMode": "replay",
+  "route": "fixtures/route-renai-001.json",
+  "routeSha256": "3c0ca31f831c4254d82b2cc7a66233f39f0ab308099a6d111c2f25e9411152f8",
+  "labels": "eval/photo-labels.json",
+  "labelsSha256": "28af6a6e459875d6ce9d8a039de5a87d9d8f5026517888fd983417a72666407b",
+  "replaySource": "eval/reviews/trip2-2026-10-07/saved-readings.json",
+  "replaySourceSha256": "7c81740be807862edf54302664d0d49521e33147a875c0e839a8e94b60bca450",
+  "readingVocabulary": [
+    "1號電梯",
+    "2號出口",
+    "SOGO復興館",
+    "YouBike",
+    "二號出口",
+    "仁愛路",
+    "仁愛路三段123巷13弄",
+    "仁愛院區",
+    "停車場",
+    "出口2",
+    "出口二",
+    "大安路",
+    "大安路一段116巷",
+    "大廳入口",
+    "復康巴士",
+    "復興南路",
+    "急診",
+    "排班計程車",
+    "救護車",
+    "瀚群骨科",
+    "玻璃門",
+    "福華",
+    "福華飯店",
+    "綠色頂棚走廊",
+    "聯合醫院",
+    "臨時停車區",
+    "臺北市立聯合醫院",
+    "醫院",
+    "醫院大樓",
+    "黃色直式掛牌"
+  ],
+  "vocabularyMatches": false,
+  "vocabulary": [
+    "仁愛路",
+    "仁愛路三段123巷13弄",
+    "仁愛院區",
+    "停車場",
+    "大安路",
+    "大安路一段116巷",
+    "大廳入口",
+    "復康巴士",
+    "急診",
+    "排班計程車",
+    "救護車",
+    "瀚群骨科",
+    "玻璃門",
+    "福華",
+    "福華飯店",
+    "綠色頂棚走廊",
+    "聯合醫院",
+    "臨時停車區",
+    "臺北市立聯合醫院",
+    "醫院",
+    "醫院大樓",
+    "黃色直式掛牌"
+  ],
+  "rows": [
+    {
+      "variant": "crop",
+      "location": "none",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 1,
+      "medianMs": 7425,
+      "falseConfirm": 1,
+      "falseArrival": 0,
+      "falseConflict": 2,
+      "strict": 5,
+      "vetoes": 0,
+      "homeHits": "5/13",
+      "termRecall": "21/39",
+      "outOfVocab": 45
+    },
+    {
+      "variant": "crop",
+      "location": "place",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 1,
+      "medianMs": 7425,
+      "falseConfirm": 0,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 3,
+      "vetoes": 7,
+      "homeHits": "7/13",
+      "termRecall": "21/39",
+      "outOfVocab": 45
+    },
+    {
+      "variant": "orig",
+      "location": "none",
+      "readings": 99,
+      "errors": 1,
+      "timeouts": 3,
+      "medianMs": 7082,
+      "falseConfirm": 1,
+      "falseArrival": 0,
+      "falseConflict": 1,
+      "strict": 2,
+      "vetoes": 0,
+      "homeHits": "4/13",
+      "termRecall": "23/39",
+      "outOfVocab": 49
+    },
+    {
+      "variant": "orig",
+      "location": "place",
+      "readings": 99,
+      "errors": 1,
+      "timeouts": 3,
+      "medianMs": 7082,
+      "falseConfirm": 1,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 2,
+      "vetoes": 5,
+      "homeHits": "7/13",
+      "termRecall": "23/39",
+      "outOfVocab": 49
+    },
+    {
+      "variant": "small",
+      "location": "none",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 3,
+      "medianMs": 7036,
+      "falseConfirm": 2,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 5,
+      "vetoes": 0,
+      "homeHits": "4/13",
+      "termRecall": "21/39",
+      "outOfVocab": 35
+    },
+    {
+      "variant": "small",
+      "location": "place",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 3,
+      "medianMs": 7036,
+      "falseConfirm": 2,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 5,
+      "vetoes": 3,
+      "homeHits": "7/13",
+      "termRecall": "21/39",
+      "outOfVocab": 35
+    },
+    {
+      "variant": "dark",
+      "location": "none",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 2,
+      "medianMs": 8177,
+      "falseConfirm": 0,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 1,
+      "vetoes": 0,
+      "homeHits": "3/13",
+      "termRecall": "21/39",
+      "outOfVocab": 41
+    },
+    {
+      "variant": "dark",
+      "location": "place",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 2,
+      "medianMs": 8177,
+      "falseConfirm": 0,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 0,
+      "vetoes": 3,
+      "homeHits": "7/13",
+      "termRecall": "21/39",
+      "outOfVocab": 41
+    },
+    {
+      "variant": "blur",
+      "location": "none",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 1,
+      "medianMs": 7624,
+      "falseConfirm": 0,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 3,
+      "vetoes": 0,
+      "homeHits": "3/13",
+      "termRecall": "16/39",
+      "outOfVocab": 14
+    },
+    {
+      "variant": "blur",
+      "location": "place",
+      "readings": 99,
+      "errors": 0,
+      "timeouts": 1,
+      "medianMs": 7624,
+      "falseConfirm": 0,
+      "falseArrival": 0,
+      "falseConflict": 0,
+      "strict": 2,
+      "vetoes": 3,
+      "homeHits": "5/13",
+      "termRecall": "16/39",
+      "outOfVocab": 14
+    }
+  ],
+  "failures": [
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "TAIPEI CITY HOSPITAL",
+        "仁愛院區",
+        "Renai Branch",
+        "醫院",
+        "醫院大樓",
+        "聯合醫院",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "排班計程車",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "醫院",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "福華飯店",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "1號電梯",
+        "SOGO復興館"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "出口2",
+        "安東街"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "hospital_side",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院",
+        "玻璃門",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "臺北市立聯合醫院仁愛院區",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "inside",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "急診"
+      ]
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "inside",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "急診",
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復康巴士",
+        "臨時停車區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "YouBike",
+        "YouBike",
+        "臺北市立聯合醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院",
+        "聯合醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "聯合醫院",
+        "仁愛院區",
+        "仁愛路",
+        "仁愛路三段123巷13弄",
+        "大安路",
+        "醫院",
+        "醫院大樓",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "聯合醫院",
+        "仁愛院區",
+        "仁愛路",
+        "仁愛路三段123巷13弄",
+        "大安路",
+        "醫院",
+        "醫院大樓",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "聯合醫院",
+        "仁愛院區",
+        "仁愛路",
+        "仁愛路三段123巷13弄",
+        "大安路",
+        "醫院",
+        "醫院大樓",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "TAIPEI CITY HOSPITAL",
+        "仁愛院區",
+        "Renai Branch",
+        "醫院",
+        "醫院大樓",
+        "聯合醫院",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "醫院",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "福華飯店",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "1號電梯",
+        "SOGO復興館"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "出口2",
+        "安東街"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院",
+        "玻璃門",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "臺北市立聯合醫院仁愛院區",
+        "仁愛院區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "YouBike",
+        "YouBike",
+        "臺北市立聯合醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院",
+        "聯合醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "停車場"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "排班計程車",
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "YouBike",
+        "出口2",
+        "仁愛路",
+        "福華飯店",
+        "聯合醫院",
+        "仁愛院區",
+        "大安路",
+        "福華"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "1號電梯",
+        "SOGO復興館"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "玻璃門",
+        "醫院",
+        "醫院大樓",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "inside",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "急診",
+        "仁愛路",
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復康巴士",
+        "臨時停車區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "YouBike",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院",
+        "聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "金醇臻品",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "YouBike",
+        "出口2",
+        "仁愛路",
+        "福華飯店",
+        "聯合醫院",
+        "仁愛院區",
+        "大安路",
+        "福華"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "1號電梯",
+        "SOGO復興館"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "YouBike",
+        "仁愛院區",
+        "臺北市立聯合醫院",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院",
+        "聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "金醇臻品",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "排班計程車",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "エレベーター",
+        "엘리베이터",
+        "1號電梯"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "出口2",
+        "SOGO復興館",
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "停車場",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "停車場",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "hospital_side",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "醫院",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "玻璃門",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "黃色直式掛牌",
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復康巴士",
+        "臨時停車區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "仁愛路三段123巷13弄"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "行人優先",
+        "當心行人"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "HOSPITAL",
+        "仁愛院區",
+        "大廳入口",
+        "急診室入口",
+        "停車場入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院大樓",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院",
+        "醫院大樓",
+        "聯合醫院",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "黃色直式掛牌",
+        "玻璃門",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "エレベーター",
+        "엘리베이터",
+        "1號電梯"
+      ]
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "出口2",
+        "SOGO復興館",
+        "大安路"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "停車場",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_east",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "人行道",
+        "停車場",
+        "瀚群骨科",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "玻璃門",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "仁愛路三段123巷13弄"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "行人優先",
+        "當心行人"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "HOSPITAL",
+        "仁愛院區",
+        "大廳入口",
+        "急診室入口",
+        "停車場入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院大樓",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院",
+        "醫院大樓",
+        "聯合醫院",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "黃色直式掛牌",
+        "玻璃門",
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "瀚群骨科",
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "排班計程車"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "1號電梯"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院",
+        "玻璃門",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "仁愛院區",
+        "聯合醫院",
+        "臺北市立聯合醫院",
+        "醫院",
+        "仁愛院區",
+        "聯合醫院",
+        "臺北市立聯合醫院",
+        "醫院",
+        "黃色直式掛牌"
+      ]
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復康巴士",
+        "臨時停車區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "TAIPEI CITY HOSPITAL",
+        "義美食品",
+        "I-M Foods",
+        "YouBike",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "仁愛路"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "仁愛路"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院大樓",
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "聯合醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯",
+        "Elevator",
+        "1號電梯"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "TAIPEI CITY HOSPITAL",
+        "義美食品",
+        "I-M Foods",
+        "YouBike",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復興南路",
+        "仁愛路"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "醫院",
+        "仁愛院區",
+        "大廳入口",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "醫院大樓",
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "出口",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "RECOVER",
+        "verdict": "CONFLICT",
+        "outcome": "false_conflict",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "綠色頂棚走廊"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "停車場",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "排班計程車",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "2號出口",
+        "大安路",
+        "福華飯店",
+        "臺北市立聯合醫院"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "CONFIRMED",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "復康巴士",
+        "臨時停車區"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "HOSPITAL",
+        "仁愛院區",
+        "Renai Branch",
+        "ENTRANCE",
+        "大廳入口",
+        "LOUNGE",
+        "EMERGENCY",
+        "YouBike",
+        "醫院",
+        "仁愛院區",
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "黃色直式掛牌",
+        "醫院大樓",
+        "停車場",
+        "大廳入口"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "none",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "仁愛路"
+      ]
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "大廳入口",
+        "停車場",
+        "YouBike"
+      ]
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "er",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓",
+        "醫院"
+      ]
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "station",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "SOGO復興館",
+        "2號出口",
+        "大安路",
+        "福華飯店",
+        "臺北市立聯合醫院"
+      ]
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "電梯"
+      ]
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "exit2",
+      "cell": {
+        "checkpointId": "cp1",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "玻璃門",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "YouBike"
+      ]
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lane",
+      "cell": {
+        "checkpointId": "cp2",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "renai_fuxing",
+      "cell": {
+        "checkpointId": "cp3",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "聯合醫院",
+        "HOSPITAL",
+        "仁愛院區",
+        "Renai Branch",
+        "ENTRANCE",
+        "大廳入口",
+        "LOUNGE",
+        "EMERGENCY",
+        "YouBike",
+        "醫院",
+        "仁愛院區",
+        "停車場"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "REANCHOR",
+        "verdict": "UNKNOWN",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": []
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "past",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "臺北市立聯合醫院",
+        "仁愛院區",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "lobby",
+      "cell": {
+        "checkpointId": "cp5",
+        "action": "ASK",
+        "verdict": "INSUFFICIENT",
+        "outcome": "miss",
+        "reachable": true,
+        "vetoed": false
+      },
+      "read": [
+        "醫院",
+        "醫院大樓"
+      ]
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "location": "place",
+      "place": "fuxing_west",
+      "cell": {
+        "checkpointId": "cp4",
+        "action": "GUIDE",
+        "verdict": "CONFIRMED",
+        "outcome": "false_confirm",
+        "reachable": false,
+        "vetoed": false
+      },
+      "read": [
+        "黃色直式掛牌",
+        "醫院大樓",
+        "停車場",
+        "大廳入口"
+      ]
+    }
+  ],
+  "unsupported": [
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "blur",
+      "term": "停車場"
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "orig",
+      "term": "停車場"
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "small",
+      "term": "停車場"
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "crop",
+      "term": "停車場"
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "dark",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "blur",
+      "term": "停車場"
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "crop",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "orig",
+      "term": "仁愛路"
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "orig",
+      "term": "福華"
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "orig",
+      "term": "排班計程車"
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "orig",
+      "term": "排班計程車"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "crop",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "blur",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "crop",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "small",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "orig",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "dark",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "small",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "dark",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "small",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "orig",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "crop",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "small",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "crop",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "crop",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "orig",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "dark",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "orig",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "orig",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "orig",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "orig",
+      "term": "救護車"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "small",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "dark",
+      "term": "救護車"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "blur",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "crop",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "crop",
+      "term": "救護車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "dark",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "orig",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "orig",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "small",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "orig",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "blur",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "small",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "orig",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "blur",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "crop",
+      "term": "復康巴士"
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "small",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "orig",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "orig",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "dark",
+      "term": "福華飯店"
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "small",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "small",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "small",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "small",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "orig",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "dark",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "crop",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "small",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "blur",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "blur",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "blur",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "dark",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "crop",
+      "term": "綠色頂棚走廊"
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "blur",
+      "term": "排班計程車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "term": "黃色直式掛牌"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "term": "瀚群骨科"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "term": "仁愛路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "term": "仁愛路三段123巷13弄"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "term": "大安路"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "orig",
+      "term": "排班計程車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "small",
+      "term": "排班計程車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "blur",
+      "term": "排班計程車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "dark",
+      "term": "排班計程車"
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "orig",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "small",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "blur",
+      "term": "停車場"
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "dark",
+      "term": "停車場"
+    }
+  ],
+  "readingCount": 495,
+  "distinctPhotos": 99,
+  "readingsStoredIn": "eval/reviews/trip2-2026-10-07/saved-readings.json"
+}

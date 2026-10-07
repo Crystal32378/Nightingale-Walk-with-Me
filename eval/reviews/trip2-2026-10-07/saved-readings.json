@@ -1,0 +1,7222 @@
+{
+  "runId": "2026-09-28T13-45-15-303Z",
+  "vocabulary": [
+    "1號電梯",
+    "2號出口",
+    "SOGO復興館",
+    "YouBike",
+    "二號出口",
+    "仁愛路",
+    "仁愛路三段123巷13弄",
+    "仁愛院區",
+    "停車場",
+    "出口2",
+    "出口二",
+    "大安路",
+    "大安路一段116巷",
+    "大廳入口",
+    "復康巴士",
+    "復興南路",
+    "急診",
+    "排班計程車",
+    "救護車",
+    "瀚群骨科",
+    "玻璃門",
+    "福華",
+    "福華飯店",
+    "綠色頂棚走廊",
+    "聯合醫院",
+    "臨時停車區",
+    "臺北市立聯合醫院",
+    "醫院",
+    "醫院大樓",
+    "黃色直式掛牌"
+  ],
+  "readings": [
+    {
+      "file": "S__121634827_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6402,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6340,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "大廳入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634827_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6970,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634827_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7408,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634827_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7886,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634827_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10312,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4784,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "大廳入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3367,
+      "observation": {
+        "landmarks": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7015,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "大廳入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7342,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "大廳入口",
+          "停車場"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4430,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634828_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7554,
+      "observation": {
+        "landmarks": [
+          "YouBike",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "大廳入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4433,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 3778,
+      "observation": {
+        "landmarks": [
+          "聯合醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4126,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5437,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "出口",
+          "Exit",
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634829_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9013,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "TAIPEI CITY HOSPITAL",
+          "仁愛院區",
+          "Renai Branch"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10734,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "TAIPEI CITY HOSPITAL",
+          "仁愛院區",
+          "Renai Branch",
+          "出口",
+          "Exit"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7932,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "大廳入口",
+          "醫院"
+        ],
+        "signage": [
+          "仁愛院區",
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9307,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口",
+          "聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7611,
+      "observation": {
+        "landmarks": [
+          "仁愛院區",
+          "醫院",
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7635,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院",
+          "醫院大樓",
+          "大廳入口"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634830_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 16478,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "仁愛院區",
+          "停車場"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7251,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8393,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 9787,
+      "observation": {
+        "landmarks": [
+          "大廳入口",
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9692,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634831_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 13116,
+      "observation": {
+        "landmarks": [
+          "大廳入口",
+          "玻璃門",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6478,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "排班計程車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6357,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "排班計程車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 10253,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "排班計程車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 15913,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10241,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "排班計程車"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634832_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 16981,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5275,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "停車場"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634833_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9381,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "排班計程車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 10840,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "急診",
+          "停車場",
+          "臨時停車區"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診",
+          "停車場",
+          "右車道",
+          "緊急、公務專用車道",
+          "左車道",
+          "一般、臨停請靠左取票"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7040,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "停車場",
+          "臨時停車區"
+        ],
+        "signage": [
+          "博醫仁愛藥局",
+          "仁愛醫院",
+          "緊急、",
+          "一般、臨"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6046,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "望",
+          "LOOK"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6159,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "醫院大樓"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634834_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 9506,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5484,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7686,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 13007,
+      "observation": {
+        "landmarks": [
+          "聯合醫院"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7035,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5815,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4729,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3279,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "仁愛院區"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5856,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634835_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 15296,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4739,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634836_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8770,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5458,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 11519,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634838_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 13898,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院",
+          "仁愛院區",
+          "臺北市立聯合醫院",
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8402,
+      "observation": {
+        "landmarks": [
+          "SOGO復興館"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8449,
+      "observation": {
+        "landmarks": [
+          "SOGO復興館"
+        ],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7008,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5596,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634839_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9617,
+      "observation": {
+        "landmarks": [
+          "SOGO復興館"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 2865,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5764,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5240,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 3115,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634840_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5889,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6096,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7712,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3542,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7266,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8113,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4767,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "無障礙坡道",
+          "Wheelchair Ramp"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4033,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634841_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10139,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9341,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 3590,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 3359,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "無障礙坡道",
+          "Wheelchair Ramp"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634842_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8238,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8039,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4108,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "無障礙坡道"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634843_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5734,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10154,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館",
+          "福華飯店",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 12824,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 15630,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 17553,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館",
+          "YouBike",
+          "出口2",
+          "仁愛路",
+          "福華飯店",
+          "聯合醫院",
+          "仁愛院區",
+          "大安路",
+          "福華"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634844_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 16424,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館",
+          "2號出口",
+          "大安路",
+          "福華飯店",
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5126,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6891,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8842,
+      "observation": {
+        "landmarks": [
+          "1號電梯",
+          "排班計程車"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 13983,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 27936,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 12038,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "電梯",
+          "1號電梯"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7043,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5520,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "1號電梯",
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634845_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 25326,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5869,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "電梯",
+          "Elevator",
+          "1號電梯",
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8656,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "電梯",
+          "Elevator",
+          "エレベーター",
+          "엘리베이터",
+          "1號電梯"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 13649,
+      "observation": {
+        "landmarks": [
+          "1號電梯"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10598,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "電梯"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634846_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 26695,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634847_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 12634,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "電梯",
+          "Elevator",
+          "1號電梯"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9383,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館",
+          "出口2",
+          "安東街"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6977,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4993,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "出口2",
+          "SOGO復興館",
+          "大安路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 21939,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 20887,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 19643,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10916,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5280,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634849_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 23637,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 14080,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4028,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634850_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10597,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9355,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5684,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4499,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634851_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8471,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6748,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4893,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6613,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634852_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9453,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8409,
+      "observation": {
+        "landmarks": [
+          "排班計程車"
+        ],
+        "signage": [
+          "空車",
+          "假髮",
+          "方大廈"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 10023,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6417,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 15456,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8523,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "人行道",
+          "停車場",
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11615,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "人行道",
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634853_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 14974,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8451,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3876,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4614,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 11894,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 3786,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3057,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8428,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "人行道"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5055,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634855_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5679,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 3998,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 3790,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 3783,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5238,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北客運"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5719,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4363,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5295,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634857_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9150,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5233,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634856_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6088,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8869,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7717,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9928,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "綠色頂棚走廊"
+        ],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3904,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 3260,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4753,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4442,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634858_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8127,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634860_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4876,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7850,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "急診",
+          "停車場",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7425,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [
+          "停車場",
+          "右車道",
+          "緊急、公務專用車道",
+          "左車道",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 9329,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "急診",
+          "停車場",
+          "臨時停車區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8045,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8099,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "仁愛院區",
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5521,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "玻璃門",
+          "大廳入口"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6224,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3155,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634861_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 14772,
+      "observation": {
+        "landmarks": [
+          "急診",
+          "停車場",
+          "醫院",
+          "醫院大樓",
+          "臨時停車區"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8545,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "玻璃門",
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5979,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌",
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7033,
+      "observation": {
+        "landmarks": [
+          "仁愛院區",
+          "聯合醫院",
+          "臺北市立聯合醫院",
+          "醫院",
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "仁愛院區",
+          "聯合醫院",
+          "臺北市立聯合醫院",
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9889,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "臺北市立聯合醫院仁愛院區",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634862_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 13587,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5043,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5182,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4543,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 2698,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634864_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5022,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634863_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 17934,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7624,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8379,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11225,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "仁愛院區",
+          "聯合醫院",
+          "醫療大樓"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 11457,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10813,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區",
+          "醫療大樓"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5855,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7884,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "醫院大樓"
+        ],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7901,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7446,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "急診",
+          "仁愛路",
+          "大安路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 17585,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "仁愛院區",
+          "聯合醫院",
+          "臺北市立聯合醫院",
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8445,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 12163,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634866_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 18951,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "醫院",
+          "聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 13220,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7519,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9014,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8171,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 12823,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4153,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 18360,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4303,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 3689,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6214,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 3985,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復康巴士",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4004,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復康巴士",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 14782,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4294,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復康巴士",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4768,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復康巴士",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634871_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4562,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復康巴士",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634869_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6136,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4461,
+      "observation": {
+        "landmarks": [
+          "YouBike",
+          "臺北市立聯合醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8371,
+      "observation": {
+        "landmarks": [
+          "YouBike",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 10373,
+      "observation": {
+        "landmarks": [
+          "YouBike",
+          "醫院"
+        ],
+        "signage": [
+          "YouBike",
+          "仁愛院區",
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5256,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5060,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4443,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4717,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5584.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6282,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 15700,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7566,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5113,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "S__121634872_0.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 19285,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "TAIPEI CITY HOSPITAL",
+          "義美食品",
+          "I-M Foods",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5526,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8344,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5585.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8731,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7251,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8457,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5774,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5586,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5587.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4944,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5972,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6496,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5296,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6106,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6813,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5590.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7487,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "停車場"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 3639,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7036,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛路三段123巷13弄"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6407,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4353,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "FamilyMart",
+          "FLOW",
+          "RAKITONE",
+          "復興路一段",
+          "219巷",
+          "Let's Tea",
+          "VILECTIVE"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4843,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄",
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9545,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "復興南路"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5527,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8395,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11589,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄",
+          "復興南路一段"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4840,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "行人優先",
+          "當心行人"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 3744,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4535,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5593.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 13122,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "復興南路",
+          "仁愛路"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5335,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6857,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6438,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5779,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5595.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5132,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5864,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5594.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 14165,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5433,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5349,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5361,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5596.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5475,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7855,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8626,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7777,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7056,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5602.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 12557,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8759,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "仁愛路"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6367,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8008,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6555,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [
+          "救護車",
+          "臨停"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8692,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5603.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10433,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8943,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6037,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "救護車",
+          "員工",
+          "臨停",
+          "車牌辨識系統",
+          "無需取票"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 9052,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [
+          "臨時停車區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/jpg/IMG_5605.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10060,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "醫院",
+          "玻璃門"
+        ],
+        "signage": [
+          "救護車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5449,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "聯合醫院",
+          "HOSPITAL",
+          "仁愛院區",
+          "大廳入口",
+          "急診室入口",
+          "停車場入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7082,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區",
+          "大廳入口",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9394,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫院",
+          "仁愛院區",
+          "大廳入口",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6745,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "聯合醫院",
+          "醫院",
+          "仁愛院區",
+          "大廳入口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6907,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 10604,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12382,
+      "observation": {
+        "landmarks": [
+          "YouBike",
+          "醫院",
+          "仁愛院區",
+          "停車場"
+        ],
+        "signage": [
+          "聯合醫院",
+          "HOSPITAL",
+          "仁愛院區",
+          "Renai Branch",
+          "ENTRANCE",
+          "大廳入口",
+          "LOUNGE",
+          "EMERGENCY"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6898,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6125,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 13177,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4641,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10146,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6194,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 4429,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6021,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "大廳入口"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5580_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10063,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9798,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7128,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9036,
+      "observation": {
+        "landmarks": [
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7219,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "聯合醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8385,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "聯合醫院",
+          "大廳入口"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6796,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "聯合醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6721,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7192,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6177,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7335,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "停車場"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 19515,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8632,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10806,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7130,
+      "observation": {
+        "landmarks": [
+          "復康巴士"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "復康巴士"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5581_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10820,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "出口2"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11936,
+      "observation": {
+        "landmarks": [
+          "復康巴士",
+          "醫院",
+          "醫院大樓",
+          "玻璃門"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "復康巴士"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12219,
+      "observation": {
+        "landmarks": [
+          "復康巴士",
+          "玻璃門",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7031,
+      "observation": {
+        "landmarks": [
+          "復康巴士",
+          "玻璃門"
+        ],
+        "signage": [
+          "復康巴士"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 10628,
+      "observation": {
+        "landmarks": [
+          "大廳入口",
+          "玻璃門"
+        ],
+        "signage": [
+          "復康巴士"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 21055,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4883,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 11407,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院大樓",
+          "大廳入口"
+        ],
+        "signage": [
+          "復康巴士"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5774,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 22481,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7235,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4725,
+      "observation": {
+        "landmarks": [
+          "復康巴士",
+          "玻璃門"
+        ],
+        "signage": [
+          "復康巴士"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4434,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6600,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫療用品"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8699,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7034,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "瀚群骨科",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5582_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 21053,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7306,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "醫療用品",
+          "維康",
+          "WELLCARE"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6548,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "醫院大樓"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9860,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8206,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診",
+          "停車場",
+          "右車道",
+          "左車道"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10847,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7024,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9014,
+      "observation": {
+        "landmarks": [
+          "急診",
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診",
+          "右車道",
+          "左車道"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5117,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6037,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5844,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9884,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "仁愛院區",
+          "急診",
+          "右車道",
+          "左車道"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6665,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10728,
+      "observation": {
+        "landmarks": [
+          "福華飯店"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8439,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛路",
+          "仁愛路三段123巷13弄"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7367,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9323,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5583_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 16283,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8177,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9309,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7356,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8841,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5131,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8454,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 11606,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5197,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 3944,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4570,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5586_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6090,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5466,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5616,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 10054,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7420,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5648,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 13003,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8239,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌",
+          "玻璃門",
+          "醫院"
+        ],
+        "signage": [
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 13963,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6528,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10006,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7729,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [
+          "金醇臻品"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8825,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 11320,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7099,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8439,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "大廳入口"
+        ],
+        "signage": [
+          "瀚群骨科",
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 12614,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5588_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 15191,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌",
+          "醫院大樓",
+          "停車場",
+          "大廳入口"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4941,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "玻璃門"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12529,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9283,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6090,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [
+          "聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 12336,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5358,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7126,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "玻璃門"
+        ],
+        "signage": [
+          "聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 4099,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10055,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 11796,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7311,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛院區"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 16111,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6607,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6822,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7107,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 10538,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 11166,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11189,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄",
+          "SOGO復興館",
+          "SIDERALA"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9548,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 11185,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4312,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 5638,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄",
+          "臨時停車區",
+          "110"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12046,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "仁愛路"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 5991,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9092,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "復興南路",
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8524,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5592_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9236,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "復興南路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5734,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6377,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6176,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9992,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "出口2"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8844,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6084,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 11614,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [
+          "SOGO復興館",
+          "2號出口",
+          "出口2"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8387,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [
+          "出口2"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5312,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 11371,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9638,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "1號電梯",
+          "SOGO復興館",
+          "YouBike",
+          "出口2"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8100,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 14961,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [
+          "SOGO復興館",
+          "出口2"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6291,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4851,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5597_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7195,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "1號電梯"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6478,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6187,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7661,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6814,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 3815,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5631,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4468,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6319,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8900,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "出口2"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5227,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館",
+          "出口2"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 14595,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5738,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6913,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5441,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5598_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 11064,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7328,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9049,
+      "observation": {
+        "landmarks": [
+          "綠色頂棚走廊"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5433,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5276,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12152,
+      "observation": {
+        "landmarks": [
+          "排班計程車"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 13495,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6522,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9763,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 10870,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6958,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "SOGO復興館"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 11623,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 11959,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7666,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7827,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8654,
+      "observation": {
+        "landmarks": [
+          "SOGO復興館"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6326,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 9677,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 12314,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "瀚群骨科",
+          "聯合醫院",
+          "仁愛院區",
+          "仁愛路",
+          "仁愛路三段123巷13弄",
+          "大安路"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6772,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 10092,
+      "observation": {
+        "landmarks": [
+          "SOGO復興館",
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8063,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7807,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 11616,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 9141,
+      "observation": {
+        "landmarks": [
+          "排班計程車",
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 8593,
+      "observation": {
+        "landmarks": [
+          "排班計程車"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 5464,
+      "observation": {
+        "landmarks": [
+          "排班計程車"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5599_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 0,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "error": "{\"error\":{\"code\":429,\"message\":\"Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\",\"status\":\"RESOURCE_E"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 14362,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7146,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6043,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 11506,
+      "observation": {
+        "landmarks": [
+          "排班計程車"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6799,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6089,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6218,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5547,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8810,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 6863,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 4797,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7809,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5582,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 4194,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "YouBike"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8532,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6153,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [
+          "YouBike"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5728,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "救護車",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5601_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7995,
+      "observation": {
+        "landmarks": [
+          "YouBike"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7924,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8350,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "急診",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 4507,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診",
+          "救護車",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7890,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "救護車",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5534,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "急診",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 12196,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "停車場",
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7716,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 5700,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院大樓",
+          "停車場"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7676,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓",
+          "救護車",
+          "停車場",
+          "大廳入口"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 7589,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 10144,
+      "observation": {
+        "landmarks": [
+          "停車場",
+          "急診",
+          "救護車",
+          "醫院"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9787,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "醫院",
+          "停車場"
+        ],
+        "signage": [
+          "急診",
+          "入口",
+          "救護車",
+          "臨時停車區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 8987,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "停車場",
+          "醫院大樓"
+        ],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7766,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5604_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 12034,
+      "observation": {
+        "landmarks": [
+          "救護車",
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5803,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7056,
+      "observation": {
+        "landmarks": [
+          "聯合醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7960,
+      "observation": {
+        "landmarks": [
+          "醫院",
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7351,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f1.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 7855,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "請勿停車"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6630,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7094,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 6771,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5589_f1.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 235836,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "timedOut": true
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f2.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 6677,
+      "observation": {
+        "landmarks": [
+          "停車場"
+        ],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 7280,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區",
+          "科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 9906,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院",
+          "醫院大樓",
+          "大廳入口"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 7573,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [
+          "臺北市立聯合醫院",
+          "聯合醫院",
+          "仁愛院區",
+          "醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "variant": "blur",
+      "repeat": 0,
+      "latencyMs": 7219,
+      "observation": {
+        "landmarks": [
+          "玻璃門"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      }
+    },
+    {
+      "file": "第二趟/frames/IMG_5606_f3.jpg",
+      "variant": "dark",
+      "repeat": 0,
+      "latencyMs": 8622,
+      "observation": {
+        "landmarks": [
+          "玻璃門",
+          "醫院"
+        ],
+        "signage": [
+          "臺北市立聯合醫院"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      }
+    }
+  ]
+}

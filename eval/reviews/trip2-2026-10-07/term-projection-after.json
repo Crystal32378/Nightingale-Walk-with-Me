@@ -1,0 +1,1563 @@
+[
+  {
+    "file": "S__121634827_0.jpg",
+    "field": "expect",
+    "verbatim": "綠色頂棚走廊",
+    "routeTerms": [
+      "綠色頂棚走廊"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "expect",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "expect",
+    "verbatim": "大廳入口",
+    "routeTerms": [
+      "大廳入口"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634828_0.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "S__121634829_0.jpg",
+    "field": "expect",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634829_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634829_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634830_0.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634830_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634830_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634831_0.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "S__121634831_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634831_0.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634833_0.jpg",
+    "field": "expect",
+    "verbatim": "排班計程車",
+    "routeTerms": [
+      "排班計程車"
+    ]
+  },
+  {
+    "file": "S__121634834_0.jpg",
+    "field": "expect",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634834_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634834_0.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "S__121634835_0.jpg",
+    "field": "optional",
+    "verbatim": "大路口",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634835_0.jpg",
+    "field": "optional",
+    "verbatim": "八線道",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634838_0.jpg",
+    "field": "expect",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634838_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634839_0.jpg",
+    "field": "optional",
+    "verbatim": "大路口",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634841_0.jpg",
+    "field": "optional",
+    "verbatim": "大路口",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634841_0.jpg",
+    "field": "optional",
+    "verbatim": "自行車標線",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "忠孝東路",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "福華飯店",
+    "routeTerms": [
+      "福華飯店"
+    ]
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634844_0.jpg",
+    "field": "optional",
+    "verbatim": "大安路",
+    "routeTerms": [
+      "大安路"
+    ]
+  },
+  {
+    "file": "S__121634845_0.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634845_0.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634845_0.jpg",
+    "field": "optional",
+    "verbatim": "忠孝東路",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634845_0.jpg",
+    "field": "optional",
+    "verbatim": "大安路",
+    "routeTerms": [
+      "大安路"
+    ]
+  },
+  {
+    "file": "S__121634846_0.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634846_0.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634847_0.jpg",
+    "field": "expect",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634847_0.jpg",
+    "field": "expect",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634847_0.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634849_0.jpg",
+    "field": "expect",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634849_0.jpg",
+    "field": "expect",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634849_0.jpg",
+    "field": "optional",
+    "verbatim": "大安路",
+    "routeTerms": [
+      "大安路"
+    ]
+  },
+  {
+    "file": "S__121634850_0.jpg",
+    "field": "expect",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634850_0.jpg",
+    "field": "expect",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634850_0.jpg",
+    "field": "optional",
+    "verbatim": "大安路",
+    "routeTerms": [
+      "大安路"
+    ]
+  },
+  {
+    "file": "S__121634854_0.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "S__121634858_0.jpg",
+    "field": "optional",
+    "verbatim": "瀚群骨科",
+    "routeTerms": [
+      "瀚群骨科"
+    ]
+  },
+  {
+    "file": "S__121634861_0.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634861_0.jpg",
+    "field": "optional",
+    "verbatim": "救護車",
+    "routeTerms": [
+      "救護車"
+    ]
+  },
+  {
+    "file": "S__121634861_0.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "S__121634862_0.jpg",
+    "field": "expect",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634862_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634862_0.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "S__121634863_0.jpg",
+    "field": "expect",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634863_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634863_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634865_0.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634865_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634865_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634865_0.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634865_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛路",
+    "routeTerms": [
+      "仁愛路"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "大安路",
+    "routeTerms": [
+      "大安路"
+    ]
+  },
+  {
+    "file": "S__121634867_0.jpg",
+    "field": "optional",
+    "verbatim": "仁愛路",
+    "routeTerms": [
+      "仁愛路"
+    ]
+  },
+  {
+    "file": "S__121634868_0.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "S__121634869_0.jpg",
+    "field": "optional",
+    "verbatim": "自行車標線",
+    "routeTerms": []
+  },
+  {
+    "file": "S__121634871_0.jpg",
+    "field": "expect",
+    "verbatim": "復康巴士",
+    "routeTerms": [
+      "復康巴士"
+    ]
+  },
+  {
+    "file": "S__121634871_0.jpg",
+    "field": "expect",
+    "verbatim": "臨時停車區",
+    "routeTerms": [
+      "臨時停車區"
+    ]
+  },
+  {
+    "file": "S__121634872_0.jpg",
+    "field": "expect",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "S__121634872_0.jpg",
+    "field": "expect",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "S__121634872_0.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/jpg/IMG_5591.jpg",
+    "field": "expect",
+    "verbatim": "FamilyMart",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5591.jpg",
+    "field": "expect",
+    "verbatim": "復興南路一段219巷",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5593.jpg",
+    "field": "expect",
+    "verbatim": "大安路一段116巷",
+    "routeTerms": [
+      "大安路一段116巷"
+    ]
+  },
+  {
+    "file": "第二趟/jpg/IMG_5593.jpg",
+    "field": "expect",
+    "verbatim": "復興南路一段",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5593.jpg",
+    "field": "optional",
+    "verbatim": "復興南路",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5594.jpg",
+    "field": "expect",
+    "verbatim": "行人優先 當心行人",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5595.jpg",
+    "field": "expect",
+    "verbatim": "行人優先 當心行人",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5596.jpg",
+    "field": "expect",
+    "verbatim": "行人優先 當心行人",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5602.jpg",
+    "field": "expect",
+    "verbatim": "望 左",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/jpg/IMG_5602.jpg",
+    "field": "optional",
+    "verbatim": "瀚群骨科",
+    "routeTerms": [
+      "瀚群骨科"
+    ]
+  },
+  {
+    "file": "第二趟/jpg/IMG_5605.jpg",
+    "field": "expect",
+    "verbatim": "救護員工車 臨停 無需取票 車牌辨識系統 人請走人行道",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "expect",
+    "verbatim": "聯合醫院 仁愛院區 大廳入口 急診室哭 停車場入口",
+    "routeTerms": [
+      "聯合醫院",
+      "仁愛院區",
+      "大廳入口",
+      "急診",
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "大廳入口",
+    "routeTerms": [
+      "大廳入口"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f1.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "大廳入口",
+    "routeTerms": [
+      "大廳入口"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f2.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5580_f3.jpg",
+    "field": "expect",
+    "verbatim": "醫院",
+    "routeTerms": [
+      "醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f1.jpg",
+    "field": "expect",
+    "verbatim": "台北市立聯合",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f1.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f1.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f1.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f2.jpg",
+    "field": "expect",
+    "verbatim": "出口",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f2.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f2.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f2.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f3.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f3.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f3.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5581_f3.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f1.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f1.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f2.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f2.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f3.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5582_f3.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f1.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f1.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f2.jpg",
+    "field": "expect",
+    "verbatim": "急診 右車道 左車道",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f2.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f2.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f3.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f3.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5583_f3.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f1.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f1.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f2.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f2.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5588_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f1.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f1.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f2.jpg",
+    "field": "expect",
+    "verbatim": "聯合醫院仁愛院區",
+    "routeTerms": [
+      "聯合醫院",
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f2.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f2.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f3.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f3.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5589_f3.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5592_f2.jpg",
+    "field": "optional",
+    "verbatim": "大安路一段116巷",
+    "routeTerms": [
+      "大安路一段116巷"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5592_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛路三段123巷13弄",
+    "routeTerms": [
+      "仁愛路三段123巷13弄"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5592_f3.jpg",
+    "field": "optional",
+    "verbatim": "大安路一段116巷",
+    "routeTerms": [
+      "大安路一段116巷"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5592_f3.jpg",
+    "field": "optional",
+    "verbatim": "仁愛路三段123巷13弄",
+    "routeTerms": [
+      "仁愛路三段123巷13弄"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f1.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f1.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f1.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f2.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f2.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f2.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f3.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f3.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5597_f3.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f1.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f1.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f1.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f2.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f2.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f2.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f3.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f3.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5598_f3.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f1.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f1.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f1.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f2.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f2.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f2.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f3.jpg",
+    "field": "optional",
+    "verbatim": "出口2",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f3.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5599_f3.jpg",
+    "field": "optional",
+    "verbatim": "1號電梯",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5600_f1.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5600_f2.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5600_f3.jpg",
+    "field": "optional",
+    "verbatim": "SOGO復興館",
+    "routeTerms": []
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f1.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f1.jpg",
+    "field": "optional",
+    "verbatim": "救護車",
+    "routeTerms": [
+      "救護車"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f1.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f2.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f2.jpg",
+    "field": "optional",
+    "verbatim": "救護車",
+    "routeTerms": [
+      "救護車"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f2.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f3.jpg",
+    "field": "optional",
+    "verbatim": "急診",
+    "routeTerms": [
+      "急診"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f3.jpg",
+    "field": "optional",
+    "verbatim": "救護車",
+    "routeTerms": [
+      "救護車"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5604_f3.jpg",
+    "field": "optional",
+    "verbatim": "停車場",
+    "routeTerms": [
+      "停車場"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "黃色直式掛牌",
+    "routeTerms": [
+      "黃色直式掛牌"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f1.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "黃色直式掛牌",
+    "routeTerms": [
+      "黃色直式掛牌"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f2.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "臺北市立聯合醫院",
+    "routeTerms": [
+      "臺北市立聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "聯合醫院",
+    "routeTerms": [
+      "聯合醫院"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "仁愛院區",
+    "routeTerms": [
+      "仁愛院區"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "黃色直式掛牌",
+    "routeTerms": [
+      "黃色直式掛牌"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "玻璃門",
+    "routeTerms": [
+      "玻璃門"
+    ]
+  },
+  {
+    "file": "第二趟/frames/IMG_5606_f3.jpg",
+    "field": "optional",
+    "verbatim": "醫院大樓",
+    "routeTerms": [
+      "醫院大樓"
+    ]
+  }
+]

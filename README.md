@@ -20,7 +20,7 @@ Live: **https://nightingale-walk-with-me.web.app/?flow=last300m**
 
 - Frontend on Firebase Hosting; `/api/**` rewrites to Cloud Run (`nightingale`, asia-east1) — one origin for page and API.
 - Gemini 2.5 Flash on Vertex AI maps free-text observations onto the route vocabulary; every failure mode falls back to deterministic matching.
-- 57 tests (engine, validator, Gemini text and photo fallbacks, Firestore session store, HTTP API, and end-to-end walks of the real route).
+- 84 tests (engine, validator, Gemini text and photo fallbacks, photo gates and scoring, Firestore session store, HTTP API, and end-to-end walks of the real route), plus 5 Python review-import checks.
 
 ```
 npm install
@@ -37,11 +37,17 @@ Walked twice by the route author (2026-09-26 and 2026-09-28); every landmark str
 
 ## Voice: Gemini TTS
 
-Route guidance has been recorded with **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices — Leda (female) and Puck (male) — for a user-switchable voice. The recordings and the script are ready; wiring playback into the frontend is the next step.
+Route guidance uses pre-recorded **Gemini TTS** (`gemini-2.5-flash-tts`) in two voices — Leda (female) and Puck (male). On 2026-10-07, the 11 revised lines were generated for both voices, including `cp2.along`. The local frontend now selects fixed recordings by route, checkpoint, and action, supports voice switching and mute, and plays `cp2.after` followed by `cp2.along` only after the walker presses「過完了」. Crystal has accepted all 22 revised recordings, including a final single-line Puck `photo.wait` retake with an explicit adult-male voice instruction. This continuation has not been deployed; phone field acceptance remains separate.
 
-What made Gemini TTS the right fit is that accent and manner are steered in plain language. One style instruction — *speak Mandarin with a natural Taiwanese accent, gently and unhurried, like a grandchild walking an elder* — produced voices a native Taiwanese listener judged as warm and local. No voice training and no audio engineering were needed.
+The current style instruction is *speak Mandarin gently and unhurried, like a grandchild walking an elder*. In the 2026-10-07 comparison, Crystal approved the Leda/Puck samples after removing the explicit Taiwanese-accent instruction: the Mandarin sounded natural while the pace and warmth remained suitable. The model, voices, wording and other generation settings were held constant. This records a listening decision for these samples, not a general claim about accent prompting.
 
-Only human-written, verified lines are recorded (`docs/tts-outdoor-script.md`, 17 lines, all passing the product's register lint). Live server text and anything the user says are never sent to speech generation.
+Only human-written, verified lines are recorded (`docs/tts-outdoor-script.md`, 22 lines, all passing the product's register lint). Live server text and anything the user says are never sent to speech generation. Missing recordings stay silent. The three recoveries currently share `RECOVER:cp5`, so they remain text-only until the protocol can identify each recovery without matching server prose.
+
+For local generation, `scripts/record-outdoor.py` previews the marked「新錄」rows by default; `--record` calls the existing Vertex AI project and preserves a hash and generation record for each file. Existing matching files are reused. On this Mac, run with `SSL_CERT_FILE=/etc/ssl/cert.pem` so Python uses the system CA bundle. No quota, billing, or service configuration changes are needed by the script.
+
+`python3 scripts/make-trip2-review.py` builds the private second-trip review sheet at `field trip photos/第二趟/標註核對.html`. It loads the existing 57 image drafts, keeps all rows unreviewed until the human marks them, stores changes in the local browser, and exports a separate JSON. It never updates the evaluation labels, route truth, or original media.
+
+The completed 57-row human review was imported in the 2026-10-08 acceptance preparation. Human wording, the prior labels, and the scoring projection are preserved in `eval/reviews/trip2-2026-10-07/` (the folder date is the human export date). The replay report is `docs/photo-review-2026-10-08.md`. Saved readings still produce early checkpoint confirmations; zero first-step false arrivals is not a deployment approval.
 
 ## Adding a new hospital
 
