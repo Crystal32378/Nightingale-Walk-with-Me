@@ -1,0 +1,20 @@
+{
+  "recordedAt": "2026-10-07T16:21:30.143800+00:00",
+  "reviewerRole": "Independent fu_acceptance agent authorized by Crystal in this session",
+  "preparationVerdict": "PASS",
+  "deploymentVerdict": "HOLD",
+  "reviewedBackendCommit": "2bdf76d5e494a1d7a1baeac10de26d2c923ff77c",
+  "reviewedFrontendCommit": "f4016ba8b0b009aa209cbbcfc72b5487823da913",
+  "report": "fu-review.md",
+  "reportSha256": "488473afdfd75d0cfca6f9229f6ad3e2f0cbc9a98301704b5976de047e9afc66",
+  "runtimeOrAudioChangesAfterReview": false,
+  "deployed": false,
+  "pushed": false,
+  "blockingEvidence": {
+    "reachableEarlyConfirmCases": 7,
+    "reachableFalseRecoveryCases": 3,
+    "modelCallsAreHistorical": true,
+    "phoneFieldAcceptancePerformed": false
+  },
+  "nextScope": "Propose narrow fixes or a genuinely isolated phone-test scope for the documented existing navigation failures, then obtain independent deployment acceptance."
+}
