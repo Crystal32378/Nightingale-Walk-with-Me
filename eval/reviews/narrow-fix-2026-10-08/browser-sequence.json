@@ -1,0 +1,253 @@
+{
+  "status": "PASS",
+  "scope": "Real frontend and HTTP API; six recorded failing photo observations injected at the interpreter seam; no cloud model",
+  "photos": 6,
+  "arrived": true,
+  "errors": [],
+  "events": [
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp1",
+        "instruction": "出口2出來，往右轉。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2",
+        "instruction": "等綠燈，過復興南路。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2x",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp2x",
+        "instruction": "過完馬路，往右轉。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp3",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp3",
+        "questionCount": 0
+      },
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp3",
+        "lookFor": [
+          "仁愛路",
+          "福華飯店",
+          "福華",
+          "瀚群骨科"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp3",
+        "questionCount": 0
+      },
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3",
+        "instruction": "等綠燈，過仁愛路。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp3x",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp3x",
+        "instruction": "過完左轉，醫院在這一側。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp4",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "GUIDE",
+        "checkpointId": "cp4",
+        "instruction": "大廳入口還在前面一點。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp5",
+        "questionCount": 0
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp5",
+        "questionCount": 0
+      },
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "action": {
+        "type": "REANCHOR",
+        "checkpointId": "cp5",
+        "lookFor": [
+          "復康巴士",
+          "排班計程車",
+          "黃色直式掛牌"
+        ]
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp5",
+        "questionCount": 0
+      },
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "action": {
+        "type": "ASK",
+        "checkpointId": "cp5",
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "AMBIGUOUS",
+        "checkpointId": "cp5",
+        "questionCount": 1
+      },
+      "photoHold": null
+    },
+    {
+      "action": {
+        "type": "CONFIRM_ARRIVAL",
+        "checkpointId": "cp5"
+      },
+      "session": {
+        "routeId": "renai-001",
+        "state": "ARRIVED",
+        "checkpointId": "cp5",
+        "questionCount": 0
+      },
+      "photoHold": null
+    }
+  ],
+  "audio": [
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp1.guide.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp1.exit.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.remind.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp2.cross.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp2.after.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.remind.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp3.cross.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp3.after.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/cp4.driveway.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.remind.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/photo.wait.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/reanchor.wav",
+    "http://127.0.0.1:5178/audio/outdoor/renai-001/leda/ask.entrance.wav"
+  ]
+}

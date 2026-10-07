@@ -137,6 +137,8 @@ export interface VerdictResult {
   unrecognized: string[];
   /** Set when the evidence matched but the phone's zone says this checkpoint is not reached yet. */
   locationVeto?: string;
+  /** An unlocated photo cannot start a crossing or a zone-specific recovery. */
+  photoHold?: "crossing-needs-location" | "recovery-needs-location";
 }
 
 /** What the engine decided; canonical facts only, phrased later by the language layer. */

@@ -67,6 +67,11 @@ export function step(
   switch (verdict.verdict) {
     case "CONFLICT": {
       const conflict = verdict.matchedConflict!;
+      if (observation.source === "photo" && conflict.zones && (!location || location.zone === UNKNOWN_ZONE)) {
+        // A directory may name the ER without placing the walker at its driveway.
+        // Keep the checkpoint and question budget; another photo is not corroboration.
+        return reanchor(session, cp, { ...verdict, photoHold: "recovery-needs-location" });
+      }
       if (location && location.zone !== UNKNOWN_ZONE && conflict.zones && !conflict.zones.includes(location.zone)) {
         // Reliably somewhere this landmark cannot mean: drop the recovery, stay put.
         const held = { ...verdict, locationVeto: location.zone };
@@ -103,6 +108,12 @@ export function step(
       const where = zoneRule(cp, location);
       if (where === "veto") {
         return reanchor(session, cp, { ...verdict, locationVeto: location!.zone });
+      }
+      const next = cp.next ? findCheckpoint(route, cp.next) : undefined;
+      if (observation.source === "photo" && next?.confirmBy === "walker" && where === "unknown") {
+        // A recognised road name alone must not start a crossing while location
+        // is unknown. Text follow-up remains available; a zone alone proves nothing.
+        return reanchor(session, cp, { ...verdict, photoHold: "crossing-needs-location" });
       }
       // True arrival requires the entrance's own evidence; location can only
       // hold it back. Near or unknown: ask once, then let the evidence stand,

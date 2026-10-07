@@ -27,14 +27,16 @@ describe("photo eval scoring", () => {
     expect(judge(route, places, pylon, "cp5", saw("臺北市立聯合醫院")).action).not.toBe("CONFIRM_ARRIVAL");
   });
 
-  it("the emergency pylon recovering at cp5 is right; the same word inside the building is false", () => {
-    expect(judge(route, places, at("er", ["急診"]), "cp5", saw("急診")).outcome).toBe("correct");
-    expect(judge(route, places, at("inside", [], ["急診"]), "cp5", saw("急診")).outcome).toBe("false_conflict");
+  it("recovers from the emergency pylon only with compatible photo context", () => {
+    expect(judge(route, places, at("er", ["急診"]), "cp5", saw("急診"), "place").outcome).toBe("correct");
+    expect(judge(route, places, at("inside", [], ["急診"]), "cp5", saw("急診")).outcome).toBe("ok");
+    // The scorer still reports a false conflict when the engine emits one from text.
+    expect(judge(route, places, at("inside", [], ["急診"]), "cp5", { ...saw("急診"), source: "text" }).outcome).toBe("false_conflict");
   });
 
   it("location vetoes confirming a corner the walker has not reached", () => {
     const exit = at("exit2");
-    expect(judge(route, places, exit, "cp2", saw("大安路一段116巷"), "none")).toMatchObject({ outcome: "false_confirm", reachable: true });
+    expect(judge(route, places, exit, "cp2", saw("大安路一段116巷"), "none")).toMatchObject({ action: "REANCHOR", outcome: "ok", reachable: true });
     expect(judge(route, places, exit, "cp2", saw("大安路一段116巷"), "place")).toMatchObject({ action: "REANCHOR", outcome: "ok", vetoed: true });
   });
 
@@ -44,7 +46,7 @@ describe("photo eval scoring", () => {
 
   it("inside the lobby, a floor directory's 急診 is held back once the phone knows it is at the lobby", () => {
     const floor = at("inside", [], ["急診"]);
-    expect(judge(route, places, floor, "cp5", saw("急診"), "none").outcome).toBe("false_conflict");
+    expect(judge(route, places, floor, "cp5", saw("急診"), "none")).toMatchObject({ action: "REANCHOR", outcome: "ok" });
     expect(judge(route, places, floor, "cp5", saw("急診"), "place")).toMatchObject({ action: "ASK", vetoed: true });
   });
 
@@ -53,12 +55,14 @@ describe("photo eval scoring", () => {
   });
 
   it("a photo of nothing in particular must never confirm anywhere", () => {
-    expect(judge(route, places, at("noise"), "cp3", saw("仁愛路"))).toMatchObject({ outcome: "false_confirm", reachable: true });
+    expect(judge(route, places, at("noise"), "cp3", saw("仁愛路"))).toMatchObject({ outcome: "ok", reachable: true });
+    expect(judge(route, places, at("noise"), "cp3", { ...saw("仁愛路"), source: "text" })).toMatchObject({ outcome: "false_confirm", reachable: true });
   });
 
   it("the walked-too-far canopy recovers at the lobby checkpoint", () => {
     const canopy = at("past", ["綠色頂棚走廊"]);
-    expect(judge(route, places, canopy, "cp5", { ...saw(), landmarks: ["綠色頂棚走廊"] }).outcome).toBe("correct");
+    expect(judge(route, places, canopy, "cp5", { ...saw(), landmarks: ["綠色頂棚走廊"] }, "place").outcome).toBe("correct");
+    expect(judge(route, places, canopy, "cp5", { ...saw(), landmarks: ["綠色頂棚走廊"] }, "none").outcome).toBe("miss");
     expect(judge(route, places, canopy, "cp5", saw()).outcome).toBe("miss");
   });
 });

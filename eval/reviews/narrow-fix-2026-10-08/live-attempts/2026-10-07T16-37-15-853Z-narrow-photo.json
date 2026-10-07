@@ -1,0 +1,108 @@
+{
+  "runId": "2026-10-07T16-37-15-853Z-narrow-photo",
+  "evaluationMode": "live-narrow-probe",
+  "project": "nightingale-walk-with-me",
+  "location": "global",
+  "model": "gemini-2.5-flash",
+  "promptSha256": "940e17f3dc603168c5943ec1c0d6b9c3571e6fb8085b91c528026b460befe2a7",
+  "routeSha256": "3c0ca31f831c4254d82b2cc7a66233f39f0ab308099a6d111c2f25e9411152f8",
+  "sourceFailures": "eval/reviews/trip2-2026-10-07/after-projected.json",
+  "vocabulary": [
+    "仁愛路",
+    "仁愛路三段123巷13弄",
+    "仁愛院區",
+    "停車場",
+    "大安路",
+    "大安路一段116巷",
+    "大廳入口",
+    "復康巴士",
+    "急診",
+    "排班計程車",
+    "救護車",
+    "瀚群骨科",
+    "玻璃門",
+    "福華",
+    "福華飯店",
+    "綠色頂棚走廊",
+    "聯合醫院",
+    "臨時停車區",
+    "臺北市立聯合醫院",
+    "醫院",
+    "醫院大樓",
+    "黃色直式掛牌"
+  ],
+  "readings": [
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 6098,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "人行道",
+          "停車場",
+          "瀚群骨科"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      },
+      "inputSha256": "4daf2d16f23e03da24d4bdfd0e81fb5d60559a176ba79b022280847d4cc8ccbf",
+      "checkedAt": "2026-10-07T16:37:21.987Z"
+    },
+    {
+      "file": "S__121634867_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 8871,
+      "observation": {
+        "landmarks": [],
+        "signage": [
+          "臺北市立聯合醫院",
+          "仁愛院區"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      },
+      "inputSha256": "2beec7850b59087a9dda7f437604247138aa6683fb4b4768f60b6b5935782d66",
+      "checkedAt": "2026-10-07T16:37:30.893Z"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 6518,
+      "observation": {
+        "landmarks": [
+          "黃色直式掛牌"
+        ],
+        "signage": [
+          "人行道",
+          "SIDEWALK"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      },
+      "inputSha256": "14c7c0b84632638cb9b44f1bc04ced6e5e6619826adc8b32e3829cdb8a4c1898",
+      "checkedAt": "2026-10-07T16:37:37.446Z"
+    },
+    {
+      "file": "第二趟/jpg/IMG_5591.jpg",
+      "variant": "small",
+      "repeat": 0,
+      "latencyMs": 5195,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "high",
+        "source": "photo"
+      },
+      "inputSha256": "cfa96d3640fa992fddb3cc6780e1efef85aa2e7ebf1652b97f3d23f3bd45c431",
+      "checkedAt": "2026-10-07T16:37:42.690Z"
+    }
+  ],
+  "plannedRequests": 4,
+  "completedRequests": 4,
+  "startAt": 3,
+  "scope": "Subset of seven previously failing pairs; one interpreter call per selected pair in this run. All partial/failed runs retained. Not a full model or phone-field acceptance."
+}

@@ -1,0 +1,102 @@
+{
+  "runId": "2026-10-07T16-30-53-201Z-narrow-photo",
+  "evaluationMode": "live-narrow-probe",
+  "project": "nightingale-walk-with-me",
+  "location": "global",
+  "model": "gemini-2.5-flash",
+  "promptSha256": "940e17f3dc603168c5943ec1c0d6b9c3571e6fb8085b91c528026b460befe2a7",
+  "routeSha256": "3c0ca31f831c4254d82b2cc7a66233f39f0ab308099a6d111c2f25e9411152f8",
+  "sourceFailures": "eval/reviews/trip2-2026-10-07/after-projected.json",
+  "vocabulary": [
+    "仁愛路",
+    "仁愛路三段123巷13弄",
+    "仁愛院區",
+    "停車場",
+    "大安路",
+    "大安路一段116巷",
+    "大廳入口",
+    "復康巴士",
+    "急診",
+    "排班計程車",
+    "救護車",
+    "瀚群骨科",
+    "玻璃門",
+    "福華",
+    "福華飯店",
+    "綠色頂棚走廊",
+    "聯合醫院",
+    "臨時停車區",
+    "臺北市立聯合醫院",
+    "醫院",
+    "醫院大樓",
+    "黃色直式掛牌"
+  ],
+  "readings": [
+    {
+      "file": "S__121634865_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 8430,
+      "observation": {
+        "landmarks": [
+          "醫院大樓"
+        ],
+        "signage": [
+          "急診"
+        ],
+        "confidence": "high",
+        "source": "photo"
+      },
+      "inputSha256": "9e0c213825b5026b2459c43ba5c5b4b2c737b1fd3cdb023d955df3959360c404",
+      "checkedAt": "2026-10-07T16:31:01.673Z"
+    },
+    {
+      "file": "S__121634868_0.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 19930,
+      "observation": {
+        "landmarks": [
+          "醫院"
+        ],
+        "signage": [],
+        "confidence": "medium",
+        "source": "photo"
+      },
+      "inputSha256": "572bf24248cd126607fd080dddfb86b39c5abd6730ab12c7276b45e0848e92bb",
+      "checkedAt": "2026-10-07T16:31:21.639Z"
+    },
+    {
+      "file": "第二趟/frames/IMG_5600_f1.jpg",
+      "variant": "crop",
+      "repeat": 0,
+      "latencyMs": 9989,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "inputSha256": "251b2aed9a48bf1a972acdfd3a1a9b7744dc25e4a33b8ec41b294c415ba09c41",
+      "checkedAt": "2026-10-07T16:31:31.673Z"
+    },
+    {
+      "file": "S__121634854_0.jpg",
+      "variant": "orig",
+      "repeat": 0,
+      "latencyMs": 13076,
+      "observation": {
+        "landmarks": [],
+        "signage": [],
+        "confidence": "low",
+        "source": "photo"
+      },
+      "error": "{\"error\":{\"code\":429,\"message\":\"Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\",\"status\":\"RESOURCE_EXHAUSTED\"}}",
+      "inputSha256": "4daf2d16f23e03da24d4bdfd0e81fb5d60559a176ba79b022280847d4cc8ccbf",
+      "checkedAt": "2026-10-07T16:31:44.786Z"
+    }
+  ],
+  "plannedRequests": 7,
+  "completedRequests": 4,
+  "scope": "Seven previously failing pairs; one current-model request each. Not a full model or phone-field acceptance."
+}

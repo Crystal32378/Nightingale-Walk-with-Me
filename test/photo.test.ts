@@ -60,13 +60,18 @@ describe("photo observations over HTTP", () => {
     return { status: res.status, json: await res.json() };
   };
 
-  it("a photo cannot confirm exit 2, but a readable corner sign advances the walk", async () => {
+  it("a photo needs compatible location at the corner and never confirms exit 2", async () => {
     const a = app();
     const { json: s } = await post(a, "/api/sessions", { routeId: route.routeId });
     const first = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo });
     expect(first.json.session.checkpointId).toBe("cp1");
     await post(a, `/api/sessions/${s.sessionId}/observations`, { confirm: "done" });
-    const { status, json } = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo });
+    const held = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo });
+    expect(held.json.session.checkpointId).toBe("cp2");
+    expect(held.json.action.type).toBe("REANCHOR");
+    expect(held.json.verdict.photoHold).toBe("crossing-needs-location");
+    expect(held.json.expects).toBe("evidence");
+    const { status, json } = await post(a, `/api/sessions/${s.sessionId}/observations`, { photo, location: { zone: "lane" } });
     expect(status).toBe(200);
     expect(json.verdict.verdict).toBe("CONFIRMED");
     expect(json.session.checkpointId).toBe("cp2x");
