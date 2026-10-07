@@ -4,6 +4,12 @@
 
 A fresh build for **AI Builder Cup 2026** (Hack2Skill × Google Cloud). It guides one journey: transit exit → verified hospital entrance — the last 300 meters where maps say "arrived" but the person is standing between three buildings, two entrances, and a parking ramp.
 
+## Source and handoff
+
+This repository owns the API, verified route and evaluation evidence. The [companion frontend repository](https://github.com/Crystal32378/Nightingale/tree/zh-tw-preview-2026-10-08) contains the Chinese UI, bird and 44 reviewed speech assets. Both repositories preserve this checkpoint under `zh-tw-preview-2026-10-08`; GitHub source publication does not promote the preview to the live site.
+
+Start the next session with [the current handoff (繁體中文)](HANDOFF.md). See [English-version preparation](docs/english-preparation.md) for the next phase and [the paired version record](docs/zh-tw-preview-baseline.json) for the exact deployed code commits.
+
 ## Architecture principle
 
 > **AI interprets. Verified data decides.**
@@ -50,7 +56,7 @@ For local generation, `scripts/record-outdoor.py` previews the marked「新錄�
 
 `python3 scripts/make-trip2-review.py` builds the private second-trip review sheet at `field trip photos/第二趟/標註核對.html`. It loads the existing 57 image drafts, keeps all rows unreviewed until the human marks them, stores changes in the local browser, and exports a separate JSON. It never updates the evaluation labels, route truth, or original media.
 
-The completed 57-row human review was imported in the 2026-10-08 acceptance preparation. Human wording, the prior labels, and the scoring projection are preserved in `eval/reviews/trip2-2026-10-07/` (the folder date is the human export date). The replay report is `docs/photo-review-2026-10-08.md`. Saved readings still produce early checkpoint confirmations; zero first-step false arrivals is not a deployment approval.
+The completed 57-row human review was imported in the 2026-10-08 acceptance preparation. Human wording, the prior labels, and the scoring projection are preserved in `eval/reviews/trip2-2026-10-07/` (the folder date is the human export date). The initial replay in `docs/photo-review-2026-10-08.md` exposed early checkpoint confirmations and held deployment. The subsequent [narrow photo-context fix](docs/photo-context-fix-2026-10-08.md) holds those tested cases and received independent approval for the limited preview. Zero first-step false arrivals still does not establish complete field safety.
 
 ## Adding a new hospital
 

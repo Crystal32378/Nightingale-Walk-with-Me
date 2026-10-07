@@ -1,0 +1,21 @@
+{
+  "checkpoint": "zh-tw-preview-2026-10-08",
+  "status": "Chinese phone-test preview accepted; physical field acceptance pending; full/live release HOLD",
+  "backend": {
+    "repository": "https://github.com/Crystal32378/Nightingale-Walk-with-Me",
+    "deployedCodeCommit": "65de4d86a59f9aaade7d8b44f4342a36f5678efe",
+    "publicationTag": "zh-tw-preview-2026-10-08",
+    "reviewBranch": "feat/photo-eval-gates"
+  },
+  "frontend": {
+    "repository": "https://github.com/Crystal32378/Nightingale",
+    "deployedCodeCommit": "f4016ba8b0b009aa209cbbcfc72b5487823da913",
+    "publicationTag": "zh-tw-preview-2026-10-08",
+    "reviewBranch": "feat/photo-gates"
+  },
+  "sourcePublicationDoesNotPromoteProduction": true,
+  "previewUrl": "https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app/?flow=last300m&photo=1",
+  "previewExpiresAt": "2026-10-14T17:09:36.107491900Z",
+  "handoff": "../HANDOFF.md",
+  "englishPreparation": "english-preparation.md"
+}
