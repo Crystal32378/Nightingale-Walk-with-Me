@@ -203,7 +203,9 @@
       "status": "REVIEW_DIFFERENCE",
       "expected": "Wait for the green pedestrian signal, then cross Renai Road.",
       "transcribed": "Wait for the green pedestrian signal, then cross Ren I Road.",
-      "sha256": "9b5067dc4300c0e702340704a1734989fe6befd894d6afb64334a063df2bd798"
+      "sha256": "9b5067dc4300c0e702340704a1734989fe6befd894d6afb64334a063df2bd798",
+      "review": "PASS_USER_SPOT_LISTENING",
+      "reviewNote": "Crystal: 兩句地名都可以. Raw ASR difference is preserved; no rerecording."
     },
     "Puck:cp3.after": {
       "status": "PASS",
@@ -239,7 +241,9 @@
       "status": "REVIEW_DIFFERENCE",
       "expected": "This road leads to Da'an Road. Let us turn around.",
       "transcribed": "This road leads to Don Road. Let us turn around.",
-      "sha256": "aebf26758f3ec64240f98683801a1a025c3098e985924a444b95b62b761b99f8"
+      "sha256": "aebf26758f3ec64240f98683801a1a025c3098e985924a444b95b62b761b99f8",
+      "review": "PASS_USER_SPOT_LISTENING",
+      "reviewNote": "Crystal: 兩句地名都可以. Raw ASR difference is preserved; no rerecording."
     },
     "Puck:recover.daan.b": {
       "status": "PASS",
@@ -283,10 +287,12 @@
     "checked": 44,
     "normalizedMatches": 36,
     "numericEquivalent": 6,
-    "properNameSpotListeningPending": [
+    "properNameSpotListeningPending": [],
+    "scope": "Machine text cross-check; no claim of individual human acceptance for all clips.",
+    "properNameSpotListeningAccepted": [
       "Puck:cp3.cross",
       "Puck:recover.daan.a"
     ],
-    "scope": "Machine text cross-check; no claim of individual human acceptance for all clips."
+    "individualHumanAcceptedClips": 6
   }
 }

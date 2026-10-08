@@ -1,8 +1,8 @@
-# English fixed voice copy — review draft
+# English fixed voice copy — accepted recording script
 
-Purpose: the same verified Taipei route, understandable to an English-speaking walker. This is a proposed English script; the 44 accepted Chinese recordings remain untouched. Leda and Puck will share the same fixed words. No regional accent is assumed.
+Purpose: the same verified Taipei route, understandable to an English-speaking walker. Crystal accepted this recording script and the revised normal-pace style; the 44 accepted Chinese recordings remain untouched. Leda and Puck will share the same fixed words. No regional accent is assumed.
 
-A first audition will use `cp2.along` and `reanchor` in both voices. Full generation waits for Crystal's sample/script acceptance.
+Crystal accepted normal-pace `cp2.along` and `reanchor` samples in both voices, then authorized the full batch. All 44 clips were generated and imported; two Puck place-name clips also passed her spot listening. Other clips have machine text/hash checks, not individual human listening acceptance.
 
 | Key | Accepted Chinese source | Proposed English |
 |---|---|---|

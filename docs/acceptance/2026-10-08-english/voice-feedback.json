@@ -7,8 +7,14 @@
   ],
   "correction": "Normal conversational pace and relaxed articulation; removed unhurried/grandchild style from English only.",
   "revisedSamples": "outputs/nightingale-english-normal-2026-10-08",
-  "batchStatus": "authorized_normal_pace",
+  "batchStatus": "44_generated_and_imported",
   "chineseWavs": "unchanged",
   "revisedSampleAcceptance": "這版可以，全部用正常語速",
-  "acceptedAtUtc": "2026-10-08T04:58:28.879597+00:00"
+  "acceptedAtUtc": "2026-10-08T04:58:28.879597+00:00",
+  "placeNameSpotAcceptance": "兩句地名都可以",
+  "placeNameSpotAcceptedKeys": [
+    "Puck:cp3.cross",
+    "Puck:recover.daan.a"
+  ],
+  "acceptanceScope": "Normal-pace style/script approved; 4 audition clips and 2 place-name clips individually heard by Crystal. Other clips have machine text/hash checks."
 }
