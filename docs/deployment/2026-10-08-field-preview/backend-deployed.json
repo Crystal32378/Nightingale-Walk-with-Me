@@ -1,0 +1,51 @@
+{
+  "checkedAtUtc": "2026-10-08T02:20:57.644946+00:00",
+  "service": {
+    "spec": {
+      "template": {
+        "spec": {
+          "serviceAccountName": "160543130573-compute@developer.gserviceaccount.com"
+        }
+      }
+    },
+    "status": {
+      "latestReadyRevisionName": "nightingale-fieldfix20261008",
+      "traffic": [
+        {
+          "percent": 100,
+          "revisionName": "nightingale-00010-ff2"
+        },
+        {
+          "revisionName": "nightingale-fieldfix20261008",
+          "tag": "field-fix-20261008",
+          "url": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+        },
+        {
+          "revisionName": "nightingale-guard20261008",
+          "tag": "photo-guard-20261008",
+          "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+        }
+      ]
+    }
+  },
+  "revision": {
+    "metadata": {
+      "annotations": {
+        "autoscaling.knative.dev/maxScale": "1",
+        "run.googleapis.com/build-id": "{\"nightingale-1\":\"6571f6eb-675e-4f2d-85a2-77d5b1f34553\"}",
+        "run.googleapis.com/build-source-location": "{\"nightingale-1\":\"gs://run-sources-nightingale-walk-with-me-asia-east1/services/nightingale/1791425886.320378-d05e90b997ac4ef884dcc93ba5babaed.zip#1791425886618921\"}",
+        "run.googleapis.com/client-name": "gcloud",
+        "run.googleapis.com/client-version": "579.0.0",
+        "run.googleapis.com/operation-id": "77bdb940-81ce-47f3-b412-7ed9db4138e6",
+        "run.googleapis.com/startup-cpu-boost": "true",
+        "serving.knative.dev/creator": "CrystalYS.Chang@gmail.com"
+      }
+    },
+    "spec": {
+      "serviceAccountName": "160543130573-compute@developer.gserviceaccount.com"
+    },
+    "status": {
+      "imageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:8cc4e463fd568c475e632204cd354cd4054bee522bddd3c33fa31f27b08bbc59"
+    }
+  }
+}

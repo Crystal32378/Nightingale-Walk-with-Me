@@ -1,6 +1,6 @@
 # Nightingale 實走問題修正 — 2026-10-08
 
-Crystal 已授權修正照片上傳及文字卡在前關的問題。這份文件描述本機修正；既有測試站與正式站尚未部署這批變更。
+Crystal 已授權修正照片上傳及文字卡在前關的問題，並於後續同意更新受限預覽。修正版已配對部署至[新的七天測試站](deployment/2026-10-08-field-preview/README.md)，線上檢查通過；正式站未切換。
 
 ## 修正後的行為
 
@@ -33,8 +33,8 @@ Crystal 已授權修正照片上傳及文字卡在前關的問題。這份文件
 - 新 UI 在修正前的實際瀏覽器 RED：後端已回 confirmation，但畫面沒有確認按鈕。修正後兩種瀏覽器均通過：實際本機照片 POST、YouBike 追問、取消、重新確認、整趟文字至抵達、幫我問停止音訊、409 清除失效按鈕及雙擊只送一筆請求。[整合結果](acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
 - [獨立程式複驗 PASS](acceptance/2026-10-08-field-fixes/independent-review.md)，先前發現的取消競態、模型猜測混入及過街慢請求問題均已修正。
 
-測試中的模型失敗 stderr 是刻意注入的 fallback 情境；本輪未呼叫雲端模型。Firestore 本機測試使用 transaction runner 測試讀寫／retry 契約，尚未驗證這批程式在 Cloud Run／真實 Firestore 的新部署。
+以上本機測試中的模型失敗 stderr 是刻意注入的 fallback 情境，該階段未呼叫雲端模型；Firestore 使用 transaction runner 測試讀寫／retry 契約。後續已完成實際 Cloud Run／Firestore／Vertex 的新部署驗證，另見[線上收據](deployment/2026-10-08-field-preview/README.md)，其中保留一次文字模型 429 與成功備援的紀錄。
 
 ## 下一階段
 
-先以這批程式的獨立複驗結果準備配對的受限預覽，再驗證 iPhone X／LINE 的真實拍照、權限、定位及完整走行。正式發布仍 HOLD；本機 WebKit 與合成地標流程不等同真機戶外通過。
+配對的受限預覽已部署並通過線上檢查，接下來驗證 iPhone X／LINE 的真實拍照、權限、定位及完整走行。正式發布仍 HOLD；本機與線上桌面 WebKit 不等同真機戶外通過。

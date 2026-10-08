@@ -1,0 +1,187 @@
+{
+  "checkedAt": "2026-10-08T02:23:59.447Z",
+  "status": "PASS",
+  "preview": "https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app",
+  "bundle": "assets/index-CuLU9qtc.js",
+  "bundleSha256": "96e373c84452bc5fb48231711b464e33818531f433ee2506d34dd32ca9a04c90",
+  "apiRewriteStatus": 404,
+  "audioFiles": 44,
+  "audio": [
+    {
+      "file": "audio/outdoor/renai-001/leda/cp1.exit.wav",
+      "sha256": "eb180ab613b8b4b8f80fac07f7ea3229ebe2c1a28972add872fd8bba66fdeb92"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp1.exit.wav",
+      "sha256": "95c0c9dd9fda0d16bfbb1bd319524b792c20e8beba0e48829bac7f4d054a0799"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp1.guide.wav",
+      "sha256": "90918d572ac1f94e64cbf68f8d38269749c52fa4a7885aeb9779e078069a6fda"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp1.guide.wav",
+      "sha256": "1c53e2c86734c09f3171ea76b3657f3a2d331835183d8acfd214f084a0ea5ab5"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp1.board.wav",
+      "sha256": "83267ca6788ea46a8cf17e1f37de65c51824099f5deeee800a8020698af41c6a"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp1.board.wav",
+      "sha256": "49d6d8f47cb5c54284b51d02537cc350ebcf9ac1780637fe09da68d709c43672"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp2.along.wav",
+      "sha256": "ab3d13a5c4b2ea0d7f22e17a37fbffa79d4124df36c4ced2c42f3b210c8b0140"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp2.along.wav",
+      "sha256": "1fc612f614cfa033811d512bbd939444f29594d68d04b17222517d59f274af68"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp2.after.wav",
+      "sha256": "2db7ee29e90bf742a8c5981aeef32385f67bebfa44de8761bc3794a215e4a576"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp2.cross.wav",
+      "sha256": "4ef8727002267bdadcabc30899c1d331aca0218a8891e5225117ffc34e8c121b"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp2.after.wav",
+      "sha256": "80e7c4feb6017c32b85ad1568de6dbad9a0cb76759651577c17798ec08e5a3ae"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp2.cross.wav",
+      "sha256": "8f8dd5c68e217da1f41ba30954070446ebb40a4c156739226aa2ebef31da4132"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp3.cross.wav",
+      "sha256": "83658162ea47a17533306b7cd9dfb39877e5735b70dc9728688f7bc30c88899c"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp3.cross.wav",
+      "sha256": "4309706c2fc6af43b767132ae104b2fc56304353c47c98d36170949a4df78714"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp2.water.wav",
+      "sha256": "57bda5465bbde83b68322a29f2d9ad785fe986b4d4f247790da3d752a2f30e2f"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp2.bike.wav",
+      "sha256": "832fbc7b992f0a7ae916c7a44d3b61b54f9d93248a3fd24ff41d5056e3947354"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp2.bike.wav",
+      "sha256": "fcf7721e016b9255a4be036cd5c70dc1b0b89824459f6538b3a059874555a3c0"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp2.water.wav",
+      "sha256": "3efa4fe4ddfed7ee7113d18d83fa43dba7a3d2c8f9f7837e26932c7b7995a752"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp3.after.wav",
+      "sha256": "90e1e0e814030ba50c3218b17cebf04debbfc06662ae57df951a1fe59a695774"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/ask.entrance.wav",
+      "sha256": "1bd018f35d9c9cd51efe56570ae45f489ec59b3e2be4c58648cc994b88495295"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp4.driveway.wav",
+      "sha256": "ae128e96f633a1aff9b91b87ef9680cbca57e97b44ccd46ea0ed027e105118f4"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/ask.entrance.wav",
+      "sha256": "9bdf198462b29b495860f428ed86dfacf68293cbcf441925a08c5c7c522b2dad"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp4.driveway.wav",
+      "sha256": "417857e2c9944a32fe911890580569e3334d625ee66ea1b0534c5db9f4cdd609"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp3.after.wav",
+      "sha256": "e31811a6a324889c7a4cfb870b72e7f48b71454d9bbbb78fa816b5eeeb795937"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/recover.daan.a.wav",
+      "sha256": "948cb596e015dd713d69165bd813a3cab4bf477399dc43aef84ca4e641aa4fba"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/recover.daan.a.wav",
+      "sha256": "bf5a7c80226dde5f04f037e56690c8354272a6bfd2ed69dd49f74c39fd735ce4"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/recover.er.wav",
+      "sha256": "dfe279cd8f1c4c215f75dccbda0edac850e2a1dc37f843d4827c173ebb1c8951"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/cp5.lobby.wav",
+      "sha256": "e465c85567d10e2ce866ba2ead399bbd93a450e4dee6dbdae931094f03b58820"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/cp5.lobby.wav",
+      "sha256": "296cd1ed58c62f80ae59004ff09c65d6b8b549e7d4a85849789cfcc434a5e88f"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/recover.er.wav",
+      "sha256": "64b1dde160c678c71e5ff8c6bbcb5e23cafa005f5e8401e8f7f0c19dd05340b7"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/arrived.wav",
+      "sha256": "1443e554f585589af31df49f4a1162c089d8cacadaf9652fe2034cb4127cd628"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/arrived.wav",
+      "sha256": "07ee32a9db6b38dac48fcb96273bfa297ec6c01e2c462275db51574979d34243"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/recover.daan.b.wav",
+      "sha256": "bc56d7f95c6b15b81b97daf1b31e771aca7e2177c8a6004519b4c379f6d21992"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/recover.daan.b.wav",
+      "sha256": "bf98152606d0f15f85a96a7df9389b274df643ed22d6dd5181cc6168aa8ab81e"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/recover.canopy.wav",
+      "sha256": "57dbf60b418c3181da4ab6acb62615dd8e9672ad3acfcbe6bab5617dfacb97f1"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/recover.canopy.wav",
+      "sha256": "2839a102bebbc3f61e0d64bfb108dd85f97b667eb97b998a01cc6e0494187c63"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/photo.wait.wav",
+      "sha256": "bbbd15a05a0853daeb287d9fc36ee6cea410f265d8e17342d84cd2b05cbf80e9"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/photo.remind.wav",
+      "sha256": "66b758cb5a9ac8458a89f197653ecbcd05d1eab5d882a4392b6118e6189facf4"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/photo.wait.wav",
+      "sha256": "55f9ab71a1084d91c39adbafba646e93e4654af540eca6c06ecec1ad3fa16ae4"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/photo.remind.wav",
+      "sha256": "105be74bfb1790405a427a24d6eae85c6fd02599762205cdec2d7cb32798639b"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/reanchor.wav",
+      "sha256": "7466fa1b29b7e76f1edd6b6621d652daebfc988168a863cd99bbdcb00d555b11"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/reanchor.wav",
+      "sha256": "9ec33cd54889e51cc60bd48a85ff37b91b9eb1688a68b815818e7f653ce5a93d"
+    },
+    {
+      "file": "audio/outdoor/renai-001/puck/photo.wait2.wav",
+      "sha256": "a60d84bbbac5be2b7e0d7fbd547457eac220a1e132c5ceb56c1882fad9447983"
+    },
+    {
+      "file": "audio/outdoor/renai-001/leda/photo.wait2.wav",
+      "sha256": "b9a64ac4466421e35bbbd8ec227d19615082fcaf160f3b33257925ad3ba63469"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "apiUrl": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "bundle": "assets/index-CuLU9qtc.js",
+  "bundleSha256": "96e373c84452bc5fb48231711b464e33818531f433ee2506d34dd32ca9a04c90",
+  "audioFiles": 44,
+  "noProductionRewrite": true,
+  "frontendCodeCommit": "80d1ce46b14bac867ae6225c9a08d399f97c9e4c"
+}

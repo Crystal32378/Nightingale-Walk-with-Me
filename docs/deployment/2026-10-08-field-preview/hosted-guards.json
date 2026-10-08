@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-10-08T02:23:00.215Z",
+  "status": "PASS",
+  "scope": "Synthetic photo/text observations over tagged HTTP API with real Firestore; no fresh image recognition or physical location",
+  "api": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "events": [
+    {
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "checkpoint": "cp2x",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp2x",
+      "action": "REANCHOR",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp3",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp3",
+      "action": "REANCHOR",
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "checkpoint": "cp3x",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp3x",
+      "action": "REANCHOR",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp4",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp5",
+      "action": "GUIDE",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp5",
+      "action": "REANCHOR",
+      "photoHold": "recovery-needs-location"
+    },
+    {
+      "checkpoint": "cp5",
+      "action": "ASK",
+      "photoHold": null
+    },
+    {
+      "checkpoint": "cp5",
+      "action": "CONFIRM_ARRIVAL",
+      "photoHold": null
+    }
+  ]
+}

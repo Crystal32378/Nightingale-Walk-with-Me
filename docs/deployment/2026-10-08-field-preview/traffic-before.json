@@ -1,0 +1,24 @@
+{
+  "checkedAtUtc": "2026-10-08T02:17:58.489337+00:00",
+  "spec": {
+    "template": {
+      "spec": {
+        "serviceAccountName": "160543130573-compute@developer.gserviceaccount.com"
+      }
+    }
+  },
+  "status": {
+    "latestReadyRevisionName": "nightingale-guard20261008",
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "nightingale-00010-ff2"
+      },
+      {
+        "revisionName": "nightingale-guard20261008",
+        "tag": "photo-guard-20261008",
+        "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+      }
+    ]
+  }
+}

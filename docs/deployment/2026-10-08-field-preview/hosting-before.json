@@ -1,0 +1,19 @@
+{
+  "checkedAtUtc": "2026-10-08T02:20:58.748333+00:00",
+  "channels": [
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008",
+      "url": "https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/0ccc81bc6b786761",
+      "releaseTime": "2026-10-07T17:09:42.618Z",
+      "expireTime": "2026-10-14T17:09:36.107491900Z"
+    },
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live",
+      "url": "https://nightingale-walk-with-me.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/cd96c56a42be2957",
+      "releaseTime": "2026-09-27T09:00:22.239Z",
+      "expireTime": null
+    }
+  ]
+}

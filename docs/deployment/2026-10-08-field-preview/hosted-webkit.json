@@ -1,0 +1,159 @@
+{
+  "checkedAt": "2026-10-08T02:23:51.027Z",
+  "scope": "Actual hosted desktop WebKit, one existing field JPEG, real Vertex and Firestore; not iPhone LINE or field acceptance",
+  "preview": "https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app",
+  "api": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "events": [
+    {
+      "label": "我到出口2了",
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp1",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "one real photo via WebKit preprocessing",
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp2",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": "crossing-needs-location"
+    },
+    {
+      "label": "youbike站",
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "仁愛復興路口",
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "expects": "evidence",
+      "confirmationOffered": true,
+      "photoHold": null
+    },
+    {
+      "label": "不是／不確定",
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp2",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "仁愛復興路口",
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "expects": "evidence",
+      "confirmationOffered": true,
+      "photoHold": null
+    },
+    {
+      "label": "是，這些都符合",
+      "checkpoint": "cp3x",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp3",
+      "expects": "walker",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "過完了",
+      "checkpoint": "cp4",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp3x",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "急診停車場車道",
+      "checkpoint": "cp5",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp4",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "復康巴士",
+      "checkpoint": "cp5",
+      "action": "ASK",
+      "actionCheckpoint": "cp5",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    },
+    {
+      "label": "復康巴士",
+      "checkpoint": "cp5",
+      "action": "CONFIRM_ARRIVAL",
+      "actionCheckpoint": "cp5",
+      "expects": "evidence",
+      "confirmationOffered": false,
+      "photoHold": null
+    }
+  ],
+  "audio": [
+    {
+      "file": "/audio/outdoor/renai-001/puck/photo.wait.wav",
+      "status": 200
+    },
+    {
+      "file": "/audio/outdoor/renai-001/puck/reanchor.wav",
+      "status": 200
+    },
+    {
+      "file": "/audio/outdoor/renai-001/puck/cp4.driveway.wav",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "unexpectedOrigins": [],
+  "status": "PASS",
+  "browser": {
+    "engine": "desktop WebKit",
+    "version": "26.5",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "geolocationPermission": "not granted"
+  },
+  "photo": {
+    "file": "IMG_5593.jpg",
+    "inputSha256": "696d0584f30faccefd8ecce204319bf81a4df714068a4895e2264e8d75955f0a",
+    "acceptedPhotoCount": 1,
+    "observation": {
+      "landmarks": [],
+      "signage": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄",
+        "復興南路一段"
+      ],
+      "confidence": "high",
+      "source": "photo"
+    },
+    "action": {
+      "type": "REANCHOR",
+      "checkpointId": "cp2",
+      "lookFor": [
+        "大安路一段116巷",
+        "仁愛路三段123巷13弄"
+      ]
+    },
+    "photoHold": "crossing-needs-location"
+  },
+  "cancelledConfirmationReplayStatus": 409,
+  "arrived": true
+}

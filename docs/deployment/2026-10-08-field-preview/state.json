@@ -1,0 +1,39 @@
+{
+  "checkedAtUtc": "2026-10-08T02:26:17.866119+00:00",
+  "authorization": "Crystal approved updating the limited preview in the current conversation; no production promotion",
+  "backendCodeCommit": "0f9e345078d50a1c937dcfc09596094e0c436c5b",
+  "frontendCodeCommit": "80d1ce46b14bac867ae6225c9a08d399f97c9e4c",
+  "backendRevision": "nightingale-fieldfix20261008",
+  "backendTag": "field-fix-20261008",
+  "backendApiUrl": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "backendImageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:8cc4e463fd568c475e632204cd354cd4054bee522bddd3c33fa31f27b08bbc59",
+  "firebaseChannel": "field-fix-20261008",
+  "previewUrl": "https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app/?flow=last300m&photo=1",
+  "previewExpiresAt": "2026-10-15T02:22:07.087778608Z",
+  "previewExpiresTaipei": "2026-10-15 10:22 Asia/Taipei",
+  "revisionMinInstances": 0,
+  "revisionMaxInstances": 1,
+  "productionTrafficUnchanged": true,
+  "productionRevision": "nightingale-00010-ff2",
+  "productionPercent": 100,
+  "hostingLiveUnchanged": true,
+  "previousPreviewRetained": true,
+  "hostedAssets": "PASS",
+  "all44AudioHashesVerified": true,
+  "hostedPhotoGuards": "PASS",
+  "hostedWebKitRealPhotoAndTextFlow": "PASS",
+  "phoneLineAcceptance": "PENDING",
+  "fullLiveRelease": "HOLD",
+  "cloudRunTagAutoExpires": false,
+  "rawPhotosAddedToGit": false,
+  "sourceFixesPushedToGitHub": false,
+  "cleanup": "After test completion or expiry, re-query traffic, delete only Firebase channel field-fix-20261008 and remove only Cloud Run tag field-fix-20261008; never shift production traffic.",
+  "modelWarnings": [
+    {
+      "timestamp": "2026-10-08T02:24:15.011224Z",
+      "code": 429,
+      "stage": "text interpreter",
+      "behavior": "deterministic fallback used; hosted flow still passed"
+    }
+  ]
+}

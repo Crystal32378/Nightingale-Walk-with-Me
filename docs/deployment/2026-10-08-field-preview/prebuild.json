@@ -1,0 +1,41 @@
+{
+  "preparedAtUtc": "2026-10-08T02:17:30.357962+00:00",
+  "tag": "field-fix-20261008",
+  "channel": "field-fix-20261008",
+  "revision": "nightingale-fieldfix20261008",
+  "stagingRoot": "/var/folders/xq/ymwfhdp93rq6w9y_w8xq00yr0000gp/T/nightingale-field-preview-e6vsitys",
+  "sources": {
+    "backend": {
+      "commit": "0f9e345078d50a1c937dcfc09596094e0c436c5b",
+      "sourceDir": "/var/folders/xq/ymwfhdp93rq6w9y_w8xq00yr0000gp/T/nightingale-field-preview-e6vsitys/backend",
+      "archiveSha256": "bd79c01135bc2a1ff014285d3376c9e58cfa16fbc9d25eda8363820c45d2e6ac",
+      "fileCount": 17,
+      "files": [
+        ".gcloudignore",
+        "fixtures/fixture-hospital-001.json",
+        "fixtures/route-renai-001.json",
+        "package-lock.json",
+        "package.json",
+        "src/engine.ts",
+        "src/gemini.ts",
+        "src/index.ts",
+        "src/interpreter.ts",
+        "src/limits.ts",
+        "src/photo.ts",
+        "src/server.ts",
+        "src/store.ts",
+        "src/textFollowUp.ts",
+        "src/types.ts",
+        "src/validator.ts",
+        "tsconfig.json"
+      ]
+    },
+    "frontend": {
+      "commit": "80d1ce46b14bac867ae6225c9a08d399f97c9e4c",
+      "sourceDir": "/var/folders/xq/ymwfhdp93rq6w9y_w8xq00yr0000gp/T/nightingale-field-preview-e6vsitys/frontend",
+      "archiveSha256": "9fa76d3315f84494cfbcef78600ed3aec7c911ff71f1059af7fcde0507330200",
+      "fileCount": 184
+    }
+  },
+  "previewConfigSha256": "e6f60718323e7459a16613f80d3329b9e24db263ed1ecf2f4216e95244ac428c"
+}
