@@ -1,6 +1,6 @@
 # English version preparation — next phase
 
-Status: planning only. The Chinese voice and route baseline is preserved at `zh-tw-preview-2026-10-08` in both repositories. The current hosted preview still speaks and displays Chinese. Phone/field feedback from Crystal is pending; address concrete field blockers before general/live release.
+Status: planning only. The Chinese voice and route baseline is preserved at `zh-tw-preview-2026-10-08` in both repositories. The current hosted preview still speaks and displays Chinese. Crystal has now reported that iPhone LINE no longer shows the photo decoding error and reaches the landmark follow-up; matching backend records accepted three photos. Full route field acceptance remains incomplete. She chose to freeze this photo/text baseline, add reviewed voice input first, then prepare English. See `docs/voice-input-next.md`.
 
 ## Purpose and first deliverable
 
@@ -12,6 +12,7 @@ First prepare a reviewed copy inventory, a stable identity mapping and the langu
 
 - Start page, route origin/destination, concise step labels, full wording, and the two different walker confirmations (exit reached versus crossing completed).
 - Observation entry, photo reminder/consent wording, waiting states, unreadable image, rate limit, offline errors, and unknown-location re-anchor.
+- The new cp2 YouBike follow-up, explicit crossing-history confirmation/cancel, expired confirmation state, and any voice-input controls/errors added in the next phase.
 - Clarifying questions, recovery text, entrance confirmation, arrival and the service-desk handoff.
 - “Help me ask” card, its own controls, speech language, focus return, and screen-reader labels. This currently reuses the indoor AskCard with Chinese defaults; do not assume translating outdoor buttons covers it.
 - Voice choice, mute, replay and optional bike/water reminders.

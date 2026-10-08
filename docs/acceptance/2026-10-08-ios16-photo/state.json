@@ -13,7 +13,8 @@
   "orientationCases": 16,
   "independentReview": "PASS",
   "hostedUpload": "PASS",
-  "iphoneRetest": "PENDING",
+  "iphoneRetest": "PARTIAL_PASS: user reports decode error gone; matching session photoCount=3 and observations HTTP200; REANCHOR remains",
   "production": "UNCHANGED / HOLD",
-  "sourcePushed": false
+  "sourcePushed": false,
+  "baselineDecision": "Crystal chose to freeze photo/text work and move to voice input"
 }

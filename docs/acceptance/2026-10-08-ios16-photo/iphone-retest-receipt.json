@@ -1,0 +1,51 @@
+{
+  "checkedAtUtc": "2026-10-08T03:31:50.979281+00:00",
+  "scope": "Read-only matching LINE requests; no original photo, text, GPS, session ID or interpreter result retained",
+  "requests": [
+    {
+      "timestamp": "2026-10-08T03:22:43.373837Z",
+      "status": 200,
+      "kind": "observation"
+    },
+    {
+      "timestamp": "2026-10-08T03:19:56.637169Z",
+      "status": 200,
+      "kind": "observation"
+    },
+    {
+      "timestamp": "2026-10-08T03:19:38.062352Z",
+      "status": 200,
+      "kind": "observation"
+    },
+    {
+      "timestamp": "2026-10-08T03:19:28.234041Z",
+      "status": 200,
+      "kind": "observation"
+    },
+    {
+      "timestamp": "2026-10-08T03:19:26.092277Z",
+      "status": 201,
+      "kind": "session"
+    }
+  ],
+  "sessions": [
+    {
+      "alias": "line-retest-1",
+      "photoCount": 3,
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "lastAction": {
+        "type": "REANCHOR",
+        "checkpointId": "cp2",
+        "lookFor": [
+          "大安路一段116巷",
+          "仁愛路三段123巷13弄"
+        ]
+      }
+    }
+  ]
+}

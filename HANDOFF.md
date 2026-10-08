@@ -1,16 +1,18 @@
-# Nightingale 交接 — iOS 16 照片相容修正已部署，待真機複測
+# Nightingale 交接 — 中文照片／文字基準收住，下一步語音輸入
 
 更新：2026-10-08（Asia/Taipei）。這份文件是新 context 的接手入口，不必重讀整段對話。先讀本頁，再按需要開連結中的證據。
 
 ## 現在最重要的事
 
-**最新進度：已收到 `P-DECODE / JPEG / 2219K / TypeError / B1`，並完成已知的舊版 WebKit 選項相容修正。** 官方紀錄與舊測試支持移除 `imageOrientation: 'from-image'`，改用原生預設值。前端 `9aa1e9c` 已更新到[相容修正版](https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1&v=ios16-1)，10/09 11:11 台灣時間到期。319 tests、16 個方向／縮圖案例、獨立複驗與線上照片上傳通過；仍待 Crystal 的 iPhone LINE 修後回報。[修正證據與界線](docs/acceptance/2026-10-08-ios16-photo/README.md)。
+**Crystal 已回報：拍照後不再出現「照片我打不開」或診斷碼，而是正常播放 reanchor 並顯示地標追問。** 唯讀核對的相符 LINE 行程有 3 張照片被後端接受，observations 均回 200，session 為 cp2／REANCHOR。[手機回報收據](docs/acceptance/2026-10-08-ios16-photo/iphone-retest-receipt.json)。照片上傳與回覆已恢復；本次沒有 interpreter observation／實際定位證據，不能宣稱每張辨識成功或完整實走通過。
+
+**依 Crystal 指示，照片、地標追問與恢復進度先收在這裡，下一階段做語音輸入。** 接續順序已提出：語音輸入 → 獨立 agent 覆檢 → 配對受限部署 → architecture → GitHub → 英文版（再驗證／部署／保存）→ demo 與英文 deck。範圍、建議技術與驗收寫在 [下一階段簡報](docs/voice-input-next.md)。此輪完成交接，語音輸入、英文版、架構成圖及影片尚未製作。
 
 Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` 也通過；聲音定稿，不再重錄。57 張第二趟標註已由她核對、匯入並保存。後端窄修經獨立 agent 複驗通過，限時手機測試預覽已部署且完成線上檢查。
 
-**本機 PASS／獨立程式複驗 PASS／iPhone LINE 照片仍失敗、文字部分成功／正式發布 HOLD。** 已修正一項可在桌面 WebKit 重現的 metadata 問題，以及兩句文字卡關。這不代表 iPhone 的照片問題已解決。原路線及 44 段音檔未變。[修正說明](docs/field-fixes-2026-10-08.md)、[原獨立複驗](docs/acceptance/2026-10-08-field-fixes/independent-review.md)、[原整合測試](docs/acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
+**本機 PASS／獨立複驗 PASS／iPhone LINE 上傳與回覆局部通過、文字已有成功回報／完整正式發布 HOLD。** 已修正 WebKit metadata 與舊版讀圖選項問題，以及兩句文字卡關；本輪在此凍結，不繼續擴張照片或定位功能。原路線及 44 段音檔未變。[修正說明](docs/field-fixes-2026-10-08.md)、[原獨立複驗](docs/acceptance/2026-10-08-field-fixes/independent-review.md)、[原整合測試](docs/acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
 
-**這批修正已配對部署至新的受限預覽，線上驗證 PASS；尚未推送 GitHub。** 新增確認協定的前後端已一起更新。下一步是 iPhone LINE 複驗，不要求 Crystal 重走舊版。實走原話與根因證據保留在[回報](docs/field-report-2026-10-08.md)。家屬經 LINE 傳路線卡與語音輸入需求已記錄，尚未實作。
+**這批修正已配對部署至新的受限預覽，線上驗證 PASS；尚未推送 GitHub。** 新增確認協定的前後端已一起更新。下一步是語音輸入，不要求 Crystal 再測舊版照片錯誤。實走原話與根因證據保留在[回報](docs/field-report-2026-10-08.md)。家屬經 LINE 傳路線卡與語音輸入需求已記錄，尚未實作。
 
 前輪中文版 GitHub 基準仍保留；本輪已部署七天受限預覽，正式流量與正式 Hosting release 未改動。英文版尚未實作；依 [英文版準備清單](docs/english-preparation.md) 的順序，先處理實走阻擋。
 
@@ -20,10 +22,10 @@ Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` �
 - [前端 repo：Nightingale](https://github.com/Crystal32378/Nightingale)：React 操作介面、小鳥、44 個固定中文音檔。
 - 兩個 repo 保留既有分工；不要為了交接改成 monorepo 或搬動來源。
 - 兩邊以 `zh-tw-preview-2026-10-08` tag 保存這次中文基準；`main` 是最新原始碼入口。此 tag 表示已核對的**測試版本**，不是正式發布驗收。
-- 新預覽實際部署的後端程式 commit：`0f9e345078d50a1c937dcfc09596094e0c436c5b`。
-- 新預覽實際部署的前端程式 commit：`80d1ce46b14bac867ae6225c9a08d399f97c9e4c`。
+- 共用 field-fix 後端 runtime：`0f9e345078d50a1c937dcfc09596094e0c436c5b`。
+- 目前 photo-check 前端 runtime：`9aa1e9c0dc89aa76a9e9b6c534a2b179e934ae9a`；七天 field-fix 前端仍是 `80d1ce4`，作舊版比對。
 - 其後的版本含驗收、部署與交接文件；不得把文件 commit 與部署的 runtime commit 混為一談。
-- [版本對照檔](docs/zh-tw-preview-baseline.json) 記錄兩個 repo 與上述部署版本。
+- [原中文基準](docs/zh-tw-preview-baseline.json) 是前輪記錄；目前相容修正版以 [state.json](docs/acceptance/2026-10-08-ios16-photo/state.json) 為準。修正仍在本機分支，尚未推送 GitHub；Crystal 已提出下一階段保存至既有兩個 repo。
 
 ## 可用的手機測試網址
 
@@ -82,22 +84,13 @@ Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` �
 - 窄樣本與人工試聽不能寫成普遍辨識／口音品質保證。
 - 正式 live promotion 仍 HOLD。下一次部署前要以實走證據與獨立驗收作依據。
 
-## 下一步：配對的受限預覽與 iPhone LINE 複驗
+## 下一步：語音輸入與下一輪交付
 
-不要請她重做已完成的標註或錄音。先讀[本次修正](docs/field-fixes-2026-10-08.md)、新複驗及新部署收據，再接手機回報。線上 WebKit PASS 不等同 iPhone LINE 真機通過。定位仍不自動推進關卡，也未顯示定位狀態；「我在哪」仍只是重播指引，這些不列成本次已修功能。
+先讀 [docs/voice-input-next.md](docs/voice-input-next.md)。產品操作採「點擊啟動 → 短句 → 可修正文字 → 使用者傳送」，沿用現有文字判路；先查 iPhone LINE 的實際錄音／轉錄支援。正式部署與完整導航接受仍 HOLD，已授權的下一步部署延續受限 preview。
 
-實走時可簡單記：在哪個位置、看到的招牌字、畫面／聲音說什麼、按了哪個按鈕，以及定位／網路是否允許；有問題時截圖或記時間即可，不必填繁重表單。
+不要重新要求照片診斷、中文錄音驗收或拓寬定位。現有定位不自動推進，「我在哪」仍是重播；只有新功能造成回歸才重開相關問題。所有新結果區分本機、hosted、真機與實走。
 
-優先核對：
-
-1. 手機能否開站、按開始後定位、切換聲音和正常播放。
-2. 拍招牌能否上傳；等待、失敗及定位不明時，是否能自然改用文字。
-3. 兩次過街是否都等她按「過完了」，途中無額外指令。
-4. 急診車道與大廳是否分清；院內樓層牌是否不再錯誤帶回。
-5. 入口 ASK、抵達與服務台交接是否合理，沒有提早說到了。
-
-若有問題：保存具體案例 → 窄修 → 獨立 agent 複驗。若完整通過：保存 field acceptance，再討論正式部署及比賽 demo。等待回報期間可先做英文文字盤點／草稿，不修改中文定稿。
-
+語音輸入通過獨立 review 後，配對部署前後端；根據實作畫 architecture 並正常保存 GitHub。英文版要再走驗證／部署／保存，最後從凍結版本錄 demo。
 ## 英文版準備
 
 詳見 [English preparation](docs/english-preparation.md)。目前只有準備規劃，沒有英文操作介面或新英文錄音。需要涵蓋整個操作流程，不是只翻開始按鈕；保留中文招牌作為真實證據，英文只做呈現。不要自動擴充印度或其他醫院路線。

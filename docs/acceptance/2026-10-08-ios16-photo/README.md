@@ -1,5 +1,7 @@
 # iOS 16 照片解碼相容修正
 
+修後回報：Crystal 已確認不再出現照片打不開／診斷碼，而是進入文字及地標追問並播放 reanchor。相符 LINE 行程的照片計數為 3，觀察請求皆為 200；這支持上傳與回覆恢復，未保留本次辨識結果或 GPS，不能把它延伸成完整路線驗收。Crystal 決定此輪先收住，下一步語音輸入。見 [手機收據](iphone-retest-receipt.json) 與 [接續簡報](../../voice-input-next.md)。
+
 Crystal 回報的真機診斷碼：`P-DECODE / JPEG / 2219K / TypeError / B1`。
 
 這證實檔案前段可辨認為 JPEG、約 2219 KiB、`createImageBitmap` 存在，失敗發生在原呼叫解碼分支，例外名稱為 TypeError。尚未證實此照片完整 bytes 的有效性；沒有把原圖保存到此資料夾。
