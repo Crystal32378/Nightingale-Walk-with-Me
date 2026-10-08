@@ -1,12 +1,14 @@
-# Nightingale 交接 — 實走修正版已部署預覽，待 iPhone LINE 複驗
+# Nightingale 交接 — 文字已有成功回報，iPhone 照片待診斷碼
 
 更新：2026-10-08（Asia/Taipei）。這份文件是新 context 的接手入口，不必重讀整段對話。先讀本頁，再按需要開連結中的證據。
 
 ## 現在最重要的事
 
+**最新手機回報：文字可到正確關卡，照片仍顯示「這張照片我打不開」。** 新版相符的 LINE 行程已到 cp4、照片計數仍 0，照片尚未在真機修復。已提供一天的[照片診斷版](https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1)，10/09 10:54 台灣時間到期；下一步接 Crystal 的「檢查代碼」整段。只加裝置端錯誤階段顯示，不改解碼流程、路線、後端或成功圖片 bytes。[診斷交接](docs/acceptance/2026-10-08-iphone-photo-followup/README.md)。
+
 Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` 也通過；聲音定稿，不再重錄。57 張第二趟標註已由她核對、匯入並保存。後端窄修經獨立 agent 複驗通過，限時手機測試預覽已部署且完成線上檢查。
 
-**本次實走修正：本機 PASS／獨立程式複驗 PASS／iPhone LINE 待驗收／正式發布 HOLD。** 已修正 WebKit 相片轉檔被拒，以及「youbike站」「仁愛復興路口」卡在前關的問題。後端 130 tests、前端 313 tests 通過；桌面 Chromium／WebKit 的照片與完整文字流程通過。原路線及 44 段音檔未變。[修正說明](docs/field-fixes-2026-10-08.md)、[獨立複驗](docs/acceptance/2026-10-08-field-fixes/independent-review.md)、[整合測試](docs/acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
+**本機 PASS／獨立程式複驗 PASS／iPhone LINE 照片仍失敗、文字部分成功／正式發布 HOLD。** 已修正一項可在桌面 WebKit 重現的 metadata 問題，以及兩句文字卡關。這不代表 iPhone 的照片問題已解決。原路線及 44 段音檔未變。[修正說明](docs/field-fixes-2026-10-08.md)、[原獨立複驗](docs/acceptance/2026-10-08-field-fixes/independent-review.md)、[原整合測試](docs/acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
 
 **這批修正已配對部署至新的受限預覽，線上驗證 PASS；尚未推送 GitHub。** 新增確認協定的前後端已一起更新。下一步是 iPhone LINE 複驗，不要求 Crystal 重走舊版。實走原話與根因證據保留在[回報](docs/field-report-2026-10-08.md)。家屬經 LINE 傳路線卡與語音輸入需求已記錄，尚未實作。
 

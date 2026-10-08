@@ -1,0 +1,10 @@
+{
+  "checkedAtUtc": "2026-10-08T02:52:27.431824+00:00",
+  "frontendCommit": "807f9145e499bf2c22d4c7aff0712acfb78fccf8",
+  "sourceDir": "/var/folders/xq/ymwfhdp93rq6w9y_w8xq00yr0000gp/T/nightingale-photo-check-70ygp_jo",
+  "archiveSha256": "e5dd2667e455373d93ec9ddfdbeb8a7f359f4cf30e0c078df7aca8644f864512",
+  "backendUnchanged": "0f9e345078d50a1c937dcfc09596094e0c436c5b",
+  "apiUrl": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "channel": "photo-check-20261008",
+  "purpose": "Only display local failure diagnostics when photoCheck=1; not another claimed iPhone fix"
+}

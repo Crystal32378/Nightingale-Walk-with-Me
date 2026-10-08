@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-08T02:49:57.941Z",
+  "scope": "Local injected failures only; no real iPhone error diagnosis yet",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "test": "decode diagnostics",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。 檢查代碼：P-DECODE / PNG / 2K / InvalidStateError / B1",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "test": "JPEG framing diagnostics",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。 檢查代碼：P-JPEG / PNG / 2K / none / B1",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "test": "normal notice unchanged",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "test": "successful upload unchanged",
+      "status": "PASS",
+      "notice": null,
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "test": "decode diagnostics",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。 檢查代碼：P-DECODE / PNG / 2K / InvalidStateError / B1",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "test": "JPEG framing diagnostics",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。 檢查代碼：P-JPEG / PNG / 2K / none / B1",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "test": "normal notice unchanged",
+      "status": "PASS",
+      "notice": "這張照片我打不開。用文字跟我說也可以。",
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "test": "successful upload unchanged",
+      "status": "PASS",
+      "notice": null,
+      "photoDiagnosticNetworkRequests": 0,
+      "noFilenameOrMessageLeak": true,
+      "textFallbackUsable": false
+    }
+  ]
+}

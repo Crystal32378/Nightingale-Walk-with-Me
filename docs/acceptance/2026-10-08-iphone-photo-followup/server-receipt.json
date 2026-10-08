@@ -1,0 +1,56 @@
+{
+  "checkedAtUtc": "2026-10-08T02:44:30.109074+00:00",
+  "scope": "Read-only matching iPhone LINE request/session metadata, no user text/photos/session IDs retained",
+  "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"nightingale\" AND resource.labels.revision_name=\"nightingale-fieldfix20261008\" AND timestamp>=\"2026-10-08T02:30:00Z\" AND httpRequest.userAgent:\"Line/\" AND httpRequest.requestMethod=\"POST\"",
+  "requests": [
+    {
+      "timestamp": "2026-10-08T02:35:47.698231Z",
+      "status": 200,
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T02:35:35.006389Z",
+      "status": 200,
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T02:35:30.722447Z",
+      "status": 200,
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T02:35:22.838276Z",
+      "status": 200,
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T02:34:21.662208Z",
+      "status": 200,
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T02:34:14.818466Z",
+      "status": 201,
+      "kind": "session",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    }
+  ],
+  "sessions": [
+    {
+      "alias": "line-walk-1",
+      "photoCount": 0,
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp4",
+        "questionCount": 0
+      },
+      "lastActionType": "REANCHOR"
+    }
+  ]
+}

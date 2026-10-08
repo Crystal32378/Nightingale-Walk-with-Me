@@ -1,0 +1,52 @@
+{
+  "checkedAtUtc": "2026-10-08T02:58:08.791227+00:00",
+  "oldHostingChannelsUnchanged": true,
+  "backendUnchanged": true,
+  "channels": [
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-check-20261008",
+      "url": "https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/ece3557888791fc2",
+      "expiry": "2026-10-09T02:54:47.774618910Z"
+    },
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/field-fix-20261008",
+      "url": "https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/1e914f06771febfb",
+      "expiry": "2026-10-15T02:22:07.087778608Z"
+    },
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008",
+      "url": "https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/0ccc81bc6b786761",
+      "expiry": "2026-10-14T17:09:36.107491900Z"
+    },
+    {
+      "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live",
+      "url": "https://nightingale-walk-with-me.web.app",
+      "version": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/cd96c56a42be2957",
+      "expiry": null
+    }
+  ],
+  "cloudRun": {
+    "status": {
+      "latestReadyRevisionName": "nightingale-fieldfix20261008",
+      "traffic": [
+        {
+          "percent": 100,
+          "revisionName": "nightingale-00010-ff2"
+        },
+        {
+          "revisionName": "nightingale-fieldfix20261008",
+          "tag": "field-fix-20261008",
+          "url": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+        },
+        {
+          "revisionName": "nightingale-guard20261008",
+          "tag": "photo-guard-20261008",
+          "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+        }
+      ]
+    }
+  }
+}

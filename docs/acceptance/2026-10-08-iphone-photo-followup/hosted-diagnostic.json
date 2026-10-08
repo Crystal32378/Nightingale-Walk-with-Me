@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-08T02:57:16.627Z",
+  "status": "PASS",
+  "scope": "Hosted content verified; forced decoder failure with API mocked, no Firestore/model calls or actual iPhone diagnosis",
+  "url": "https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1",
+  "bundle": "index-DYZhtQ7N.js",
+  "bundleSha256": "c2fe0b85386be77eeb7240b6f125e0185c1cee8022ad5b43f834e7d02bdd453b",
+  "notice": "這張照片我打不開。用文字跟我說也可以。 檢查代碼：P-DECODE / PNG / 2K / InvalidStateError / B1",
+  "photoOrDiagnosticRequests": 0,
+  "backendUnchanged": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+}
