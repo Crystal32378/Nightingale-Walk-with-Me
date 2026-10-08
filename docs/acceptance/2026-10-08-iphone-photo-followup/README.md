@@ -1,5 +1,7 @@
 # iPhone LINE 照片續查與限定診斷預覽
 
+後續更新：Crystal 已回報 `P-DECODE / JPEG / 2219K / TypeError / B1`，同一 photo-check channel 已更新為前端 `9aa1e9c` 的相容修正版。最新連結、到期與證據以 [iOS 16 修正紀錄](../2026-10-08-ios16-photo/README.md) 為準；下方保留原診斷階段紀錄。
+
 Crystal 在 2026-10-08 回報：「照片無法使用，當我補充路牌文字就會在正確的關卡」，並確認仍顯示「這張照片我打不開。用文字跟我說也可以。」。
 
 **文字有使用者操作成功回報；iPhone LINE 照片仍失敗；完整實走與正式發布仍 HOLD。** 桌面 WebKit 通過不等同真機根因已解決。

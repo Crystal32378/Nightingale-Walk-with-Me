@@ -1,10 +1,10 @@
-# Nightingale 交接 — 文字已有成功回報，iPhone 照片待診斷碼
+# Nightingale 交接 — iOS 16 照片相容修正已部署，待真機複測
 
 更新：2026-10-08（Asia/Taipei）。這份文件是新 context 的接手入口，不必重讀整段對話。先讀本頁，再按需要開連結中的證據。
 
 ## 現在最重要的事
 
-**最新手機回報：文字可到正確關卡，照片仍顯示「這張照片我打不開」。** 新版相符的 LINE 行程已到 cp4、照片計數仍 0，照片尚未在真機修復。已提供一天的[照片診斷版](https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1)，10/09 10:54 台灣時間到期；下一步接 Crystal 的「檢查代碼」整段。只加裝置端錯誤階段顯示，不改解碼流程、路線、後端或成功圖片 bytes。[診斷交接](docs/acceptance/2026-10-08-iphone-photo-followup/README.md)。
+**最新進度：已收到 `P-DECODE / JPEG / 2219K / TypeError / B1`，並完成已知的舊版 WebKit 選項相容修正。** 官方紀錄與舊測試支持移除 `imageOrientation: 'from-image'`，改用原生預設值。前端 `9aa1e9c` 已更新到[相容修正版](https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1&v=ios16-1)，10/09 11:11 台灣時間到期。319 tests、16 個方向／縮圖案例、獨立複驗與線上照片上傳通過；仍待 Crystal 的 iPhone LINE 修後回報。[修正證據與界線](docs/acceptance/2026-10-08-ios16-photo/README.md)。
 
 Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` 也通過；聲音定稿，不再重錄。57 張第二趟標註已由她核對、匯入並保存。後端窄修經獨立 agent 複驗通過，限時手機測試預覽已部署且完成線上檢查。
 
@@ -27,7 +27,9 @@ Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` �
 
 ## 可用的手機測試網址
 
-**使用新的 [Nightingale 實走修正版](https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app/?flow=last300m&photo=1)。** 到期為 **2026-10-15 上午 10:22，台灣時間**。
+**照片優先用 [iOS 16 相容修正版](https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1&v=ios16-1)**，前端 `9aa1e9c`，後端與下方 field-fix tag 相同。到期 10/09 11:11 台灣時間；保留診斷碼。
+
+既有 [Nightingale 文字修正版](https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app/?flow=last300m&photo=1) 尚未包含此次 iOS 16 選項修正，保留供比對。到期為 **2026-10-15 上午 10:22，台灣時間**。
 
 新 channel／tag 為 `field-fix-20261008`；revision 為 `nightingale-fieldfix20261008`；tagged API 為 `https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app`。正式流量維持 `nightingale-00010-ff2=100%`，新 revision min 0／max 1，沒有正式流量。
 

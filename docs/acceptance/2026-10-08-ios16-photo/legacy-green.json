@@ -1,0 +1,583 @@
+{
+  "checkedAt": "2026-10-08T03:07:31.479Z",
+  "scope": "Desktop engines with real JPEG/EXIF decoding and a simulated legacy enum rejection; not iPhone field acceptance",
+  "results": [
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 1
+      },
+      "ok": true,
+      "width": 320,
+      "height": 160,
+      "corners": [
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          229,
+          210,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 8
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          21,
+          219,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": false,
+      "input": {
+        "width": 4032,
+        "height": 3024,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 960,
+      "height": 1280,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 1
+      },
+      "ok": true,
+      "width": 320,
+      "height": 160,
+      "corners": [
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          229,
+          210,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 8
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          21,
+          219,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "legacyEnum": true,
+      "input": {
+        "width": 4032,
+        "height": 3024,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 960,
+      "height": 1280,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          21,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          21,
+          219,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 1
+      },
+      "ok": true,
+      "width": 320,
+      "height": 160,
+      "corners": [
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          229,
+          210,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": false,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 8
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          19,
+          220,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": false,
+      "input": {
+        "width": 4032,
+        "height": 3024,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 960,
+      "height": 1280,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 1
+      },
+      "ok": true,
+      "width": 320,
+      "height": 160,
+      "corners": [
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          229,
+          210,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": true,
+      "input": {
+        "width": 320,
+        "height": 160,
+        "orientation": 8
+      },
+      "ok": true,
+      "width": 160,
+      "height": 320,
+      "corners": [
+        [
+          19,
+          220,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          20,
+          20,
+          240
+        ]
+      ],
+      "metadata": false
+    },
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "legacyEnum": true,
+      "input": {
+        "width": 4032,
+        "height": 3024,
+        "orientation": 6
+      },
+      "ok": true,
+      "width": 960,
+      "height": 1280,
+      "corners": [
+        [
+          20,
+          20,
+          240
+        ],
+        [
+          240,
+          20,
+          20
+        ],
+        [
+          229,
+          210,
+          20
+        ],
+        [
+          19,
+          220,
+          20
+        ]
+      ],
+      "metadata": false
+    }
+  ],
+  "failures": []
+}

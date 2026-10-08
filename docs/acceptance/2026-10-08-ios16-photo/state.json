@@ -1,0 +1,19 @@
+{
+  "checkedAtUtc": "2026-10-08T03:16:50.749813+00:00",
+  "reportedCode": "P-DECODE / JPEG / 2219K / TypeError / B1",
+  "compatibilityCause": "Explicit from-image enum added in Safari17.2; old WebKit rejects it with TypeError",
+  "change": "Use createImageBitmap(file) native default",
+  "frontendCommit": "9aa1e9c0dc89aa76a9e9b6c534a2b179e934ae9a",
+  "backendCommitUnchanged": "0f9e345078d50a1c937dcfc09596094e0c436c5b",
+  "channel": "photo-check-20261008",
+  "url": "https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app/?flow=last300m&photo=1&photoCheck=1&v=ios16-1",
+  "expiresAt": "2026-10-09T03:11:16.366282638Z",
+  "expiresTaipei": "2026-10-09 11:11 Asia/Taipei",
+  "unitTests": 319,
+  "orientationCases": 16,
+  "independentReview": "PASS",
+  "hostedUpload": "PASS",
+  "iphoneRetest": "PENDING",
+  "production": "UNCHANGED / HOLD",
+  "sourcePushed": false
+}

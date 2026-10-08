@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-08T03:12:17.539Z",
+  "scope": "Hosted desktop WebKit with legacy option enum shim; real photo/Firestore/Vertex; not actual iPhone acceptance",
+  "status": "PASS",
+  "errors": [],
+  "unexpectedOrigins": [],
+  "inputSha256": "696d0584f30faccefd8ecce204319bf81a4df714068a4895e2264e8d75955f0a",
+  "photoCount": 1,
+  "observation": {
+    "landmarks": [],
+    "signage": [
+      "大安路一段116巷",
+      "仁愛路三段123巷13弄"
+    ],
+    "confidence": "high",
+    "source": "photo"
+  },
+  "action": {
+    "type": "REANCHOR",
+    "checkpointId": "cp2",
+    "lookFor": [
+      "大安路一段116巷",
+      "仁愛路三段123巷13弄"
+    ]
+  },
+  "photoHold": "crossing-needs-location",
+  "version": "26.5"
+}

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-08T03:13:32.426Z",
+  "status": "PASS",
+  "bundle": "index-DnnrpsNP.js",
+  "sha256": "722ccbf9c7916ab80787aec7b8cf3d425158d71f7fa13eb89a41009ad1a80599",
+  "apiUrl": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "frontendCommit": "9aa1e9c0dc89aa76a9e9b6c534a2b179e934ae9a",
+  "noExplicitImageOrientation": true,
+  "noApiRewrite": true
+}
