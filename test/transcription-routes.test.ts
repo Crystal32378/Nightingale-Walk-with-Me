@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import routeJson from "../fixtures/route-renai-001.json";
 import { createApp } from "../src/server.js";
 import { InMemorySessionStore } from "../src/store.js";
@@ -23,6 +23,49 @@ async function setup(options: Record<string, unknown> = {}) {
 }
 
 describe("isolated transcription endpoint", () => {
+  it.each([true, false])("times out a stalled body (Content-Length present=%s), cancels it and frees the processing slot", async declared => {
+    vi.useFakeTimers();
+    try {
+      const s = await setup(); let cancelled = false;
+      const stream = new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(new Uint8Array([1, 2, 3, 4])); }, cancel() { cancelled = true; } });
+      const request = new Request(`http://localhost/api/sessions/${s.id}/transcriptions`, {
+        method: "POST", headers: { "Content-Type": "audio/wav", ...(declared ? { "Content-Length": "16" } : {}) }, body: stream, duplex: "half",
+      } as RequestInit);
+      let status: number | undefined;
+      const pending = Promise.resolve(s.app.request(request)).then(response => { status = response.status; });
+      await vi.advanceTimersByTimeAsync(29000);
+      expect(status).toBe(504); expect(cancelled).toBe(true); await pending;
+      expect((await s.post()).status).toBe(200);
+    } finally { vi.useRealTimers(); }
+  });
+  it("cancels an upload on client abort and accepts the next request", async () => {
+    const s = await setup(); const controller = new AbortController(); let cancelled = false;
+    const stream = new ReadableStream<Uint8Array>({ start(c) { c.enqueue(new Uint8Array([1])); }, cancel() { cancelled = true; } });
+    const request = new Request(`http://localhost/api/sessions/${s.id}/transcriptions`, {
+      method: "POST", headers: { "Content-Type": "audio/wav", "Content-Length": "16" }, body: stream, signal: controller.signal, duplex: "half",
+    } as RequestInit);
+    const pending = s.app.request(request);
+    await new Promise(resolve => setTimeout(resolve, 5)); controller.abort();
+    expect((await pending).status).toBe(504); expect(cancelled).toBe(true);
+    expect((await s.post()).status).toBe(200);
+  });
+  it("ends a stalled quota transaction and never starts delayed model work after timeout", async () => {
+    vi.useFakeTimers();
+    try {
+      const s = await setup(); const update = s.store.update.bind(s.store);
+      let release: () => void = () => {};
+      const wait = new Promise<void>(r => { release = r; });
+      s.store.update = async (...args) => { await wait; return update(...args); };
+      let status: number | undefined;
+      const pending = Promise.resolve(s.post()).then(response => { status = response.status; });
+      await vi.advanceTimersByTimeAsync(29000);
+      expect(status).toBe(504); await pending;
+      s.store.update = update;
+      expect((await s.post()).status).toBe(200);
+      release(); await vi.advanceTimersByTimeAsync(1);
+      expect(s.calls()).toBe(1);
+    } finally { vi.useRealTimers(); }
+  });
   it("returns unconfirmed text without observing or changing route state", async () => {
     const s = await setup(); const before = structuredClone(await s.store.get(s.id));
     const res = await s.post();
