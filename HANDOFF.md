@@ -1,3 +1,9 @@
+# 本輪結束：英文完成並保存 GitHub，submission assets 留下一個對話
+
+Crystal最新決定：本session只做到英文版完成並推上GitHub，demo／deck／PDF另開新對話。兩repo的`en-preview-2026-10-08`已推送並核對，都是public。新對話先讀 [submission assets交接](docs/handoffs/2026-10-08-submission-assets.md)。本輪沒有製作或上傳demo／deck／PDF；正式導航與影片／比賽最終提交的確認仍保留。
+
+---
+
 # 最新狀態：英文已完成受限部署，接 demo／deck
 
 更新2026-10-08。英文完整操作、44個獨立英文音檔、獨立覆檢、配對受限部署與hosted驗證已完成。最新網址：https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app/?flow=last300m&photo=1&lang=en ，11/07 13:27台灣時間到期。
