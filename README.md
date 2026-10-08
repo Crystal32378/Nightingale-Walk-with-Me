@@ -8,7 +8,7 @@ A fresh build for **AI Builder Cup 2026** (Hack2Skill × Google Cloud). It guide
 
 This repository owns the API, verified route and evaluation evidence. The [companion frontend repository](https://github.com/Crystal32378/Nightingale) contains the Chinese UI, bird and 44 reviewed speech assets. The original `zh-tw-preview-2026-10-08` tags remain fixed. The subsequent Chinese voice preview has separate source/deployment receipts; GitHub publication does not promote production traffic.
 
-Start the next session with [the current handoff (繁體中文)](HANDOFF.md). See [English-version preparation](docs/english-preparation.md) for the next phase and [the current paired version record](docs/deployment/2026-10-08-voice-preview/state.json) for the exact deployed code commits.
+Start the next session with [the current handoff (繁體中文)](HANDOFF.md). See [English-version preparation](docs/english-preparation.md) for the next phase and [the current paired version record](docs/deployment/2026-10-08-english-preview/state.json) for the exact deployed code commits.
 
 ## Architecture principle
 
@@ -22,17 +22,19 @@ Start the next session with [the current handoff (繁體中文)](HANDOFF.md). Se
 
 ## Status
 
-[Chinese voice-input preview](https://nightingale-walk-with-me--voice-input-20261008-oajxumay.web.app/?flow=last300m&photo=1) — expires **2026-10-15 12:17 Asia/Taipei**. Independent code/limited deployment evidence passed. Crystal reports that iPhone LINE recording, editing and explicit sending all succeeded. Full outdoor navigation and production promotion remain HOLD.
+[English / Chinese prototype](https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app/?flow=last300m&photo=1&lang=en) — expires **2026-11-07 13:27 Asia/Taipei**. The language switch changes presentation without resetting the walk. Backend runtime `34bc9be`; frontend runtime `cdb9da5`.
 
-Backend runtime `03bc45e`; frontend runtime `5d11a50`. The new tagged revision receives 0% production traffic; the original backend still receives 100%, and the existing live Hosting release remains unchanged. [Deployment and provenance](docs/deployment/2026-10-08-voice-preview/README.md) · [Independent review](docs/acceptance/2026-10-08-voice-input/independent-review.md) · [Phone report](docs/acceptance/2026-10-08-voice-input/iphone-receipt.json).
+The complete English flow includes voice/text/photo entry, explicit text confirmation, follow-up questions, recovery, both crossings, entrance confirmation, and the help card. Chinese sign words remain visible for real-world matching. Both languages use the same verified route and deterministic authority. The English parser has conservative canonical aliases and guards tested against negated, uncertain and question-shaped input.
 
-[Architecture: editable diagrams and deck-ready images](docs/architecture/README.md)
+Independent code/assets and hosted reviews passed. Crystal accepted the English script, normal-pace Leda/Puck samples and two place-name clips. The English set has 44 fixed WAVs; the original 44 Chinese WAVs remain unchanged. English desktop/hosted checks and the earlier user-reported Chinese iPhone LINE voice flow are separate evidence. Full outdoor navigation and production promotion remain HOLD.
+
+[Deployment and source provenance](docs/deployment/2026-10-08-english-preview/README.md) · [Independent review](docs/acceptance/2026-10-08-english/independent-review.md) · [Architecture and editable diagram sources](docs/architecture/README.md).
 
 ![Nightingale route architecture](docs/architecture/nightingale-overview.svg)
 
-The frontend preview connects directly to its paired tagged Cloud Run API. Typed text and user-confirmed transcripts use the same existing observation flow. Chinese playback remains the 44 accepted fixed recordings; raw recordings are handled transiently and are not written by the application to Firestore or logs.
+The preview connects directly to its tagged Cloud Run API. The new revision receives 0% ordinary production traffic; the original backend keeps 100%. The existing live Hosting release and earlier preview releases are unchanged. Historical Chinese annotations preserve the real sign wording; current presentation and primary documentation are available in English.
 
-161 backend tests and typecheck passed. Local audio decoder tests require FFmpeg (`FFMPEG_PATH` may specify its executable). The Dockerfile installs FFmpeg for the deployed container.
+193 backend tests and typecheck passed. Audio decoder tests require FFmpeg (`FFMPEG_PATH` may specify its executable). The Dockerfile installs FFmpeg for the deployed container. Without a Google project, local route tests use deterministic interpretation; actual transcription requires the configured Vertex service.
 
 ```bash
 npm ci

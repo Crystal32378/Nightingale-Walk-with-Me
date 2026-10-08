@@ -1,0 +1,62 @@
+{
+  "recordedAtUtc": "2026-10-08T05:35:14.047696+00:00",
+  "status": "PASS_LIMITED_ENGLISH_HOSTED_PREVIEW",
+  "url": "https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app/?flow=last300m&photo=1&lang=en",
+  "expiresAt": "2026-11-07T05:27:43.895321215Z",
+  "api": "https://english-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "runtimeCommits": {
+    "backend": "34bc9be7c27e996eb789ba9c1f0f2240b608d1b8",
+    "frontend": "cdb9da550b0b7b039380ca52505a1bd193e26b52"
+  },
+  "revision": "nightingale-english20261008",
+  "imageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:461f5f6df44ab15c0b80972afeeb716194b10c55fac66cf0db43efb14d4ec5bd",
+  "cloudBuild": "92947d1c-4151-47e1-8a34-55e393fd394f",
+  "productionTraffic": [
+    {
+      "percent": 100,
+      "revisionName": "nightingale-00010-ff2"
+    },
+    {
+      "revisionName": "nightingale-english20261008",
+      "tag": "english-20261008",
+      "url": "https://english-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    },
+    {
+      "revisionName": "nightingale-fieldfix20261008",
+      "tag": "field-fix-20261008",
+      "url": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    },
+    {
+      "revisionName": "nightingale-guard20261008",
+      "tag": "photo-guard-20261008",
+      "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    },
+    {
+      "revisionName": "nightingale-voiceinput20261008",
+      "tag": "voice-input-20261008",
+      "url": "https://voice-input-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    }
+  ],
+  "oldHostingReleasesUnchanged": {
+    "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/voice-input-20261008": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/voice-input-20261008/releases/1791433058037000",
+    "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-check-20261008": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-check-20261008/releases/1791429081778000",
+    "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/field-fix-20261008": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/field-fix-20261008/releases/1791426132051000",
+    "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008/releases/1791392982618000",
+    "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live/releases/1790499622239000"
+  },
+  "tests": {
+    "backend": 193,
+    "frontend": 354
+  },
+  "audio": {
+    "chineseHashMatched": 44,
+    "englishHashMatched": 44,
+    "englishIndividualHumanListening": 6,
+    "otherEnglishClips": "machine text/hash checks; not individual human listening"
+  },
+  "englishPhoneOrTeammateWalkthrough": "NOT_CLAIMED",
+  "chineseIphoneVoiceFlow": "PASS_USER_REPORTED_IN_PREVIOUS_CHINESE_PREVIEW",
+  "fullOutdoor": "HOLD",
+  "productionPromotion": "HOLD",
+  "firstHostedSyntheticAsrDifferencePreserved": "hosted-voice-attempt1.json"
+}

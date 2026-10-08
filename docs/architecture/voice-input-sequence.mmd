@@ -24,7 +24,7 @@ sequenceDiagram
   Note over Walker,Phone: Stop playback before capture.<br/>No recording during crossings.
   Phone->>Phone: Record for up to 15 seconds
   Walker->>Phone: Stop (or cancel)
-  Note over Walker,Phone: Release microphone tracks.<br/>Cancel drops late results.
+  Note over Walker,Phone: Release microphone tracks.<br/>Cancel or language change<br/>drops late results.
   Phone->>API: Binary audio, at most 2 MiB
   Note over API,Vertex: 8s upload, 5s decode.<br/>28s request, usage limits.<br/>2 MiB upload, 16s audio.<br/>No raw audio saved.
   API->>Vertex: In-memory WAV, transcription only

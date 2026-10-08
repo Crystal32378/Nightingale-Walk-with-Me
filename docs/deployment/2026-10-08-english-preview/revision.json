@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "annotations": {
+      "autoscaling.knative.dev/maxScale": "1",
+      "run.googleapis.com/build-source-location": "{\"nightingale-1\":\"gs://run-sources-nightingale-walk-with-me-asia-east1/services/nightingale/1791436891.039524-b2ce7fedd04343048e338af3f80d270f.zip#1791436891177165\"}",
+      "run.googleapis.com/client-name": "gcloud",
+      "run.googleapis.com/client-version": "579.0.0",
+      "run.googleapis.com/operation-id": "2b5741ed-9735-4c05-830f-12caa91efa74",
+      "run.googleapis.com/startup-cpu-boost": "true",
+      "serving.knative.dev/creator": "CrystalYS.Chang@gmail.com"
+    },
+    "labels": {
+      "cloud.googleapis.com/location": "asia-east1",
+      "reviewed-sha": "34bc9be",
+      "run.googleapis.com/startupProbeType": "Default",
+      "serving.knative.dev/configuration": "nightingale",
+      "serving.knative.dev/configurationGeneration": "14",
+      "serving.knative.dev/route": "nightingale",
+      "serving.knative.dev/service": "nightingale",
+      "serving.knative.dev/serviceUid": "98df971d-ce2b-4b2a-9fe8-a80968b813d5"
+    },
+    "name": "nightingale-english20261008"
+  },
+  "spec": {
+    "containerConcurrency": 80,
+    "containers": [
+      {
+        "env": [
+          {
+            "name": "GOOGLE_CLOUD_PROJECT",
+            "value": "nightingale-walk-with-me"
+          }
+        ],
+        "image": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:461f5f6df44ab15c0b80972afeeb716194b10c55fac66cf0db43efb14d4ec5bd",
+        "name": "nightingale-1",
+        "ports": [
+          {
+            "containerPort": 8080,
+            "name": "http1"
+          }
+        ],
+        "resources": {
+          "limits": {
+            "cpu": "1000m",
+            "memory": "512Mi"
+          }
+        },
+        "startupProbe": {
+          "failureThreshold": 1,
+          "periodSeconds": 240,
+          "tcpSocket": {
+            "port": 8080
+          },
+          "timeoutSeconds": 240
+        }
+      }
+    ],
+    "serviceAccountName": "160543130573-compute@developer.gserviceaccount.com",
+    "timeoutSeconds": 300
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-10-08T05:23:57.804829Z",
+        "message": "Deploying revision succeeded in 26.25s.",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T05:23:57.904484Z",
+        "severity": "Info",
+        "status": "True",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T05:23:57.758227Z",
+        "message": "Containers became healthy in 5.25s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T05:23:50.683510Z",
+        "message": "Container image import completed in 18.54s.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T05:23:52.167248Z",
+        "message": "Provisioning imported containers completed in 1.48s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+        "status": "True",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:461f5f6df44ab15c0b80972afeeb716194b10c55fac66cf0db43efb14d4ec5bd",
+    "logUrl": "https://console.cloud.google.com/logs/viewer?project=nightingale-walk-with-me&resource=cloud_run_revision/service_name/nightingale/revision_name/nightingale-english20261008&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22nightingale%22%0Aresource.labels.revision_name%3D%22nightingale-english20261008%22",
+    "observedGeneration": 1
+  }
+}

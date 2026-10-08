@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-08T05:32:31.296Z",
+  "url": "https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app",
+  "api": "https://english-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "status": "PASS",
+  "scope": "Desktop real MediaRecorder and hosted Vertex/Firestore, with accepted synthetic Leda speech replacing microphone. No iPhone LINE or outdoor acceptance.",
+  "results": [
+    {
+      "engine": "chromium",
+      "browserVersion": "154.0.8037.98",
+      "transcriptionStatus": 200,
+      "syntheticTranscript": "What can you see nearby? Just tell me.",
+      "mime": "audio/webm",
+      "durationSeconds": 2.8109583333333332,
+      "sessionUnchangedBeforeSend": true,
+      "persistedAudioCount": 1,
+      "explicitSendCount": 1,
+      "checkpointAfterEditedText": "cp2",
+      "microphoneTracksReleased": true,
+      "allApiRequestsTagged": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "transcriptionStatus": 200,
+      "syntheticTranscript": "What can you see nearby Just tell me",
+      "mime": "audio/mp4",
+      "durationSeconds": 2.8109583333333332,
+      "sessionUnchangedBeforeSend": true,
+      "persistedAudioCount": 1,
+      "explicitSendCount": 1,
+      "checkpointAfterEditedText": "cp2",
+      "microphoneTracksReleased": true,
+      "allApiRequestsTagged": true,
+      "errors": []
+    }
+  ]
+}

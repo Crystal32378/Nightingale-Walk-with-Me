@@ -1,12 +1,37 @@
-# English implementation — independent review draft
+# English implementation — final independent review
 
-**DRAFT / NOT A RELEASE ACCEPTANCE.** Review started on 2026-10-08 against backend working changes after `1d952f1` and frontend working changes after `540279b`. Source is still changing; final accepted SHAs, English audio inventory and deployment evidence are not frozen.
+**PASS_CODE_REVIEW_FOR_LIMITED_ENGLISH_PREVIEW.** Final independent review completed on 2026-10-08. No open implementation blocker remains for the authorized paired limited preview. This is a code/assets/local-runtime gate, not hosted acceptance or production promotion. **Full outdoor navigation and production remain HOLD.**
 
-**Current disposition: INITIAL_CODE_CHECKS_PASS / FINAL_REVIEW_PENDING.** All four findings below have been fixed and independently rechecked in the working tree. No open implementation blocker from this initial review remains; complete English audio and frozen-commit review are still required before a release verdict.
+Accepted frozen source pair:
+
+- Backend `34bc9be7c27e996eb789ba9c1f0f2240b608d1b8`; runtime code equals `690f62b` for src/fixtures/Dockerfile/package inputs. Comparison baseline: Chinese `1d952f1`.
+- Frontend **`cdb9da550b0b7b039380ca52505a1bd193e26b52`**. Full tests/build/playback were run on `47ef838b6b087e44834c249fc7ceb5a32a389488`; reviewer then inspected the complete `47ef838..cdb9da5` diff: only the two visible English voice labels changed from Leda/Puck to Female/Male in `locale.ts`. Option values, voice IDs, logic and audio are unchanged, so that narrow copy change does not require repeating the complete checks. `47ef838` runtime code/audio equal `71ad52a` except two listening-acceptance metadata entries. Comparison baseline: Chinese `540279b`.
+
+All four findings below are resolved in this frozen pair. The final missing-key check also verifies that `OutdoorSequence.play(['constructor'], ...)` stays silent; inherited properties are not treated as recordings.
 
 Reviewer: `voice_independent_review`, independent of implementation. Applied `engineering:code-review`; inspected source and ran local tests / intercepted-API browser checks. No implementation edits, TTS generation, paid model calls, deployment or push by this reviewer.
 
-Current copy status: all four previous script corrections pass text recheck. The synchronized 22-line draft had SHA-256 `e3b39643e75a3d0c6a7b916de61bb969dba0244347ea5692faf815943144b6e1`; changing its status to `approved_for_recording` gives current file SHA-256 `a1579077950ff8a82d1ed5c781ad0320520114be1099b66bc8d9d6dff0d2fe5e`, with the same reviewed words. Reviewer read `voice-feedback.json`: Crystal's revised-sample response is **「這版可以，全部用正常語速」**. The four Leda/Puck sample clips plus text/style are accepted; **this does not establish individual human acceptance of all 44 files**. Batch generation is in progress. At the latest read, the English manifest still has 0 imported utterances; this is explicitly unfinished, not proof that English playback works.
+Current copy status: all four previous script corrections pass text recheck. The synchronized 22-line draft had SHA-256 `e3b39643e75a3d0c6a7b916de61bb969dba0244347ea5692faf815943144b6e1`; changing its status to `approved_for_recording` gives accepted file SHA-256 `a1579077950ff8a82d1ed5c781ad0320520114be1099b66bc8d9d6dff0d2fe5e`, with the same reviewed words. All **22 × 2 = 44 English recordings are now imported and independently hash/format checked**. Reviewer read `voice-feedback.json`: **「這版可以，全部用正常語速」** accepts the revised style/four samples; **「兩句地名都可以」** accepts the two flagged Puck place-name clips. **Individual human listening covers 6 clips, not all 44.** The other 38 retain that narrower human-review status; their machine/content/hash evidence is described below.
+
+## Final frozen-version verification
+
+| Check | Independent result |
+|---|---|
+| English inventory / provenance | **44 / 44** bytes match frozen Git blobs, English manifest SHA-256 and machine-content receipt hashes; 22 texts match the approved script and the backend inventory; manifest script hash matches the complete approved JSON. Every clip stays under `audio/outdoor/renai-001-en/{leda,puck}/`. |
+| WAV format | **44 / 44** open as mono PCM16 at 24,000 Hz, positive frame count, duration equal to manifest. Range **1.570958–12.570958 seconds**. |
+| Normal-speed generation setting | Both recorder source and manifest specify normal conversational pace, relaxed/effortless articulation and warm/calm tone. Import provenance rejects mismatched script/voice/hash. This verifies configuration lineage; actual acoustic acceptance remains the stated six clips / machine evidence, not a claim of 44 human approvals. |
+| Content check recomputation | Recomputed existing receipt normalization: **36 matches**, **6 numeric equivalents** (spoken one/two versus 1/2). Raw Puck `Ren I Road` and `Don Road` ASR differences remain unchanged and linked to Crystal's two spot-listening acceptances. No new ASR/model calls were made. |
+| Chinese preservation | **44 / 44 Chinese WAVs plus the entire Chinese manifest** equal baseline `540279b` byte-for-byte; hashes match. |
+| Route preservation | Frozen fixture equals `1d952f1` after removing only additive messageKey metadata. Earlier E1/E2 independent adversarial reproductions rerun against the frozen code pass. |
+| Complete regression | Backend **193 / 193**, frontend **354 / 354**, both typechecks PASS, independently rerun on `34bc9be` / `47ef838`; subsequent two-label-only `cdb9da5` diff independently inspected as described above. |
+| Build | Production frontend build PASS with explicit `VITE_LAST300M_API=https://review.invalid` and isolated `/tmp` output. It validates compilation/bundling only and is deliberately **not** the deployable paired API build. |
+| Real English playback | Chromium **154.0.8037.98** and desktop WebKit **26.5** fetched/decoded/started the actual local English WAVs; **11 audio requests per engine**. Puck `cp2.after` completed before `cp2.along` began. All requested files were English paths; no Chinese fallback. |
+| Playback cancellation | Actual source.stop observed for locale switch, help, mute, beginning microphone input, new route action and player.dispose. The interrupted queues did not fetch their pending next clip. Locale switch caused no route API call. After the crossing prompt completed, no further automatic audio started while waiting for the walker. |
+| Unknown identity | A protocol-accepted unknown `constructor` recovery rendered generic text, made no new audio request and did not render a replay control or raise a page error. |
+
+Playback receipt: [independent-playback.json](independent-playback.json). The test used real local files and native Web Audio, instrumenting source start/stop/ended without replacing playback; only route API responses and microphone permission outcome were controlled. The dispose check directly exercised the same player.dispose called by React cleanup; it was not a physical page-unload measurement. This is **desktop local playback evidence**, not a fresh hosted, iPhone or outdoor acceptance. It also does not mean that the reviewer listened to all 44 clips. Temporary reproduction source: `/tmp/nightingale-english-playback-final-review.cjs`.
+
+The playback harness initially needed its selector aligned to the existing voice select and its standalone test AudioContext unlocked on a real button press before calling play. Those were harness corrections; no runtime source changed during this final review.
 
 ## Findings and current disposition
 
@@ -70,18 +95,18 @@ Initially, `noticeDetail` stored a pretranslated `檢查代碼：` / `Check code
 | Presentation identity | English guide cards use route/action/checkpoint identity. Questions and cp5 recoveries use stable route-authored metadata; no English matching of server prose. Unknown recovery stays generic and silent after E2. |
 | Input fallback | Alias results are limited to registered Chinese route vocabulary; full phrase matching prevents Lane 116 / wrong section from becoming the broader Da'an Road. Generic YouBike asks for real lane signs at cp2 and gives no location evidence. E1 guards the tested negative / uncertain forms even against a mistaken model response. |
 | Ask card | Actual React dialog uses English labels / `lang=en`, `en-US` browser speech for the fixed help sentence, English volume labels; Escape returns focus to Help me ask. Shared indoor defaults stay Chinese. |
-| Missing English audio | English manifest is empty and missing files fail silent, with no fallback to Chinese recordings or server-text TTS. This validates the missing-audio behavior only. |
+| Missing English audio | The complete manifest is now present. Explicit unknown/missing-key tests still fail silent, with no fallback to Chinese recordings or server-text TTS. Actual English-path playback/cancellation is covered by the final verification above. |
 
-## Checks executed by reviewer
+## Earlier initial-review checks retained for traceability
 
 - Initial current-tree full regression: backend **186 / 186**, frontend **348 / 348**, both typechecks PASS. The frontend count observed by this reviewer was 348, not the earlier reported 347.
 - After E1/E2 changes: backend English-input + presentation-identity **32 / 32**, typecheck PASS; frontend English + outdoorVoice + textContinuation **46 / 46**, typecheck PASS. This targeted count reflects additional tests present when the commands ran; it is not a final frozen full-suite count.
 - Chromium **154.0.8037.98** and desktop WebKit **26.5**, viewport 390×844: full English mocked-API path **17 requests per engine**, correct locale switching without new requests, help focus / speech language, pending-confirmation cancel, both crossings, all three recoveries and arrival; no page errors / horizontal overflow.
 - English input-browser check using real desktop MediaRecorder / synthetic oscillator and intercepted transcription API: editable unconfirmed text, one explicit send, no microphone before press, cancel/help/pagehide cleanup, both crossings / pending confirmation hide recording, permission-denial English message and usable text fallback PASS. Reviewer added the locale-switch-while-recording assertions above; WebM **5156 bytes**, MP4 **2966 bytes** in that run.
-- No test in this draft establishes real English model comprehension, accepted English audio, hosted English version, iPhone English operation or full outdoor navigation.
+- These initial mocked-API checks do not establish real English model comprehension, a hosted English version, iPhone English operation or full outdoor navigation. Final asset checks and real local English playback above supplement them; human listening remains six clips as recorded.
 
-## Work still required before final review
+## Next-stage gates outside this code review
 
-1. Implementing agent completes generation/import of the normal-speed English set and verifies all 44 files/text hashes without touching Chinese assets. Sample/style acceptance is recorded; batch machine checks and any additional human listening must be labeled separately.
-2. Freeze both implementation SHAs; reviewer checks final diff, complete audio manifest and final regression/build/browser receipts. Real English playback cancellation and complete-phrase sequencing require the actual files.
-3. Paired limited deployment / hosted acceptance follows separately, retaining production HOLD and Chinese baseline. This draft grants no deployment or final-release PASS.
+1. Build/deploy the accepted source pair to the already authorized **limited** English preview with its explicit tagged API, preserving original production traffic and the Chinese preview/asset baseline; verify hosted source/image/assets/route behavior separately.
+2. Keep English hosted/phone/teammate evidence separate from the earlier Chinese phone report and from complete Taipei field acceptance. Do not call the 44 clips individually human-accepted; only four samples plus two place-name clips have that evidence.
+3. Record the fixed-version demo only after deployment and hosted verification. Final demo/submission approval and production navigation remain Crystal's gate. This report permits proceeding through the authorized limited-preview sequence; it does not remove production HOLD.

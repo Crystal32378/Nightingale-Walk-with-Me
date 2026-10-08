@@ -1,0 +1,306 @@
+{
+  "checkedAtUtc": "2026-10-08T05:19:19.102467+00:00",
+  "reviewer": "voice_independent_review",
+  "backendCommit": "34bc9be7c27e996eb789ba9c1f0f2240b608d1b8",
+  "frontendCommit": "47ef838b6b087e44834c249fc7ceb5a32a389488",
+  "paidModelCalls": 0,
+  "scope": "Independent desktop real local WAV/Web Audio verification with intercepted route API. Not human listening to all clips, hosted acceptance, iPhone acceptance, or field navigation.",
+  "results": [
+    {
+      "engine": "chromium",
+      "status": "PASS",
+      "version": "154.0.8037.98",
+      "apiRequests": 9,
+      "audioRequests": [
+        "/audio/outdoor/renai-001-en/leda/cp1.guide.wav",
+        "/audio/outdoor/renai-001-en/leda/cp1.exit.wav",
+        "/audio/outdoor/renai-001-en/leda/cp2.cross.wav",
+        "/audio/outdoor/renai-001-en/leda/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.along.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp3.cross.wav",
+        "/audio/outdoor/renai-001-en/puck/cp3.after.wav",
+        "/audio/outdoor/renai-001-en/puck/recover.daan.a.wav"
+      ],
+      "playbackEvents": [
+        {
+          "event": "start",
+          "id": 1,
+          "duration": 5.090958333333333
+        },
+        {
+          "event": "stop",
+          "id": 1
+        },
+        {
+          "event": "ended",
+          "id": 1
+        },
+        {
+          "event": "start",
+          "id": 2,
+          "duration": 2.770958333333333
+        },
+        {
+          "event": "stop",
+          "id": 2
+        },
+        {
+          "event": "ended",
+          "id": 2
+        },
+        {
+          "event": "start",
+          "id": 3,
+          "duration": 5.010958333333333
+        },
+        {
+          "event": "ended",
+          "id": 3
+        },
+        {
+          "event": "start",
+          "id": 4,
+          "duration": 3.0109583333333334
+        },
+        {
+          "event": "stop",
+          "id": 4
+        },
+        {
+          "event": "ended",
+          "id": 4
+        },
+        {
+          "event": "start",
+          "id": 5,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "ended",
+          "id": 5
+        },
+        {
+          "event": "start",
+          "id": 6,
+          "duration": 3.3709583333333333
+        },
+        {
+          "event": "stop",
+          "id": 6
+        },
+        {
+          "event": "ended",
+          "id": 6
+        },
+        {
+          "event": "start",
+          "id": 7,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "stop",
+          "id": 7
+        },
+        {
+          "event": "ended",
+          "id": 7
+        },
+        {
+          "event": "start",
+          "id": 8,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "stop",
+          "id": 8
+        },
+        {
+          "event": "ended",
+          "id": 8
+        },
+        {
+          "event": "start",
+          "id": 9,
+          "duration": 4.690958333333334
+        },
+        {
+          "event": "stop",
+          "id": 9
+        },
+        {
+          "event": "ended",
+          "id": 9
+        },
+        {
+          "event": "start",
+          "id": 10,
+          "duration": 4.6109583333333335
+        },
+        {
+          "event": "stop",
+          "id": 10
+        },
+        {
+          "event": "ended",
+          "id": 10
+        },
+        {
+          "event": "start",
+          "id": 11,
+          "duration": 4.050958333333333
+        },
+        {
+          "event": "stop",
+          "id": 11
+        }
+      ],
+      "assertions": [
+        "actual English WAV fetch/decode/start",
+        "Puck after-then-along sequence",
+        "locale change stops playback without route requests",
+        "help/mute/recording/new step/dispose cancel current clip and prevent queued continuation",
+        "crossing waits silently after prompt",
+        "unknown constructor recovery stays generic/silent",
+        "no Chinese audio fallback",
+        "no page errors"
+      ],
+      "scope": "Real local WAV and Web Audio in desktop engines; mocked route API; no paid model call or device field acceptance"
+    },
+    {
+      "engine": "webkit",
+      "status": "PASS",
+      "version": "26.5",
+      "apiRequests": 9,
+      "audioRequests": [
+        "/audio/outdoor/renai-001-en/leda/cp1.guide.wav",
+        "/audio/outdoor/renai-001-en/leda/cp1.exit.wav",
+        "/audio/outdoor/renai-001-en/leda/cp2.cross.wav",
+        "/audio/outdoor/renai-001-en/leda/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.along.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp2.after.wav",
+        "/audio/outdoor/renai-001-en/puck/cp3.cross.wav",
+        "/audio/outdoor/renai-001-en/puck/cp3.after.wav",
+        "/audio/outdoor/renai-001-en/puck/recover.daan.a.wav"
+      ],
+      "playbackEvents": [
+        {
+          "event": "start",
+          "id": 1,
+          "duration": 5.090958333333333
+        },
+        {
+          "event": "stop",
+          "id": 1
+        },
+        {
+          "event": "start",
+          "id": 2,
+          "duration": 2.770958333333333
+        },
+        {
+          "event": "stop",
+          "id": 2
+        },
+        {
+          "event": "start",
+          "id": 3,
+          "duration": 5.010958333333333
+        },
+        {
+          "event": "ended",
+          "id": 3
+        },
+        {
+          "event": "start",
+          "id": 4,
+          "duration": 3.0109583333333334
+        },
+        {
+          "event": "stop",
+          "id": 4
+        },
+        {
+          "event": "start",
+          "id": 5,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "ended",
+          "id": 5
+        },
+        {
+          "event": "start",
+          "id": 6,
+          "duration": 3.3709583333333333
+        },
+        {
+          "event": "stop",
+          "id": 6
+        },
+        {
+          "event": "start",
+          "id": 7,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "stop",
+          "id": 7
+        },
+        {
+          "event": "start",
+          "id": 8,
+          "duration": 2.8109583333333332
+        },
+        {
+          "event": "stop",
+          "id": 8
+        },
+        {
+          "event": "start",
+          "id": 9,
+          "duration": 4.690958333333334
+        },
+        {
+          "event": "stop",
+          "id": 9
+        },
+        {
+          "event": "start",
+          "id": 10,
+          "duration": 4.6109583333333335
+        },
+        {
+          "event": "stop",
+          "id": 10
+        },
+        {
+          "event": "start",
+          "id": 11,
+          "duration": 4.050958333333333
+        },
+        {
+          "event": "stop",
+          "id": 11
+        }
+      ],
+      "assertions": [
+        "actual English WAV fetch/decode/start",
+        "Puck after-then-along sequence",
+        "locale change stops playback without route requests",
+        "help/mute/recording/new step/dispose cancel current clip and prevent queued continuation",
+        "crossing waits silently after prompt",
+        "unknown constructor recovery stays generic/silent",
+        "no Chinese audio fallback",
+        "no page errors"
+      ],
+      "scope": "Real local WAV and Web Audio in desktop engines; mocked route API; no paid model call or device field acceptance"
+    }
+  ],
+  "finalAcceptedFrontendCommit": "cdb9da550b0b7b039380ca52505a1bd193e26b52",
+  "postTestChangeReview": "The full 47ef838..cdb9da5 diff changes only two visible locale.ts voice labels from Leda/Puck to Female/Male. Values, voice IDs, logic and WAV bytes are unchanged; no repeated paid or full-duration checks."
+}

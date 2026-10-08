@@ -1,3 +1,17 @@
+# 最新狀態：英文已完成受限部署，接 demo／deck
+
+更新2026-10-08。英文完整操作、44個獨立英文音檔、獨立覆檢、配對受限部署與hosted驗證已完成。最新網址：https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app/?flow=last300m&photo=1&lang=en ，11/07 13:27台灣時間到期。
+
+後端runtime34bc9be、前端runtimecdb9da5；revision `nightingale-english20261008`正式流量0%，原正式revision100%。source/expiry/133檔與88WAV hash/17turnEnglishflow/語音重測收據見`docs/deployment/2026-10-08-english-preview/README.md`和`state.json`。
+
+Crystal說英文初樣太慢、咬字用力，要求正常語速；新版已回覆「這版可以，全部用正常語速」，兩段地名也回覆「兩句地名都可以」。6段個別人審，38段machine/hash/content checks；不把44段全部寫成人審通過。中文44段與路線事實未改。第一次hosted合成聲音尾詞辨識差異保留；測試起音時點修正後兩browser通過，不宣稱ASR永遠正確。
+
+英文GitHub發布基準為兩repo的 `en-preview-2026-10-08`，原中文兩tag保留。接著錄固定版英文demo及deck/PDF。English真機／印度隊友walkthrough未宣稱完成；Chinese iPhone LINE短句流程已由Crystal回報成功，不重做診斷。完整戶外與正式導航發布HOLD，影片與最後提交仍由Crystal確認。
+
+下方中文交接保留作歷史基準。
+
+---
+
 # Nightingale 交接 — 中文語音輸入完成，接英文版
 
 更新：2026-10-08（Asia/Taipei）。下一階段順序：保存中文基準後 → 依 `docs/english-preparation.md` 做完整英文流程 → 驗證／獨立複驗／受限部署／再次保存 GitHub → 固定版本英文 demo、deck／PDF。正式導航發布與影片／比賽最終提交仍由 Crystal 確認。

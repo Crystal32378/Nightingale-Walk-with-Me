@@ -1,3 +1,13 @@
+# English version status — 2026-10-08
+
+The English phase is now implemented, independently reviewed and deployed as a limited preview. See [the runtime/deployment receipt](deployment/2026-10-08-english-preview/README.md), [fixed-copy review](english-copy-review.md) and [independent implementation review](acceptance/2026-10-08-english/independent-review.md). Runtime source pair: backend34bc9be / frontendcdb9da5. The original Chinese tags/audio remain fixed. English voice style is normal conversational pace at Crystal's request; 6 clips have individual listening acceptance and all44 have content/hash evidence.
+
+Next: preserve the English source/evidence on GitHub, record this fixed deployed version as an English demo under3 minutes, and prepare the English deck/PDF. Final media/publication/submission remain Crystal's gate. Full outdoor software acceptance is separate and still incomplete.
+
+The plan below is retained as the phase's original acceptance checklist, not a statement that the English UI is still absent.
+
+---
+
 # English version preparation — next phase
 
 Status: planning only. The Chinese voice and route baseline is preserved at `zh-tw-preview-2026-10-08` in both repositories. The current hosted preview still speaks and displays Chinese. Crystal has now reported that iPhone LINE no longer shows the photo decoding error and reaches the landmark follow-up; matching backend records accepted three photos. Full route field acceptance remains incomplete. She chose to freeze this photo/text baseline, add reviewed voice input first, then prepare English. See `docs/voice-input-next.md`.

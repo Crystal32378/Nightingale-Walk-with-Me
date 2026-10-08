@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-10-08T05:32:07.994549+00:00",
+  "status": "STRICT_SAMPLE_TEXT_CHECK_FAILED",
+  "text": "What can you see nearby Just type",
+  "expected": "What can you see nearby? Just tell me.",
+  "httpStatus": 200,
+  "scope": "Synthetic fixed-speech capture with source started before MediaRecorder. Browser variant for the failed line was not retained by the initial harness. No physical microphone evidence.",
+  "followUp": "Preserve discrepancy; start synthetic speech after recorder has initialized and retain each response before assertions. Do not change production transcription or auto-submit behavior."
+}

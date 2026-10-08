@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-10-08T05:29:37.262Z",
+  "url": "https://nightingale-walk-with-me--english-20261008-q4gion1y.web.app",
+  "api": "https://english-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "status": "PASS",
+  "scope": "Desktop remote scripted English descriptions through real tagged API/Vertex/Firestore; not physical outdoor acceptance.",
+  "events": [
+    {
+      "name": "Start",
+      "checkpoint": "cp1",
+      "action": "REANCHOR",
+      "expects": "walker"
+    },
+    {
+      "name": "I am at Exit 2",
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "messageKey": "ask.youbike",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "messageKey": "ask.crossing-history",
+      "expects": "evidence"
+    },
+    {
+      "name": "No / not sure",
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp2x",
+      "action": "GUIDE",
+      "expects": "walker"
+    },
+    {
+      "name": "I have crossed",
+      "checkpoint": "cp3",
+      "action": "GUIDE",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp3",
+      "action": "REANCHOR",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp3x",
+      "action": "GUIDE",
+      "expects": "walker"
+    },
+    {
+      "name": "I have crossed",
+      "checkpoint": "cp4",
+      "action": "GUIDE",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "GUIDE",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "RECOVER",
+      "messageKey": "recover.daan",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "RECOVER",
+      "messageKey": "recover.canopy",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "RECOVER",
+      "messageKey": "recover.er",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "ASK",
+      "messageKey": "ask.entrance",
+      "expects": "evidence"
+    },
+    {
+      "name": "Send",
+      "checkpoint": "cp5",
+      "action": "CONFIRM_ARRIVAL",
+      "expects": "evidence"
+    }
+  ],
+  "errors": []
+}

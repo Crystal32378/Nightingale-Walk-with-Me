@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-08T05:32:28.702Z",
+  "attempts": [
+    {
+      "engine": "chromium",
+      "status": 200,
+      "body": {
+        "text": "What can you see nearby? Just tell me."
+      }
+    },
+    {
+      "engine": "webkit",
+      "status": 200,
+      "body": {
+        "text": "What can you see nearby Just tell me"
+      }
+    }
+  ]
+}
