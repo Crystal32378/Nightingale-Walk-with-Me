@@ -10,6 +10,7 @@ import {
 } from "./interpreter.js";
 import { clientKey, DEFAULT_PHOTO_LIMITS, SlidingWindow, type PhotoLimits } from "./limits.js";
 import { inspectPhoto } from "./photo.js";
+import { confirmTextContinuation, textFollowUp, withTextAlias, withoutTextContinuation } from "./textFollowUp.js";
 import type { SessionStore } from "./store.js";
 import {
   observationSchema,
@@ -99,6 +100,7 @@ export function createApp({
     const id = c.req.param("id");
     let record = await store.get(id);
     if (!record) return c.json({ error: "unknown session" }, 404);
+    const requestCheckpoint = record.session.checkpointId;
     if (record.session.state === "ARRIVED") {
       return c.json({ error: "session already arrived" }, 409);
     }
@@ -115,7 +117,38 @@ export function createApp({
       location = { zone };
     }
 
+    const inputKeys = ["text", "photo", "observation", "confirm", "confirmation"].filter(key => body?.[key] !== undefined);
+    if (inputKeys.length !== 1) return c.json({ error: "provide exactly one observation or confirmation" }, 400);
+    if (body.confirmation !== undefined) {
+      const answer = body.confirmation;
+      if (typeof answer?.id !== "string" || !["confirm", "cancel"].includes(answer?.answer)) {
+        return c.json({ error: "invalid confirmation" }, 400);
+      }
+      try {
+        const result = await store.update(id, current => {
+          const value = confirmTextContinuation(route, current, answer, location, now());
+          return { record: { ...withoutTextContinuation(current), session: value.session, lastAction: value.action }, value };
+        });
+        if (!result) return c.json({ error: "unknown session" }, 404);
+        return c.json({ ...result, expects: expects(route, result.session) });
+      } catch (err) {
+        if (err instanceof RouteError) return c.json({ error: err.message }, 409);
+        throw err;
+      }
+    }
+    // A different observation withdraws the old question, even if its photo later fails validation.
+    if (record.pendingTextContinuation) {
+      const current = await store.update(id, latest => {
+        const clean = withoutTextContinuation(latest);
+        return { record: clean, value: clean };
+      });
+      if (!current) return c.json({ error: "unknown session" }, 404);
+      record = current;
+      if (record.session.state === "ARRIVED") return c.json({ error: "session already arrived" }, 409);
+    }
+
     let observation: Observation;
+    let rawText: string | undefined;
     if (body?.confirm === "done") {
       observation = { landmarks: [], signage: [], confidence: "high", source: "walker" };
     } else if (body?.observation !== undefined) {
@@ -153,21 +186,37 @@ export function createApp({
         c.header("Retry-After", String(Math.ceil(wait / 1000)));
         return c.json({ error: "too many photos, try again shortly" }, 429);
       }
-      record = { ...record, photoCount: photoCount + 1 };
-      await store.put(id, record);
+      const allowed = await store.update(id, current => {
+        const count = current.photoCount ?? 0;
+        return count >= photoLimits.perSession
+          ? { record: current, value: false }
+          : { record: { ...withoutTextContinuation(current), photoCount: count + 1 }, value: true };
+      });
+      if (allowed === undefined) return c.json({ error: "unknown session" }, 404);
+      if (!allowed) return c.json({ error: "photo limit reached for this walk" }, 429);
 
       observation = interpreter.interpretPhoto
         ? await interpreter.interpretPhoto(input, route)
         : EMPTY_PHOTO_OBSERVATION;
     } else if (typeof body?.text === "string" && body.text.trim().length > 0) {
-      observation = await interpreter.interpret(body.text, route);
+      rawText = body.text;
+      observation = withTextAlias(route, body.text, await interpreter.interpret(body.text, route));
     } else {
       return c.json({ error: "provide text, photo, confirm or observation" }, 400);
     }
 
     try {
-      const result = step(route, record.session, observation, location);
-      await store.put(id, { ...record, session: result.session, lastAction: result.action });
+      const followUpId = randomUUID();
+      const result = await store.update(id, current => {
+        if (current.session.checkpointId !== requestCheckpoint) throw new RouteError("checkpoint changed; submit a new observation");
+        let value = step(route, current.session, observation, location);
+        const followUp = rawText === undefined ? undefined : textFollowUp(route, current, value, observation, rawText, now(), followUpId);
+        if (followUp) value = followUp.result;
+        return { record: { ...withoutTextContinuation(current), session: value.session, lastAction: value.action,
+          ...(followUp?.pending ? { pendingTextContinuation: followUp.pending } : {}),
+        }, value };
+      });
+      if (!result) return c.json({ error: "unknown session" }, 404);
       // verdict + observation are returned for observability (debug panel), not for UI truth.
       return c.json({ ...result, observation, expects: expects(route, result.session) });
     } catch (err) {

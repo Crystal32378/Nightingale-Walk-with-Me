@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-08T02:09:43.802Z",
+  "scope": "Local HTTP + desktop Chromium/WebKit at 390x844. Synthetic photo; deterministic interpreter without image understanding. Actual iPhone LINE and live model acceptance pending.",
+  "frontend": "http://127.0.0.1:5179",
+  "api": "http://127.0.0.1:8791",
+  "status": "PASS",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "154.0.8037.98",
+      "status": "PASS",
+      "checks": [
+        "Synthetic PNG reached real photo HTTP branch; photoCount=1",
+        "Help stopped active native route audio; zero observations; checkpoint stayed cp4",
+        "Full text recovery route reached ARRIVED after entrance ASK",
+        "Injected HTTP 409 removed stale controls, restored text input, and showed retry prompt",
+        "Two synchronous confirmation clicks while response held produced one POST"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "status": "PASS",
+      "checks": [
+        "Synthetic PNG reached real photo HTTP branch; photoCount=1",
+        "Help stopped active native route audio; zero observations; checkpoint stayed cp4",
+        "Full text recovery route reached ARRIVED after entrance ASK",
+        "Injected HTTP 409 removed stale controls, restored text input, and showed retry prompt",
+        "Two synchronous confirmation clicks while response held produced one POST"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "queriedAtUtc": "2026-10-08T01:39:39.291131+00:00",
+  "source": "Cloud Run request metadata and read-only tagged session API",
+  "project": "nightingale-walk-with-me",
+  "revision": "nightingale-guard20261008",
+  "requestFilter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"nightingale\" AND resource.labels.revision_name=\"nightingale-guard20261008\" AND timestamp>=\"2026-10-08T00:00:00Z\" AND timestamp<=\"2026-10-08T01:20:00Z\" AND httpRequest.userAgent:\"Line/\" AND httpRequest.requestMethod=\"POST\"",
+  "requests": [
+    {
+      "timestamp": "2026-10-08T01:07:21.110490Z",
+      "status": 201,
+      "latency": "1.078589264s",
+      "kind": "session_or_other",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:07:25.226428Z",
+      "status": 200,
+      "latency": "0.134169640s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:08:44.286557Z",
+      "status": 201,
+      "latency": "0.041205066s",
+      "kind": "session_or_other",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:08:50.654050Z",
+      "status": 200,
+      "latency": "0.084740163s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:10:39.352538Z",
+      "status": 200,
+      "latency": "2.272195582s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:10:56.229639Z",
+      "status": 200,
+      "latency": "2.122507427s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:11:16.629184Z",
+      "status": 200,
+      "latency": "2.028307331s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    },
+    {
+      "timestamp": "2026-10-08T01:11:47.501378Z",
+      "status": 200,
+      "latency": "2.150480359s",
+      "kind": "observation",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_16 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari Line/15.7.2"
+    }
+  ],
+  "sessions": [
+    {
+      "alias": "walk-1",
+      "photoCount": 0,
+      "photoCountPresent": false,
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "lastActionType": "REANCHOR"
+    },
+    {
+      "alias": "walk-2",
+      "photoCount": 0,
+      "photoCountPresent": false,
+      "session": {
+        "routeId": "renai-001",
+        "state": "AT_CHECKPOINT",
+        "checkpointId": "cp2",
+        "questionCount": 0
+      },
+      "lastActionType": "GUIDE"
+    }
+  ],
+  "limits": [
+    "Matching user agent and timing are consistent with Crystal report, not unique identity proof.",
+    "Request logs do not contain request bodies, photo format, client exceptions or GPS fixes.",
+    "No raw photos, session IDs, IPs, tokens or user text are included."
+  ]
+}

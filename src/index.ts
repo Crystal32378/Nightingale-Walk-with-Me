@@ -15,10 +15,18 @@ const interpreter: Interpreter = process.env.GOOGLE_CLOUD_PROJECT
   : fallback;
 
 // Firestore whenever we run against a GCP project; SESSION_STORE=memory opts out for local runs.
-const store: SessionStore =
-  process.env.GOOGLE_CLOUD_PROJECT && process.env.SESSION_STORE !== "memory"
-    ? new FirestoreSessionStore(new Firestore({ projectId: process.env.GOOGLE_CLOUD_PROJECT }).collection("sessions"))
-    : new InMemorySessionStore();
+function createSessionStore(): SessionStore {
+  const projectId = process.env.GOOGLE_CLOUD_PROJECT;
+  if (!projectId || process.env.SESSION_STORE === "memory") return new InMemorySessionStore();
+  const firestore = new Firestore({ projectId });
+  const collection = firestore.collection("sessions");
+  return new FirestoreSessionStore(collection, operation => firestore.runTransaction(transaction => operation({
+    get: id => transaction.get(collection.doc(id)),
+    set: (id, data) => { transaction.set(collection.doc(id), data); },
+  })));
+}
+
+const store = createSessionStore();
 
 const app = createApp({
   routes: [renaiJson as Route, fixtureJson as Route],

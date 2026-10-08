@@ -1,0 +1,135 @@
+{
+  "checkedAtUtc": "2026-10-08T01:45:59.140Z",
+  "scope": "Local Chromium versus desktop Playwright WebKit, not iPhone or LINE acceptance",
+  "source": "Unmodified frontend src/remote/photo.ts from baseline f4016ba",
+  "results": [
+    {
+      "engine": "chromium",
+      "browserVersion": "154.0.8037.98",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "input": "locally generated 320x240 PNG, no camera data",
+      "prepare": {
+        "ok": true,
+        "mime": "image/jpeg",
+        "bytes": 1211
+      },
+      "hasApp1": false,
+      "markers": [
+        {
+          "marker": "e0",
+          "length": 16
+        },
+        {
+          "marker": "e2",
+          "length": 472
+        },
+        {
+          "marker": "db",
+          "length": 67
+        },
+        {
+          "marker": "db",
+          "length": 67
+        },
+        {
+          "marker": "c0",
+          "length": 17
+        },
+        {
+          "marker": "c4",
+          "length": 21
+        },
+        {
+          "marker": "c4",
+          "length": 20
+        },
+        {
+          "marker": "c4",
+          "length": 22
+        },
+        {
+          "marker": "c4",
+          "length": 20
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "browserVersion": "26.5",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+      "input": "locally generated 320x240 PNG, no camera data",
+      "prepare": {
+        "ok": false,
+        "name": "Error",
+        "message": "metadata survived re-encoding"
+      },
+      "hasApp1": true,
+      "markers": [
+        {
+          "marker": "e0",
+          "length": 16
+        },
+        {
+          "marker": "e1",
+          "length": 76,
+          "payloadHex": "4578696600004d4d002a00000008000187690004000000010000001a000000000003a00100030000000100010000a00200040000000100000140a003000400000001000000f000000000"
+        },
+        {
+          "marker": "ed",
+          "length": 56
+        },
+        {
+          "marker": "c0",
+          "length": 17
+        },
+        {
+          "marker": "c4",
+          "length": 31
+        },
+        {
+          "marker": "c4",
+          "length": 181
+        },
+        {
+          "marker": "c4",
+          "length": 31
+        },
+        {
+          "marker": "c4",
+          "length": 181
+        },
+        {
+          "marker": "db",
+          "length": 67
+        },
+        {
+          "marker": "db",
+          "length": 67
+        },
+        {
+          "marker": "dd",
+          "length": 4
+        }
+      ]
+    }
+  ],
+  "proposalProbe": {
+    "scope": "In-memory diagnostic only; remove APP1 from newly encoded JPEG before the existing guard; no repository source edits",
+    "engine": "desktop Playwright WebKit 26.5",
+    "result": {
+      "ok": true,
+      "hasApp1": false,
+      "decodedDimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "decodedPixel": [
+        68,
+        153,
+        171,
+        255
+      ],
+      "bytes": 1977
+    }
+  }
+}

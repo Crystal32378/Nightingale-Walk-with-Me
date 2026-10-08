@@ -1,0 +1,142 @@
+{
+  "checkedAtUtc": "2026-10-08T01:48:06.588Z",
+  "scope": "Local engine reproduction; supplied zone is synthetic; no cloud model called; no original live observation body available",
+  "cases": [
+    {
+      "input": "youbike站",
+      "interpreter": "deterministic fallback, not a replay of live Gemini output",
+      "result": {
+        "verdict": {
+          "verdict": "UNKNOWN",
+          "matchedExpected": [],
+          "matchedArrival": [],
+          "matchedShared": [],
+          "matchedConflict": null,
+          "unrecognized": []
+        },
+        "session": {
+          "routeId": "renai-001",
+          "state": "AT_CHECKPOINT",
+          "checkpointId": "cp2",
+          "questionCount": 0
+        },
+        "action": {
+          "type": "REANCHOR",
+          "checkpointId": "cp2",
+          "lookFor": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ]
+        }
+      }
+    },
+    {
+      "input": "仁愛復興路口",
+      "interpreter": "deterministic fallback, not a replay of live Gemini output",
+      "result": {
+        "verdict": {
+          "verdict": "UNKNOWN",
+          "matchedExpected": [],
+          "matchedArrival": [],
+          "matchedShared": [],
+          "matchedConflict": null,
+          "unrecognized": []
+        },
+        "session": {
+          "routeId": "renai-001",
+          "state": "AT_CHECKPOINT",
+          "checkpointId": "cp2",
+          "questionCount": 0
+        },
+        "action": {
+          "type": "REANCHOR",
+          "checkpointId": "cp2",
+          "lookFor": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ]
+        }
+      }
+    },
+    {
+      "canonicalObservation": "仁愛路",
+      "result": {
+        "verdict": {
+          "verdict": "UNKNOWN",
+          "matchedExpected": [],
+          "matchedArrival": [],
+          "matchedShared": [],
+          "matchedConflict": null,
+          "unrecognized": []
+        },
+        "session": {
+          "routeId": "renai-001",
+          "state": "AT_CHECKPOINT",
+          "checkpointId": "cp2",
+          "questionCount": 0
+        },
+        "action": {
+          "type": "REANCHOR",
+          "checkpointId": "cp2",
+          "lookFor": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ]
+        }
+      }
+    },
+    {
+      "canonicalObservation": "福華飯店",
+      "result": {
+        "verdict": {
+          "verdict": "UNKNOWN",
+          "matchedExpected": [],
+          "matchedArrival": [],
+          "matchedShared": [],
+          "matchedConflict": null,
+          "unrecognized": []
+        },
+        "session": {
+          "routeId": "renai-001",
+          "state": "AT_CHECKPOINT",
+          "checkpointId": "cp2",
+          "questionCount": 0
+        },
+        "action": {
+          "type": "REANCHOR",
+          "checkpointId": "cp2",
+          "lookFor": [
+            "大安路一段116巷",
+            "仁愛路三段123巷13弄"
+          ]
+        }
+      }
+    },
+    {
+      "canonicalObservation": "大安路一段116巷",
+      "result": {
+        "verdict": {
+          "verdict": "CONFIRMED",
+          "matchedExpected": [
+            "大安路一段116巷"
+          ],
+          "matchedArrival": [],
+          "matchedShared": [],
+          "matchedConflict": null,
+          "unrecognized": []
+        },
+        "session": {
+          "routeId": "renai-001",
+          "state": "AT_CHECKPOINT",
+          "checkpointId": "cp2x",
+          "questionCount": 0
+        },
+        "action": {
+          "type": "GUIDE",
+          "checkpointId": "cp2",
+          "instruction": "等綠燈，過復興南路。"
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Nightingale 交接 — 中文測試版定稿，等待實走回報
+# Nightingale 交接 — 實走修正已通過本機複驗，待更新預覽
 
 更新：2026-10-08（Asia/Taipei）。這份文件是新 context 的接手入口，不必重讀整段對話。先讀本頁，再按需要開連結中的證據。
 
@@ -6,9 +6,11 @@
 
 Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` 也通過；聲音定稿，不再重錄。57 張第二趟標註已由她核對、匯入並保存。後端窄修經獨立 agent 複驗通過，限時手機測試預覽已部署且完成線上檢查。
 
-**窄修 PASS／限定預覽 PASS／完整正式發布 HOLD。** Crystal 將在下次回覆提供實走結果；目前尚未收到，不能把手機或戶外驗收寫成已通過。
+**本次實走修正：本機 PASS／獨立程式複驗 PASS／iPhone LINE 待驗收／正式發布 HOLD。** 已修正 WebKit 相片轉檔被拒，以及「youbike站」「仁愛復興路口」卡在前關的問題。後端 130 tests、前端 313 tests 通過；桌面 Chromium／WebKit 的照片與完整文字流程通過。原路線及 44 段音檔未變。[修正說明](docs/field-fixes-2026-10-08.md)、[獨立複驗](docs/acceptance/2026-10-08-field-fixes/independent-review.md)、[整合測試](docs/acceptance/2026-10-08-field-fixes/ui-browser-summary.json)。
 
-本輪 GitHub 保存與 handoff 不改產品行為、不重新部署、不切正式流量。英文版尚未實作；下一階段依 [英文版準備清單](docs/english-preparation.md) 進行。
+**這批修正尚未部署或推送 GitHub；下方原測試網址仍是修正前的版本。** 新增確認協定需要前後端配對更新，不能只換其中一邊。下一步是準備受限預覽部署與手機複驗，不要求 Crystal 重走舊版。實走原話與根因證據保留在[回報](docs/field-report-2026-10-08.md)。家屬經 LINE 傳路線卡與語音輸入需求已記錄，尚未實作。
+
+前輪中文版 GitHub 基準仍保留；本輪只完成本機修正與複驗，未重新部署或切流量。英文版尚未實作；依 [英文版準備清單](docs/english-preparation.md) 的順序，先處理實走阻擋。
 
 ## 專案入口與版本
 
@@ -22,6 +24,8 @@ Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` �
 - [版本對照檔](docs/zh-tw-preview-baseline.json) 記錄兩個 repo 與上述部署版本。
 
 ## 可用的手機測試網址
+
+以下是先前已部署的版本，**尚不包含本次實走修正**。
 
 [Nightingale 中文手機測試版](https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app/?flow=last300m&photo=1)
 
@@ -68,9 +72,9 @@ Crystal 已完成 22 段新錄音的逐句試聽，最後的 Puck `photo.wait` �
 - 窄樣本與人工試聽不能寫成普遍辨識／口音品質保證。
 - 正式 live promotion 仍 HOLD。下一次部署前要以實走證據與獨立驗收作依據。
 
-## 下一步：接收 Crystal 的實走回報
+## 下一步：配對的受限預覽與 iPhone LINE 複驗
 
-不要請她重做已完成的標註或錄音。收到回報後，先用她提供的情境重現，再挑最小修法。
+不要請她重做已完成的標註或錄音。先讀[本次修正](docs/field-fixes-2026-10-08.md)及新複驗。部署前核對當下雲端狀態與配對來源；既有 preview PASS 是先前版本的範圍，不等同新版本已部署或真機通過。定位仍不自動推進關卡，也未顯示定位狀態；「我在哪」仍只是重播指引，這些不列成本次已修功能。
 
 實走時可簡單記：在哪個位置、看到的招牌字、畫面／聲音說什麼、按了哪個按鈕，以及定位／網路是否允許；有問題時截圖或記時間即可，不必填繁重表單。
 

@@ -96,6 +96,17 @@ export interface LocationFix {
 
 export const UNKNOWN_ZONE = "unknown";
 
+export interface TextConfirmation {
+  id: string;
+  kind: "renai-before-second-crossing";
+}
+
+/** Server-created only; records evidence without retaining the walker's raw text. */
+export interface PendingTextContinuation extends TextConfirmation {
+  evidence: string[];
+  expiresAt: number;
+}
+
 /** Session state machine. */
 export type SessionState =
   | "AT_CHECKPOINT"
@@ -144,7 +155,7 @@ export interface VerdictResult {
 /** What the engine decided; canonical facts only, phrased later by the language layer. */
 export type EngineAction =
   | { type: "GUIDE"; checkpointId: string; instruction: string }
-  | { type: "ASK"; checkpointId: string; question: string }
+  | { type: "ASK"; checkpointId: string; question: string; confirmation?: TextConfirmation }
   | { type: "RECOVER"; checkpointId: string; instruction: string }
   | { type: "REANCHOR"; checkpointId: string; lookFor: string[] }
   | { type: "CONFIRM_ARRIVAL"; checkpointId: string };

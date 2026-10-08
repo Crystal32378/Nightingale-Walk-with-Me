@@ -1,0 +1,314 @@
+{
+  "engine": "chromium",
+  "version": "154.0.8037.98",
+  "status": "PASS",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "noGeolocationPermission": true,
+  "events": [
+    {
+      "story": "photo-text-route",
+      "operation": "start",
+      "checkpoint": "cp1",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "walker"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "exit-done",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "synthetic-PNG-through-preparePhoto",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp2",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "youbike站",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "仁愛復興路口",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "confirmation": {
+        "kind": "renai-before-second-crossing",
+        "offered": true
+      },
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "cancel",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp2",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "仁愛復興路口",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "confirmation": {
+        "kind": "renai-before-second-crossing",
+        "offered": true
+      },
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "confirm",
+      "status": 200,
+      "checkpoint": "cp3x",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp3",
+      "confirmation": null,
+      "expects": "walker"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "second-crossing-done",
+      "status": 200,
+      "checkpoint": "cp4",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp3x",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "急診",
+      "status": 200,
+      "checkpoint": "cp5",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp4",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "復康巴士",
+      "status": 200,
+      "checkpoint": "cp5",
+      "action": "ASK",
+      "actionCheckpoint": "cp5",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "photo-text-route",
+      "operation": "復康巴士",
+      "status": 200,
+      "checkpoint": "cp5",
+      "action": "CONFIRM_ARRIVAL",
+      "actionCheckpoint": "cp5",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "expired-confirmation",
+      "operation": "start",
+      "checkpoint": "cp1",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "walker"
+    },
+    {
+      "story": "expired-confirmation",
+      "operation": "exit-done",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "expired-confirmation",
+      "operation": "仁愛復興路口",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "confirmation": {
+        "kind": "renai-before-second-crossing",
+        "offered": true
+      },
+      "expects": "evidence"
+    },
+    {
+      "story": "expired-confirmation",
+      "operation": "injected-409",
+      "status": 409,
+      "confirmation": null
+    },
+    {
+      "story": "duplicate-confirmation",
+      "operation": "start",
+      "checkpoint": "cp1",
+      "action": "REANCHOR",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "walker"
+    },
+    {
+      "story": "duplicate-confirmation",
+      "operation": "exit-done",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp1",
+      "confirmation": null,
+      "expects": "evidence"
+    },
+    {
+      "story": "duplicate-confirmation",
+      "operation": "仁愛復興路口",
+      "status": 200,
+      "checkpoint": "cp2",
+      "action": "ASK",
+      "actionCheckpoint": "cp2",
+      "confirmation": {
+        "kind": "renai-before-second-crossing",
+        "offered": true
+      },
+      "expects": "evidence"
+    },
+    {
+      "story": "duplicate-confirmation",
+      "operation": "double-click-delayed-response",
+      "status": 200,
+      "checkpoint": "cp3x",
+      "action": "GUIDE",
+      "actionCheckpoint": "cp3",
+      "confirmation": null,
+      "expects": "walker"
+    }
+  ],
+  "checks": [
+    "Synthetic PNG reached real photo HTTP branch; photoCount=1",
+    "Help stopped active native route audio; zero observations; checkpoint stayed cp4",
+    "Full text recovery route reached ARRIVED after entrance ASK",
+    "Injected HTTP 409 removed stale controls, restored text input, and showed retry prompt",
+    "Two synchronous confirmation clicks while response held produced one POST"
+  ],
+  "screenshots": [
+    "ui-chromium-question.png",
+    "ui-chromium-question-again.png",
+    "ui-chromium-expired-before.png",
+    "ui-chromium-duplicate-before.png"
+  ],
+  "audio": [
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/cp1.guide.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/cp1.exit.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/photo.remind.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/photo.wait.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/reanchor.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/reanchor.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/cp3.cross.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/cp3.after.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/cp4.driveway.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/ask.entrance.wav",
+      "status": 200
+    },
+    {
+      "story": "photo-text-route",
+      "file": "/audio/outdoor/renai-001/leda/arrived.wav",
+      "status": 200
+    },
+    {
+      "story": "expired-confirmation",
+      "file": "/audio/outdoor/renai-001/leda/cp1.guide.wav",
+      "status": 200
+    },
+    {
+      "story": "expired-confirmation",
+      "file": "/audio/outdoor/renai-001/leda/cp1.exit.wav",
+      "status": 200
+    },
+    {
+      "story": "duplicate-confirmation",
+      "file": "/audio/outdoor/renai-001/leda/cp1.guide.wav",
+      "status": 200
+    },
+    {
+      "story": "duplicate-confirmation",
+      "file": "/audio/outdoor/renai-001/leda/cp1.exit.wav",
+      "status": 200
+    },
+    {
+      "story": "duplicate-confirmation",
+      "file": "/audio/outdoor/renai-001/leda/cp3.cross.wav",
+      "status": 200
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}
