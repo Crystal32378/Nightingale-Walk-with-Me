@@ -45,7 +45,9 @@ npm run typecheck
 ## The route
 
 **MRT Zhongxiao Fuxing Exit 2, ground level (step-free passage) → Taipei City Hospital Renai Branch lobby entrance (step-free).**
-Walked twice by the route author (2026-09-26 and 2026-09-28); every landmark string is copied from real signage. The second walk corrected the first: Fuxing S. Rd has a shared bike-and-pedestrian path, not a wheelchair lane, and the corner stores are FamilyMart. The route is step-free end to end: exit 2 is the only exit with both an elevator and a ramp, both crossings have signals and ramps at each end, and rehab buses and accessible taxis stop at the lobby door. Signal timings were observed once and are kept as unstable field notes — never spoken, never shown. Field notes: `docs/route-renai-field-notes.md`. Verified in daylight and dusk only — night-time sign visibility is not yet verified.
+The route author reports **three field visits: scouting, annotation and verification**, approximately **10–15 minutes each**, alongside human and AI collaboration. A **57-image human-reviewed reference set** documents the path. These figures describe the author's route-development experience, not a travel-time promise or total preparation effort. See [how the route was developed](docs/route-development.md) for the sources, image composition and evidence limits.
+
+Every landmark string is copied from real signage. The historical field notes record the first two visits (2026-09-26 and 2026-09-28); the third is included in the author's 2026-10-08 report. The second walk corrected the first: Fuxing S. Rd has a shared bike-and-pedestrian path, not a wheelchair lane, and the corner stores are FamilyMart. The route is step-free end to end: exit 2 is the only exit with both an elevator and a ramp, both crossings have signals and ramps at each end, and rehab buses and accessible taxis stop at the lobby door. Signal timings were observed once and are kept as unstable field notes — never spoken, never shown. Field notes: `docs/route-renai-field-notes.md`. Verified in daylight and dusk only — night-time sign visibility is not yet verified.
 
 **Location only vetoes.** The phone turns its position into a coarse route zone on the device; raw coordinates are never sent. A zone can stop a checkpoint the walker cannot have reached yet from being confirmed; it never confirms anything by itself. Arrival still needs the lobby's own evidence (the rehab-bus sign, the taxi-rank sign, the vertical yellow plaque), because the hospital's name is printed on signs all the way from Fuxing S. Rd to the Daan Rd corner.
 
@@ -63,18 +65,13 @@ For local generation, `scripts/record-outdoor.py` previews the marked「新錄�
 
 The completed 57-row human review was imported in the 2026-10-08 acceptance preparation. Human wording, the prior labels, and the scoring projection are preserved in `eval/reviews/trip2-2026-10-07/` (the folder date is the human export date). The initial replay in `docs/photo-review-2026-10-08.md` exposed early checkpoint confirmations and held deployment. The subsequent [narrow photo-context fix](docs/photo-context-fix-2026-10-08.md) holds those tested cases and received independent approval for the limited preview. Zero first-step false arrivals still does not establish complete field safety.
 
-## Adding a new hospital
+## Next steps: families and hospital volunteers
 
-A route is a slice of a real walk, not a map inference, so a new location is added by walking it:
+We plan to explore two complementary workflows:
 
-1. Someone local walks the route once — the transit exit to the entrance — photographing each sign they would use to find their way, plus the sights that mean "walked too far".
-2. The signage text becomes the route vocabulary; the walker's own way of giving directions becomes the instructions.
-3. The spoken lines are written, checked, and recorded — in a voice the hospital chooses for its community.
+- **Family preparation from afar:** an adult child, relative or friend selects a locally verified route, prepares the journey and shares a simple link with an older family member. Missing routes need local field review before they become navigable.
+- **Hospital volunteer route development:** local volunteers scout, annotate and verify routes; AI helps organize evidence and draft descriptions; a human reviewer approves the route and a local maintainer checks for changes.
 
-Our one field run took **30 to 60 minutes per route**, covering:
+These are planned capabilities. The current preview has no family route-preparation, sharing or volunteer-authoring interface, and no hospital partnership is claimed. The walker's interface should stay focused on one clear next action.
 
-- walking from a transit stop about 10 minutes from the hospital;
-- walking the route twice (there and back), photographing 8 to 10 points to confirm landmarks and directions;
-- putting the photos and notes into a folder for an agent to organise and analyse.
-
-That is one route's experience, not a benchmark; writing and recording the spoken lines comes on top. A hospital can author its own entrances, and can swap in whatever voice best fits the people it serves.
+The next proposed outdoor pilot would measure route completion, wrong turns and requests for help, alongside the effort required to prepare and maintain routes. [Read the next-steps roadmap](docs/next-steps.md).
