@@ -10,6 +10,7 @@ import {
 } from "./interpreter.js";
 import { clientKey, DEFAULT_PHOTO_LIMITS, SlidingWindow, type PhotoLimits } from "./limits.js";
 import { inspectPhoto } from "./photo.js";
+import { registerTranscriptions, type TranscriptionDeps } from "./transcriptionRoutes.js";
 import { confirmTextContinuation, textFollowUp, withTextAlias, withoutTextContinuation } from "./textFollowUp.js";
 import type { SessionStore } from "./store.js";
 import {
@@ -31,6 +32,7 @@ export interface AppDeps {
   interpreter: Interpreter;
   photoLimits?: PhotoLimits;
   now?: () => number;
+  transcription?: TranscriptionDeps;
 }
 
 function initialAction(route: Route): EngineAction {
@@ -53,6 +55,7 @@ export function createApp({
   interpreter,
   photoLimits = DEFAULT_PHOTO_LIMITS,
   now = Date.now,
+  transcription,
 }: AppDeps): Hono {
   const app = new Hono();
   const routeById = new Map(routes.map((r) => [r.routeId, r]));
@@ -62,6 +65,7 @@ export function createApp({
   // Production serves the frontend from the same origin (Firebase rewrite);
   // this is for local dev and preview deploys. No credentials are involved.
   app.use("/api/*", cors());
+  if (transcription) registerTranscriptions(app, routes, store, transcription, now);
 
   app.get("/api/health", (c) => c.json({ ok: true }));
 

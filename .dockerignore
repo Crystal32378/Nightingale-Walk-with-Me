@@ -1,0 +1,9 @@
+*
+!package.json
+!package-lock.json
+!tsconfig.json
+!src/
+!src/**
+!fixtures/
+!fixtures/route-renai-001.json
+!fixtures/fixture-hospital-001.json

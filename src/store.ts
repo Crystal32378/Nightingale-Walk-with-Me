@@ -5,6 +5,8 @@ export interface SessionRecord {
   lastAction: EngineAction;
   /** Photos this walk has sent to the reader; absent means none. */
   photoCount?: number;
+  /** Numeric cost counter only; no audio or unconfirmed transcript is stored. */
+  audioCount?: number;
   pendingTextContinuation?: PendingTextContinuation;
 }
 
@@ -83,9 +85,10 @@ function isRecord(v: unknown): v is SessionRecord {
 
 function readRecord(data: unknown): SessionRecord | undefined {
   if (!isRecord(data)) return undefined;
-  const { session, lastAction, photoCount, pendingTextContinuation } = data;
+  const { session, lastAction, photoCount, audioCount, pendingTextContinuation } = data;
   return { session, lastAction,
     ...(typeof photoCount === "number" ? { photoCount } : {}),
+    ...(typeof audioCount === "number" ? { audioCount } : {}),
     ...(isPendingTextContinuation(pendingTextContinuation) ? { pendingTextContinuation } : {}),
   };
 }
@@ -95,6 +98,7 @@ function writeRecord(record: SessionRecord): Record<string, unknown> {
     session: record.session,
     lastAction: record.lastAction,
     ...(record.photoCount !== undefined ? { photoCount: record.photoCount } : {}),
+    ...(record.audioCount !== undefined ? { audioCount: record.audioCount } : {}),
     ...(record.pendingTextContinuation ? { pendingTextContinuation: record.pendingTextContinuation } : {}),
     updatedAt: new Date(),
     // Firestore TTL policy on this field removes abandoned walks after a day.

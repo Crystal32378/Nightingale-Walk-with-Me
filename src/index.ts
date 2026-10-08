@@ -7,6 +7,7 @@ import { createApp } from "./server.js";
 import { Firestore } from "@google-cloud/firestore";
 import { FirestoreSessionStore, InMemorySessionStore, type SessionStore } from "./store.js";
 import type { Route } from "./types.js";
+import { createVertexTranscriber } from "./transcription.js";
 
 const fallback = new KeywordInterpreter();
 // Without a GCP project we run fully deterministic — same app, no AI layer.
@@ -32,6 +33,7 @@ const app = createApp({
   routes: [renaiJson as Route, fixtureJson as Route],
   store,
   interpreter,
+  ...(process.env.GOOGLE_CLOUD_PROJECT ? { transcription: { transcriber: createVertexTranscriber() } } : {}),
 });
 
 const port = Number(process.env.PORT ?? 8080);
