@@ -146,7 +146,8 @@
           "大廳入口",
           "臨時停車區"
         ],
-        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。",
+        "messageKey": "ask.entrance"
       },
       "next": "cp5"
     },
@@ -174,7 +175,8 @@
           "大廳入口",
           "臨時停車區"
         ],
-        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。"
+        "question": "你前面的門，上面寫「急診」嗎？一般門診，要走大廳的玻璃自動門。",
+        "messageKey": "ask.entrance"
       },
       "conflictLandmarks": [
         {
@@ -183,7 +185,8 @@
           "recoveryInstruction": "那是急診的車道口。大廳入口還在前面一點。",
           "zones": [
             "er"
-          ]
+          ],
+          "messageKey": "recover.er"
         },
         {
           "landmark": "大安路",
@@ -191,7 +194,8 @@
           "recoveryInstruction": "這條路會通到大安路。我們先轉身，再沿著醫院牆面往回走，會看到玻璃自動門。",
           "zones": [
             "daan"
-          ]
+          ],
+          "messageKey": "recover.daan"
         },
         {
           "landmark": "綠色頂棚走廊",
@@ -199,7 +203,8 @@
           "recoveryInstruction": "綠色頂棚的長廊是側邊通道。左轉往仁愛路走2分鐘，大廳入口就在前面。",
           "zones": [
             "daan"
-          ]
+          ],
+          "messageKey": "recover.canopy"
         }
       ],
       "arrivalEvidence": [

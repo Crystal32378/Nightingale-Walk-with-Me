@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-08T04:57:41.508604+00:00",
+  "baseRuntime": "03bc45e",
+  "routeFactsUnchangedAfterRemovingPresentationKeys": true,
+  "addedKeys": [
+    "ask.entrance",
+    "ask.entrance",
+    "recover.er",
+    "recover.daan",
+    "recover.canopy"
+  ],
+  "chineseWavCount": 44,
+  "chineseWavHashesUnchanged": true
+}

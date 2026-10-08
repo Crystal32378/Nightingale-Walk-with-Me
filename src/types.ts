@@ -7,6 +7,8 @@ import { z } from "zod";
  */
 
 export interface ConflictLandmark {
+  /** Stable presentation identity, authored with the route; never inferred from prose. */
+  messageKey?: string;
   /** Canonical landmark that means the user is off-route (e.g. "renai roundabout"). */
   landmark: string;
   /** Checkpoint to re-anchor at when this conflict is observed. */
@@ -22,6 +24,7 @@ export interface ConflictLandmark {
 }
 
 export interface Ambiguity {
+  messageKey?: string;
   /**
    * Evidence that is true at more than one place (e.g. "hospital building")
    * and therefore can never confirm this checkpoint on its own.
@@ -153,12 +156,13 @@ export interface VerdictResult {
 }
 
 /** What the engine decided; canonical facts only, phrased later by the language layer. */
-export type EngineAction =
+export type EngineAction = (
   | { type: "GUIDE"; checkpointId: string; instruction: string }
   | { type: "ASK"; checkpointId: string; question: string; confirmation?: TextConfirmation }
   | { type: "RECOVER"; checkpointId: string; instruction: string }
   | { type: "REANCHOR"; checkpointId: string; lookFor: string[] }
-  | { type: "CONFIRM_ARRIVAL"; checkpointId: string };
+  | { type: "CONFIRM_ARRIVAL"; checkpointId: string }
+) & { messageKey?: string };
 
 export interface StepResult {
   session: SessionSnapshot;

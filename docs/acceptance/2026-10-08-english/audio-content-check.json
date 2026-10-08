@@ -1,0 +1,292 @@
+{
+  "scope": "Machine transcription cross-check of fixed synthetic English TTS; not human listening, voice-identity or field acceptance.",
+  "results": {
+    "Leda:cp2.along": {
+      "status": "PASS",
+      "expected": "Continue straight along Fuxing South Road.",
+      "transcribed": "continue straight along Fuxing South Road",
+      "sha256": "d5232810fda5d787f84b28f46be1692934c5398441ac7b7201c3752e32a30790"
+    },
+    "Puck:cp2.along": {
+      "status": "PASS",
+      "expected": "Continue straight along Fuxing South Road.",
+      "transcribed": "Continue straight along Fuxing South Road",
+      "sha256": "5c818465190b2c001a402d348d43b4dc090947296bf328d39a96bedfe8db8b16"
+    },
+    "Leda:reanchor": {
+      "status": "PASS",
+      "expected": "What can you see nearby? Just tell me.",
+      "transcribed": "What can you see nearby? Just tell me.",
+      "sha256": "afea716eab644da990cc1a66b393de26dca7d805a334cd4f0bd94e08db9b71a2"
+    },
+    "Puck:reanchor": {
+      "status": "PASS",
+      "expected": "What can you see nearby? Just tell me.",
+      "transcribed": "What can you see nearby? Just tell me.",
+      "sha256": "036a299f9186ec4bd48daa83145518ecf5ecb1b7896289907af6ca79a55f9d68"
+    },
+    "Leda:cp1.guide": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "Take Elevator 1 to street level. Exit 2 is just outside.",
+      "transcribed": "Take elevator one to street level. Exit two is just outside.",
+      "sha256": "a3088afbd421aaba6e38af6222c472a85406aa7808b62b0af61e8aad531fe887",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Leda:cp1.board": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "At Exit 2, look at the notice board nearby. Look for the Chinese name of Taipei City Hospital, Renai Branch.",
+      "transcribed": "at exit two, look at the notice board nearby. Look for the Chinese name of Taipei City Hospital, Renai branch.",
+      "sha256": "5dda794e4555e8257c785620fb21b52a3f49e709823b39af0e155723c9513bb7",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Leda:cp1.exit": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "Outside Exit 2, turn right.",
+      "transcribed": "Outside exit two, turn right.",
+      "sha256": "4b3057f67b3d11986fc3c0e218aae9aec045d5fd880386f8033338679dd3abd5",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Leda:cp2.cross": {
+      "status": "PASS",
+      "expected": "Wait for the green pedestrian signal, then cross Fuxing South Road.",
+      "transcribed": "Wait for the green pedestrian signal, then cross Fuxing South Road.",
+      "sha256": "a0b88124215e96a33da3a3da82e92d4cec19a47cb14de093957bf419e88018e9"
+    },
+    "Leda:cp2.after": {
+      "status": "PASS",
+      "expected": "Now that you have crossed, turn right.",
+      "transcribed": "Now that you have crossed, turn right.",
+      "sha256": "d94846574cadab003c8154acf9d310e6d5c44484006a1fcba76fff8d0940548d"
+    },
+    "Leda:cp2.bike": {
+      "status": "PASS",
+      "expected": "Bicycles use this sidewalk too. Stay on the inner side.",
+      "transcribed": "Bicycles use this sidewalk too. Stay on the inner side.",
+      "sha256": "62062e558fabf5c82f134ceb190172286c869664aabe5a897892e8108823f31e"
+    },
+    "Leda:cp2.water": {
+      "status": "PASS",
+      "expected": "There is a FamilyMart along the way if you need water. Take your time.",
+      "transcribed": "There is a family mart along the way if you need water. Take your time.",
+      "sha256": "c5dc2d0c2fe30656e13b88e13471373834395810f8d71739db44f6a5782e85b2"
+    },
+    "Leda:cp3.cross": {
+      "status": "PASS",
+      "expected": "Wait for the green pedestrian signal, then cross Renai Road.",
+      "transcribed": "Wait for the green pedestrian signal, then cross Renai Road.",
+      "sha256": "26b01fcf0f734f586be7426fba820d812437f6ecc7b29a74cb1f2687f2e6ef1d"
+    },
+    "Leda:cp3.after": {
+      "status": "PASS",
+      "expected": "After crossing, turn left. The hospital is on this side.",
+      "transcribed": "After crossing, turn left. The hospital is on this side.",
+      "sha256": "de330d5a83b4f652d5a2ebd979349fb7e75f448b57f1e094999a69e5728ef244"
+    },
+    "Leda:cp4.driveway": {
+      "status": "PASS",
+      "expected": "The driveway with the red Chinese characters for Emergency and the letter P is for vehicles. The lobby entrance is a little farther ahead.",
+      "transcribed": "The driveway with the red Chinese characters for emergency and the letter P is for vehicles. The lobby entrance is a little farther ahead.",
+      "sha256": "cfec3588996240c32fade6a97d910aa82797a9a9f3b15067040d7dbb4ed2002c"
+    },
+    "Leda:ask.entrance": {
+      "status": "PASS",
+      "expected": "Does the sign above the door show the Chinese characters for Emergency? For outpatient visits, use the automatic glass doors to the lobby.",
+      "transcribed": "Does the sign above the door show the Chinese characters for emergency? For outpatient visits, use the automatic glass doors to the lobby.",
+      "sha256": "bdc0ea20dd66d602ef98d6e7ea935bb927ce39402e08b87eca3f8babeaaec538"
+    },
+    "Leda:cp5.lobby": {
+      "status": "PASS",
+      "expected": "The row of automatic glass doors is the lobby entrance.",
+      "transcribed": "The row of automatic glass doors is the lobby entrance.",
+      "sha256": "087e6aa7b1f51ffa3df80a093213ee8b8f38b5a68b43d71ecb5b37b4eb4ba8ba"
+    },
+    "Leda:recover.er": {
+      "status": "PASS",
+      "expected": "That is the emergency driveway. The lobby entrance is a little farther ahead.",
+      "transcribed": "That is the emergency driveway. The lobby entrance is a little farther ahead.",
+      "sha256": "9032d1849888dc173b73f8b3b9b2f816a0f849737b9c4d8ac45b89c55b1ad45c"
+    },
+    "Leda:recover.daan.a": {
+      "status": "PASS",
+      "expected": "This road leads to Da'an Road. Let us turn around.",
+      "transcribed": "This road leads to Daan Road. Let us turn around.",
+      "sha256": "76d1f45e5a9e4c2ff0ce6a322bf7aa794d015da012b859effaafe0bebbae977f"
+    },
+    "Leda:recover.daan.b": {
+      "status": "PASS",
+      "expected": "Follow the hospital wall back until you see the automatic glass doors.",
+      "transcribed": "Follow the hospital wall back until you see the automatic glass doors.",
+      "sha256": "2d0ca0e98c03d0ce6002010dd5ad76c7748d316c240f4bd0bf2abb024b75dc9a"
+    },
+    "Leda:recover.canopy": {
+      "status": "PASS",
+      "expected": "The green-roofed corridor is a side passage. Turn left toward Renai Road. The lobby entrance is ahead.",
+      "transcribed": "The green roofed corridor is a side passage. Turn left toward Renai Road. The lobby entrance is ahead.",
+      "sha256": "c2be03200dfde2d22c6eb4427b8a941b0ada56e0e096a626832777c2264ab675"
+    },
+    "Leda:arrived": {
+      "status": "PASS",
+      "expected": "This is the hospital entrance. The service desk is on your left inside. They can help you with the next step.",
+      "transcribed": "This is the hospital entrance. The service desk is on your left inside. They can help you with the next step.",
+      "sha256": "2a3fc7f7bcbb432944cd5021de66ec4a26fc76915418e494c6c9be155d56de53"
+    },
+    "Leda:photo.remind": {
+      "status": "PASS",
+      "expected": "Photograph the sign only. Keep faces, number plates, and patient information out of the picture. Google will read the photo. Nightingale does not save the original image.",
+      "transcribed": "Photograph the sign only. Keep faces, number plates, and patient information out of the picture. Google will read the photo. Nightingale does not save the original image.",
+      "sha256": "26116d6f302d683c7fe84aa92006f37c3b26355d8e6c56e2b15f12731f1e8dbc"
+    },
+    "Leda:photo.wait": {
+      "status": "PASS",
+      "expected": "Let me take a look at this photo.",
+      "transcribed": "Let me take a look at this photo.",
+      "sha256": "f1ebe399660bf363da56b4b241e293d1c52c657de66a303b5f84d81c376eec63"
+    },
+    "Leda:photo.wait2": {
+      "status": "PASS",
+      "expected": "I am still looking.",
+      "transcribed": "I am still looking.",
+      "sha256": "1be31cd98d2b4f651df070b781e6560797c0fd6e79cc4f12e11b404ee31a0be0"
+    },
+    "Puck:cp1.guide": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "Take Elevator 1 to street level. Exit 2 is just outside.",
+      "transcribed": "Take elevator one to street level. Exit two is just outside.",
+      "sha256": "8a05b581c09be9980c84ce74d58e0f76ddaa2f4cc67927abe23d0b83e55e39fe",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Puck:cp1.board": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "At Exit 2, look at the notice board nearby. Look for the Chinese name of Taipei City Hospital, Renai Branch.",
+      "transcribed": "at exit two, look at the notice board nearby. Look for the Chinese name of Taipei City Hospital, Renai Branch.",
+      "sha256": "e19d57ea75efe06357ceba8c414b86861bca22b1473825975ebc3e1716c0c3d7",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Puck:cp1.exit": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "Outside Exit 2, turn right.",
+      "transcribed": "Outside exit two, turn right.",
+      "sha256": "16e1b86192ad304b7a40ef3593a860c55eb857ca136a77f1f6f1890da0e13e74",
+      "review": "PASS_NUMERIC_EQUIVALENCE",
+      "reviewNote": "ASR writes spoken one/two as words; fixed script uses 1/2. Raw transcript is preserved."
+    },
+    "Puck:cp2.cross": {
+      "status": "PASS",
+      "expected": "Wait for the green pedestrian signal, then cross Fuxing South Road.",
+      "transcribed": "Wait for the green pedestrian signal, then cross Fuxing South Road.",
+      "sha256": "ff27c5eb7ffb94fdbb3348c93342445848924d426df438d72100025f5d9f44f4"
+    },
+    "Puck:cp2.after": {
+      "status": "PASS",
+      "expected": "Now that you have crossed, turn right.",
+      "transcribed": "Now that you have crossed, turn right.",
+      "sha256": "e5ece3b4a3d9e441ee3c72813788004e258dedb48745a2bf7ab20ec863911ec3"
+    },
+    "Puck:cp2.bike": {
+      "status": "PASS",
+      "expected": "Bicycles use this sidewalk too. Stay on the inner side.",
+      "transcribed": "Bicycles use this sidewalk too. Stay on the inner side.",
+      "sha256": "cea86ed1450b7a746df83e35888021be198a1b7c722f4846f9dab136b0436086"
+    },
+    "Puck:cp2.water": {
+      "status": "PASS",
+      "expected": "There is a FamilyMart along the way if you need water. Take your time.",
+      "transcribed": "There is a family mart along the way if you need water. Take your time.",
+      "sha256": "4f4b907585c4ebbf933a80e7e0d840a3b6dd28a5531c88cd6fbfb985ce793616"
+    },
+    "Puck:cp3.cross": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "Wait for the green pedestrian signal, then cross Renai Road.",
+      "transcribed": "Wait for the green pedestrian signal, then cross Ren I Road.",
+      "sha256": "9b5067dc4300c0e702340704a1734989fe6befd894d6afb64334a063df2bd798"
+    },
+    "Puck:cp3.after": {
+      "status": "PASS",
+      "expected": "After crossing, turn left. The hospital is on this side.",
+      "transcribed": "After crossing, turn left. The hospital is on this side.",
+      "sha256": "a34274c89cd491d553b942eae3cfc2112ec6c80b3a5be25b0e86a175bfdd5e00"
+    },
+    "Puck:cp4.driveway": {
+      "status": "PASS",
+      "expected": "The driveway with the red Chinese characters for Emergency and the letter P is for vehicles. The lobby entrance is a little farther ahead.",
+      "transcribed": "The driveway with the red Chinese characters for emergency and the letter P is for vehicles. The lobby entrance is a little farther ahead.",
+      "sha256": "f3dd340c064ddc72a825d15fc52382823f2237b5aeda73b3614138047636a330"
+    },
+    "Puck:ask.entrance": {
+      "status": "PASS",
+      "expected": "Does the sign above the door show the Chinese characters for Emergency? For outpatient visits, use the automatic glass doors to the lobby.",
+      "transcribed": "Does the sign above the door show the Chinese characters for emergency? For outpatient visits, use the automatic glass doors to the lobby.",
+      "sha256": "a4d8b8368c9da7c06bfd41f45f12d1b39c94b0bc47b3675ea6c2d36fdbadb957"
+    },
+    "Puck:cp5.lobby": {
+      "status": "PASS",
+      "expected": "The row of automatic glass doors is the lobby entrance.",
+      "transcribed": "The row of automatic glass doors is the lobby entrance.",
+      "sha256": "f1a80d2db7318253cf559a1b4ebcb803e0f6fe05bc3689e96a51cb110d9e13c3"
+    },
+    "Puck:recover.er": {
+      "status": "PASS",
+      "expected": "That is the emergency driveway. The lobby entrance is a little farther ahead.",
+      "transcribed": "That is the emergency driveway. The lobby entrance is a little farther ahead.",
+      "sha256": "077b949d5f435f553b2949c3870b1b92a7b0ca4d951f3c69ed83d9cdf8eb3552"
+    },
+    "Puck:recover.daan.a": {
+      "status": "REVIEW_DIFFERENCE",
+      "expected": "This road leads to Da'an Road. Let us turn around.",
+      "transcribed": "This road leads to Don Road. Let us turn around.",
+      "sha256": "aebf26758f3ec64240f98683801a1a025c3098e985924a444b95b62b761b99f8"
+    },
+    "Puck:recover.daan.b": {
+      "status": "PASS",
+      "expected": "Follow the hospital wall back until you see the automatic glass doors.",
+      "transcribed": "Follow the hospital wall back until you see the automatic glass doors.",
+      "sha256": "aa8196a667549af1781f433469400abd9b2430046b4613f5a781a4ec60c8de49"
+    },
+    "Puck:recover.canopy": {
+      "status": "PASS",
+      "expected": "The green-roofed corridor is a side passage. Turn left toward Renai Road. The lobby entrance is ahead.",
+      "transcribed": "The green roofed corridor is a side passage. Turn left toward Renai Road. The lobby entrance is ahead.",
+      "sha256": "e8296c69267bc2e71ad032425805ced69a2b3e056d41b57e7650c6c9b031a67e"
+    },
+    "Puck:arrived": {
+      "status": "PASS",
+      "expected": "This is the hospital entrance. The service desk is on your left inside. They can help you with the next step.",
+      "transcribed": "This is the hospital entrance. The service desk is on your left inside. They can help you with the next step.",
+      "sha256": "68dafbe3d163af0d8c10b22498df9d5ad35e164d10fd0ddeacd44605902d3284"
+    },
+    "Puck:photo.remind": {
+      "status": "PASS",
+      "expected": "Photograph the sign only. Keep faces, number plates, and patient information out of the picture. Google will read the photo. Nightingale does not save the original image.",
+      "transcribed": "photograph the sign only. Keep faces, number plates, and patient information out of the picture. Google will read the photo. Nightingale does not save the original image.",
+      "sha256": "4c0ccd23e8a2709b1eb602c7ac473a7b6276a28b5d88976e1ed335276473a54c"
+    },
+    "Puck:photo.wait": {
+      "status": "PASS",
+      "expected": "Let me take a look at this photo.",
+      "transcribed": "Let me take a look at this photo.",
+      "sha256": "c6704b40c253c73958fc4692ec2122dd18f5b5f99513dba5c332743b8c02466a"
+    },
+    "Puck:photo.wait2": {
+      "status": "PASS",
+      "expected": "I am still looking.",
+      "transcribed": "I am still looking.",
+      "sha256": "fd43fabf035a01537a01f8c1706c3baf2ea3f144568a57f75f59642c8cefd7c9"
+    }
+  },
+  "checkedAt": "2026-10-08T05:04:54.726Z",
+  "summary": {
+    "checked": 44,
+    "normalizedMatches": 36,
+    "numericEquivalent": 6,
+    "properNameSpotListeningPending": [
+      "Puck:cp3.cross",
+      "Puck:recover.daan.a"
+    ],
+    "scope": "Machine text cross-check; no claim of individual human acceptance for all clips."
+  }
+}

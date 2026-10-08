@@ -1,0 +1,14 @@
+{
+  "recordedAtUtc": "2026-10-08T04:48:45.313004+00:00",
+  "firstSampleFeedback": "聲音沒問題，但聽起來實在太慢，咬字特別用力，不太自然，所以建議用正常語速即可，不需要特別變慢",
+  "acceptedVoiceIds": [
+    "Leda",
+    "Puck"
+  ],
+  "correction": "Normal conversational pace and relaxed articulation; removed unhurried/grandchild style from English only.",
+  "revisedSamples": "outputs/nightingale-english-normal-2026-10-08",
+  "batchStatus": "authorized_normal_pace",
+  "chineseWavs": "unchanged",
+  "revisedSampleAcceptance": "這版可以，全部用正常語速",
+  "acceptedAtUtc": "2026-10-08T04:58:28.879597+00:00"
+}

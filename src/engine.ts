@@ -79,7 +79,7 @@ export function step(
           return {
             verdict: held,
             session: { ...session, state: "AMBIGUOUS", questionCount: session.questionCount + 1 },
-            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question },
+            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question, ...(cp.ambiguity.messageKey ? { messageKey: cp.ambiguity.messageKey } : {}) },
           };
         }
         return reanchor(session, cp, held);
@@ -100,6 +100,7 @@ export function step(
           type: "RECOVER",
           checkpointId: conflict.recoveryPointer,
           instruction: conflict.recoveryInstruction,
+          ...(conflict.messageKey ? { messageKey: conflict.messageKey } : {}),
         },
       };
     }
@@ -123,7 +124,7 @@ export function step(
           return {
             verdict,
             session: { ...session, state: "AMBIGUOUS", questionCount: session.questionCount + 1 },
-            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question },
+            action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question, ...(cp.ambiguity.messageKey ? { messageKey: cp.ambiguity.messageKey } : {}) },
           };
         }
         return {
@@ -155,7 +156,7 @@ export function step(
             state: "AMBIGUOUS",
             questionCount: session.questionCount + 1,
           },
-          action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question },
+          action: { type: "ASK", checkpointId: cp.id, question: cp.ambiguity.question, ...(cp.ambiguity.messageKey ? { messageKey: cp.ambiguity.messageKey } : {}) },
         };
       }
       return reanchor(session, cp, verdict);

@@ -1,6 +1,7 @@
 import { RouteError, step } from "./engine.js";
 import { isPendingTextContinuation, type SessionRecord } from "./store.js";
 import type { LocationFix, Observation, PendingTextContinuation, Route, StepResult } from "./types.js";
+import { englishObservation, isEnglishBike, isEnglishCaution } from "./englishInput.js";
 
 const EMPTY_TEXT: Observation = { landmarks: [], signage: [], confidence: "low", source: "text" };
 const compact = (text: string) => text.trim().replace(/[\s，。！？,.!?]/g, "").toLowerCase();
@@ -11,6 +12,8 @@ const NOT_BEFORE_RENAI = /已(?:經)?(?:走)?過(?:了)?仁愛路|過完仁愛�
 /** One field-reported intersection alias, mapped to existing route vocabulary, text only. */
 export function withTextAlias(route: Route, text: string, observation: Observation): Observation {
   if (route.routeId !== "renai-001") return observation;
+  const english = englishObservation(text, route);
+  if (english) return english;
   // Generic bike stations are not location evidence, even if the interpreter guessed a street.
   if (BIKE.test(compact(text))) return { ...EMPTY_TEXT };
   if (!INTERSECTION.test(compact(text))) return observation;
@@ -24,11 +27,11 @@ export function textFollowUp(route: Route, record: SessionRecord, result: StepRe
   if (route.routeId !== "renai-001" || record.session.checkpointId !== "cp2"
     || result.action.type !== "REANCHOR" || result.verdict.verdict !== "UNKNOWN") return { result };
   const cp = route.checkpoints.find(c => c.id === "cp2")!;
-  if (BIKE.test(compact(text))) {
-    return { result: { ...result, action: { type: "ASK", checkpointId: cp.id,
+  if (BIKE.test(compact(text)) || isEnglishBike(text)) {
+    return { result: { ...result, action: { type: "ASK", checkpointId: cp.id, messageKey: "ask.youbike",
       question: `YouBike 旁邊的路牌寫什麼？找找「${cp.expectedLandmarks.join("」或「")}」。` } } };
   }
-  if (NOT_BEFORE_RENAI.test(compact(text))) return { result };
+  if (NOT_BEFORE_RENAI.test(compact(text)) || isEnglishCaution(text)) return { result };
   const target = route.checkpoints.find(c => c.id === "cp3");
   const observed = [...observation.landmarks, ...observation.signage].map(compact);
   const evidence = target?.expectedLandmarks.filter(term => observed.includes(compact(term))) ?? [];
@@ -36,7 +39,7 @@ export function textFollowUp(route: Route, record: SessionRecord, result: StepRe
   const confirmation = { id, kind: "renai-before-second-crossing" as const };
   return {
     pending: { ...confirmation, evidence, expiresAt: now + 120_000 },
-    result: { ...result, action: { type: "ASK", checkpointId: "cp2", confirmation,
+    result: { ...result, action: { type: "ASK", checkpointId: "cp2", confirmation, messageKey: "ask.crossing-history",
       question: "你已經過復興南路，現在安全站在仁愛路口的人行道上，而且還沒有過仁愛路，對嗎？" } },
   };
 }
@@ -67,7 +70,7 @@ export function confirmTextContinuation(route: Route, record: SessionRecord,
   const confirmed = step(route, { ...record.session, checkpointId: "cp3", state: "AT_CHECKPOINT", questionCount: 0 },
     { landmarks: p.evidence, signage: [], confidence: "high", source: "text" }, location);
   if (confirmed.verdict.locationVeto) {
-    return { ...held, action: { type: "ASK", checkpointId: "cp2",
+    return { ...held, action: { type: "ASK", checkpointId: "cp2", messageKey: "ask.location-veto",
       question: "目前定位和路口對不上。請再看看附近路牌，告訴我上面的路名。" } };
   }
   return confirmed;
