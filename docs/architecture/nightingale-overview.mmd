@@ -1,0 +1,42 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 17px
+    primaryColor: '#eef3ed'
+    primaryTextColor: '#23372d'
+    primaryBorderColor: '#557565'
+    lineColor: '#557565'
+  flowchart:
+    curve: linear
+    nodeSpacing: 38
+    rankSpacing: 44
+    htmlLabels: true
+---
+flowchart LR
+  accTitle: Nightingale — AI interprets. Verified data decides.
+  accDescr: Explicit user observations reach a deterministic route engine. Human-verified route data and validation determine progress. Session state is persisted; the phone presents bounded text, bird cues and accepted fixed speech. Audio transcription is a separate editable-draft flow.
+
+  Input["PHONE / Firebase Hosting<br/>Typed text · confirmed transcript<br/>Photo · walker confirmation"]
+  API["CLOUD RUN / Hono<br/>POST /api/sessions/:id/observations"]
+  AI["VERTEX / Gemini 2.5 Flash<br/>Interpret text or photo<br/>Canonical observation"]
+  Gate["SCHEMA + VALIDATOR<br/>Route vocabulary and guards<br/>Unknown evidence holds position"]
+  Engine["DETERMINISTIC ENGINE<br/>Questions · recovery · arrival<br/>Atomic confirmation"]
+  Output["PHONE / Validated response<br/>One next step + bird cue<br/>44 fixed Chinese WAVs"]
+  Truth["HUMAN-VERIFIED ROUTE<br/>Renai checkpoint graph<br/>Entrance evidence"]
+  Store[("FIRESTORE SESSION<br/>State · action · pending question<br/>Usage counts + expiry")]
+  Zone["PHONE / Optional coarse zone<br/>Coordinates stay on the phone<br/>Zone alone cannot prove arrival"]
+
+  Input --> API
+  API -->|"text / photo"| AI --> Gate --> Engine --> Output
+  API -->|"explicit confirmation"| Engine
+  Truth --> Gate
+  Truth --> Engine
+  Zone -.->|"zone ID only"| Gate
+  Engine <--> Store
+
+  classDef truth fill:#dce9df,stroke:#355d47,stroke-width:2px
+  classDef gate fill:#fff5db,stroke:#9a7840
+  class Truth,Engine truth
+  class Gate gate

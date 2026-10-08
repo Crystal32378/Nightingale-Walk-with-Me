@@ -1,0 +1,15 @@
+{
+  "recordedAtUtc": "2026-10-08T04:24:45.247407+00:00",
+  "status": "PASS_USER_REPORTED_VOICE_FLOW",
+  "source": "Crystal response to the iPhone LINE short-sentence test in this conversation",
+  "verbatim": "錄音、改字、傳送都成功",
+  "preview": "https://nightingale-walk-with-me--voice-input-20261008-oajxumay.web.app/?flow=last300m&photo=1",
+  "testedFlow": [
+    "user-initiated recording",
+    "editable transcript",
+    "explicit send into existing text flow"
+  ],
+  "scope": "User-reported iPhone LINE voice input flow; no raw audio or transcript retained in this receipt. Does not establish full outdoor navigation acceptance or every OS/browser.",
+  "productionPromotion": "HOLD",
+  "fullOutdoor": "HOLD"
+}

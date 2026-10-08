@@ -6,33 +6,36 @@ A fresh build for **AI Builder Cup 2026** (Hack2Skill × Google Cloud). It guide
 
 ## Source and handoff
 
-This repository owns the API, verified route and evaluation evidence. The [companion frontend repository](https://github.com/Crystal32378/Nightingale/tree/zh-tw-preview-2026-10-08) contains the Chinese UI, bird and 44 reviewed speech assets. Both repositories preserve this checkpoint under `zh-tw-preview-2026-10-08`; GitHub source publication does not promote the preview to the live site.
+This repository owns the API, verified route and evaluation evidence. The [companion frontend repository](https://github.com/Crystal32378/Nightingale) contains the Chinese UI, bird and 44 reviewed speech assets. The original `zh-tw-preview-2026-10-08` tags remain fixed. The subsequent Chinese voice preview has separate source/deployment receipts; GitHub publication does not promote production traffic.
 
-Start the next session with [the current handoff (繁體中文)](HANDOFF.md). See [English-version preparation](docs/english-preparation.md) for the next phase and [the paired version record](docs/zh-tw-preview-baseline.json) for the exact deployed code commits.
+Start the next session with [the current handoff (繁體中文)](HANDOFF.md). See [English-version preparation](docs/english-preparation.md) for the next phase and [the current paired version record](docs/deployment/2026-10-08-voice-preview/state.json) for the exact deployed code commits.
 
 ## Architecture principle
 
 > **AI interprets. Verified data decides.**
 
 - **Route truth** is a human-authored, field-verified checkpoint graph (`fixtures/*.json`). No LLM ever writes it.
-- **Gemini** (Vertex AI) translates in both directions only: messy human observations (text or photo) → typed evidence, and engine decisions → calm natural language.
+- **Gemini** (Vertex AI) maps text/photo observations to canonical evidence. A separate short-audio transcription endpoint returns only editable, unconfirmed text. The user must press Send before it enters the route flow.
 - **Validator** (`src/validator.ts`) is a pure function comparing evidence against route truth. Fail-closed: landmarks not registered in the route never count as evidence.
 - **Engine** (`src/engine.ts`) is a deterministic state machine: `AT_CHECKPOINT → AMBIGUOUS → RECOVERING → ARRIVED`. It owns the question budget (one clarifying question, then re-anchor), recovery pointers, and arrival — which requires specific entrance evidence, never GPS proximity.
 - LLM output is untrusted structured input: schema-validated (`zod`), with deterministic fallback. A failed Gemini call can never invent a route.
 
 ## Status
 
-Temporary reviewed phone-test preview: **https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app/?flow=last300m&photo=1** — expires **2026-10-15 01:09 Asia/Taipei**. Independent verdict: narrow fix PASS, this limited preview PASS, full/live release HOLD. Hosted API, actual photo, text walkthrough and all 44 speech assets passed smoke checks; iPhone and physical-route acceptance are still pending. Deployment receipt: `docs/deployment/2026-10-08-preview/`.
+[Chinese voice-input preview](https://nightingale-walk-with-me--voice-input-20261008-oajxumay.web.app/?flow=last300m&photo=1) — expires **2026-10-15 12:17 Asia/Taipei**. Independent code/limited deployment evidence passed. Crystal reports that iPhone LINE recording, editing and explicit sending all succeeded. Full outdoor navigation and production promotion remain HOLD.
 
-The existing live site below and its production backend traffic were not switched:
-**https://nightingale-walk-with-me.web.app/?flow=last300m**
+Backend runtime `03bc45e`; frontend runtime `5d11a50`. The new tagged revision receives 0% production traffic; the original backend still receives 100%, and the existing live Hosting release remains unchanged. [Deployment and provenance](docs/deployment/2026-10-08-voice-preview/README.md) · [Independent review](docs/acceptance/2026-10-08-voice-input/independent-review.md) · [Phone report](docs/acceptance/2026-10-08-voice-input/iphone-receipt.json).
 
-- Frontend on Firebase Hosting; `/api/**` rewrites to Cloud Run (`nightingale`, asia-east1) — one origin for page and API.
-- Gemini 2.5 Flash on Vertex AI maps free-text observations onto the route vocabulary; every failure mode falls back to deterministic matching.
-- 95 tests (engine, validator, Gemini text and photo fallbacks, photo context guards, photo gates and scoring, Firestore session store, HTTP API, and end-to-end walks of the real route), plus 5 Python review-import checks.
+[Architecture: editable diagrams and deck-ready images](docs/architecture/README.md)
 
-```
-npm install
+![Nightingale route architecture](docs/architecture/nightingale-overview.svg)
+
+The frontend preview connects directly to its paired tagged Cloud Run API. Typed text and user-confirmed transcripts use the same existing observation flow. Chinese playback remains the 44 accepted fixed recordings; raw recordings are handled transiently and are not written by the application to Firestore or logs.
+
+161 backend tests and typecheck passed. Local audio decoder tests require FFmpeg (`FFMPEG_PATH` may specify its executable). The Dockerfile installs FFmpeg for the deployed container.
+
+```bash
+npm ci
 npm test
 npm run typecheck
 ```

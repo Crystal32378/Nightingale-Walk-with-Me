@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-08T04:06:01.616Z",
+  "source": "existing accepted synthetic Leda reanchor.wav; no human recording",
+  "provider": "Vertex gemini-2.5-flash",
+  "ok": true,
+  "elapsedMs": 1595,
+  "text": "你附近看得到什麼,跟我說就可以",
+  "scope": "Local Node client to real Vertex; no session/route transition, no hosted/iPhone acceptance"
+}

@@ -1,0 +1,55 @@
+{
+  "recordedAtUtc": "2026-10-08T04:23:26.425007+00:00",
+  "status": "PASS_LIMITED_HOSTED_PREVIEW",
+  "iphoneLine": "PASS_USER_REPORTED_VOICE_FLOW",
+  "fullOutdoor": "HOLD",
+  "productionPromotion": "HOLD",
+  "tag": "voice-input-20261008",
+  "channel": "voice-input-20261008",
+  "url": "https://nightingale-walk-with-me--voice-input-20261008-oajxumay.web.app/?flow=last300m&photo=1",
+  "expiresAt": "2026-10-15T04:17:32.654066485Z",
+  "api": "https://voice-input-20261008---nightingale-uwker3cn5a-de.a.run.app",
+  "runtimeCommits": {
+    "backend": "03bc45e7ce39b39ff2efda829a120f098f9acd6f",
+    "frontend": "5d11a5006d0234443dd730503ab8e40d7a00eddb"
+  },
+  "revision": "nightingale-voiceinput20261008",
+  "imageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:030934220f23bb53da1089383a5f1085ea3270678d7e64c2744bdb7f17124f06",
+  "productionTraffic": [
+    {
+      "percent": 100,
+      "revisionName": "nightingale-00010-ff2"
+    },
+    {
+      "revisionName": "nightingale-fieldfix20261008",
+      "tag": "field-fix-20261008",
+      "url": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    },
+    {
+      "revisionName": "nightingale-guard20261008",
+      "tag": "photo-guard-20261008",
+      "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    },
+    {
+      "revisionName": "nightingale-voiceinput20261008",
+      "tag": "voice-input-20261008",
+      "url": "https://voice-input-20261008---nightingale-uwker3cn5a-de.a.run.app"
+    }
+  ],
+  "liveHostingReleaseUnchanged": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live/releases/1790499622239000",
+  "evidence": {
+    "unitTests": {
+      "backend": 161,
+      "frontend": 337
+    },
+    "hostedAssetHashes": 89,
+    "acceptedWavHashes": 44,
+    "syntheticGuardCalls": 14,
+    "hostedSyntheticTranscriptionFormats": [
+      "audio/webm",
+      "audio/mp4"
+    ]
+  },
+  "metadataLimit": "Inherited reviewed-sha service label is stale; source archive and image digest establish this runtime, not that label.",
+  "iphoneReceipt": "../../acceptance/2026-10-08-voice-input/iphone-receipt.json"
+}

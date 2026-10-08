@@ -1,0 +1,25 @@
+{
+  "status": {
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "nightingale-00010-ff2"
+      },
+      {
+        "revisionName": "nightingale-fieldfix20261008",
+        "tag": "field-fix-20261008",
+        "url": "https://field-fix-20261008---nightingale-uwker3cn5a-de.a.run.app"
+      },
+      {
+        "revisionName": "nightingale-guard20261008",
+        "tag": "photo-guard-20261008",
+        "url": "https://photo-guard-20261008---nightingale-uwker3cn5a-de.a.run.app"
+      },
+      {
+        "revisionName": "nightingale-voiceinput20261008",
+        "tag": "voice-input-20261008",
+        "url": "https://voice-input-20261008---nightingale-uwker3cn5a-de.a.run.app"
+      }
+    ]
+  }
+}

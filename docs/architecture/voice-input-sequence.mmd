@@ -1,0 +1,38 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 16px
+    noteBkgColor: '#fff5db'
+    noteTextColor: '#23372d'
+    noteBorderColor: '#9a7840'
+    actorBkg: '#eef3ed'
+  sequence:
+    mirrorActors: false
+    wrap: true
+---
+sequenceDiagram
+  accTitle: Short voice input — transcription never advances the route
+  actor Walker as Walker
+  participant Phone as Phone / MediaRecorder
+  participant API as Cloud Run transcription endpoint
+  participant Vertex as Vertex AI
+  participant Route as Existing observations + route engine
+
+  Walker->>Phone: Tap “Say a sentence” after disclosure
+  Note over Walker,Phone: Stop playback before capture.<br/>No recording during crossings.
+  Phone->>Phone: Record for up to 15 seconds
+  Walker->>Phone: Stop (or cancel)
+  Note over Walker,Phone: Release microphone tracks.<br/>Cancel drops late results.
+  Phone->>API: Binary audio, at most 2 MiB
+  Note over API,Vertex: 8s upload, 5s decode.<br/>28s request, usage limits.<br/>2 MiB upload, 16s audio.<br/>No raw audio saved.
+  API->>Vertex: In-memory WAV, transcription only
+  Vertex-->>API: Validated text (at most 500 characters)
+  API-->>Phone: Unconfirmed transcript
+  Note over Phone,Route: Checkpoint and route action have not changed.
+  Phone-->>Walker: Editable text, waiting for explicit Send
+  Walker->>Phone: Edit, then press Send
+  Phone->>Route: Existing text observation, once
+  Route-->>Phone: Validated next step / question / recovery
+  Note over Phone,Route: Fixed accepted playback follows the validated action.<br/>No dynamically generated navigation speech.

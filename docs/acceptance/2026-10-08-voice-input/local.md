@@ -13,4 +13,4 @@ Implementation scope: short explicit recording -> unconfirmed editable text -> e
 
 Local FFmpeg for tests: `FFMPEG_PATH=$(python3 -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())') npm test`. Runtime image installs distribution FFmpeg and runs Node as a non-root user. Local tests do not establish the Cloud Run container or provider response.
 
-Pending: independent review, tagged preview build/deploy, real hosted Vertex transcription, one short iPhone X/LINE recording/edit/send check. No claims of full outdoor acceptance.
+Follow-up: independent review found a stalled-upload blocker; commit `03bc45e` fixes it and passes 161 backend tests plus independent timed replay. Paired hosted preview and real Vertex checks passed. Crystal reports iPhone LINE recording/editing/sending succeeded. See `independent-review.md`, `iphone-receipt.json` and `../../deployment/2026-10-08-voice-preview/`. No claims of full outdoor acceptance.

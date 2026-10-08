@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "annotations": {
+      "autoscaling.knative.dev/maxScale": "1",
+      "run.googleapis.com/build-source-location": "{\"nightingale-1\":\"gs://run-sources-nightingale-walk-with-me-asia-east1/services/nightingale/1791432898.598882-9c08e5a2ee4045e0a128069153a2aa8c.zip#1791432898762491\"}",
+      "run.googleapis.com/client-name": "gcloud",
+      "run.googleapis.com/client-version": "579.0.0",
+      "run.googleapis.com/operation-id": "dd0e4b7a-57a1-44b9-9b02-2978bef222e9",
+      "run.googleapis.com/startup-cpu-boost": "true",
+      "serving.knative.dev/creator": "CrystalYS.Chang@gmail.com"
+    },
+    "name": "nightingale-voiceinput20261008"
+  },
+  "spec": {
+    "containerConcurrency": 80,
+    "containers": [
+      {
+        "env": [
+          {
+            "name": "GOOGLE_CLOUD_PROJECT",
+            "value": "nightingale-walk-with-me"
+          }
+        ],
+        "image": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:030934220f23bb53da1089383a5f1085ea3270678d7e64c2744bdb7f17124f06",
+        "name": "nightingale-1",
+        "ports": [
+          {
+            "containerPort": 8080,
+            "name": "http1"
+          }
+        ],
+        "resources": {
+          "limits": {
+            "cpu": "1000m",
+            "memory": "512Mi"
+          }
+        },
+        "startupProbe": {
+          "failureThreshold": 1,
+          "periodSeconds": 240,
+          "tcpSocket": {
+            "port": 8080
+          },
+          "timeoutSeconds": 240
+        }
+      }
+    ],
+    "serviceAccountName": "160543130573-compute@developer.gserviceaccount.com",
+    "timeoutSeconds": 300
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-10-08T04:17:19.875980Z",
+        "message": "Deploying revision succeeded in 25.57s.",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T04:17:19.983373Z",
+        "severity": "Info",
+        "status": "True",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T04:17:19.767377Z",
+        "message": "Containers became healthy in 4.85s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T04:17:13.058889Z",
+        "message": "Container image import completed in 18.22s.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-10-08T04:17:14.507822Z",
+        "message": "Provisioning imported containers completed in 1.45s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+        "status": "True",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "asia-east1-docker.pkg.dev/nightingale-walk-with-me/cloud-run-source-deploy/nightingale@sha256:030934220f23bb53da1089383a5f1085ea3270678d7e64c2744bdb7f17124f06",
+    "logUrl": "https://console.cloud.google.com/logs/viewer?project=nightingale-walk-with-me&resource=cloud_run_revision/service_name/nightingale/revision_name/nightingale-voiceinput20261008&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22nightingale%22%0Aresource.labels.revision_name%3D%22nightingale-voiceinput20261008%22",
+    "observedGeneration": 1
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "status": "success",
+  "result": {
+    "channels": [
+      {
+        "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/voice-input-20261008",
+        "url": "https://nightingale-walk-with-me--voice-input-20261008-oajxumay.web.app",
+        "release": {
+          "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/voice-input-20261008/releases/1791433058037000",
+          "version": {
+            "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/4381420ef196ddec",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "/"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "**/*.html"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "public, max-age=31536000, immutable"
+                  },
+                  "glob": "/assets/**"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-08T04:17:33.875914Z",
+            "createUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "finalizeTime": "2026-10-08T04:17:37.969187Z",
+            "finalizeUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "fileCount": "91",
+            "versionBytes": "13429383"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-08T04:17:38.037Z",
+          "releaseUser": {
+            "email": "CrystalYS.Chang@gmail.com"
+          }
+        },
+        "createTime": "2026-10-08T04:17:32.654066485Z",
+        "updateTime": "2026-10-08T04:17:38.037Z",
+        "retainedReleaseCount": 10,
+        "expireTime": "2026-10-15T04:17:32.654066485Z"
+      },
+      {
+        "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-check-20261008",
+        "url": "https://nightingale-walk-with-me--photo-check-20261008-yl1k8e08.web.app",
+        "release": {
+          "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-check-20261008/releases/1791429081778000",
+          "version": {
+            "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/1a3ba6654df6acdf",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "/"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "**/*.html"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "public, max-age=31536000, immutable"
+                  },
+                  "glob": "/assets/**"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-08T03:11:17.602115Z",
+            "createUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "finalizeTime": "2026-10-08T03:11:21.773017Z",
+            "finalizeUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "fileCount": "91",
+            "versionBytes": "13426164"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-08T03:11:21.778Z",
+          "releaseUser": {
+            "email": "CrystalYS.Chang@gmail.com"
+          }
+        },
+        "createTime": "2026-10-08T02:54:47.774618910Z",
+        "updateTime": "2026-10-08T03:11:21.778Z",
+        "retainedReleaseCount": 10,
+        "expireTime": "2026-10-09T03:11:16.366282638Z"
+      },
+      {
+        "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/field-fix-20261008",
+        "url": "https://nightingale-walk-with-me--field-fix-20261008-ac1wlluu.web.app",
+        "release": {
+          "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/field-fix-20261008/releases/1791426132051000",
+          "version": {
+            "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/1e914f06771febfb",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "/"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "**/*.html"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "public, max-age=31536000, immutable"
+                  },
+                  "glob": "/assets/**"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-08T02:22:08.359964Z",
+            "createUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "finalizeTime": "2026-10-08T02:22:11.964280Z",
+            "finalizeUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "fileCount": "91",
+            "versionBytes": "13425591"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-08T02:22:12.051Z",
+          "releaseUser": {
+            "email": "CrystalYS.Chang@gmail.com"
+          }
+        },
+        "createTime": "2026-10-08T02:22:07.087778608Z",
+        "updateTime": "2026-10-08T02:22:12.051Z",
+        "retainedReleaseCount": 10,
+        "expireTime": "2026-10-15T02:22:07.087778608Z"
+      },
+      {
+        "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008",
+        "url": "https://nightingale-walk-with-me--photo-guard-20261008-lb1kvmut.web.app",
+        "release": {
+          "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/photo-guard-20261008/releases/1791392982618000",
+          "version": {
+            "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/0ccc81bc6b786761",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "/"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "**/*.html"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "public, max-age=31536000, immutable"
+                  },
+                  "glob": "/assets/**"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-07T17:09:37.194339Z",
+            "createUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "finalizeTime": "2026-10-07T17:09:42.516420Z",
+            "finalizeUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "fileCount": "91",
+            "versionBytes": "13424592"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-07T17:09:42.618Z",
+          "releaseUser": {
+            "email": "CrystalYS.Chang@gmail.com"
+          }
+        },
+        "createTime": "2026-10-07T17:09:36.107491900Z",
+        "updateTime": "2026-10-07T17:09:42.618Z",
+        "retainedReleaseCount": 10,
+        "expireTime": "2026-10-14T17:09:36.107491900Z"
+      },
+      {
+        "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live",
+        "url": "https://nightingale-walk-with-me.web.app",
+        "release": {
+          "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/channels/live/releases/1790499622239000",
+          "version": {
+            "name": "projects/nightingale-walk-with-me/sites/nightingale-walk-with-me/versions/cd96c56a42be2957",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "/"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "no-cache"
+                  },
+                  "glob": "**/*.html"
+                },
+                {
+                  "headers": {
+                    "Cache-Control": "public, max-age=31536000, immutable"
+                  },
+                  "glob": "/assets/**"
+                }
+              ],
+              "rewrites": [
+                {
+                  "glob": "/api/**",
+                  "run": {
+                    "serviceId": "nightingale",
+                    "region": "asia-east1"
+                  }
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-09-27T09:00:19.728215Z",
+            "createUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "finalizeTime": "2026-09-27T09:00:22.207195Z",
+            "finalizeUser": {
+              "email": "CrystalYS.Chang@gmail.com"
+            },
+            "fileCount": "47",
+            "versionBytes": "2387561"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-09-27T09:00:22.239Z",
+          "releaseUser": {
+            "email": "CrystalYS.Chang@gmail.com"
+          }
+        },
+        "createTime": "2026-09-27T07:58:11.825365586Z",
+        "updateTime": "2026-09-27T09:00:22.239Z",
+        "retainedReleaseCount": 2147483647
+      }
+    ]
+  }
+}
