@@ -1,162 +1,39 @@
-# RFC: Continuous Multimodal Streaming, Agentic Route Authoring, and Firestore Geospatial Graph Storage
+# RFC: Reviewed route data, volunteer evidence and cached assistance
 
-**Status**: Proposed  
-**Author**: Community Architectural Proposal (for Nightingale-Walk-with-Me & Nightingale)  
-**Date**: October 2026  
-**PR Title**: `rfc(architecture): Proposal for Continuous Multimodal Streaming, Agentic Route Authoring, and Firestore Geospatial Graph Storage`
+**Status: future proposal; not implemented or an outdoor acceptance claim.**
 
----
+Original architectural contribution: **Anish Chandak (@anishchandak7)**, October 2026, [PR #1](https://github.com/Crystal32378/Nightingale-Walk-with-Me/pull/1). This corrected RFC retains the useful route-authoring and cached-assistance ideas while narrowing unsupported claims. It concerns the outdoor Google Cloud project only.
 
-## 📝 Description & Executive Summary
+## Existing baseline
 
-This Request for Comments (RFC) presents a comprehensive architectural proposal and system design enhancement for **Nightingale**. Based on a detailed analysis of the current production codebase (`Nightingale` PWA frontend and `Nightingale-Walk-with-Me` backend), this RFC outlines a phased roadmap to transition Nightingale from a single-route hackathon prototype into a multi-route, enterprise-grade, global accessibility platform.
+The limited preview uses route fixtures with reviewed vocabulary, text/photo observations and deterministic route decisions. `src/gemini.ts` validates model OUTPUT against the observation schema before it reaches the engine; request validation is a separate boundary. `src/validator.ts` is a pure function accepting route, checkpoint and observation: no database calls, model calls or clock. Firestore already stores sessions; dynamic route storage is the proposed addition.
 
-The proposal adheres strictly to Nightingale’s foundational principle:
-> **"AI interprets; a field-verified route decides."**
+Playback uses fixed accepted Leda/Puck recordings selected by route/checkpoint/action, not newly generated speech from arbitrary server prose. Voice capture is press-to-record, followed by transcription into an editable draft. Only explicit Send submits text as an observation; transcription does not advance a route. See the [implemented architecture and evidence limits](README.md).
 
----
+Family preparation and volunteer route development are already a [roadmap](../../README.md#next-steps-families-and-hospital-volunteers), not new implemented interfaces. This RFC suggests evidence organization and reviewed dynamic data within that roadmap. The current limited preview is not full outdoor acceptance; production release remains HOLD.
 
-## 🔍 Background & Current State Limitations
+## Proposed additions and release requirements
 
-An analysis of the current implementation highlights several structural bottlenecks that constrain usability, scalability, and trust:
+1. **Volunteer evidence organization.** With informed consent, volunteers could submit selected route evidence for AI-assisted indexing and draft checkpoint descriptions. This does not assume continuous patient recording. AI drafts remain unpublished candidates. A named local reviewer must personally field-verify step-free access, signage, entrances, crossings and ambiguity/recovery rules, record the date and responsibility, and approve each version. A local maintainer must recheck changes and withdraw stale or unsafe routes. A one-click approval is not evidence of field verification.
+2. **Reviewed dynamic route data.** A separate loader could read a versioned, approved Firestore route snapshot and validate its schema/provenance before session use. Pin a reviewed version per session; do not hot-swap it mid-walk. Keep the deterministic validator pure and retain model output validation in `src/gemini.ts`. Missing, expired, revoked or invalid route data must prevent new guidance/advancement and offer reviewed help. Design migration and revocation behavior before release; existing fixture behavior is unchanged by this documentation.
+3. **Cached assistance only.** A future PWA cache could hold approved fixed audio, reviewed route instructions and help cards, with version/expiry checks and a visible offline state. Offline reading/playback is not proof of current position. There is no guarantee of live visual interpretation, checkpoint advancement or arrival advancement offline. Hold route state on lost connectivity; offer cached help and reconnect/reanchor before resuming validated navigation. Do not turn a cached route graph into an autonomous offline navigation engine.
+4. **Optional individual-image screening study.** Model Armor supports configured individual image screening/redaction; it does not support audio/video streams. It cannot be represented as a continuous media firewall or a guarantee that every face, license plate or injected sign will be removed. Evaluate supported formats, configured detectors, regional limits and false positives/negatives before any integration. Retain model output schema validation regardless of screening. If a future required screening step fails, times out or returns an unusable result, block that media from onward model processing; preserve state and offer text/help. Never silently bypass screening.
+5. **Sensor research only.** GPS/BLE may supply a conservative veto or supporting proximity evidence after field testing. BLE must never be the sole arrival proof. Reviewed route evidence, deterministic validation and explicit crossing confirmations remain authoritative. Continuous Live streaming, AR, haptics, ADK/Agent Engine and analytics are speculative research options, not committed dependencies, deployed services or submission features. Do not remove existing limits to accommodate them.
 
-1. **Static JSON Route Storage**:
-   * *Current State*: Ground-truth checkpoints reside in static JSON files (`fixtures/*.json`) with closed-set vocabularies (`routeVocabulary`).
-   * *Limitation*: Adding or updating routes requires developer intervention, manual JSON editing, and redeploying backend container code to Cloud Run.
-2. **Single-Route Limitation**:
-   * *Current State*: Route coverage is limited to a single 300m walk (MRT Zhongxiao Fuxing Exit 2 to Taipei City Hospital Renai Branch).
-   * *Limitation*: Lack of volunteer/family authoring tools prevents scaling across hospital hubs globally.
-3. **Discrete HTTP Observation Round-Trips**:
-   * *Current State*: Every photo or voice observation triggers a discrete HTTP POST request (`/api/sessions/:id/observations`).
-   * *Limitation*: High latency and potential drops in cellular dead zones near dense concrete hospital entrances disrupt step guidance.
-4. **Hardcoded Session Throttling**:
-   * *Current State*: Hard sliding-window limits (`src/limits.ts`) cap uploads per walk session.
-   * *Limitation*: Disoriented walkers uploading multiple photos in rapid succession risk encountering HTTP `429 Too Many Requests`.
+## Privacy requirements before any media pilot
 
----
+These are design and release requirements, not implemented compliance assurances. Specify informed, revocable consent for each capture purpose, a visible capture indicator and stop/cancel controls; minimize capture and avoid patients/bystanders and unnecessary raw media. No background or continuous patient recording is assumed. Prefer selected volunteer evidence over whole walks.
 
-## 🚀 Proposed Architectural Enhancements
+Before collecting media, document where raw audio/images/video may exist (device memory/cache, transport, model provider and any evidence store), authorized access, encryption, provider retention, a concrete retention/deletion schedule and consent withdrawal handling. Do not write raw media/transcripts to ordinary logs or session documents or reuse them for training/analytics by default. Any separate evidence storage needs explicit purpose, authorization and bounded retention. Redaction does not establish anonymity or permission. If consent, retention policy, screening or reviewed-route availability is unresolved, do not start the pilot or advance a route. Keep cached assistance available without claiming fresh interpretation.
 
-### 1. Usability: Hands-Free Multimodal Streaming & Offline PWA
-* **Gemini Multimodal Live API via WebSockets/WebRTC**:
-  * Replace discrete HTTP POST requests with a continuous streaming channel on Cloud Run.
-  * Enables ambient audio guidance where walkers receive real-time, hands-free directional cues as visual landmarks pass their camera view.
-* **Offline-First PWA Caching**:
-  * Utilize PWA Service Workers and `IndexedDB` to pre-cache route graphs, state machine rules, and pre-rendered **Gemini 2.5 Flash TTS** audio files (`Leda`/`Puck` voices).
-  * Guarantees uninterrupted step-by-step guidance even if cellular connectivity drops during the 300m walk.
+## Hypothetical expansion and evaluation
 
-### 2. Scalability: Cloud Firestore Graph DB & Agentic Route Authoring
-* **Cloud Firestore Geospatial Graph Storage**:
-  * Migrate static JSON fixtures to Cloud Firestore. Model routes as geospatial graphs (`Nodes = Checkpoints/Signs`, `Edges = Step-Free Walkways`).
-* **Agentic Crowdsourcing Pipeline (Agent Development Kit - ADK)**:
-  * Deploy an automated **Route Authoring Agent** using Google's ADK and Vertex AI Agent Engine.
-  * Volunteers or family members record a video walk of a new route; the agent extracts signage, identifies ramps/elevators, and drafts candidate graph nodes in Firestore for 1-click human verification.
+AIIMS Delhi, NIMHANS Bengaluru and Siriraj Bangkok are hypothetical examples only: no deployment, partnership, validated route, language coverage or institutional endorsement is claimed. Every new location requires actual local field verification and a responsible reviewer. Translation drafts and help cards also need local review.
 
-### 3. Trust & Security: Enterprise Guardrails & Multi-Sensor Veto
-* **Vertex AI Model Armor Integration**:
-  * Position Model Armor upstream of Gemini processing to filter out prompt injection attempts (e.g., physical stickers/posters placed on signs) and automatically redact faces and license plates.
-* **Multi-Sensor Veto Guardrails**:
-  * Augment phone GPS with low-cost **Bluetooth LE (BLE) Beacons** at hospital entrances to provide multi-sensor physical proximity verification before establishing arrival.
+A possible sequence is: define consent/retention and route-review ownership; prototype versioned route loading while preserving the pure validator; evaluate volunteer evidence drafts; test bounded cached assistance; separately assess individual-image screening and sensors. Before release, exercise stale/revoked routes, invalid model output, missing connectivity, screening failures, ambiguous landmarks, crossings and BLE false positives. This PR adds documentation only and does not satisfy these gates.
 
----
+## Corrected diagram and sources
 
-## 📊 System Flow Diagram
+[HTML overview](nightingale-rfc-flow.html) · [diagram data](nightingale-rfc-flow.json) · [Mermaid](rfc-system-scale-enhancements.mmd) · [light PNG](nightingale-rfc-flow.png) · [dark PNG](nightingale-rfc-flow.dark.png).
 
-![Nightingale Continuous Multimodal Architecture and System Flow](nightingale-rfc-flow.png)
-
-Interactive explorable diagram: [nightingale-rfc-flow.html](nightingale-rfc-flow.html) · Dark mode: [nightingale-rfc-flow.dark.png](nightingale-rfc-flow.dark.png) · JSON specification: [nightingale-rfc-flow.json](nightingale-rfc-flow.json) · Mermaid source: [rfc-system-scale-enhancements.mmd](rfc-system-scale-enhancements.mmd)
-
-<details>
-<summary><b>Click to expand Mermaid source diagram</b></summary>
-
-```mermaid
-flowchart TD
-    subgraph Client ["1. Client Layer (Next.js PWA / Firebase Hosting)"]
-        direction TB
-        A1["Hands-Free Multimodal Stream (WebSockets / WebRTC)"]
-        A2["Offline PWA Service Worker & IndexedDB Cache"]
-        A3["AR Viewfinder Overlay & Haptic Feedback"]
-        
-        A1 -->|Continuous Camera & Audio Stream| B1["Cloud Armor & API Gateway"]
-        A2 -->|Pre-cached Audio & Offline State Engine| A1
-    end
-
-    subgraph Security ["2. Security & Ingestion Tier"]
-        direction TB
-        B1 --> B2["Vertex AI Model Armor (Prompt Injection Filter & PII Masking)"]
-        B2 --> B3["Zod Schema Validator & Throttler"]
-    end
-
-    subgraph Perception ["3. AI Perception & Agentic Authoring Tier"]
-        direction TB
-        B3 --> C1["Gemini Multimodal Live API (Real-Time Interpretation)"]
-        C1 -->|Structured Observation DTO| D1["Observation Payload"]
-        
-        subgraph Authoring ["Agentic Route Authoring Pipeline (ADK)"]
-            X1["Volunteer Video Walkthrough"] --> X2["ADK Route Authoring Agent"]
-            X2 --> X3["Candidate Checkpoint Graph Generator"]
-            X3 --> X4["Human Supervisor 1-Click Verification"]
-        end
-    end
-
-    subgraph EngineTier ["4. Deterministic Engine & Storage Tier"]
-        direction TB
-        X4 -->|Publish Verified Route| E1[(Cloud Firestore Geospatial Graph DB)]
-        
-        D1 --> D2["Cloud Run: Deterministic Route Engine (engine.ts & validator.ts)"]
-        E1 -->|Load Active Route Checkpoints| D2
-        
-        subgraph Sensors ["Multi-Sensor Guardrails"]
-            S1["Coarse Phone GPS"]
-            S2["BLE Beacons at Hospital Entry"]
-        end
-        Sensors -->|Proximity Veto Check| D2
-
-        D2 -->|Conflict| F1["State: RECOVERING -> Action: REANCHOR"]
-        D2 -->|Confirmed| F2["State: AT_CHECKPOINT -> Action: GUIDE"]
-        D2 -->|Ambiguous| F3["State: AMBIGUOUS -> Action: ASK"]
-    end
-
-    subgraph Observability ["5. Observability & CI/CD Tier"]
-        direction TB
-        D2 -.->|Log Anonymized Observation Failures| G1["BigQuery & Vertex AI Auto-Eval Pipeline"]
-        G1 -.->|Continuous Prompt & Route Tuning| C1
-    end
-
-    subgraph Guidance ["6. Guidance & Audio Delivery"]
-        direction TB
-        F1 --> H1["Gemini 2.5 Flash TTS Audio Cues (Leda / Puck)"]
-        F2 --> H1
-        F3 --> H1
-        
-        F2 -->|Junction Crossing Detected| H2["Lock Inputs & Require Crossing Confirmation"]
-        H1 -->|Stream Audio & Haptic Patterns| Client
-        H2 -->|Display 'Crossed' Button| Client
-    end
-```
-</details>
-
----
-
-## 🌎 Global Impact & Real-World Use Cases
-
-* **Navigating Large Indian & Regional Medical Campuses**:
-  * Solves multi-gate navigation at large public hospitals (e.g., AIIMS Delhi, NIMHANS Bengaluru, Siriraj Bangkok) where standard GPS marks arrival at perimeter walls 300+ meters away from step-free OPD doors.
-* **Overcoming Local Script & Literacy Barriers**:
-  * Translates street signage in real-time across regional scripts (Hindi, Tamil, Thai, Marathi) while displaying spoken **"Help Me Ask" cards** to assist disoriented travelers.
-
----
-
-## 🧪 Implementation & Migration Plan
-
-1. **Phase 1 (Backend Database Migration)**:
-   * Implement Firestore schema for route graphs and update `validator.ts` to load nodes dynamically.
-2. **Phase 2 (Security & Model Armor)**:
-   * Deploy Vertex AI Model Armor upstream of Gemini observation requests.
-3. **Phase 3 (Agentic Authoring Tooling)**:
-   * Build the ADK-powered volunteer video ingestion tool for automated candidate route generation.
-4. **Phase 4 (Continuous WebSockets & Offline PWA)**:
-   * Roll out WebSocket streaming endpoints on Cloud Run and Service Worker caching on the PWA.
-
----
-*Submitted for community review and architectural feedback.*
+Google references checked 2026-10-17: [Model Armor limitations](https://docs.cloud.google.com/model-armor/overview#limitations) and [configured image redaction](https://docs.cloud.google.com/model-armor/sanitize-prompts-responses#redact-images). These service capabilities do not mean this project has integrated them.
