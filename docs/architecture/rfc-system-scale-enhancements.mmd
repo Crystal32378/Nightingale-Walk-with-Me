@@ -1,0 +1,63 @@
+flowchart TD
+    subgraph Client ["1. Client Layer (Next.js PWA / Firebase Hosting)"]
+        direction TB
+        A1["Hands-Free Multimodal Stream (WebSockets / WebRTC)"]
+        A2["Offline PWA Service Worker & IndexedDB Cache"]
+        A3["AR Viewfinder Overlay & Haptic Feedback"]
+        
+        A1 -->|Continuous Camera & Audio Stream| B1["Cloud Armor & API Gateway"]
+        A2 -->|Pre-cached Audio & Offline State Engine| A1
+    end
+
+    subgraph Security ["2. Security & Ingestion Tier"]
+        direction TB
+        B1 --> B2["Vertex AI Model Armor (Prompt Injection Filter & PII Masking)"]
+        B2 --> B3["Zod Schema Validator & Throttler"]
+    end
+
+    subgraph Perception ["3. AI Perception & Agentic Authoring Tier"]
+        direction TB
+        B3 --> C1["Gemini Multimodal Live API (Real-Time Interpretation)"]
+        C1 -->|Structured Observation DTO| D1["Observation Payload"]
+        
+        subgraph Authoring ["Agentic Route Authoring Pipeline (ADK)"]
+            X1["Volunteer Video Walkthrough"] --> X2["ADK Route Authoring Agent"]
+            X2 --> X3["Candidate Checkpoint Graph Generator"]
+            X3 --> X4["Human Supervisor 1-Click Verification"]
+        end
+    end
+
+    subgraph EngineTier ["4. Deterministic Engine & Storage Tier"]
+        direction TB
+        X4 -->|Publish Verified Route| E1[(Cloud Firestore Geospatial Graph DB)]
+        
+        D1 --> D2["Cloud Run: Deterministic Route Engine (engine.ts & validator.ts)"]
+        E1 -->|Load Active Route Checkpoints| D2
+        
+        subgraph Sensors ["Multi-Sensor Guardrails"]
+            S1["Coarse Phone GPS"]
+            S2["BLE Beacons at Hospital Entry"]
+        end
+        Sensors -->|Proximity Veto Check| D2
+
+        D2 -->|Conflict| F1["State: RECOVERING -> Action: REANCHOR"]
+        D2 -->|Confirmed| F2["State: AT_CHECKPOINT -> Action: GUIDE"]
+        D2 -->|Ambiguous| F3["State: AMBIGUOUS -> Action: ASK"]
+    end
+
+    subgraph Observability ["5. Observability & CI/CD Tier"]
+        direction TB
+        D2 -.->|Log Anonymized Observation Failures| G1["BigQuery & Vertex AI Auto-Eval Pipeline"]
+        G1 -.->|Continuous Prompt & Route Tuning| C1
+    end
+
+    subgraph Guidance ["6. Guidance & Audio Delivery"]
+        direction TB
+        F1 --> H1["Gemini 2.5 Flash TTS Audio Cues (Leda / Puck)"]
+        F2 --> H1
+        F3 --> H1
+        
+        F2 -->|Junction Crossing Detected| H2["Lock Inputs & Require Crossing Confirmation"]
+        H1 -->|Stream Audio & Haptic Patterns| Client
+        H2 -->|Display 'Crossed' Button| Client
+    end

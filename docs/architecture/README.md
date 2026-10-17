@@ -56,3 +56,8 @@ PUPPETEER_SKIP_DOWNLOAD=1 npx --yes @mermaid-js/mermaid-cli@12.0.0 \
 ```
 
 Change the input to `voice-input-sequence.mmd` for the second diagram; use `.png` output and `--size 2400` for deck images. No cloud service is called during rendering.
+
+## Architectural Proposals & RFCs
+
+- [RFC: Continuous Multimodal Streaming, Agentic Route Authoring, and Firestore Geospatial Graph Storage](rfc-system-scale-enhancements.md) ([Mermaid source](rfc-system-scale-enhancements.mmd)): Architectural proposal for scaling Nightingale from the single-route baseline into a continuous streaming, multi-route global accessibility platform.
+
