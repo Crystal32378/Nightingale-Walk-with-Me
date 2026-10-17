@@ -75,3 +75,7 @@ We plan to explore two complementary workflows:
 These are planned capabilities. The current preview has no family route-preparation, sharing or volunteer-authoring interface, and no hospital partnership is claimed. The walker's interface should stay focused on one clear next action.
 
 The next proposed outdoor pilot would measure route completion, wrong turns and requests for help, alongside the effort required to prepare and maintain routes. [Read the next-steps roadmap](docs/next-steps.md).
+
+## Contributors
+
+- [Anish Chandak (@anishchandak7)](https://github.com/anishchandak7) — contributed the Google Cloud scaling roadmap and future architecture documentation in [PR #1](https://github.com/Crystal32378/Nightingale-Walk-with-Me/pull/1).
