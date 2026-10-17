@@ -1,0 +1,18 @@
+%% Original contribution: Anish Chandak; corrected future proposal, not implemented
+flowchart TD
+  V["PROPOSED: consented volunteer evidence"] --> D["AI draft: unpublished candidate"]
+  D --> R["Actual local field verification and named reviewer approval"]
+  R --> S["PROPOSED: versioned approved Firestore route"]
+  S --> L["Separate validated loader; pin reviewed snapshot"]
+  L --> P["Pure deterministic validator: route + checkpoint + observation"]
+  O["EXISTING: text/photo observation"] --> G["Gemini interpretation"]
+  G --> Z["EXISTING: model OUTPUT schema validation, src/gemini.ts"]
+  Z --> P
+  P --> E["EXISTING: engine and Firestore session state"]
+  T["EXISTING: press-record -> editable transcript -> explicit Send"] --> O
+  E --> A["EXISTING: fixed Leda/Puck audio"]
+  C["PROPOSED cache: approved audio, reviewed instructions/help cards"] --> H["Offline: HOLD; no live vision or checkpoint/arrival advancement"]
+  M["RESEARCH: configured individual-image Model Armor; no audio/video streams"] -.-> O
+  B["RESEARCH: BLE/GPS supporting evidence; BLE never sole arrival proof"] -.-> P
+  F["REQUIRED: consent, minimization, raw-media boundaries, retention/deletion; fail closed"] -.-> V
+  F -.-> M

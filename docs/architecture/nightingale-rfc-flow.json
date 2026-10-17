@@ -1,0 +1,40 @@
+{
+  "title": "Future proposal; not implemented",
+  "author": "Anish Chandak (@anishchandak7); corrected PR #1",
+  "canonical": "rfc-system-scale-enhancements.md",
+  "sections": [
+    {
+      "title": "EXISTING: bounded observations",
+      "description": "Text/photo -> Gemini -> model OUTPUT schema validation (src/gemini.ts)."
+    },
+    {
+      "title": "EXISTING: reviewed decisions",
+      "description": "Reviewed route snapshot + observation -> pure validator -> engine. Firestore sessions exist."
+    },
+    {
+      "title": "EXISTING: deliberate voice and audio",
+      "description": "Press-record -> editable transcript -> explicit Send. Fixed Leda/Puck playback."
+    },
+    {
+      "title": "PROPOSED: volunteer evidence",
+      "description": "Consented selected evidence -> AI draft -> actual local field verification and named reviewer."
+    },
+    {
+      "title": "PROPOSED: reviewed dynamic data",
+      "description": "Versioned approved Firestore route -> separate validated loader -> pinned route snapshot."
+    },
+    {
+      "title": "PROPOSED: cached assistance",
+      "description": "Approved audio, reviewed instructions/help cards only. Offline: HOLD; no checkpoint/arrival advance."
+    },
+    {
+      "title": "RESEARCH: optional screening and sensors",
+      "description": "Configured individual-image Model Armor only; no audio/video streams. BLE never sole arrival proof."
+    },
+    {
+      "title": "REQUIRED BEFORE RELEASE: privacy and failures",
+      "description": "Consent, minimization, raw-media boundaries, retention/deletion. Fail closed; no silent bypass."
+    }
+  ],
+  "limitations": "No continuous patient recording; no overseas deployment/partnership claim. Full outdoor acceptance remains HOLD."
+}

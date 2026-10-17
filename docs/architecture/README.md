@@ -56,3 +56,7 @@ PUPPETEER_SKIP_DOWNLOAD=1 npx --yes @mermaid-js/mermaid-cli@12.0.0 \
 ```
 
 Change the input to `voice-input-sequence.mmd` for the second diagram; use `.png` output and `--size 2400` for deck images. No cloud service is called during rendering.
+
+## Architectural Proposals & RFCs
+
+- [Future RFC: reviewed route data, volunteer evidence and cached assistance](rfc-system-scale-enhancements.md) by Anish Chandak (@anishchandak7), corrected for scope and safety boundaries. [HTML](nightingale-rfc-flow.html) · [PNG](nightingale-rfc-flow.png) · [Mermaid](rfc-system-scale-enhancements.mmd). Proposed capabilities are not implemented; offline assistance cannot advance checkpoints or arrival. The current preview and its acceptance limits above remain the baseline.
