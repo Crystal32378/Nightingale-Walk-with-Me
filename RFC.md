@@ -2,7 +2,8 @@
 
 **Status**: Proposed  
 **RFC Document**: [docs/architecture/rfc-system-scale-enhancements.md](docs/architecture/rfc-system-scale-enhancements.md)  
-**Mermaid Diagram**: [docs/architecture/rfc-system-scale-enhancements.mmd](docs/architecture/rfc-system-scale-enhancements.mmd)  
+**Interactive Diagram (Archify)**: [docs/architecture/nightingale-rfc-flow.html](docs/architecture/nightingale-rfc-flow.html)  
+**Mermaid Source**: [docs/architecture/rfc-system-scale-enhancements.mmd](docs/architecture/rfc-system-scale-enhancements.mmd)  
 
 ---
 
@@ -64,7 +65,14 @@ An analysis of the current implementation highlights several structural bottlene
 
 ---
 
-## 📊 System Flow Diagram (Mermaid)
+## 📊 System Flow Diagram
+
+![Nightingale Continuous Multimodal Architecture and System Flow](docs/architecture/nightingale-rfc-flow.png)
+
+Interactive explorable diagram: [docs/architecture/nightingale-rfc-flow.html](docs/architecture/nightingale-rfc-flow.html) · Dark mode: [docs/architecture/nightingale-rfc-flow.dark.png](docs/architecture/nightingale-rfc-flow.dark.png) · JSON specification: [docs/architecture/nightingale-rfc-flow.json](docs/architecture/nightingale-rfc-flow.json) · Mermaid source: [docs/architecture/rfc-system-scale-enhancements.mmd](docs/architecture/rfc-system-scale-enhancements.mmd)
+
+<details>
+<summary><b>Click to expand Mermaid source diagram</b></summary>
 
 ```mermaid
 flowchart TD
@@ -131,6 +139,7 @@ flowchart TD
         H2 -->|Display 'Crossed' Button| Client
     end
 ```
+</details>
 
 ---
 

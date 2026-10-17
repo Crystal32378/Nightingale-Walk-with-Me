@@ -62,7 +62,12 @@ An analysis of the current implementation highlights several structural bottlene
 
 ## 📊 System Flow Diagram
 
-Editable source: [rfc-system-scale-enhancements.mmd](rfc-system-scale-enhancements.mmd)
+![Nightingale Continuous Multimodal Architecture and System Flow](nightingale-rfc-flow.png)
+
+Interactive explorable diagram: [nightingale-rfc-flow.html](nightingale-rfc-flow.html) · Dark mode: [nightingale-rfc-flow.dark.png](nightingale-rfc-flow.dark.png) · JSON specification: [nightingale-rfc-flow.json](nightingale-rfc-flow.json) · Mermaid source: [rfc-system-scale-enhancements.mmd](rfc-system-scale-enhancements.mmd)
+
+<details>
+<summary><b>Click to expand Mermaid source diagram</b></summary>
 
 ```mermaid
 flowchart TD
@@ -129,6 +134,7 @@ flowchart TD
         H2 -->|Display 'Crossed' Button| Client
     end
 ```
+</details>
 
 ---
 

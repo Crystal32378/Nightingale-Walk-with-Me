@@ -59,5 +59,6 @@ Change the input to `voice-input-sequence.mmd` for the second diagram; use `.png
 
 ## Architectural Proposals & RFCs
 
-- [RFC: Continuous Multimodal Streaming, Agentic Route Authoring, and Firestore Geospatial Graph Storage](rfc-system-scale-enhancements.md) ([Mermaid source](rfc-system-scale-enhancements.mmd)): Architectural proposal for scaling Nightingale from the single-route baseline into a continuous streaming, multi-route global accessibility platform.
+- [RFC: Continuous Multimodal Streaming, Agentic Route Authoring, and Firestore Geospatial Graph Storage](rfc-system-scale-enhancements.md) ([Interactive Archify diagram](nightingale-rfc-flow.html) · [PNG](nightingale-rfc-flow.png) · [Mermaid source](rfc-system-scale-enhancements.mmd)): Architectural proposal for scaling Nightingale from the single-route baseline into a continuous streaming, multi-route global accessibility platform.
+
 

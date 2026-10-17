@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Nightingale — Continuous Multimodal Architecture & System Flow",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-nightingale-rfc-flow-20261017-174000/nightingale-rfc-flow.html"
+  },
+  "components": [
+    {
+      "id": "walker",
+      "type": "frontend",
+      "label": "Walker Mobile PWA",
+      "sublabel": "Camera stream · audio · haptics",
+      "pos": [40, 40],
+      "size": [190, 86]
+    },
+    {
+      "id": "edge",
+      "type": "security",
+      "label": "Cloud Armor + API Gateway",
+      "sublabel": "DDoS mitigation · WebSockets",
+      "pos": [40, 180],
+      "size": [190, 86]
+    },
+    {
+      "id": "modelArmor",
+      "type": "security",
+      "label": "Vertex AI Model Armor",
+      "sublabel": "Prompt injection & PII filter",
+      "pos": [40, 320],
+      "size": [190, 86]
+    },
+    {
+      "id": "validator",
+      "type": "backend",
+      "label": "Zod Schema Validator",
+      "sublabel": "Payload types & rate throttler",
+      "pos": [40, 460],
+      "size": [190, 86]
+    },
+    {
+      "id": "gemini",
+      "type": "cloud",
+      "label": "Gemini Multimodal Live",
+      "sublabel": "Vertex AI; landmark interpretation",
+      "pos": [40, 600],
+      "size": [190, 86]
+    },
+    {
+      "id": "pwaCache",
+      "type": "frontend",
+      "label": "Offline PWA Storage",
+      "sublabel": "IndexedDB; pre-cached TTS audio",
+      "pos": [360, 40],
+      "size": [190, 86]
+    },
+    {
+      "id": "ttsDelivery",
+      "type": "cloud",
+      "label": "Gemini 2.5 Flash TTS",
+      "sublabel": "Audio cues (Leda / Puck voices)",
+      "pos": [360, 180],
+      "size": [190, 86]
+    },
+    {
+      "id": "crossingGuard",
+      "type": "security",
+      "label": "Crossing Confirmation",
+      "sublabel": "Junction lock & walker confirmation",
+      "pos": [360, 320],
+      "size": [190, 86]
+    },
+    {
+      "id": "routeEngine",
+      "type": "backend",
+      "label": "Deterministic Route Engine",
+      "sublabel": "Cloud Run; graph rules + veto",
+      "pos": [360, 460],
+      "size": [190, 86]
+    },
+    {
+      "id": "sensors",
+      "type": "external",
+      "label": "Multi-Sensor Guardrails",
+      "sublabel": "Coarse GPS + BLE beacons",
+      "pos": [360, 600],
+      "size": [190, 86]
+    },
+    {
+      "id": "authorAgent",
+      "type": "backend",
+      "label": "ADK Authoring Agent",
+      "sublabel": "Video walk → candidate nodes",
+      "pos": [680, 40],
+      "size": [200, 86]
+    },
+    {
+      "id": "fieldReview",
+      "type": "external",
+      "label": "Human Verification",
+      "sublabel": "1-click review of draft routes",
+      "pos": [680, 180],
+      "size": [200, 86]
+    },
+    {
+      "id": "firestore",
+      "type": "database",
+      "label": "Cloud Firestore Graph DB",
+      "sublabel": "Verified checkpoints & edges",
+      "pos": [680, 320],
+      "size": [200, 86]
+    },
+    {
+      "id": "autoEval",
+      "type": "cloud",
+      "label": "Vertex AI Auto-Eval",
+      "sublabel": "Prompt regression & telemetry",
+      "pos": [680, 460],
+      "size": [200, 86]
+    },
+    {
+      "id": "bigQuery",
+      "type": "database",
+      "label": "BigQuery Analytics",
+      "sublabel": "Anonymized observation logs",
+      "pos": [680, 600],
+      "size": [200, 86]
+    }
+  ],
+  "connections": [
+    {
+      "id": "stream-to-edge",
+      "from": "walker",
+      "to": "edge",
+      "label": "camera & audio stream",
+      "variant": "emphasis"
+    },
+    {
+      "id": "edge-to-armor",
+      "from": "edge",
+      "to": "modelArmor",
+      "label": "inspect stream",
+      "variant": "security"
+    },
+    {
+      "id": "armor-to-validator",
+      "from": "modelArmor",
+      "to": "validator",
+      "label": "sanitized payload",
+      "variant": "security"
+    },
+    {
+      "id": "validator-to-gemini",
+      "from": "validator",
+      "to": "gemini",
+      "label": "validated frames"
+    },
+    {
+      "id": "gemini-to-engine",
+      "from": "gemini",
+      "to": "routeEngine",
+      "label": "observation DTO",
+      "variant": "emphasis"
+    },
+    {
+      "id": "sensors-to-engine",
+      "from": "sensors",
+      "to": "routeEngine",
+      "label": "proximity veto",
+      "variant": "security"
+    },
+    {
+      "id": "graph-to-engine",
+      "from": "firestore",
+      "to": "routeEngine",
+      "label": "load active graph"
+    },
+    {
+      "id": "engine-to-crossing",
+      "from": "routeEngine",
+      "to": "crossingGuard",
+      "label": "junction safety lock",
+      "variant": "security"
+    },
+    {
+      "id": "engine-to-tts",
+      "from": "routeEngine",
+      "to": "ttsDelivery",
+      "label": "step guidance action",
+      "variant": "emphasis"
+    },
+    {
+      "id": "tts-to-walker",
+      "from": "ttsDelivery",
+      "to": "walker",
+      "label": "audio cues & haptics",
+      "variant": "emphasis"
+    },
+    {
+      "id": "cache-to-walker",
+      "from": "pwaCache",
+      "to": "walker",
+      "label": "pre-cached fallback",
+      "variant": "dashed"
+    },
+    {
+      "id": "author-to-review",
+      "from": "authorAgent",
+      "to": "fieldReview",
+      "label": "candidate checkpoints"
+    },
+    {
+      "id": "review-to-firestore",
+      "from": "fieldReview",
+      "to": "firestore",
+      "label": "publish verified route",
+      "variant": "security"
+    },
+    {
+      "id": "engine-to-eval",
+      "from": "routeEngine",
+      "to": "autoEval",
+      "label": "anonymized failures",
+      "variant": "dashed"
+    },
+    {
+      "id": "engine-to-analytics",
+      "from": "routeEngine",
+      "to": "bigQuery",
+      "label": "observation telemetry",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Safety Invariant",
+      "items": [
+        "AI interprets observations; only the field-verified route graph decides the next step.",
+        "Coarse GPS + BLE beacon proximity vetoes checkpoint jumps; street crossings require physical confirmation."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Hands-Free Multimodal Experience",
+      "items": [
+        "Continuous WebSockets/WebRTC streaming delivers ambient, low-latency audio cues as landmarks pass the camera.",
+        "PWA Service Worker and IndexedDB pre-cache Gemini 2.5 Flash TTS clips and graph rules for cellular dead zones."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Global Scalability & Authoring",
+      "items": [
+        "ADK Authoring Agent extracts candidate nodes from volunteer video walks for 1-click supervisor verification.",
+        "Cloud Firestore stores routes as geospatial graphs, scaling Nightingale to complex hospital hubs worldwide."
+      ]
+    }
+  ]
+}
